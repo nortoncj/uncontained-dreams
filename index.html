@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>UnContained Dreams homepage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="assets/brand/icon.png" sizes="any"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F1F3F2;color:#1B2429;font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:#14324A}a:hover{color:#B04E25}
+h1,h2,h3{font-family:"Archivo","Arial Narrow",Arial,sans-serif;text-wrap:balance;margin:0}
+p{margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,4vw);padding-right:max(20px,4vw);box-sizing:border-box}
+.media{position:relative;box-sizing:border-box;border:1.5px dashed #8FA0A6;background:#DCE3E5;color:#14324A;border-radius:2px;display:flex;flex-direction:column;justify-content:flex-end;gap:4px;padding:16px;overflow:hidden}
+.media.dark{background:#1E425E;border-color:#5C7D95;color:#F1F3F2}
+.mtag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.mnote{font-size:13px;line-height:19px;max-width:44ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:6px;font-weight:600;font-size:16px;text-decoration:none;box-sizing:border-box}
+.btn.primary{background:#B04E25;color:#FFFFFF}
+.btn.primary:hover{background:#963F1C;color:#FFFFFF}
+.btn.ghost{border:1.5px solid currentColor;color:#14324A}
+.btn.ghost.light{color:#FFFFFF}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5A666C}
+.chip{display:inline-flex;align-items:center;padding:4px 12px;border-radius:999px;font-size:13px;font-weight:600}
+.field{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600;color:#1B2429}
+.field input,.field select{min-height:46px;border:1px solid #B9C4C8;border-radius:2px;padding:0 12px;font:inherit;font-weight:400;font-size:16px;background:#FFFFFF;color:#1B2429}
+a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{outline:3px solid #B04E25;outline-offset:2px}
+.media.filled{border:0;padding:0;background:#1E425E}
+.media>img,.media>video,.media>a>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.hero-video{display:block}
+@media (max-width:767px){.hero-video{display:none}}
+</style>
+<link rel="stylesheet" href="assets/css/mega-menu.css">
+</head>
+<body>
+<div style="display: flex; flex-direction: column; min-width: 0;">
+
+<!-- HEADER + MEGA MENU -->
+<header class="site-header">
+  <div class="wrap site-header__bar">
+    <a class="site-logo" href="#top">
+      <img class="site-logo__img" src="./assets/brand/logo.png" alt="UnContained Dreams logo" width="230" height="80"/>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <svg class="nav-toggle__open" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="nav-toggle__close" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      Menu
+    </button>
+
+    <nav id="primary-nav" class="primary-nav" aria-label="Main">
+      <ul class="menu">
+
+        <!-- Models -->
+        <li class="menu-item menu-item-has-children">
+          <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="mega-models">
+            Models
+            <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg>
+          </button>
+          <div class="mega-panel" id="mega-models">
+            <div class="wrap mega-panel__inner">
+              <div class="mega-col">
+                <p class="mega-heading">Our homes</p>
+                <ul class="sub-menu">
+                  <li class="menu-item"><a href="#models">The Rising Sun <span class="menu-desc">Our flagship. From $85,000, furnished.</span></a></li>
+                  <li class="menu-item"><a href="#build">Custom build <span class="menu-desc">Your layout, our shop.</span></a></li>
+                  <li class="menu-item"><a href="#models">Compare models <span class="menu-desc">Size, beds, baths and price side by side.</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-col">
+                <p class="mega-heading">Plan it</p>
+                <ul class="sub-menu">
+                  <li class="menu-item"><a href="#build">Build Your Home <span class="menu-desc">Pick upgrades, see the total.</span></a></li>
+                  <li class="menu-item"><a href="#models">Spec sheets <span class="menu-desc">Insulation, HVAC and wind ratings.</span></a></li>
+                  <li class="menu-item"><a href="#tour">3D tour <span class="menu-desc">Walk through before you commit.</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-col mega-col--span-6 mega-col--feature">
+                <a class="mega-card" href="#models">
+                  <div class="mega-card__img"><img src="assets/Website/Main%20Site%20professional%20pics/Copy%20of%20Front%20View.jpg" alt="" loading="lazy"></div>
+                  <div class="mega-card__body">
+                    <span class="mega-card__price">From $85,000</span>
+                    <span class="mega-card__title">The Rising Sun</span>
+                    <span class="mega-card__text">Custom furniture and the first 1,000 delivery miles included.</span>
+                    <span class="mega-card__cta">See the model</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- How It Works -->
+        <li class="menu-item menu-item-has-children">
+          <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="mega-how">
+            How It Works
+            <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg>
+          </button>
+          <div class="mega-panel" id="mega-how">
+            <div class="wrap mega-panel__inner">
+              <div class="mega-col mega-col--span-4">
+                <p class="mega-heading">Four steps</p>
+                <ul class="sub-menu sub-menu--steps">
+                  <li class="menu-item"><a href="#how"><span>Build it online <span class="menu-desc">Choose your model and finishes.</span></span></a></li>
+                  <li class="menu-item"><a href="#financing"><span>Check financing <span class="menu-desc">No hard credit pull.</span></span></a></li>
+                  <li class="menu-item"><a href="#how"><span>We build it <span class="menu-desc">Photo updates at every stage.</span></span></a></li>
+                  <li class="menu-item"><a href="#how"><span>We deliver it <span class="menu-desc">First 1,000 miles on us.</span></span></a></li>
+                </ul>
+              </div>
+              <div class="mega-col mega-col--span-4 mega-col--feature">
+                <a class="mega-card" href="#how">
+                  <div class="mega-card__img"><img src="assets/Website/Build%20%20plans/File%20Name%20Lost%20(491).jpg" alt="" loading="lazy"></div>
+                  <div class="mega-card__body">
+                    <span class="mega-card__title">Built in our shop</span>
+                    <span class="mega-card__text">Cabinets, tables and framing made by hand for each layout.</span>
+                    <span class="mega-card__cta">See the build process</span>
+                  </div>
+                </a>
+              </div>
+              <div class="mega-col mega-col--span-4 mega-col--feature">
+                <a class="mega-card mega-card--oak" href="#financing">
+                  <div class="mega-card__img"><img src="assets/Website/Main%20Site%20professional%20pics/Copy%20of%20Living%20room%20_%20Kitchen%20view.jpg" alt="" loading="lazy"></div>
+                  <div class="mega-card__body">
+                    <span class="mega-card__title">See your monthly payment</span>
+                    <span class="mega-card__text">Prequalifying won't affect your credit score.</span>
+                    <span class="mega-card__cta">Check financing</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Gallery -->
+        <li class="menu-item menu-item-has-children">
+          <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="mega-gallery">
+            Gallery
+            <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg>
+          </button>
+          <div class="mega-panel" id="mega-gallery">
+            <div class="wrap mega-panel__inner">
+              <div class="mega-col mega-col--full">
+                <p class="mega-heading">From real builds</p>
+                <ul class="mega-tiles">
+                  <li class="mega-tile"><a href="#gallery"><span class="mega-tile__img"><img src="assets/Website/Main%20Site%20professional%20pics/Copy%20of%20Front%20Corner.jpg" alt="" loading="lazy"></span>Finished homes</a></li>
+                  <li class="mega-tile"><a href="#gallery"><span class="mega-tile__img"><img src="assets/Website/Gallery/20230601_163705.jpg" alt="" loading="lazy"></span>Interiors</a></li>
+                  <li class="mega-tile"><a href="#gallery"><span class="mega-tile__img"><img src="assets/Website/Build%20%20plans/Cabinet%20Stacked.JPG" alt="" loading="lazy"></span>Build process</a></li>
+                  <li class="mega-tile"><a href="#gallery"><span class="mega-tile__img"><img src="assets/Website/Gallery/DJI_0434.JPG" alt="" loading="lazy"></span>Delivery day</a></li>
+                </ul>
+              </div>
+              <div class="mega-footer">
+                <span>No renders. Every photo is a home we built.</span>
+                <a href="#tour">Watch the video walkthrough</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Service Areas -->
+        <li class="menu-item menu-item-has-children">
+          <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="mega-areas">
+            Service Areas
+            <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg>
+          </button>
+          <div class="mega-panel" id="mega-areas">
+            <div class="wrap mega-panel__inner">
+              <div class="mega-col mega-col--span-7">
+                <p class="mega-heading">Fort Bend County &amp; nearby</p>
+                <ul class="sub-menu sub-menu--cities">
+                  <li class="menu-item"><a href="#areas">Sugar Land</a></li>
+                  <li class="menu-item"><a href="#areas">Missouri City</a></li>
+                  <li class="menu-item"><a href="#areas">Richmond</a></li>
+                  <li class="menu-item"><a href="#areas">Rosenberg</a></li>
+                  <li class="menu-item"><a href="#areas">Fulshear</a></li>
+                  <li class="menu-item"><a href="#areas">Katy</a></li>
+                  <li class="menu-item"><a href="#areas">All service areas</a></li>
+                </ul>
+              </div>
+              <div class="mega-col mega-col--span-5 mega-col--feature">
+                <a class="mega-card" href="#areas">
+                  <div class="mega-card__img"><img src="assets/Website/Gallery/DJI_0411.JPG" alt="" loading="lazy"></div>
+                  <div class="mega-card__body">
+                    <span class="mega-card__title">Delivering across Texas</span>
+                    <span class="mega-card__text">Based near Sugar Land. The first 1,000 delivery miles are included in the price.</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="menu-item"><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <a class="header-phone" href="#contact">[PHONE]</a>
+        <a class="btn primary" href="#build">Build Your Home</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" style="position: relative; background: #14324A; color: #FFFFFF;">
+  <div class="media dark filled" style="position: absolute; inset: 0; border-radius: 0;">
+    <img src="assets/Website/Main%20Site%20professional%20pics/Copy%20of%20Front%20Corner.jpg" alt="" fetchpriority="high">
+    <video class="hero-video" src="assets/Website/Videos/exterior%20slow%20walk%20around.mp4" poster="assets/Website/Main%20Site%20professional%20pics/Copy%20of%20Front%20Corner.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+  </div>
+  <div class="wrap" style="position: relative; padding-top: 120px; padding-bottom: 120px;">
+    <div style="background: #14324A; max-width: 620px; padding: 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 22px; border-radius: 2px;">
+      <span class="chip" style="background: #E9B872; color: #14324A; width: max-content;">Serving Sugar Land &amp; Fort Bend County</span>
+      <h1 style="font-size: 60px; line-height: 60px; font-weight: 800; letter-spacing: -.015em;">Container homes, built for America.</h1>
+      <p style="font-size: 19px; line-height: 30px; color: #DCE6EE;">Finished, furnished, and delivered. The Rising Sun starts at $85,000 with custom furniture and 1,000 miles of delivery included.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+        <a class="btn primary" href="#build">Build Your Home</a>
+        <a class="btn ghost light" href="#tour">Take the 3D Tour</a>
+      </div>
+      <p style="font-size: 14px; color: #B7C8D6;">Check financing in minutes. Prequalifying won't affect your credit.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF STRIP -->
+<section style="background: #FFFFFF; border-bottom: 1px solid #D5DCDE;">
+  <div class="wrap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; padding-top: 28px; padding-bottom: 28px;">
+    <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 26px; color: #14324A;">$85k to $120k</span><span style="font-size: 15px; color: #5A666C;">Real prices, posted before you call</span></div>
+    <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 26px; color: #14324A;">Fully furnished</span><span style="font-size: 15px; color: #5A666C;">Custom furniture built for the space</span></div>
+    <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 26px; color: #14324A;">1,000 miles</span><span style="font-size: 15px; color: #5A666C;">Of delivery included in the price</span></div>
+    <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 26px; color: #14324A;">[★ 4.9 · 00 reviews]</span><span style="font-size: 15px; color: #5A666C;">Google rating, pulled live</span></div>
+  </div>
+</section>
+
+<!-- FEATURED MODEL -->
+<section id="models" style="padding-top: 96px; padding-bottom: 96px;">
+  <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center;">
+    <div style="flex: 1 1 560px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;">
+      <div class="media filled" style="grid-column: span 2; aspect-ratio: 16 / 9; max-width: 100%;"><img src="assets/Website/Main%20Site%20professional%20pics/Copy%20of%20Living%20Room%20in%20View.jpg" alt="The Rising Sun living room with the included sofa, wall-mounted TV, and kitchen beyond" loading="lazy"></div>
+      <div class="media filled" style="aspect-ratio: 4 / 3; max-width: 100%;"><img src="assets/Website/Main%20Site%20professional%20pics/Copy%20of%20Front%20of%20Kitchen.jpg" alt="Kitchen with navy cabinets, marble-look counters, and floating wood shelves" loading="lazy"></div>
+      <div class="media filled" style="aspect-ratio: 4 / 3; max-width: 100%;"><img src="assets/Website/Main%20Site%20professional%20pics/Copy%20of%20Bedroom%20In%20View.jpg" alt="Bedroom with queen bed under a cedar ceiling" loading="lazy"></div>
+    </div>
+    <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
+      <span class="eyebrow">Featured model</span>
+      <h2 style="font-size: 44px; line-height: 46px; font-weight: 800; color: #14324A;">The Rising Sun</h2>
+      <p style="font-size: 17px; line-height: 28px;">Everything a full-size home has, packed into a container footprint. Every piece of furniture you see in the photos comes with it, designed and built for this layout.</p>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: #D5DCDE; border: 1px solid #D5DCDE;">
+        <div style="background: #FFFFFF; padding: 14px; display: flex; flex-direction: column; gap: 2px;"><span class="eyebrow">Size</span><span style="font-weight: 700; font-size: 18px;">[000 sq ft]</span></div>
+        <div style="background: #FFFFFF; padding: 14px; display: flex; flex-direction: column; gap: 2px;"><span class="eyebrow">Beds</span><span style="font-weight: 700; font-size: 18px;">[0]</span></div>
+        <div style="background: #FFFFFF; padding: 14px; display: flex; flex-direction: column; gap: 2px;"><span class="eyebrow">Baths</span><span style="font-weight: 700; font-size: 18px;">[0]</span></div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px;">
+        <span class="chip" style="background: #14324A; color: #E9B872; font-size: 15px; padding: 8px 16px;">From $85,000</span>
+        <span style="font-size: 14px; color: #5A666C;">Up to $120,000 with every upgrade</span>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+        <a class="btn primary" href="#build">Customize The Rising Sun</a>
+        <a class="btn ghost" href="#models">See full specs</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOUR + VIDEO -->
+<section id="tour" style="background: #FFFFFF; padding-top: 96px; padding-bottom: 96px; border-top: 1px solid #D5DCDE; border-bottom: 1px solid #D5DCDE;">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 32px;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px;">
+      <div style="display: flex; flex-direction: column; gap: 12px; max-width: 620px;">
+        <span class="eyebrow">Walk through it</span>
+        <h2 style="font-size: 40px; line-height: 44px; font-weight: 800; color: #14324A;">See every inch before you commit.</h2>
+        <p style="font-size: 17px; line-height: 28px; color: #5A666C;">No renders standing in for the real thing. Tour the finished home in 3D or watch the walkthrough.</p>
+      </div>
+      <a class="btn ghost" href="#tour">Open 3D tour in new tab</a>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+      <div class="media dark filled" style="flex: 2 1 520px; min-width: 0; aspect-ratio: 16 / 9; max-width: 100%;"><video src="assets/Website/Videos/Walk%20through%20floating.mp4" poster="assets/Website/Main%20Site%20professional%20pics/Copy%20of%20living%20room%20view.jpg" controls playsinline preload="none" aria-label="Interior walkthrough of The Rising Sun"></video></div>
+      <div class="media filled" style="flex: 1 1 300px; min-width: 0; aspect-ratio: 4 / 3; max-width: 100%;"><a href="#tour" aria-label="Open the 3D tour"><img src="assets/Website/Main%20Site%20professional%20pics/Copy%20of%20hallway%20in%20View.jpg" alt="Hallway looking toward the bedroom" loading="lazy"></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" style="padding-top: 96px; padding-bottom: 96px;">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 40px;">
+    <div style="display: flex; flex-direction: column; gap: 12px; max-width: 620px;">
+      <span class="eyebrow">How it works</span>
+      <h2 style="font-size: 40px; line-height: 44px; font-weight: 800; color: #14324A;">From your screen to your lot in four steps.</h2>
+    </div>
+    <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px;">
+      <li style="background: #FFFFFF; border: 1px solid #D5DCDE; border-radius: 2px; padding: 24px; display: flex; flex-direction: column; gap: 10px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 36px; color: #B04E25;">1</span><h3 style="font-size: 20px; color: #14324A;">Build it online</h3><p style="font-size: 15px; line-height: 24px; color: #5A666C;">Pick your model, finishes, and upgrades. The price updates as you go.</p></li>
+      <li style="background: #FFFFFF; border: 1px solid #D5DCDE; border-radius: 2px; padding: 24px; display: flex; flex-direction: column; gap: 10px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 36px; color: #B04E25;">2</span><h3 style="font-size: 20px; color: #14324A;">Check financing</h3><p style="font-size: 15px; line-height: 24px; color: #5A666C;">Leave your contact info and see loan options without a hard credit pull.</p></li>
+      <li style="background: #FFFFFF; border: 1px solid #D5DCDE; border-radius: 2px; padding: 24px; display: flex; flex-direction: column; gap: 10px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 36px; color: #B04E25;">3</span><h3 style="font-size: 20px; color: #14324A;">We build it</h3><p style="font-size: 15px; line-height: 24px; color: #5A666C;">[BUILD TIME] weeks in our shop, with photo updates at each stage.</p></li>
+      <li style="background: #FFFFFF; border: 1px solid #D5DCDE; border-radius: 2px; padding: 24px; display: flex; flex-direction: column; gap: 10px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 36px; color: #B04E25;">4</span><h3 style="font-size: 20px; color: #14324A;">We deliver it</h3><p style="font-size: 15px; line-height: 24px; color: #5A666C;">Set on your site, furnished and ready. First 1,000 miles are on us.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- BUILT for America -->
+<section style="background: #FFFFFF; padding-top: 96px; padding-bottom: 96px; border-top: 1px solid #D5DCDE; border-bottom: 1px solid #D5DCDE;">
+  <div class="wrap" style="display: flex; flex-wrap: wrap-reverse; gap: 48px; align-items: center;">
+    <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
+      <span class="eyebrow">Built for America</span>
+      <h2 style="font-size: 40px; line-height: 44px; font-weight: 800; color: #14324A;">Steel shell. Gulf Coast ready.</h2>
+      <p style="font-size: 17px; line-height: 28px;">A container home lives or dies by how it handles heat and humidity. Here's what goes into every build.</p>
+      <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; font-size: 16px; line-height: 24px;">
+        <li style="display: flex; gap: 12px;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F5D47" stroke-width="2.2" stroke-linecap="square" style="flex: none; margin-top: 1px;"><path d="M4 12l5 5L20 6"></path></svg><span><strong>[INSULATION SPEC]</strong> keeps the steel from turning into an oven in August</span></li>
+        <li style="display: flex; gap: 12px;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F5D47" stroke-width="2.2" stroke-linecap="square" style="flex: none; margin-top: 1px;"><path d="M4 12l5 5L20 6"></path></svg><span><strong>[HVAC SPEC]</strong> sized for Southeast Texas summers</span></li>
+        <li style="display: flex; gap: 12px;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F5D47" stroke-width="2.2" stroke-linecap="square" style="flex: none; margin-top: 1px;"><path d="M4 12l5 5L20 6"></path></svg><span><strong>[COATING / RUST SPEC]</strong> for a humid, salty-air climate</span></li>
+        <li style="display: flex; gap: 12px;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F5D47" stroke-width="2.2" stroke-linecap="square" style="flex: none; margin-top: 1px;"><path d="M4 12l5 5L20 6"></path></svg><span><strong>[TIE-DOWN / WIND SPEC]</strong> for hurricane season</span></li>
+      </ul>
+    </div>
+    <div class="media filled" style="flex: 1 1 460px; min-width: 0; aspect-ratio: 4 / 5; max-width: 100%;"><img src="assets/Website/Build%20%20plans/DJIvwindow%20cut%20out%20pic%207.JPG" alt="Aerial view of a container mid-build with window openings cut into the steel" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- FINANCING -->
+<section id="financing" style="background: #14324A; color: #FFFFFF; padding-top: 96px; padding-bottom: 96px;">
+  <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start;">
+    <div style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
+      <span class="eyebrow" style="color: #B7C8D6;">Financing</span>
+      <h2 style="font-size: 40px; line-height: 44px; font-weight: 800;">See your monthly payment before you decide.</h2>
+      <p style="font-size: 17px; line-height: 28px; color: #DCE6EE;">Tell us how to reach you and which home you're looking at. We'll send you prequalified options from [LENDER PARTNER], with loans sized for a full home build.</p>
+      <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; font-size: 16px; color: #DCE6EE;">
+        <li style="display: flex; gap: 12px;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FB89A" stroke-width="2.2" stroke-linecap="square" style="flex: none;"><path d="M4 12l5 5L20 6"></path></svg>Prequalifying won't affect your credit score</li>
+        <li style="display: flex; gap: 12px;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FB89A" stroke-width="2.2" stroke-linecap="square" style="flex: none;"><path d="M4 12l5 5L20 6"></path></svg>We never ask for your SSN or bank details</li>
+        <li style="display: flex; gap: 12px;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FB89A" stroke-width="2.2" stroke-linecap="square" style="flex: none;"><path d="M4 12l5 5L20 6"></path></svg>You apply directly with the lender, on your terms</li>
+      </ul>
+    </div>
+    <form style="flex: 1 1 420px; min-width: 0; background: #FFFFFF; color: #1B2429; border-radius: 2px; padding: 32px; box-sizing: border-box; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
+      <label class="field" for="fn">First name<input id="fn" type="text" autocomplete="given-name"></label>
+      <label class="field" for="ln">Last name<input id="ln" type="text" autocomplete="family-name"></label>
+      <label class="field" for="em" style="grid-column: span 2;">Email<input id="em" type="email" autocomplete="email"></label>
+      <label class="field" for="ph">Phone<input id="ph" type="tel" autocomplete="tel"></label>
+      <label class="field" for="zp">ZIP code<input id="zp" type="text" inputmode="numeric" autocomplete="postal-code"></label>
+      <label class="field" for="md" style="grid-column: span 2;">Which home?<select id="md"><option>The Rising Sun</option><option>A custom build</option><option>Not sure yet</option></select></label>
+      <button type="button" class="btn primary" style="grid-column: span 2; border: 0; cursor: pointer; font-family: inherit;">Check my financing options</button>
+      <p style="grid-column: span 2; font-size: 13px; line-height: 19px; color: #5A666C;">Contact info only. A real person from UnContained Dreams follows up within [1 business day].</p>
+    </form>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" style="padding-top: 96px; padding-bottom: 96px;">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 32px;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px;">
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span class="eyebrow">From real builds</span>
+        <h2 style="font-size: 40px; line-height: 44px; font-weight: 800; color: #14324A;">No renders. Just the work.</h2>
+      </div>
+      <a class="btn ghost" href="#gallery">View full gallery</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px;">
+      <div class="media filled" style="aspect-ratio: 4 / 3; max-width: 100%;"><img src="assets/Website/Gallery/DJI_0411.JPG" alt="Finished container home on the trailer, headed to a customer lot" loading="lazy"></div>
+      <div class="media filled" style="aspect-ratio: 4 / 3; max-width: 100%;"><img src="assets/Website/Gallery/DJI_0434.JPG" alt="Crane setting a container home on delivery day" loading="lazy"></div>
+      <div class="media filled" style="aspect-ratio: 4 / 3; max-width: 100%;"><img src="assets/Website/Gallery/20230601_163705.jpg" alt="Custom walnut dining table set for dinner" loading="lazy"></div>
+      <div class="media filled" style="aspect-ratio: 4 / 3; max-width: 100%;"><img src="assets/Website/Gallery/20230601_175058.jpg" alt="Kitchen sink and counter with the hallway beyond" loading="lazy"></div>
+      <div class="media filled" style="aspect-ratio: 4 / 3; max-width: 100%;"><img src="assets/Website/Gallery/20230601_165421.jpg" alt="Close-up of the walnut fold-down table and hinges" loading="lazy"></div>
+      <div class="media filled" style="aspect-ratio: 4 / 3; max-width: 100%;"><img src="assets/Website/Gallery/20230515_113432.jpg" alt="Built-in bench seat beside the sliding glass door" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section style="background: #FFFFFF; padding-top: 96px; padding-bottom: 96px; border-top: 1px solid #D5DCDE; border-bottom: 1px solid #D5DCDE;">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 32px;">
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <span class="eyebrow">Reviews</span>
+      <h2 style="font-size: 40px; line-height: 44px; font-weight: 800; color: #14324A;">What owners say.</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
+      <!-- <figure style="margin: 0; border: 1px solid #D5DCDE; border-radius: 2px; padding: 24px; display: flex; flex-direction: column; gap: 16px;"><blockquote style="margin: 0; font-size: 17px; line-height: 28px;">[REAL GOOGLE REVIEW, verbatim, with permission]</blockquote><figcaption style="font-size: 14px; color: #5A666C;">[First name, last initial] · [City], TX</figcaption></figure>
+      <figure style="margin: 0; border: 1px solid #D5DCDE; border-radius: 2px; padding: 24px; display: flex; flex-direction: column; gap: 16px;"><blockquote style="margin: 0; font-size: 17px; line-height: 28px;">[REAL GOOGLE REVIEW, verbatim, with permission]</blockquote><figcaption style="font-size: 14px; color: #5A666C;">[First name, last initial] · [City], TX</figcaption></figure>
+      <div class="media dark" style="min-height: 200px;"><span class="mtag">Video testimonial · 30–60s</span><span class="mnote">An owner on camera beats ten written reviews. Shoot it at the next delivery.</span> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top: 96px; padding-bottom: 96px;">
+  <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 48px;">
+    <div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 12px;">
+      <span class="eyebrow">FAQ</span>
+      <h2 style="font-size: 40px; line-height: 44px; font-weight: 800; color: #14324A;">Straight answers.</h2>
+    </div>
+    <div style="flex: 2 1 560px; min-width: 0; display: flex; flex-direction: column; border-top: 1px solid #D5DCDE;">
+      <details open="" style="border-bottom: 1px solid #D5DCDE; padding: 20px 0;"><summary style="font-weight: 700; font-size: 18px; cursor: pointer; color: #14324A;">What does it actually cost?</summary><p style="margin-top: 12px; font-size: 16px; line-height: 26px;">The Rising Sun starts at $85,000 and runs up to $120,000 with every upgrade. That includes the custom furniture and the first 1,000 miles of delivery. Site prep, foundation, and utility hookups are [INCLUDED / QUOTED SEPARATELY].</p></details>
+      <details style="border-bottom: 1px solid #D5DCDE; padding: 20px 0;"><summary style="font-weight: 700; font-size: 18px; cursor: pointer; color: #14324A;">Can I put one in my backyard in Sugar Land?</summary><p style="margin-top: 12px; font-size: 16px; line-height: 26px;">[ANSWER: city zoning + HOA approval process]</p></details>
+      <details style="border-bottom: 1px solid #D5DCDE; padding: 20px 0;"><summary style="font-weight: 700; font-size: 18px; cursor: pointer; color: #14324A;">How long does a build take?</summary><p style="margin-top: 12px; font-size: 16px; line-height: 26px;">[BUILD TIME]</p></details>
+      <details style="border-bottom: 1px solid #D5DCDE; padding: 20px 0;"><summary style="font-weight: 700; font-size: 18px; cursor: pointer; color: #14324A;">Can I finance it?</summary><p style="margin-top: 12px; font-size: 16px; line-height: 26px;">Yes. Leave your contact info and we'll send prequalified options from [LENDER PARTNER]. Checking won't affect your credit.</p></details>
+      <details style="border-bottom: 1px solid #D5DCDE; padding: 20px 0;"><summary style="font-weight: 700; font-size: 18px; cursor: pointer; color: #14324A;">What's the warranty?</summary><p style="margin-top: 12px; font-size: 16px; line-height: 26px;">[WARRANTY TERMS]</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section id="areas" style="background: #FFFFFF; padding-top: 72px; padding-bottom: 72px; border-top: 1px solid #D5DCDE;">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 20px;">
+    <span class="eyebrow">Where we deliver</span>
+    <h2 style="font-size: 32px; line-height: 38px; font-weight: 800; color: #14324A;">Based near Sugar Land. Delivering across the United States.</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+      <a class="chip" href="#areas" style="background: #DCE3E5; color: #14324A; text-decoration: none; min-height: 44px; box-sizing: border-box;">Sugar Land</a>
+      <a class="chip" href="#areas" style="background: #DCE3E5; color: #14324A; text-decoration: none; min-height: 44px; box-sizing: border-box;">Missouri City</a>
+      <a class="chip" href="#areas" style="background: #DCE3E5; color: #14324A; text-decoration: none; min-height: 44px; box-sizing: border-box;">Richmond</a>
+      <a class="chip" href="#areas" style="background: #DCE3E5; color: #14324A; text-decoration: none; min-height: 44px; box-sizing: border-box;">Rosenberg</a>
+      <a class="chip" href="#areas" style="background: #DCE3E5; color: #14324A; text-decoration: none; min-height: 44px; box-sizing: border-box;">Fulshear</a>
+      <a class="chip" href="#areas" style="background: #DCE3E5; color: #14324A; text-decoration: none; min-height: 44px; box-sizing: border-box;">Katy</a>
+      <a class="chip" href="#areas" style="background: #DCE3E5; color: #14324A; text-decoration: none; min-height: 44px; box-sizing: border-box;">All service areas</a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="build" style="position: relative; background: #14324A; color: #FFFFFF;">
+  <div class="media dark filled" style="position: absolute; inset: 0; border-radius: 0;"><img src="assets/Website/Main%20Site%20professional%20pics/Copy%20of%20Back%20angle_.jpg" alt="" loading="lazy"></div>
+  <div class="wrap" style="position: relative; padding-top: 112px; padding-bottom: 112px;">
+    <div style="background: #14324A; max-width: 560px; padding: 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px; border-radius: 2px;">
+      <h2 style="font-size: 44px; line-height: 46px; font-weight: 800;">Price your home in about five minutes.</h2>
+      <p style="font-size: 17px; line-height: 28px; color: #DCE6EE;">Pick a model, choose your upgrades, and see the total. No sales call required to get a number.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px;"><a class="btn primary" href="#build">Build Your Home</a><a class="btn ghost light" href="#contact">Talk to us</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact" style="background: #0F1B24; color: #B7C8D6; padding-top: 56px; padding-bottom: 40px;">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 32px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; font-size: 15px; line-height: 26px;">
+      <div style="display: flex; flex-direction: column; gap: 8px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 20px; color: #FFFFFF;">
+
+        <img src="./assets/brand/logo-dark.png" alt="UnContained Dreams logo" style="width: 240px; height: auto; margin-top: 8px;">
+      </span><span>Container homes, built for America.</span></div>
+      <div style="display: flex; flex-direction: column; gap: 4px;"><span style="color: #FFFFFF; font-weight: 600;">Contact</span><span>[PHONE]</span><span>[EMAIL]</span><span>[STREET ADDRESS], Sugar Land, TX [ZIP]</span></div>
+      <div style="display: flex; flex-direction: column; gap: 4px;"><span style="color: #FFFFFF; font-weight: 600;">Explore</span><a href="#models" style="color: #B7C8D6;">Models</a><a href="#build" style="color: #B7C8D6;">Build Your Home</a><a href="#financing" style="color: #B7C8D6;">Financing</a><a href="#gallery" style="color: #B7C8D6;">Gallery</a></div>
+      <div style="display: flex; flex-direction: column; gap: 4px;"><span style="color: #FFFFFF; font-weight: 600;">Trust</span><span>[LICENSE / REGISTRATION #]</span><span>[INSURANCE: general liability]</span><a href="#faq" style="color: #B7C8D6;">Warranty terms</a></div>
+    </div>
+    <p style="font-size: 13px; color: #8FA3B3; border-top: 1px solid #2A3A44; padding-top: 20px;">© 2026 UnContained Dreams. Financing provided by [LENDER PARTNER]; UnContained Dreams does not make credit decisions. <a href="#contact" style="color: #B7C8D6;">Privacy</a> · <a href="#contact" style="color: #B7C8D6;">Terms</a></p>
+  </div>
+</footer>
+
+</div>
+
+
+<script src="assets/js/mega-menu.js" defer></script>
+</body></html>
