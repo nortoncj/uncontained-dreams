@@ -1,0 +1,492 @@
+/* ==========================================================================
+   Mega menu
+   Class names follow wp_nav_menu output (menu, menu-item,
+   menu-item-has-children, sub-menu) so the markup ports to a WP walker.
+   ========================================================================== */
+
+:root {
+  --ucd-harbor: #14324A;
+  --ucd-harbor-deep: #0F1B24;
+  --ucd-corten: #B04E25;
+  --ucd-sand: #E9B872;
+  --ucd-oak: #2F5D47;
+  --ucd-galvanized: #F1F3F2;
+  --ucd-surface: #FFFFFF;
+  --ucd-ink: #1B2429;
+  --ucd-muted: #5A666C;
+  --ucd-line: #D5DCDE;
+  --ucd-header-h: 76px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--ucd-surface);
+  border-bottom: 1px solid var(--ucd-line);
+}
+
+.site-header__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: var(--ucd-header-h);
+}
+
+.site-logo {
+  font-family: Archivo, sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -.01em;
+  color: var(--ucd-harbor);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* ---------- Top level ---------- */
+
+.primary-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.primary-nav .menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+  gap: 4px;
+}
+
+.primary-nav .menu > .menu-item > a,
+.menu-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: var(--ucd-header-h);
+  padding: 0 12px;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ucd-harbor);
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: inset 0 -3px 0 transparent;
+  transition: box-shadow .15s ease, color .15s ease;
+}
+
+.menu-trigger svg {
+  transition: transform .2s ease;
+}
+
+.primary-nav .menu > .menu-item > a:hover,
+.menu-trigger:hover,
+.menu-trigger[aria-expanded="true"] {
+  color: var(--ucd-corten);
+  box-shadow: inset 0 -3px 0 var(--ucd-corten);
+}
+
+.menu-trigger[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-phone {
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+/* ---------- Panel ---------- */
+
+.mega-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: var(--ucd-surface);
+  border-top: 1px solid var(--ucd-line);
+  border-bottom: 3px solid var(--ucd-harbor);
+  box-shadow: 0 24px 40px -16px rgba(15, 27, 36, .28);
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity .18s ease, transform .18s ease, visibility 0s linear .18s;
+}
+
+.menu-item.is-open > .mega-panel {
+  visibility: visible;
+  opacity: 1;
+  transform: none;
+  transition: opacity .18s ease, transform .18s ease, visibility 0s;
+}
+
+.mega-panel__inner {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 40px;
+  padding-top: 36px;
+  padding-bottom: 40px;
+}
+
+.mega-col { grid-column: span 3; min-width: 0; }
+.mega-col--span-4 { grid-column: span 4; }
+.mega-col--span-5 { grid-column: span 5; }
+.mega-col--span-6 { grid-column: span 6; }
+.mega-col--span-7 { grid-column: span 7; }
+.mega-col--full { grid-column: 1 / -1; }
+
+.mega-heading {
+  margin: 0 0 14px;
+  font-family: "Public Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ucd-muted);
+}
+
+.sub-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sub-menu a {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  margin: 0 -12px;
+  border-radius: 2px;
+  text-decoration: none;
+  color: var(--ucd-harbor);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.sub-menu a:hover {
+  background: var(--ucd-galvanized);
+  color: var(--ucd-harbor);
+}
+
+.sub-menu .menu-desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--ucd-muted);
+}
+
+.sub-menu .menu-badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--ucd-harbor);
+  color: var(--ucd-sand);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  vertical-align: 2px;
+}
+
+/* Numbered process steps */
+.sub-menu--steps { counter-reset: step; }
+.sub-menu--steps a { flex-direction: row; gap: 14px; align-items: baseline; }
+.sub-menu--steps a::before {
+  counter-increment: step;
+  content: counter(step);
+  font-family: Archivo, sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--ucd-corten);
+}
+.sub-menu--steps a > span { display: flex; flex-direction: column; gap: 2px; }
+
+/* City grid */
+.sub-menu--cities {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px 24px;
+}
+
+/* ---------- Feature cards ---------- */
+
+.mega-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--ucd-harbor);
+  color: #FFFFFF;
+  border-radius: 2px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.mega-card:hover { color: #FFFFFF; }
+
+.mega-card__img {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #1E425E;
+}
+
+.mega-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
+
+.mega-card:hover .mega-card__img img { transform: scale(1.04); }
+
+.mega-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 22px 22px;
+}
+
+.mega-card__title {
+  font-family: Archivo, sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.mega-card__text {
+  font-size: 14px;
+  line-height: 21px;
+  color: #DCE6EE;
+}
+
+.mega-card__price {
+  align-self: flex-start;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--ucd-sand);
+  color: var(--ucd-harbor);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.mega-card__cta {
+  margin-top: 4px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #FFFFFF;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.mega-card--oak { background: var(--ucd-oak); }
+
+/* Gallery thumbnails */
+.mega-tiles {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.mega-tile a {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--ucd-harbor);
+}
+
+.mega-tile__img {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #DCE3E5;
+}
+
+.mega-tile__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
+
+.mega-tile a:hover .mega-tile__img img { transform: scale(1.05); }
+.mega-tile a:hover { color: var(--ucd-corten); }
+
+.mega-footer {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--ucd-line);
+  font-size: 15px;
+  color: var(--ucd-muted);
+}
+
+.mega-footer a { font-weight: 600; }
+
+/* Dims the page while a panel is open on desktop */
+.mega-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(15, 27, 36, .35);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .18s ease, visibility 0s linear .18s;
+}
+
+.mega-scrim.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .18s ease, visibility 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mega-panel, .mega-scrim, .menu-trigger svg,
+  .mega-card__img img, .mega-tile__img img { transition: none; }
+}
+
+/* ==========================================================================
+   Mobile / tablet: drawer + accordions
+   ========================================================================== */
+
+@media (max-width: 1099px) {
+  :root { --ucd-header-h: 64px; }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 0 14px;
+    border: 1.5px solid var(--ucd-harbor);
+    border-radius: 6px;
+    background: none;
+    font: inherit;
+    font-weight: 600;
+    color: var(--ucd-harbor);
+    cursor: pointer;
+  }
+
+  .nav-toggle__close { display: none; }
+  .nav-toggle[aria-expanded="true"] .nav-toggle__open { display: none; }
+  .nav-toggle[aria-expanded="true"] .nav-toggle__close { display: block; }
+
+  .primary-nav {
+    position: fixed;
+    top: var(--ucd-header-h);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 8px max(20px, 4vw) 32px;
+    background: var(--ucd-surface);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s ease, visibility 0s linear .2s;
+  }
+
+  .primary-nav.is-open {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .2s ease, visibility 0s;
+  }
+
+  .primary-nav .menu {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .primary-nav .menu > .menu-item { border-bottom: 1px solid var(--ucd-line); }
+
+  .primary-nav .menu > .menu-item > a,
+  .menu-trigger {
+    width: 100%;
+    min-height: 56px;
+    padding: 0;
+    justify-content: space-between;
+    font-size: 18px;
+    box-shadow: none;
+  }
+
+  .primary-nav .menu > .menu-item > a:hover,
+  .menu-trigger:hover,
+  .menu-trigger[aria-expanded="true"] { box-shadow: none; }
+
+  .mega-panel {
+    position: static;
+    display: none;
+    border: 0;
+    box-shadow: none;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .menu-item.is-open > .mega-panel { display: block; }
+
+  .mega-panel__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 4px 0 24px;
+  }
+
+  /* The drawer already sits inside the page gutter */
+  .mega-panel .wrap { padding-left: 0; padding-right: 0; }
+
+  /* Keep the drawer quick to scan: drop feature imagery */
+  .mega-col--feature,
+  .mega-tile__img { display: none; }
+
+  .mega-tiles { grid-template-columns: 1fr; gap: 0; }
+  .mega-tile a { padding: 10px 0; font-size: 16px; }
+  .sub-menu--cities { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .header-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .header-actions .btn { width: 100%; }
+  .header-phone { text-align: center; padding: 8px 0; }
+  .mega-scrim { display: none; }
+
+  body.nav-open { overflow: hidden; }
+}
