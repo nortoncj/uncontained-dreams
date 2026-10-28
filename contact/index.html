@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>Contact UnContained Dreams · Texas-Built Container Homes</title>
+<meta name="description" content="Call, email, or message UnContained Dreams about a finished container home, financing, or help building your own. Talk to the builder directly.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="/contact/">
+<link rel="icon" href="../assets/brand/icon.png" sizes="any"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F1F3F2;color:#1B2429;font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:#14324A}a:hover{color:#B04E25}
+h1,h2,h3{font-family:"Archivo","Arial Narrow",Arial,sans-serif;text-wrap:balance;margin:0}
+p{margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,4vw);padding-right:max(20px,4vw);box-sizing:border-box}
+.media{position:relative;box-sizing:border-box;border:1.5px dashed #8FA0A6;background:#DCE3E5;color:#14324A;border-radius:2px;display:flex;flex-direction:column;justify-content:flex-end;gap:4px;padding:16px;overflow:hidden}
+.media.dark{background:#1E425E;border-color:#5C7D95;color:#F1F3F2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:6px;font-weight:600;font-size:16px;text-decoration:none;box-sizing:border-box}
+.btn.primary{background:#B04E25;color:#FFFFFF}
+.btn.primary:hover{background:#963F1C;color:#FFFFFF}
+.btn.ghost{border:1.5px solid currentColor;color:#14324A}
+.btn.ghost.light{color:#FFFFFF}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5A666C}
+.chip{display:inline-flex;align-items:center;padding:4px 12px;border-radius:999px;font-size:13px;font-weight:600}
+.field{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600;color:#1B2429}
+.field input,.field select{min-height:46px;border:1px solid #B9C4C8;border-radius:2px;padding:0 12px;font:inherit;font-weight:400;font-size:16px;background:#FFFFFF;color:#1B2429}
+a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible{outline:3px solid #B04E25;outline-offset:2px}
+.media.filled{border:0;padding:0;background:#1E425E}
+.media>img,.media>video,.media>a>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+/* Contact page */
+.page-h1{font-size:clamp(40px,6vw,60px);line-height:1;font-weight:800;letter-spacing:-.015em}
+.path-card{background:#FFFFFF;border:1px solid #D5DCDE;border-radius:2px;display:flex;flex-direction:column;overflow:hidden}
+.path-card__body{padding:24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.path-card__body .btn{margin-top:auto;align-self:flex-start}
+.field textarea{min-height:140px;border:1px solid #B9C4C8;border-radius:2px;padding:12px;font:inherit;font-weight:400;font-size:16px;line-height:24px;background:#FFFFFF;color:#1B2429;resize:vertical}
+.field .req{color:#B04E25}
+.field .help{font-size:13px;line-height:19px;font-weight:400;color:#5A666C}
+.field .err{font-size:14px;line-height:20px;font-weight:600;color:#A3321A}
+.field [aria-invalid="true"]{border-color:#A3321A;border-width:2px}
+.choice-row{display:flex;flex-wrap:wrap;gap:8px}
+.choice{position:relative}
+.choice input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.choice span{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1.5px solid #B9C4C8;border-radius:999px;background:#FFFFFF;color:#14324A;font-size:15px;font-weight:600}
+.choice input:checked+span{background:#14324A;border-color:#14324A;color:#FFFFFF}
+.choice input:focus-visible+span{outline:3px solid #B04E25;outline-offset:2px}
+.contact-list{margin:0;display:flex;flex-direction:column;gap:20px}
+.contact-list dt{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5A666C;margin-bottom:4px}
+.contact-list dd{margin:0;font-size:16px;line-height:24px}
+.contact-phone{font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-weight:800;font-size:30px;line-height:36px;color:#14324A;text-decoration:none}
+@media (max-width:560px){
+  #contact-form{grid-template-columns:minmax(0,1fr)!important;padding:24px 20px!important}
+  .shop-photo{display:none!important}
+}
+.form-alert{background:#FBEDE7;border-left:4px solid #A3321A;padding:14px 16px;font-size:15px;line-height:22px;color:#1B2429}
+</style>
+<link rel="stylesheet" href="../assets/css/mega-menu.css">
+<!-- Match name, phone and address exactly to the Google Business Profile. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "UnContained Dreams",
+  "url": "/",
+  "telephone": "[PHONE]",
+  "email": "[EMAIL]",
+  "address": { "@type": "PostalAddress", "streetAddress": "[STREET ADDRESS]", "addressLocality": "Sugar Land", "addressRegion": "TX", "postalCode": "[ZIP]", "addressCountry": "US" },
+  "openingHours": "[Mo-Fr 08:00-17:00]",
+  "areaServed": { "@type": "Country", "name": "United States" }
+}
+</script>
+</head>
+<body>
+<div style="display: flex; flex-direction: column; min-width: 0;">
+
+<!-- HEADER + MEGA MENU: reuse from index.html -->
+
+<main>
+
+<!-- HERO -->
+<section id="top" style="background: #14324A; color: #FFFFFF; padding-top: 88px; padding-bottom: 88px;">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 22px;">
+    <span class="eyebrow" style="color: #B7C8D6;">Contact</span>
+    <h1 class="page-h1" style="max-width: 16ch;">Talk to the person building your home.</h1>
+    <p style="font-size: 19px; line-height: 30px; color: #DCE6EE; max-width: 58ch;">No call center, no sales team. Call, email, or send a message and you'll hear back from us within [1 business day].</p>
+  </div>
+</section>
+
+<!-- WHAT DO YOU NEED? -->
+<section id="paths" style="padding-top: 72px; padding-bottom: 72px;">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 28px;">
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <span class="eyebrow">Skip the form</span>
+      <h2 style="font-size: 32px; line-height: 38px; font-weight: 800; color: #14324A;">What do you need?</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
+      <article class="path-card">
+        <div class="media filled" style="aspect-ratio: 16 / 9; border-radius: 0;"><img src="../assets/img/gallery/rising-sun-exterior-front-800.jpg" alt="" loading="lazy"></div>
+        <div class="path-card__body">
+          <h3 style="font-size: 20px; color: #14324A;">Buy a finished home</h3>
+          <p style="font-size: 15px; line-height: 24px; color: #5A666C;">See your price in about five minutes, then we'll call to go over it.</p>
+          <a class="btn primary" href="../#build">Build Your Home</a>
+        </div>
+      </article>
+      <article class="path-card">
+        <div class="media filled" style="aspect-ratio: 16 / 9; border-radius: 0;"><img src="../assets/img/gallery/rising-sun-living-room-800.jpg" alt="" loading="lazy"></div>
+        <div class="path-card__body">
+          <h3 style="font-size: 20px; color: #14324A;">Financing</h3>
+          <p style="font-size: 15px; line-height: 24px; color: #5A666C;">Apply online and a financing representative will reach out.</p>
+          <a class="btn ghost" href="../#financing">Apply for financing</a>
+        </div>
+      </article>
+      <article class="path-card">
+        <div class="media filled" style="aspect-ratio: 16 / 9; border-radius: 0;"><img src="../assets/img/gallery/build-wall-framing-outdoors-800.jpg" alt="" loading="lazy"></div>
+        <div class="path-card__body">
+          <h3 style="font-size: 20px; color: #14324A;">Help with my own build</h3>
+          <p style="font-size: 15px; line-height: 24px; color: #5A666C;">Free discovery call or a one-hour consultation.</p>
+          <a class="btn ghost" href="[BOOKING URL]">Book a call</a>
+        </div>
+      </article>
+      <article class="path-card">
+        <div class="media filled" style="aspect-ratio: 16 / 9; border-radius: 0;"><img src="../assets/img/gallery/build-cabinet-boxes-800.jpg" alt="" loading="lazy"></div>
+        <div class="path-card__body">
+          <h3 style="font-size: 20px; color: #14324A;">Building plans and course</h3>
+          <p style="font-size: 15px; line-height: 24px; color: #5A666C;">Get notified the day plans and the course launch.</p>
+          <a class="btn ghost" href="../plans/">Join the list</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT DETAILS + FORM -->
+<section id="message" style="background: #FFFFFF; padding-top: 96px; padding-bottom: 96px; border-top: 1px solid #D5DCDE; border-bottom: 1px solid #D5DCDE;">
+  <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start;">
+
+    <div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 32px;">
+      <h2 style="font-size: 28px; line-height: 34px; font-weight: 800; color: #14324A;">Reach us directly</h2>
+      <dl class="contact-list">
+        <div>
+          <dt>Phone</dt>
+          <!-- Plain tappable text, not a button -->
+          <dd><a class="contact-phone" href="tel:[PHONE]">[PHONE]</a><br><span style="color: #5A666C;">[Mon–Fri, X am–X pm Central]</span></dd>
+        </div>
+        <div><dt>Email</dt><dd><a href="mailto:[EMAIL]">[EMAIL]</a></dd></div>
+        <div><dt>Shop</dt><dd>[STREET ADDRESS]<br>Sugar Land, TX [ZIP]</dd></div>
+        <div><dt>Visits</dt><dd>[CONFIRM: Tour the shop or a model home by appointment / photo and video tours only.]</dd></div>
+        <!-- Only list accounts that are active.
+        <div><dt>Social</dt><dd style="display: flex; flex-wrap: wrap; gap: 8px 16px;"><a href="[INSTAGRAM URL]">Instagram</a><a href="[YOUTUBE URL]">YouTube</a><a href="[FACEBOOK URL]">Facebook</a><a href="[TIKTOK URL]">TikTok</a></dd></div> -->
+      </dl>
+      <figure class="shop-photo" style="margin: 0; display: flex; flex-direction: column; gap: 8px;">
+        <div class="media filled" style="aspect-ratio: 4 / 3;"><img src="../assets/img/gallery/build-tabletop-glue-up-800.jpg" alt="Walnut tabletop clamped during glue-up on the shop bench" loading="lazy"></div>
+        <figcaption style="font-size: 13px; line-height: 19px; color: #5A666C;">In the shop. The person who answers the phone is the one building your home.</figcaption>
+      </figure>
+    </div>
+
+    <!-- Point action at the form service (Formspree, Netlify Forms, etc.). JS posts it and sends people to thank-you/. -->
+    <form id="contact-form" action="[FORM ENDPOINT]" method="post" novalidate style="flex: 2 1 520px; min-width: 0; background: #F1F3F2; border: 1px solid #D5DCDE; border-radius: 2px; padding: 32px; box-sizing: border-box; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 16px;">
+      <h2 style="grid-column: 1 / -1; font-size: 28px; line-height: 34px; font-weight: 800; color: #14324A;">Send us a message</h2>
+      <p style="grid-column: 1 / -1; font-size: 14px; color: #5A666C;">Fields marked <span style="color: #B04E25;">*</span> are required.</p>
+
+      <div class="form-alert" id="form-alert" role="alert" hidden style="grid-column: 1 / -1;">Your message didn't go through. Try again, or call us at <a href="tel:[PHONE]">[PHONE]</a>.</div>
+
+      <div class="field">
+        <label for="c-first">First name <span class="req" aria-hidden="true">*</span></label>
+        <input id="c-first" name="first_name" type="text" autocomplete="given-name" required aria-describedby="c-first-err">
+        <span class="err" id="c-first-err" hidden>Add your name so we know who we're talking to.</span>
+      </div>
+      <div class="field">
+        <label for="c-last">Last name <span class="req" aria-hidden="true">*</span></label>
+        <input id="c-last" name="last_name" type="text" autocomplete="family-name" required aria-describedby="c-last-err">
+        <span class="err" id="c-last-err" hidden>Add your name so we know who we're talking to.</span>
+      </div>
+      <div class="field">
+        <label for="c-email">Email <span class="req" aria-hidden="true">*</span></label>
+        <input id="c-email" name="email" type="email" autocomplete="email" required aria-describedby="c-email-err">
+        <span class="err" id="c-email-err" hidden>That email doesn't look right. Check for typos.</span>
+      </div>
+      <div class="field">
+        <label for="c-phone">Phone</label>
+        <input id="c-phone" name="phone" type="tel" autocomplete="tel">
+      </div>
+      <div class="field" style="grid-column: 1 / -1;">
+        <label for="c-where">Where will the home go?</label>
+        <input id="c-where" name="location" type="text" placeholder="City, state" autocomplete="address-level2" aria-describedby="c-where-help">
+        <span class="help" id="c-where-help">Helps us check delivery and zoning before we call.</span>
+      </div>
+      <div class="field" style="grid-column: 1 / -1;">
+        <label for="c-topic">What can we help with? <span class="req" aria-hidden="true">*</span></label>
+        <select id="c-topic" name="topic" required aria-describedby="c-topic-err">
+          <option value="">Choose one</option>
+          <option value="buying">Buying a finished home</option>
+          <option value="financing">Financing</option>
+          <option value="diy-consultation">DIY consultation</option>
+          <option value="plans-course">Building plans or course</option>
+          <option value="other">Something else</option>
+        </select>
+        <span class="err" id="c-topic-err" hidden>Pick what you need help with so the right person calls you back.</span>
+      </div>
+      <div class="field" style="grid-column: 1 / -1;">
+        <label for="c-message">Message</label>
+        <textarea id="c-message" name="message" placeholder="Tell us about your project, your timeline, or any questions."></textarea>
+      </div>
+      <fieldset class="field" style="grid-column: 1 / -1; border: 0; padding: 0; margin: 0;">
+        <legend style="padding: 0; margin-bottom: 8px;">Best way to reach you</legend>
+        <div class="choice-row">
+          <label class="choice"><input type="radio" name="reach" value="call" checked><span>Call</span></label>
+          <label class="choice"><input type="radio" name="reach" value="text"><span>Text</span></label>
+          <label class="choice"><input type="radio" name="reach" value="email"><span>Email</span></label>
+        </div>
+      </fieldset>
+      <div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+        <button type="submit" class="btn primary" style="border: 0; cursor: pointer; font-family: inherit;">Send message</button>
+        <p style="font-size: 13px; line-height: 19px; color: #5A666C;">We only ask for contact info. Never your SSN or bank details.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER: reuse from index.html -->
+
+</div>
+
+<script>
+(function () {
+  var form = document.getElementById('contact-form');
+  var alertBox = document.getElementById('form-alert');
+  var submit = form.querySelector('button[type="submit"]');
+
+  var checks = [
+    { el: form.first_name, ok: function (v) { return v.trim() !== ''; } },
+    { el: form.last_name, ok: function (v) { return v.trim() !== ''; } },
+    { el: form.email, ok: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()); } },
+    { el: form.topic, ok: function (v) { return v !== ''; } }
+  ];
+
+  function setError(el, bad) {
+    el.setAttribute('aria-invalid', String(bad));
+    document.getElementById(el.id + '-err').hidden = !bad;
+  }
+
+  function validate() {
+    var firstBad = null;
+    checks.forEach(function (c) {
+      var bad = !c.ok(c.el.value);
+      setError(c.el, bad);
+      if (bad && !firstBad) firstBad = c.el;
+    });
+    if (firstBad) firstBad.focus();
+    return !firstBad;
+  }
+
+  // Clear an error as soon as the field is fixed.
+  checks.forEach(function (c) {
+    c.el.addEventListener(c.el.tagName === 'SELECT' ? 'change' : 'input', function () {
+      if (c.el.getAttribute('aria-invalid') === 'true' && c.ok(c.el.value)) setError(c.el, false);
+    });
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    alertBox.hidden = true;
+    if (!validate()) return;
+    submit.disabled = true;
+    submit.textContent = 'Sending…';
+    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+      .then(function (res) {
+        if (!res.ok) throw new Error(res.status);
+        var params = new URLSearchParams({ topic: form.topic.value, reach: form.reach.value });
+        location.href = 'thank-you/?' + params.toString();
+      })
+      .catch(function () {
+        alertBox.hidden = false;
+        alertBox.scrollIntoView({ block: 'center' });
+        submit.disabled = false;
+        submit.textContent = 'Send message';
+      });
+  });
+})();
+</script>
+<script src="../assets/js/mega-menu.js" defer></script>
+</body></html>
