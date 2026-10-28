@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>Review Your Build · UnContained Dreams</title>
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../../assets/brand/icon.png" sizes="any"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F1F3F2;color:#1B2429;font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:#14324A}a:hover{color:#B04E25}
+h1,h2,h3{font-family:"Archivo","Arial Narrow",Arial,sans-serif;text-wrap:balance;margin:0}
+p{margin:0}
+[hidden]{display:none!important}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,4vw);padding-right:max(20px,4vw);box-sizing:border-box}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:6px;font-weight:600;font-size:16px;text-decoration:none;box-sizing:border-box;border:0;cursor:pointer;font-family:inherit}
+.btn.primary{background:#B04E25;color:#FFFFFF}
+.btn.primary:hover{background:#963F1C;color:#FFFFFF}
+.btn.ghost{background:transparent;border:1.5px solid currentColor;color:#14324A}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5A666C}
+.field{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600;color:#1B2429}
+.field input,.field select{min-height:46px;border:1px solid #B9C4C8;border-radius:2px;padding:0 12px;font:inherit;font-weight:400;font-size:16px;background:#FFFFFF;color:#1B2429}
+a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible{outline:3px solid #B04E25;outline-offset:2px}
+/* Review page */
+.page-h1{font-size:clamp(36px,5vw,52px);line-height:1.04;font-weight:800;letter-spacing:-.015em}
+.review-layout{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px;align-items:start;padding-top:48px;padding-bottom:96px}
+@media (max-width:960px){.review-layout{grid-template-columns:minmax(0,1fr)}}
+.rv{background:#FFFFFF;border:1px solid #D5DCDE;border-radius:2px;padding:24px;display:flex;flex-direction:column;gap:4px}
+.rv-block{padding:16px 0;border-bottom:1px solid #D5DCDE;display:flex;flex-direction:column;gap:8px}
+.rv-block:first-of-type{padding-top:8px}
+.rv-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.rv-head h3{font-size:17px;line-height:22px;color:#14324A}
+.rv-head a{font-size:14px;font-weight:600}
+.rv-lines{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:20px}
+.rv-lines li{display:flex;justify-content:space-between;gap:12px}
+.rv-lines li span:last-child{flex:none;font-weight:600;text-align:right}
+.is-included{color:#2F5D47}
+.is-quoted{color:#5A666C;font-weight:500!important}
+.rv-total{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:16px}
+.rv-total strong{font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-size:30px;line-height:34px;font-weight:800;color:#14324A}
+.note{font-size:13px;line-height:19px;color:#5A666C}
+#quote-form{background:#FFFFFF;border:1px solid #D5DCDE;border-radius:2px;padding:32px;box-sizing:border-box;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px}
+#quote-form .full{grid-column:1 / -1}
+@media (max-width:560px){#quote-form{grid-template-columns:minmax(0,1fr);padding:24px 20px}}
+.field textarea{min-height:110px;border:1px solid #B9C4C8;border-radius:2px;padding:12px;font:inherit;font-weight:400;font-size:16px;line-height:24px;background:#FFFFFF;color:#1B2429;resize:vertical}
+.field .req{color:#B04E25}
+.err{font-size:14px;line-height:20px;font-weight:600;color:#A3321A}
+[aria-invalid="true"]{border-color:#A3321A!important;border-width:2px!important}
+.choice-row{display:flex;flex-wrap:wrap;gap:8px}
+.choice{position:relative}
+.choice input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.choice span{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1.5px solid #B9C4C8;border-radius:999px;background:#FFFFFF;color:#14324A;font-size:15px;font-weight:600}
+.choice input:checked+span{background:#14324A;border-color:#14324A;color:#FFFFFF}
+.choice input:focus-visible+span{outline:3px solid #B04E25;outline-offset:2px}
+.check{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:24px;font-weight:600;cursor:pointer}
+.check input{width:20px;height:20px;margin:2px 0 0;flex:none;accent-color:#14324A}
+.check small{display:block;font-size:14px;line-height:20px;font-weight:400;color:#5A666C}
+.form-alert{background:#FBEDE7;border-left:4px solid #A3321A;padding:14px 16px;font-size:15px;line-height:22px}
+</style>
+<link rel="stylesheet" href="../../assets/css/mega-menu.css">
+</head>
+<body>
+<div style="display: flex; flex-direction: column; min-width: 0;">
+
+<!-- HEADER + MEGA MENU: reuse from index.html -->
+
+<main>
+
+<section style="background: #14324A; color: #FFFFFF; padding-top: 64px; padding-bottom: 56px;">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 16px;">
+    <span class="eyebrow" style="color: #B7C8D6;">Step 6 · Review</span>
+    <h1 class="page-h1">Here's your build.</h1>
+    <p style="font-size: 18px; line-height: 28px; color: #DCE6EE; max-width: 62ch;">Check everything, then send it to us. No payment today. We'll call to go over it and send you a written quote.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="form-alert" id="load-error" role="alert" hidden style="margin-top: 48px;">We couldn't load prices right now. Refresh the page, or call <a href="tel:[PHONE]">[PHONE]</a> for a quote.</div>
+  <div class="form-alert" id="no-build" hidden style="margin-top: 48px; border-left-color: #14324A; background: #FFFFFF;">There's no build to review yet. <a href="../">Start your build</a> and it takes about five minutes.</div>
+
+  <div class="review-layout" id="review" hidden>
+    <!-- SUMMARY -->
+    <section class="rv" aria-labelledby="h-summary">
+      <h2 id="h-summary" style="font-size: 24px; line-height: 30px; font-weight: 800; color: #14324A;">Your build</h2>
+      <div id="rv-blocks"></div>
+      <div class="rv-total"><span style="font-weight: 600;">Estimated total</span><strong id="rv-total">$0</strong></div>
+      <p class="note" id="rv-quoted" hidden></p>
+      <p class="note" style="margin-top: 8px;">Final price is confirmed in your written quote. Site prep, foundation, and permits aren't included [CONFIRM].</p>
+    </section>
+
+    <!-- QUOTE FORM -->
+    <form id="quote-form" novalidate>
+      <h2 class="full" style="font-size: 28px; line-height: 34px; font-weight: 800; color: #14324A;">Where should we send your quote?</h2>
+      <p class="full note" style="font-size: 14px;">Fields marked <span style="color: #B04E25;">*</span> are required.</p>
+      <div class="form-alert full" id="send-error" role="alert" hidden>Your build didn't go through. Try again, or call us at <a href="tel:[PHONE]">[PHONE]</a>.</div>
+
+      <div class="field">
+        <label for="q-first">First name <span class="req" aria-hidden="true">*</span></label>
+        <input id="q-first" name="first_name" type="text" autocomplete="given-name" required aria-describedby="q-first-err">
+        <span class="err" id="q-first-err" hidden>Add your name so we know who we're talking to.</span>
+      </div>
+      <div class="field">
+        <label for="q-last">Last name <span class="req" aria-hidden="true">*</span></label>
+        <input id="q-last" name="last_name" type="text" autocomplete="family-name" required aria-describedby="q-last-err">
+        <span class="err" id="q-last-err" hidden>Add your name so we know who we're talking to.</span>
+      </div>
+      <div class="field">
+        <label for="q-email">Email <span class="req" aria-hidden="true">*</span></label>
+        <input id="q-email" name="email" type="email" autocomplete="email" required aria-describedby="q-email-err">
+        <span class="err" id="q-email-err" hidden>That email doesn't look right. Check for typos.</span>
+      </div>
+      <div class="field">
+        <label for="q-phone">Phone <span class="req" aria-hidden="true">*</span></label>
+        <input id="q-phone" name="phone" type="tel" autocomplete="tel" required aria-describedby="q-phone-err">
+        <span class="err" id="q-phone-err" hidden>Add a phone number so we can call you about your build.</span>
+      </div>
+      <div class="field full">
+        <label for="q-city">Delivery city and state <span class="req" aria-hidden="true">*</span></label>
+        <input id="q-city" name="delivery_city_state" type="text" placeholder="City, state" autocomplete="address-level2" required aria-describedby="q-city-err">
+        <span class="err" id="q-city-err" hidden>Add the city and state where the home will go.</span>
+      </div>
+      <div class="field full">
+        <label for="q-when">When do you want to move in?</label>
+        <select id="q-when" name="move_in">
+          <option value="">Choose one</option>
+          <option>Within 6 months</option>
+          <option>6 to 12 months</option>
+          <option>More than a year</option>
+          <option>Just exploring</option>
+        </select>
+      </div>
+      <fieldset class="field full" style="border: 0; padding: 0; margin: 0;">
+        <legend style="padding: 0; margin-bottom: 8px;">Do you have land for the home?</legend>
+        <div class="choice-row">
+          <label class="choice"><input type="radio" name="land" value="Yes"><span>Yes</span></label>
+          <label class="choice"><input type="radio" name="land" value="Buying soon"><span>Buying soon</span></label>
+          <label class="choice"><input type="radio" name="land" value="Not yet"><span>Not yet</span></label>
+        </div>
+      </fieldset>
+      <label class="check full"><input type="checkbox" name="financing" value="yes" id="q-financing"><span>I'm interested in financing.<small>A financing representative will reach out separately.</small></span></label>
+      <div class="field full">
+        <label for="q-notes">Anything else we should know?</label>
+        <textarea id="q-notes" name="notes" placeholder="HOA rules, site details, questions."></textarea>
+      </div>
+      <div class="full" style="display: flex; flex-direction: column; gap: 6px;">
+        <label class="check"><input type="checkbox" name="contact_consent" value="yes" id="q-consent" required aria-describedby="q-consent-err"><span>You can call or text me about my build. <span style="color: #B04E25;" aria-hidden="true">*</span><small>Message and data rates may apply. Reply STOP to opt out of texts.</small></span></label>
+        <span class="err" id="q-consent-err" hidden>Check this box so we can call or text you about your build.</span>
+      </div>
+      <div class="full" style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+        <button type="submit" class="btn primary">Send my build</button>
+        <p class="note">No payment today. Your price is confirmed in a written quote before you sign anything. We only ask for contact info. Never your SSN or bank details.</p>
+      </div>
+    </form>
+  </div>
+</div>
+
+</main>
+
+<!-- FOOTER: reuse from index.html -->
+
+</div>
+
+<script src="../../assets/js/build-config.js"></script>
+<script>
+(function () {
+  var B = window.UCDBuild;
+  var cfg = B.fromUrl();
+  var data = null;
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { var d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; };
+  var BLOCKS = [
+    { step: 'model', title: 'Model' },
+    { step: 'exterior', title: 'Exterior' },
+    { step: 'interior', title: 'Interior' },
+    { step: 'upgrades', title: 'Upgrades' },
+    { step: 'delivery', title: 'Delivery' }
+  ];
+
+  function priceCell(it) {
+    if (it.price === undefined) return '<span class="is-quoted">Not set</span>';
+    if (it.price === null) return '<span class="is-quoted">' + (it.delivery ? 'Quoted separately' : 'Quoted') + '</span>';
+    if (it.price === 0) return '<span class="is-included">Included</span>';
+    return '<span>' + (it.label.indexOf(', base') !== -1 ? B.money(it.price) : '+' + B.money(it.price)) + '</span>';
+  }
+
+  function render() {
+    var res = B.lines(data, cfg);
+    $('rv-blocks').innerHTML = BLOCKS.map(function (b) {
+      var items = res.items.filter(function (it) { return it.step === b.step; });
+      var rows = items.length ? items.map(function (it) {
+        return '<li><span>' + esc(it.label) + '</span>' + priceCell(it) + '</li>';
+      }).join('') : '<li><span style="color: #5A666C;">None added</span></li>';
+      if (b.step === 'delivery' && cfg.nosite) rows += '<li><span>No site yet</span><span></span></li>';
+      return '<div class="rv-block"><div class="rv-head"><h3>' + b.title + '</h3>' +
+        '<a href="../' + esc(location.search) + '#' + b.step + '" aria-label="Edit ' + b.title.toLowerCase() + '">Edit</a></div>' +
+        '<ul class="rv-lines">' + rows + '</ul></div>';
+    }).join('');
+    $('rv-total').textContent = B.money(res.total);
+    $('rv-quoted').hidden = !res.quoted;
+    $('rv-quoted').textContent = 'Plus ' + res.quoted + ' quoted item' + (res.quoted === 1 ? '' : 's') + ', priced in your written quote.';
+    if (cfg.loc && !$('q-city').value) $('q-city').value = cfg.loc;
+    return res;
+  }
+
+  var form = $('quote-form');
+  var checks = [
+    { el: form.first_name, ok: function (el) { return el.value.trim() !== ''; } },
+    { el: form.last_name, ok: function (el) { return el.value.trim() !== ''; } },
+    { el: form.email, ok: function (el) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(el.value.trim()); } },
+    { el: form.phone, ok: function (el) { return el.value.replace(/\D/g, '').length >= 10; } },
+    { el: form.delivery_city_state, ok: function (el) { return el.value.trim() !== ''; } },
+    { el: form.contact_consent, ok: function (el) { return el.checked; } }
+  ];
+
+  function setError(el, bad) {
+    el.setAttribute('aria-invalid', String(bad));
+    $(el.id + '-err').hidden = !bad;
+  }
+
+  checks.forEach(function (c) {
+    c.el.addEventListener(c.el.type === 'checkbox' ? 'change' : 'input', function () {
+      if (c.el.getAttribute('aria-invalid') === 'true' && c.ok(c.el)) setError(c.el, false);
+    });
+  });
+
+  // Fallback build number when the form service doesn't return one.
+  function buildNumber() {
+    return 'UCD-' + Date.now().toString(36).toUpperCase().slice(-6);
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    $('send-error').hidden = true;
+    var firstBad = null;
+    checks.forEach(function (c) {
+      var bad = !c.ok(c.el);
+      setError(c.el, bad);
+      if (bad && !firstBad) firstBad = c.el;
+    });
+    if (firstBad) { firstBad.focus(); return; }
+
+    var res = B.lines(data, cfg);
+    var body = new FormData(form);
+    body.append('model', res.model.name);
+    body.append('estimated_total', B.money(res.total));
+    body.append('quoted_items', String(res.quoted));
+    body.append('build_summary', B.summaryText(data, cfg));
+    body.append('build_link', location.href.replace('/review/', '/').split('#')[0]);
+    body.append('build_config', JSON.stringify(cfg));
+
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    fetch(data.endpoints.submitBuild, { method: 'POST', body: body, headers: { Accept: 'application/json' } })
+      .then(function (r) {
+        if (!r.ok) throw new Error(r.status);
+        return r.json().catch(function () { return {}; });
+      })
+      .then(function (json) {
+        var number = json.buildNumber || buildNumber();
+        // Conversion event with the model and total. Swap for the site's analytics call.
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'build_submitted', model: res.model.name, total: res.total, quoted_items: res.quoted });
+        // Kept out of the URL so the email address doesn't land in logs or analytics.
+        try {
+          sessionStorage.setItem('ucd-build', JSON.stringify({ number: number, email: form.email.value.trim(), financing: form.financing.checked }));
+        } catch (err) { /* confirmation page falls back to generic copy */ }
+        location.href = '../../order/confirmation/';
+      })
+      .catch(function () {
+        $('send-error').hidden = false;
+        $('send-error').scrollIntoView({ block: 'center' });
+        btn.disabled = false;
+        btn.textContent = 'Send my build';
+      });
+  });
+
+  B.load('../../').then(function (d) {
+    data = d;
+    B.normalize(data, cfg);
+    if (!cfg.m) { $('no-build').hidden = false; return; }
+    render();
+    $('review').hidden = false;
+  }).catch(function () {
+    $('load-error').hidden = false;
+  });
+})();
+</script>
+<script src="../../assets/js/mega-menu.js" defer></script>
+</body></html>

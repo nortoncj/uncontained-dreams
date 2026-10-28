@@ -1,0 +1,6 @@
+User-agent: *
+# Saved builds (/build/?config=...) are one person's choices, not pages to index.
+Disallow: /*?config=
+Disallow: /build/review/
+Disallow: /order/
+Disallow: /contact/thank-you/

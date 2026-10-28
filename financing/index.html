@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>Container Home Financing · UnContained Dreams</title>
+<meta name="description" content="Apply for financing on a finished, furnished container home. A financing representative reviews every request and contacts you to go over your options.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="/financing/">
+<link rel="icon" href="../assets/brand/icon.png" sizes="any"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F1F3F2;color:#1B2429;font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:#14324A}a:hover{color:#B04E25}
+h1,h2,h3{font-family:"Archivo","Arial Narrow",Arial,sans-serif;text-wrap:balance;margin:0}
+p{margin:0}
+[hidden]{display:none!important}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,4vw);padding-right:max(20px,4vw);box-sizing:border-box}
+.media{position:relative;box-sizing:border-box;border:1.5px dashed #8FA0A6;background:#DCE3E5;color:#14324A;border-radius:2px;display:flex;flex-direction:column;justify-content:flex-end;gap:4px;padding:16px;overflow:hidden}
+.media.dark{background:#1E425E;border-color:#5C7D95;color:#F1F3F2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:6px;font-weight:600;font-size:16px;text-decoration:none;box-sizing:border-box}
+.btn.primary{background:#B04E25;color:#FFFFFF}
+.btn.primary:hover{background:#963F1C;color:#FFFFFF}
+.btn.ghost{border:1.5px solid currentColor;color:#14324A}
+.btn.ghost.light{color:#FFFFFF}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5A666C}
+.chip{display:inline-flex;align-items:center;padding:4px 12px;border-radius:999px;font-size:13px;font-weight:600}
+.field{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600;color:#1B2429}
+.field input,.field select{min-height:46px;border:1px solid #B9C4C8;border-radius:2px;padding:0 12px;font:inherit;font-weight:400;font-size:16px;background:#FFFFFF;color:#1B2429}
+a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{outline:3px solid #B04E25;outline-offset:2px}
+.media.filled{border:0;padding:0;background:#1E425E}
+.media>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+/* Financing page */
+.page-h1{font-size:clamp(40px,6vw,60px);line-height:1;font-weight:800;letter-spacing:-.015em}
+.field .req{color:#B04E25}
+.field .err{font-size:14px;line-height:20px;font-weight:600;color:#A3321A}
+.field [aria-invalid="true"]{border-color:#A3321A;border-width:2px}
+.form-alert{background:#FBEDE7;border-left:4px solid #A3321A;padding:14px 16px;font-size:15px;line-height:22px;color:#1B2429}
+#fin-form{background:#FFFFFF;border:1px solid #D5DCDE;border-radius:2px;padding:32px;box-sizing:border-box;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px}
+#fin-form .full{grid-column:1 / -1}
+@media (max-width:560px){#fin-form{grid-template-columns:minmax(0,1fr);padding:24px 20px}}
+.build-chip{background:#EEF3F6;border-left:4px solid #14324A;padding:12px 16px;font-size:15px;line-height:22px}
+.fin-success{background:#FFFFFF;border:1px solid #D5DCDE;border-top:4px solid #2F5D47;border-radius:2px;padding:32px;display:flex;flex-direction:column;gap:16px}
+.fin-success:focus{outline:none}
+</style>
+<link rel="stylesheet" href="../assets/css/mega-menu.css">
+</head>
+<body>
+<div style="display: flex; flex-direction: column; min-width: 0;">
+
+<!-- HEADER + MEGA MENU: reuse from index.html -->
+
+<main>
+
+<!--
+  LATER · automated portal. Swap in only once the portal gives decisions on its own.
+  Headline: See your monthly payment in minutes.
+  Body: Apply online and get a decision in minutes. Checking your rate won't affect your credit score.
+  Button: Check my rate
+  Only claim "won't affect your credit" if the lender confirms a soft pull.
+  Drop the "never asks for your SSN" lines at that point too, because a real loan application will.
+-->
+
+<!-- HERO -->
+<section id="top" style="background: #14324A; color: #FFFFFF; padding-top: 88px; padding-bottom: 88px;">
+  <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center;">
+    <div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 22px;">
+      <span class="eyebrow" style="color: #B7C8D6;">Financing</span>
+      <h1 class="page-h1">See your financing options.</h1>
+      <p style="font-size: 19px; line-height: 30px; color: #DCE6EE; max-width: 56ch;">Tell us about yourself and the home you want. A financing representative will review it and contact you within [1–2 business days] to talk through what you qualify for.</p>
+      <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; font-size: 17px; line-height: 26px; color: #DCE6EE;">
+        <li style="display: flex; gap: 12px;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FB89A" stroke-width="2.2" stroke-linecap="square" style="flex: none; margin-top: 2px;"><path d="M4 12l5 5L20 6"></path></svg>A real person reviews every request</li>
+        <li style="display: flex; gap: 12px;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FB89A" stroke-width="2.2" stroke-linecap="square" style="flex: none; margin-top: 2px;"><path d="M4 12l5 5L20 6"></path></svg>This form never asks for your SSN or bank details</li>
+        <li style="display: flex; gap: 12px;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FB89A" stroke-width="2.2" stroke-linecap="square" style="flex: none; margin-top: 2px;"><path d="M4 12l5 5L20 6"></path></svg>No obligation, just a conversation about your options</li>
+      </ul>
+      <a class="btn primary" href="#apply" style="width: max-content;">Apply for financing</a>
+    </div>
+    <div class="media dark filled" style="flex: 1 1 380px; min-width: 0; aspect-ratio: 4 / 5; max-width: 100%;"><img src="../assets/img/gallery/rising-sun-living-room-glass-doors-1600.jpg" alt="The Rising Sun living room with sliding glass doors, walnut console table, and wall-mounted TV" fetchpriority="high"></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS + FORM -->
+<section id="apply" style="padding-top: 96px; padding-bottom: 96px; scroll-margin-top: var(--ucd-header-h, 76px);">
+  <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start;">
+    <div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 24px;">
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span class="eyebrow">How it works</span>
+        <h2 style="font-size: 36px; line-height: 40px; font-weight: 800; color: #14324A;">Three steps, and a person at every one.</h2>
+      </div>
+      <ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px;">
+        <li style="background: #FFFFFF; border: 1px solid #D5DCDE; border-radius: 2px; padding: 20px 24px; display: flex; gap: 16px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 28px; line-height: 28px; color: #2F5D47;">1</span><p style="font-size: 17px; line-height: 26px;">Send your info and the home you're interested in.</p></li>
+        <li style="background: #FFFFFF; border: 1px solid #D5DCDE; border-radius: 2px; padding: 20px 24px; display: flex; gap: 16px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 28px; line-height: 28px; color: #2F5D47;">2</span><p style="font-size: 17px; line-height: 26px;">A financing representative reviews it and reaches out.</p></li>
+        <li style="background: #FFFFFF; border: 1px solid #D5DCDE; border-radius: 2px; padding: 20px 24px; display: flex; gap: 16px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 28px; line-height: 28px; color: #2F5D47;">3</span><p style="font-size: 17px; line-height: 26px;">Go over your options together and pick what works.</p></li>
+      </ol>
+      <p style="font-size: 15px; line-height: 24px; color: #5A666C;">Haven't picked your options yet? <a href="../build/" style="font-weight: 600;">Build your home</a> first and your estimated total comes with your request.</p>
+    </div>
+
+    <div style="flex: 1.4 1 480px; min-width: 0;">
+      <!-- Point action at the form service. The financing agent should receive these directly. -->
+      <form id="fin-form" action="[FINANCING FORM ENDPOINT]" method="post" novalidate>
+        <h2 class="full" style="font-size: 28px; line-height: 34px; font-weight: 800; color: #14324A;">Apply for financing</h2>
+        <p class="full" style="font-size: 14px; color: #5A666C;">Fields marked <span style="color: #B04E25;">*</span> are required.</p>
+        <div class="build-chip full" id="build-chip" hidden></div>
+        <div class="form-alert full" id="send-error" role="alert" hidden>Your request didn't go through. Try again, or call us at <a href="tel:[PHONE]">[PHONE]</a>.</div>
+
+        <div class="field">
+          <label for="f-first">First name <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-first" name="first_name" type="text" autocomplete="given-name" required aria-describedby="f-first-err">
+          <span class="err" id="f-first-err" hidden>Add your name so we know who we're talking to.</span>
+        </div>
+        <div class="field">
+          <label for="f-last">Last name <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-last" name="last_name" type="text" autocomplete="family-name" required aria-describedby="f-last-err">
+          <span class="err" id="f-last-err" hidden>Add your name so we know who we're talking to.</span>
+        </div>
+        <div class="field full">
+          <label for="f-email">Email <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="f-email-err">
+          <span class="err" id="f-email-err" hidden>That email doesn't look right. Check for typos.</span>
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel" required aria-describedby="f-phone-err">
+          <span class="err" id="f-phone-err" hidden>Add a phone number so a financing representative can reach you.</span>
+        </div>
+        <div class="field">
+          <label for="f-zip">ZIP code <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" required aria-describedby="f-zip-err">
+          <span class="err" id="f-zip-err" hidden>Add the 5-digit ZIP code where the home will go.</span>
+        </div>
+        <div class="field full">
+          <label for="f-home">Which home?</label>
+          <select id="f-home" name="home">
+            <option>The Rising Sun</option>
+            <option>A custom build</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="full" style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+          <button type="submit" class="btn primary" style="border: 0; cursor: pointer; font-family: inherit;">Apply for financing</button>
+          <p style="font-size: 13px; line-height: 19px; color: #5A666C;">Submitting doesn't commit you to anything. Financing is arranged through [FINANCING AGENT / LENDER]. UnContained Dreams does not make credit decisions.</p>
+        </div>
+      </form>
+
+      <div class="fin-success" id="fin-success" role="status" tabindex="-1" hidden>
+        <svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2F5D47" stroke-width="2" stroke-linecap="square"><path d="M4 12l5 5L20 6"></path></svg>
+        <h2 style="font-size: 28px; line-height: 34px; font-weight: 800; color: #14324A;">Got it.</h2>
+        <p style="font-size: 17px; line-height: 28px;">A financing representative will call or email you within [1–2 business days].</p>
+        <p style="font-size: 15px; line-height: 24px; color: #5A666C;">While you wait: <a href="../build/">build your home</a>, <a href="../how-it-works/">see how it works</a>, or <a href="../faq/">read the FAQ</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER: reuse from index.html -->
+
+</div>
+
+<script src="../assets/js/build-config.js"></script>
+<script>
+(function () {
+  var B = window.UCDBuild;
+  var form = document.getElementById('fin-form');
+  var $ = function (id) { return document.getElementById(id); };
+  var build = null;
+
+  // Arriving from /build/ with ?config=: show the build and send it along.
+  var cfg = B.fromUrl();
+  if (cfg.m) {
+    B.load('../').then(function (data) {
+      B.normalize(data, cfg);
+      var res = B.lines(data, cfg);
+      if (!res.model) return;
+      build = { model: res.model.name, total: res.total, quoted: res.quoted, summary: B.summaryText(data, cfg) };
+      $('build-chip').textContent = 'Your build: ' + res.model.name + ', estimated ' + B.money(res.total) +
+        (res.quoted ? ' plus ' + res.quoted + ' quoted item' + (res.quoted === 1 ? '' : 's') : '') + '. We\'ll send it with your request.';
+      $('build-chip').hidden = false;
+      var opt = Array.prototype.filter.call(form.home.options, function (o) { return o.value === res.model.name; })[0];
+      if (opt) form.home.value = opt.value;
+      if (cfg.z && !form.zip.value) form.zip.value = cfg.z;
+    }).catch(function () { /* the form works without the build */ });
+  }
+
+  var checks = [
+    { el: form.first_name, ok: function (v) { return v.trim() !== ''; } },
+    { el: form.last_name, ok: function (v) { return v.trim() !== ''; } },
+    { el: form.email, ok: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()); } },
+    { el: form.phone, ok: function (v) { return v.replace(/\D/g, '').length >= 10; } },
+    { el: form.zip, ok: function (v) { return /^\d{5}$/.test(v.trim()); } }
+  ];
+
+  function setError(el, bad) {
+    el.setAttribute('aria-invalid', String(bad));
+    $(el.id + '-err').hidden = !bad;
+  }
+
+  checks.forEach(function (c) {
+    c.el.addEventListener('input', function () {
+      if (c.el.getAttribute('aria-invalid') === 'true' && c.ok(c.el.value)) setError(c.el, false);
+    });
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    $('send-error').hidden = true;
+    var firstBad = null;
+    checks.forEach(function (c) {
+      var bad = !c.ok(c.el.value);
+      setError(c.el, bad);
+      if (bad && !firstBad) firstBad = c.el;
+    });
+    if (firstBad) { firstBad.focus(); return; }
+
+    var body = new FormData(form);
+    if (build) {
+      body.append('build_model', build.model);
+      body.append('build_estimated_total', B.money(build.total));
+      body.append('build_summary', build.summary);
+    }
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    fetch(form.action, { method: 'POST', body: body, headers: { Accept: 'application/json' } })
+      .then(function (res) {
+        if (!res.ok) throw new Error(res.status);
+        // Conversion event. Swap for the site's analytics call.
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'financing_submitted', home: form.home.value, from_build: !!build });
+        form.hidden = true;
+        $('fin-success').hidden = false;
+        $('fin-success').focus();
+      })
+      .catch(function () {
+        $('send-error').hidden = false;
+        $('send-error').scrollIntoView({ block: 'center' });
+        btn.disabled = false;
+        btn.textContent = 'Apply for financing';
+      });
+  });
+})();
+</script>
+<script src="../assets/js/mega-menu.js" defer></script>
+</body></html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>Your Build Is In · UnContained Dreams</title>
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../../assets/brand/icon.png" sizes="any"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F1F3F2;color:#1B2429;font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:#14324A}a:hover{color:#B04E25}
+h1,h2,h3{font-family:"Archivo","Arial Narrow",Arial,sans-serif;text-wrap:balance;margin:0}
+p{margin:0}
+[hidden]{display:none!important}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,4vw);padding-right:max(20px,4vw);box-sizing:border-box}
+.media{position:relative;box-sizing:border-box;border:0;padding:0;background:#1E425E;border-radius:2px;overflow:hidden}
+.media>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5A666C}
+.chip{display:inline-flex;align-items:center;padding:4px 12px;border-radius:999px;font-size:13px;font-weight:600}
+a:focus-visible{outline:3px solid #B04E25;outline-offset:2px}
+.page-h1{font-size:clamp(36px,5vw,52px);line-height:1.04;font-weight:800;letter-spacing:-.015em}
+.next-card{background:#FFFFFF;border:1px solid #D5DCDE;border-radius:2px;display:flex;flex-direction:column;overflow:hidden;text-decoration:none;color:#14324A}
+.next-card:hover{border-color:#14324A;color:#14324A}
+.next-card span{padding:16px 20px;font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-weight:700;font-size:18px}
+</style>
+<link rel="stylesheet" href="../../assets/css/mega-menu.css">
+</head>
+<body>
+<div style="display: flex; flex-direction: column; min-width: 0;">
+
+<!-- HEADER + MEGA MENU: reuse from index.html -->
+
+<main>
+
+<section style="background: #14324A; color: #FFFFFF; padding-top: 88px; padding-bottom: 88px;">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 20px;">
+    <svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#7FB89A" stroke-width="2" stroke-linecap="square"><path d="M4 12l5 5L20 6"></path></svg>
+    <h1 class="page-h1" style="max-width: 18ch;">Your build is in. Here's what happens next.</h1>
+    <p id="build-line" style="font-size: 18px; line-height: 28px; color: #DCE6EE;" hidden>
+      <span class="chip" style="background: #E9B872; color: #14324A; font-size: 15px; padding: 6px 14px; margin-right: 8px;">Build #<span id="build-number"></span></span>
+      We emailed a copy to <strong id="build-email" style="color: #FFFFFF;"></strong>.
+    </p>
+  </div>
+</section>
+
+<section style="padding-top: 72px; padding-bottom: 72px;">
+  <div class="wrap"><div style="display: flex; flex-direction: column; gap: 24px; max-width: 760px;">
+    <ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px;">
+      <li style="background: #FFFFFF; border: 1px solid #D5DCDE; border-radius: 2px; padding: 20px 24px; display: flex; gap: 16px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 28px; line-height: 28px; color: #B04E25;">1</span><p style="font-size: 17px; line-height: 26px;">We call you within [1 business day] to go over your build and delivery.</p></li>
+      <li style="background: #FFFFFF; border: 1px solid #D5DCDE; border-radius: 2px; padding: 20px 24px; display: flex; gap: 16px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 28px; line-height: 28px; color: #B04E25;">2</span><p style="font-size: 17px; line-height: 26px;">You get a written quote with every cost, including delivery past 1,000 miles if it applies.</p></li>
+      <li style="background: #FFFFFF; border: 1px solid #D5DCDE; border-radius: 2px; padding: 20px 24px; display: flex; gap: 16px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 28px; line-height: 28px; color: #B04E25;">3</span><p style="font-size: 17px; line-height: 26px;">You sign and pay the deposit to lock in your build slot. Only then does anything get charged.</p></li>
+    </ol>
+    <p id="financing-line" hidden style="background: #FFFFFF; border: 1px solid #D5DCDE; border-left: 4px solid #2F5D47; padding: 16px 20px; font-size: 16px; line-height: 24px;">A financing representative will contact you within [1–2 business days].</p>
+  </div></div>
+</section>
+
+<section style="background: #FFFFFF; padding-top: 72px; padding-bottom: 96px; border-top: 1px solid #D5DCDE;">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 24px;">
+    <span class="eyebrow">While you wait</span>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+      <a class="next-card" href="../../how-it-works/#permits"><div class="media" style="aspect-ratio: 16 / 9; border-radius: 0;"><img src="../../assets/img/gallery/delivery-site-aerial-800.jpg" alt="" loading="lazy"></div><span>Check your local zoning</span></a>
+      <a class="next-card" href="../../faq/"><div class="media" style="aspect-ratio: 16 / 9; border-radius: 0;"><img src="../../assets/img/gallery/rising-sun-exterior-corner-800.jpg" alt="" loading="lazy"></div><span>Read the FAQ</span></a>
+      <a class="next-card" href="../../how-it-works/"><div class="media" style="aspect-ratio: 16 / 9; border-radius: 0;"><img src="../../assets/img/gallery/delivery-home-on-flatbed-800.jpg" alt="" loading="lazy"></div><span>See how it works</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER: reuse from index.html -->
+
+</div>
+
+<script>
+(function () {
+  var saved = null;
+  try { saved = JSON.parse(sessionStorage.getItem('ucd-build') || 'null'); } catch (e) { /* show the generic version */ }
+  if (!saved) return;
+  document.getElementById('build-number').textContent = saved.number;
+  document.getElementById('build-email').textContent = saved.email;
+  document.getElementById('build-line').hidden = false;
+  document.getElementById('financing-line').hidden = !saved.financing;
+})();
+</script>
+<script src="../../assets/js/mega-menu.js" defer></script>
+</body></html>

@@ -1,0 +1,133 @@
+{
+  "_readme": [
+    "Prices and options for /build/. Edit this file, not the page.",
+    "price: a number adds that many dollars; 0 shows 'Included'; null shows 'Quoted' and stays out of the total.",
+    "Only put a number on something the written quote will honor. If it isn't confirmed, leave it null.",
+    "required: true means the buyer has to pick one. default: the choice id picked to start with.",
+    "errorName: how a required group reads in 'Choose a ___ to keep going.' Defaults to the label in lowercase.",
+    "excludeModels: model ids a choice or upgrade isn't available on.",
+    "replaces: on an upgrade, the name of what it swaps out, shown when it's added. conflicts: upgrade ids it removes.",
+    "Square-bracket text is a placeholder for the owner to fill in."
+  ],
+
+  "shop": { "label": "our Texas shop", "lat": 29.6197, "lng": -95.6349 },
+  "includedMiles": 1000,
+  "roadFactor": 1.2,
+
+  "endpoints": {
+    "submitBuild": "[BUILD FORM ENDPOINT]",
+    "emailBuild": "[EMAIL BUILD ENDPOINT]"
+  },
+
+  "models": [
+    {
+      "id": "rising-sun",
+      "name": "The Rising Sun",
+      "basePrice": 85000,
+      "sqft": "[000 sq ft]",
+      "beds": "[0] bed",
+      "baths": "[0] bath",
+      "line": "[ONE-LINE DESCRIPTION, e.g. \"Our flagship. Full kitchen, full bath, and a deck made for evenings.\"]",
+      "image": "assets/img/gallery/rising-sun-exterior-front-800.jpg",
+      "tourUrl": "gallery/#tour",
+      "photosUrl": "gallery/"
+    }
+  ],
+
+  "steps": {
+    "exterior": [
+      {
+        "id": "exterior-color", "label": "Exterior color", "required": true,
+        "help": "Painted with [COATING] built for sun and humidity.",
+        "choices": [
+          { "id": "color-1", "label": "[Color 1]", "price": 0 },
+          { "id": "color-2", "label": "[Color 2]", "price": 0 },
+          { "id": "color-3", "label": "[Color 3]", "price": 0 }
+        ]
+      },
+      {
+        "id": "siding", "label": "Siding or accent", "default": "none",
+        "help": "Covers part of the steel for a warmer look.",
+        "choices": [
+          { "id": "none", "label": "None", "price": 0 },
+          { "id": "wood-accent", "label": "[Wood accent]", "price": null },
+          { "id": "full-cladding", "label": "[Full cladding]", "price": null }
+        ]
+      },
+      {
+        "id": "window-frames", "label": "Windows and doors", "required": true, "errorName": "window and door frame color",
+        "help": "Frame color and style.",
+        "choices": [
+          { "id": "black", "label": "[Black]", "price": 0 },
+          { "id": "white", "label": "[White]", "price": 0 },
+          { "id": "bronze", "label": "[Bronze]", "price": 0 }
+        ]
+      },
+      {
+        "id": "deck", "label": "Deck", "default": "none",
+        "help": "Adds outdoor living space.",
+        "choices": [
+          { "id": "none", "label": "None", "price": 0 },
+          { "id": "size-a", "label": "[Size A]", "price": null },
+          { "id": "size-b", "label": "[Size B]", "price": null }
+        ]
+      },
+      {
+        "id": "roof", "label": "Roof", "default": "standard",
+        "help": "[What the roof options do]",
+        "choices": [
+          { "id": "standard", "label": "[Standard]", "price": 0 },
+          { "id": "rooftop-deck", "label": "[Rooftop deck]", "price": null, "excludeModels": [] }
+        ]
+      }
+    ],
+    "interior": [
+      {
+        "id": "flooring", "label": "Flooring", "default": "option-1",
+        "choices": [
+          { "id": "option-1", "label": "[Option]", "price": 0 },
+          { "id": "option-2", "label": "[Option]", "price": 0 },
+          { "id": "option-3", "label": "[Option]", "price": 0 }
+        ]
+      },
+      {
+        "id": "cabinets", "label": "Cabinets", "default": "option-1",
+        "choices": [
+          { "id": "option-1", "label": "[Option]", "price": 0 },
+          { "id": "option-2", "label": "[Option]", "price": null }
+        ]
+      },
+      {
+        "id": "countertops", "label": "Countertops", "default": "option-1",
+        "choices": [
+          { "id": "option-1", "label": "[Option]", "price": 0 },
+          { "id": "option-2", "label": "[Option]", "price": null }
+        ]
+      },
+      {
+        "id": "walls", "label": "Wall finish", "default": "option-1",
+        "choices": [
+          { "id": "option-1", "label": "[Option]", "price": 0 },
+          { "id": "option-2", "label": "[Option]", "price": 0 }
+        ]
+      },
+      {
+        "id": "furniture-finish", "label": "Furniture finish", "default": "option-1",
+        "help": "All custom furniture is included. Pick the wood tone.",
+        "choices": [
+          { "id": "option-1", "label": "[Option]", "price": 0 },
+          { "id": "option-2", "label": "[Option]", "price": 0 }
+        ]
+      }
+    ]
+  },
+
+  "upgrades": [
+    { "id": "appliances", "label": "[Appliance package]", "line": "[What's included]", "price": null },
+    { "id": "hvac", "label": "[Larger HVAC / mini split]", "line": "[Why someone would want it]", "price": null },
+    { "id": "solar", "label": "[Solar package]", "line": "[Size and what it powers]", "price": null, "replaces": "[Standard electrical]" },
+    { "id": "cold-climate", "label": "[Cold-climate package]", "line": "Extra insulation and heat for snowy states like Colorado and Wyoming.", "price": null },
+    { "id": "laundry", "label": "[Washer and dryer]", "line": "", "price": null },
+    { "id": "smart-home", "label": "[Smart home / security]", "line": "", "price": null }
+  ]
+}

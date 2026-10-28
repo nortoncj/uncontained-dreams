@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>Build Your Container Home · See Your Price Online</title>
+<meta name="description" content="Design a finished, furnished shipping container home online. Pick your model, finishes, and upgrades and see your price instantly. Delivered nationwide.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="/build/">
+<link rel="icon" href="../assets/brand/icon.png" sizes="any"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F1F3F2;color:#1B2429;font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:#14324A}a:hover{color:#B04E25}
+h1,h2,h3{font-family:"Archivo","Arial Narrow",Arial,sans-serif;text-wrap:balance;margin:0}
+p{margin:0}
+[hidden]{display:none!important}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,4vw);padding-right:max(20px,4vw);box-sizing:border-box}
+.media{position:relative;box-sizing:border-box;border:1.5px dashed #8FA0A6;background:#DCE3E5;color:#14324A;border-radius:2px;display:flex;flex-direction:column;justify-content:flex-end;gap:4px;padding:16px;overflow:hidden}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:6px;font-weight:600;font-size:16px;text-decoration:none;box-sizing:border-box;border:0;cursor:pointer;font-family:inherit}
+.btn.primary{background:#B04E25;color:#FFFFFF}
+.btn.primary:hover{background:#963F1C;color:#FFFFFF}
+.btn.ghost{background:transparent;border:1.5px solid currentColor;color:#14324A}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5A666C}
+.chip{display:inline-flex;align-items:center;padding:4px 12px;border-radius:999px;font-size:13px;font-weight:600}
+.field{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600;color:#1B2429}
+.field input,.field select{min-height:46px;border:1px solid #B9C4C8;border-radius:2px;padding:0 12px;font:inherit;font-weight:400;font-size:16px;background:#FFFFFF;color:#1B2429}
+a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{outline:3px solid #B04E25;outline-offset:2px}
+.media.filled{border:0;padding:0;background:#1E425E}
+.media>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+/* Build page */
+.page-h1{font-size:clamp(36px,5vw,52px);line-height:1.04;font-weight:800;letter-spacing:-.015em}
+.stepbar{background:#FFFFFF;border-bottom:1px solid #D5DCDE}
+.stepbar ol{list-style:none;margin:0;padding:12px 0;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.stepbar ol::-webkit-scrollbar{display:none}
+.stepbar button{flex:none;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px 0 8px;border:0;border-radius:999px;background:transparent;color:#5A666C;font:inherit;font-size:15px;font-weight:600;cursor:pointer}
+.stepbar button:hover{color:#14324A;background:#F1F3F2}
+.stepbar .num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:999px;border:1.5px solid #B9C4C8;font-size:13px;font-weight:700}
+.stepbar button.is-done .num{background:#2F5D47;border-color:#2F5D47;color:#FFFFFF}
+.stepbar button[aria-current="step"]{color:#14324A;background:#E4EBEE}
+.stepbar button[aria-current="step"] .num{background:#14324A;border-color:#14324A;color:#FFFFFF}
+.cfg-layout{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:40px;align-items:start;padding-top:48px;padding-bottom:96px}
+.cfg-step{display:flex;flex-direction:column;gap:24px}
+.cfg-step h2{font-size:34px;line-height:40px;font-weight:800;color:#14324A}
+.cfg-step h2:focus{outline:none}
+.cfg-helper{font-size:17px;line-height:28px;color:#5A666C;max-width:60ch}
+.cfg-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:24px;border-top:1px solid #D5DCDE}
+.cfg-err{font-size:15px;line-height:22px;font-weight:600;color:#A3321A}
+.notice{background:#E4EBEE;border-left:4px solid #14324A;padding:12px 16px;font-size:15px;line-height:22px}
+.model-card{background:#FFFFFF;border:1px solid #D5DCDE;border-radius:2px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);overflow:hidden}
+.model-card.is-selected{border:2px solid #14324A}
+.model-card__body{padding:24px;display:flex;flex-direction:column;gap:12px}
+.model-card__specs{font-size:15px;color:#5A666C}
+.model-card__links{display:flex;flex-wrap:wrap;gap:16px;font-size:15px;font-weight:600}
+@media (max-width:640px){.model-card{grid-template-columns:minmax(0,1fr)}}
+.opt-group{border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.opt-group legend{padding:0;font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-size:20px;line-height:26px;font-weight:700;color:#14324A}
+.opt-group legend .req{font-family:"Public Sans",sans-serif;font-size:13px;font-weight:600;color:#5A666C;margin-left:8px}
+.opt-help{font-size:15px;line-height:22px;color:#5A666C}
+.opt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
+.opt{position:relative;display:flex;flex-direction:column;gap:2px;min-height:64px;padding:12px 14px 12px 40px;background:#FFFFFF;border:1.5px solid #D5DCDE;border-radius:2px;cursor:pointer;box-sizing:border-box}
+.opt:hover{border-color:#8FA0A6}
+.opt input{position:absolute;left:14px;top:15px;margin:0;width:16px;height:16px;accent-color:#14324A}
+.opt__name{font-weight:600;font-size:15px;line-height:20px}
+.opt__price{font-size:14px;color:#5A666C}
+.opt__price.is-included{color:#2F5D47;font-weight:600}
+.opt:has(input:checked){border-color:#14324A;background:#EEF3F6}
+.opt:has(input:focus-visible){outline:3px solid #B04E25;outline-offset:2px}
+.opt.is-off{cursor:not-allowed;background:#F1F3F2;color:#5A666C}
+.opt__off{font-size:13px;line-height:18px;color:#5A666C}
+.upg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+.upg-grid .opt{min-height:96px}
+.upg-grid .opt__line{font-size:14px;line-height:20px;color:#5A666C}
+.zip-row{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap}
+.zip-row .field{flex:0 1 220px}
+.result{background:#FFFFFF;border:1px solid #D5DCDE;border-left:4px solid #14324A;padding:14px 16px;font-size:16px;line-height:24px}
+.result.is-included{border-left-color:#2F5D47}
+.check{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:24px;cursor:pointer}
+.check input{width:20px;height:20px;margin:2px 0 0;flex:none;accent-color:#14324A}
+.check small{display:block;font-size:14px;line-height:20px;color:#5A666C}
+.summary{position:sticky;top:calc(var(--ucd-header-h,76px) + 24px);background:#FFFFFF;border:1px solid #D5DCDE;border-radius:2px;padding:24px;display:flex;flex-direction:column;gap:16px}
+.summary h2{font-size:22px;line-height:28px;font-weight:800;color:#14324A}
+.sum-lines{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:20px}
+.sum-lines li{display:flex;justify-content:space-between;gap:12px}
+.sum-lines li span:last-child{flex:none;font-weight:600;text-align:right}
+.sum-lines .is-included{color:#2F5D47}
+.sum-lines .is-quoted,.sum-lines .is-unset{color:#5A666C;font-weight:500}
+.sum-total{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:14px;border-top:1px solid #D5DCDE}
+.sum-total strong{font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-size:28px;line-height:32px;font-weight:800;color:#14324A}
+.sum-note{font-size:13px;line-height:19px;color:#5A666C}
+.link-btn{padding:0;border:0;background:none;font:inherit;font-size:15px;font-weight:600;color:#14324A;text-decoration:underline;cursor:pointer;align-self:flex-start}
+.link-btn:hover{color:#B04E25}
+.share-pop{border:1px solid #D5DCDE;border-radius:2px;padding:16px;display:flex;flex-direction:column;gap:12px;background:#F1F3F2}
+.share-row{display:flex;gap:8px}
+.share-row input{flex:1;min-width:0;min-height:44px;border:1px solid #B9C4C8;border-radius:2px;padding:0 10px;font:inherit;font-size:14px;background:#FFFFFF}
+.share-row .btn{min-height:44px;padding:0 16px;font-size:15px}
+.sum-bar{display:none}
+.sum-close{display:none}
+@media (max-width:960px){
+  .cfg-layout{grid-template-columns:minmax(0,1fr);padding-bottom:120px}
+  .summary{display:none;position:fixed;top:auto;left:0;right:0;bottom:0;z-index:150;max-height:80vh;overflow-y:auto;border-radius:0;border:0;border-top:1px solid #D5DCDE;box-shadow:0 -8px 24px rgba(15,27,36,.18)}
+  .summary.is-open{display:flex}
+  .sum-close{display:inline-flex;position:absolute;top:16px;right:16px}
+  .sum-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:140;justify-content:space-between;align-items:center;gap:12px;padding:12px max(20px,4vw);background:#14324A;color:#FFFFFF}
+  .sum-bar strong{font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-size:22px}
+  .sum-bar button{min-height:44px;padding:0 16px;border:1.5px solid #FFFFFF;border-radius:6px;background:transparent;color:#FFFFFF;font:inherit;font-weight:600;cursor:pointer}
+}
+</style>
+<link rel="stylesheet" href="../assets/css/mega-menu.css">
+</head>
+<body>
+<div style="display: flex; flex-direction: column; min-width: 0;">
+
+<!-- HEADER + MEGA MENU: reuse from index.html -->
+
+<main>
+
+<!-- HERO -->
+<section id="top" style="background: #14324A; color: #FFFFFF; padding-top: 64px; padding-bottom: 56px;">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 16px;">
+    <span class="eyebrow" style="color: #B7C8D6;">Build Your Home</span>
+    <h1 class="page-h1">Build your home. See your price.</h1>
+    <p style="font-size: 18px; line-height: 28px; color: #DCE6EE; max-width: 62ch;">Pick a model, choose your finishes and upgrades, and watch the total update as you go. It takes about five minutes, and nothing is charged today.</p>
+  </div>
+</section>
+
+<!-- STEP BAR -->
+<nav class="stepbar" aria-label="Build steps">
+  <div class="wrap">
+    <ol>
+      <li><button type="button" data-goto="model"><span class="num">1</span>Model</button></li>
+      <li><button type="button" data-goto="exterior"><span class="num">2</span>Exterior</button></li>
+      <li><button type="button" data-goto="interior"><span class="num">3</span>Interior</button></li>
+      <li><button type="button" data-goto="upgrades"><span class="num">4</span>Upgrades</button></li>
+      <li><button type="button" data-goto="delivery"><span class="num">5</span>Delivery</button></li>
+      <li><button type="button" data-goto="review"><span class="num">6</span>Review</button></li>
+    </ol>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="result" id="load-error" role="alert" hidden style="margin-top: 48px; border-left-color: #A3321A;">We couldn't load prices right now. Refresh the page, or call <a href="tel:[PHONE]">[PHONE]</a> for a quote.</div>
+
+  <div class="cfg-layout" id="cfg" hidden>
+    <div>
+      <!-- STEP 1 -->
+      <section class="cfg-step" data-step="model" aria-labelledby="h-model">
+        <h2 id="h-model" tabindex="-1">Start with a model.</h2>
+        <p class="cfg-helper">Every model comes fully furnished with custom furniture built for the space.</p>
+        <p class="cfg-err" id="err-model" role="alert" hidden>Pick a model to start building.</p>
+        <!-- Model cards come from assets/data/build-options.json. Add a model there, not here. -->
+        <div id="model-list" style="display: flex; flex-direction: column; gap: 16px;"></div>
+      </section>
+
+      <!-- STEP 2 -->
+      <section class="cfg-step" data-step="exterior" aria-labelledby="h-exterior" hidden>
+        <h2 id="h-exterior" tabindex="-1">How it looks from the street.</h2>
+        <div class="notice" id="notice-exterior" role="status" hidden></div>
+        <div id="groups-exterior" style="display: flex; flex-direction: column; gap: 32px;"></div>
+      </section>
+
+      <!-- STEP 3 -->
+      <section class="cfg-step" data-step="interior" aria-labelledby="h-interior" hidden>
+        <h2 id="h-interior" tabindex="-1">The inside, your way.</h2>
+        <div class="notice" id="notice-interior" role="status" hidden></div>
+        <div id="groups-interior" style="display: flex; flex-direction: column; gap: 32px;"></div>
+      </section>
+
+      <!-- STEP 4 -->
+      <section class="cfg-step" data-step="upgrades" aria-labelledby="h-upgrades" hidden>
+        <h2 id="h-upgrades" tabindex="-1">Add what you need.</h2>
+        <p class="cfg-helper">Every upgrade shows its price before you add it. Skip any of them, the home is complete without them.</p>
+        <div class="notice" id="notice-upgrades" role="status" hidden></div>
+        <div class="upg-grid" id="upgrade-list"></div>
+      </section>
+
+      <!-- STEP 5 -->
+      <section class="cfg-step" data-step="delivery" aria-labelledby="h-delivery" hidden>
+        <h2 id="h-delivery" tabindex="-1">Where is your home going?</h2>
+        <fieldset class="opt-group">
+          <legend style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">Delivery destination</legend>
+          <div class="opt-grid" style="grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));">
+            <label class="opt"><input type="radio" name="dest" value="us" checked><span class="opt__name">In the U.S.</span><span class="opt__price">All 50 states</span></label>
+            <label class="opt"><input type="radio" name="dest" value="intl"><span class="opt__name">Outside the U.S.</span><span class="opt__price">Canada, USVI, and more</span></label>
+          </div>
+        </fieldset>
+        <div id="zip-block" style="display: flex; flex-direction: column; gap: 8px;">
+          <div class="zip-row">
+            <label class="field" for="zip">Delivery ZIP code
+              <input id="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" aria-describedby="zip-help zip-err">
+            </label>
+            <button class="btn ghost" type="button" id="zip-check">Check delivery</button>
+          </div>
+          <span class="sum-note" id="zip-help" style="font-size: 14px;">We use this to estimate delivery. You can change it later.</span>
+          <p class="cfg-err" id="zip-err" role="alert" hidden></p>
+        </div>
+        <div class="result" id="delivery-result" role="status" hidden></div>
+        <label class="check"><input type="checkbox" id="nosite"><span>I don't have a site yet.<small>That's fine. We'll talk through site options on our call.</small></span></label>
+      </section>
+
+      <div class="cfg-foot">
+        <button class="btn ghost" type="button" id="back-btn">Back</button>
+        <button class="btn primary" type="button" id="next-btn">Next step</button>
+      </div>
+    </div>
+
+    <!-- PRICE SUMMARY: sticky panel on desktop, bottom sheet on mobile -->
+    <aside class="summary" id="summary" aria-labelledby="h-summary">
+      <button class="btn ghost sum-close" type="button" id="sum-close" style="min-height: 40px; padding: 0 14px; font-size: 14px;">Close</button>
+      <h2 id="h-summary">Your build</h2>
+      <p class="sum-note" id="sum-empty" style="font-size: 15px;">Pick a model to see your price.</p>
+      <ul class="sum-lines" id="sum-lines"></ul>
+      <div class="sum-total"><span style="font-weight: 600;">Estimated total</span><strong id="sum-total">$0</strong></div>
+      <p class="sum-note" id="sum-quoted" hidden></p>
+      <p class="sum-note">Final price is confirmed in your written quote. Site prep, foundation, and permits aren't included [CONFIRM].</p>
+      <p style="font-size: 15px;">Want to finance it? <a href="../financing/" id="fin-link" style="font-weight: 600;">Apply for financing</a></p>
+      <button class="btn primary" type="button" id="sum-next">Next step</button>
+      <button class="link-btn" type="button" id="share-toggle" aria-expanded="false" aria-controls="share-pop">Save or share this build</button>
+      <div class="share-pop" id="share-pop" hidden>
+        <p style="font-size: 15px; line-height: 22px;">Copy this link to come back to your build or send it to someone.</p>
+        <div class="share-row">
+          <input id="share-link" type="text" readonly aria-label="Link to this build">
+          <button class="btn primary" type="button" id="share-copy">Copy link</button>
+        </div>
+        <p class="sum-note">Anyone with the link sees your choices, not your contact info.</p>
+        <form id="share-email" novalidate style="display: flex; flex-direction: column; gap: 8px; padding-top: 12px; border-top: 1px solid #D5DCDE;">
+          <label for="share-email-input" style="font-size: 14px; font-weight: 600;">Email me this build</label>
+          <div class="share-row">
+            <input id="share-email-input" type="email" autocomplete="email" placeholder="Email">
+            <button class="btn ghost" type="submit">Send it</button>
+          </div>
+          <p class="sum-note" id="share-email-msg" role="status"></p>
+        </form>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- Mobile price bar -->
+<div class="sum-bar" id="sum-bar" hidden>
+  <span><strong id="bar-total">$0</strong> estimated</span>
+  <button type="button" id="bar-open" aria-controls="summary" aria-expanded="false">See details</button>
+</div>
+
+</main>
+
+<!-- FOOTER: reuse from index.html -->
+
+</div>
+
+<script src="../assets/js/build-config.js"></script>
+<script>
+(function () {
+  var B = window.UCDBuild;
+  var STEPS = ['model', 'exterior', 'interior', 'upgrades', 'delivery'];
+  var data = null;
+  var cfg = B.fromUrl();
+  var current = 'model';
+
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { var d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; };
+
+  function priceSpan(price) {
+    var cls = price === 0 ? ' is-included' : '';
+    return '<span class="opt__price' + cls + '">' + esc(B.priceLabel(price)) + '</span>';
+  }
+
+  function errorName(g) {
+    var name = g.errorName || g.label.toLowerCase();
+    return (/^[aeiou]/i.test(name) ? 'an ' : 'a ') + name;
+  }
+
+  // ---- Rendering -------------------------------------------------------
+
+  function renderModels() {
+    $('model-list').innerHTML = data.models.map(function (m) {
+      var picked = cfg.m === m.id;
+      return '<article class="model-card' + (picked ? ' is-selected' : '') + '">' +
+        '<div class="media filled" style="min-height: 240px; border-radius: 0;"><img src="../' + esc(m.image) + '" alt="' + esc(m.name) + ' exterior" loading="lazy"></div>' +
+        '<div class="model-card__body">' +
+          (picked ? '<span class="chip" style="background: #2F5D47; color: #FFFFFF; width: max-content;">Selected</span>' : '') +
+          '<h3 style="font-size: 26px; line-height: 30px; color: #14324A;">' + esc(m.name) + '</h3>' +
+          '<p class="model-card__specs">' + esc([m.sqft, m.beds, m.baths].join(' · ')) + '</p>' +
+          '<span class="chip" style="background: #14324A; color: #E9B872; font-size: 15px; padding: 6px 14px; width: max-content;">From ' + B.money(m.basePrice) + '</span>' +
+          '<p style="font-size: 16px; line-height: 26px;">' + esc(m.line) + '</p>' +
+          '<p class="model-card__links"><a href="../' + esc(m.tourUrl) + '">Take the 3D tour</a><a href="../' + esc(m.photosUrl) + '">See photos</a></p>' +
+          '<button class="btn ' + (picked ? 'ghost' : 'primary') + '" type="button" data-model="' + esc(m.id) + '" style="align-self: flex-start;">' + (picked ? 'Selected: ' : 'Choose ') + esc(m.name) + '</button>' +
+        '</div></article>';
+    }).join('');
+  }
+
+  function renderGroups(step) {
+    var model = B.model(data, cfg.m);
+    $('groups-' + step).innerHTML = data.steps[step].map(function (g) {
+      var choices = g.choices.map(function (c) {
+        var ok = B.availableOn(c, cfg.m);
+        var checked = cfg.o[g.id] === c.id ? ' checked' : '';
+        if (!ok) {
+          return '<label class="opt is-off"><input type="radio" name="' + esc(g.id) + '" value="' + esc(c.id) + '" disabled>' +
+            '<span class="opt__name">' + esc(c.label) + '</span>' +
+            '<span class="opt__off">' + esc(c.label) + ' isn\'t available on ' + esc(model ? model.name : 'this model') + '. <a href="#model" data-goto="model">See models that offer it</a></span></label>';
+        }
+        return '<label class="opt"><input type="radio" name="' + esc(g.id) + '" value="' + esc(c.id) + '" data-group="' + esc(g.id) + '"' + checked + '>' +
+          '<span class="opt__name">' + esc(c.label) + '</span>' + priceSpan(c.price) + '</label>';
+      }).join('');
+      return '<fieldset class="opt-group" id="grp-' + esc(g.id) + '">' +
+        '<legend>' + esc(g.label) + (g.required ? '<span class="req">Required</span>' : '') + '</legend>' +
+        (g.help ? '<p class="opt-help">' + esc(g.help) + '</p>' : '') +
+        '<p class="cfg-err" id="err-' + esc(g.id) + '" role="alert" hidden>Choose ' + esc(errorName(g)) + ' to keep going.</p>' +
+        '<div class="opt-grid">' + choices + '</div></fieldset>';
+    }).join('');
+  }
+
+  function renderUpgrades() {
+    $('upgrade-list').innerHTML = data.upgrades.map(function (u) {
+      var ok = B.availableOn(u, cfg.m);
+      var checked = cfg.u.indexOf(u.id) !== -1 ? ' checked' : '';
+      return '<label class="opt' + (ok ? '' : ' is-off') + '"><input type="checkbox" value="' + esc(u.id) + '" data-upgrade' + checked + (ok ? '' : ' disabled') + '>' +
+        '<span class="opt__name">' + esc(u.label) + '</span>' +
+        (u.line ? '<span class="opt__line">' + esc(u.line) + '</span>' : '') +
+        (ok ? priceSpan(u.price) : '<span class="opt__off">Not available on this model.</span>') + '</label>';
+    }).join('');
+  }
+
+  function renderDelivery() {
+    var intl = !!cfg.intl;
+    document.querySelector('input[name="dest"][value="' + (intl ? 'intl' : 'us') + '"]').checked = true;
+    $('zip-block').hidden = intl;
+    if (cfg.z && $('zip').value !== cfg.z) $('zip').value = cfg.z;
+    $('nosite').checked = !!cfg.nosite;
+
+    var box = $('delivery-result');
+    box.classList.remove('is-included');
+    if (intl) {
+      box.textContent = 'International delivery is quoted case by case. We\'ll include it in your quote.';
+      box.hidden = false;
+    } else if (cfg.z && typeof cfg.mi === 'number') {
+      if (cfg.mi <= data.includedMiles) {
+        box.textContent = 'Delivery to ' + (cfg.loc || cfg.z) + ' is included in your price.';
+        box.classList.add('is-included');
+      } else {
+        box.textContent = 'About ' + cfg.mi.toLocaleString('en-US') + ' miles from ' + data.shop.label + '. The first ' +
+          data.includedMiles.toLocaleString('en-US') + ' are included, and we\'ll quote the rest before you sign.';
+      }
+      box.hidden = false;
+    } else {
+      box.hidden = true;
+    }
+  }
+
+  function renderSummary() {
+    var res = B.lines(data, cfg);
+    $('sum-empty').hidden = !!res.model;
+    $('sum-lines').innerHTML = res.items.map(function (it) {
+      var label, cls;
+      if (it.price === undefined) { label = 'Add your ZIP'; cls = 'is-unset'; }
+      else if (it.price === null) { label = it.delivery ? 'Quoted separately' : 'Quoted'; cls = 'is-quoted'; }
+      else if (it.price === 0) { label = 'Included'; cls = 'is-included'; }
+      else { label = it.step === 'model' && it.label.indexOf(', base') !== -1 ? B.money(it.price) : '+' + B.money(it.price); cls = ''; }
+      return '<li><span>' + esc(it.label) + '</span><span class="' + cls + '">' + esc(label) + '</span></li>';
+    }).join('');
+    var total = res.model ? B.money(res.total) : '$0';
+    $('sum-total').textContent = total;
+    $('bar-total').textContent = total;
+    $('sum-quoted').hidden = !res.quoted;
+    $('sum-quoted').textContent = 'Plus ' + res.quoted + ' quoted item' + (res.quoted === 1 ? '' : 's') + ', priced in your written quote.';
+    var last = current === 'delivery';
+    $('sum-next').textContent = last ? 'Review my build' : 'Next step';
+    $('next-btn').textContent = last ? 'Review my build' : 'Next step';
+  }
+
+  function renderStepbar() {
+    var idx = STEPS.indexOf(current);
+    document.querySelectorAll('.stepbar button').forEach(function (b) {
+      var i = STEPS.indexOf(b.dataset.goto);
+      if (b.dataset.goto === current) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current');
+      b.classList.toggle('is-done', i !== -1 && i < idx && stepValid(b.dataset.goto));
+    });
+    $('back-btn').style.visibility = idx === 0 ? 'hidden' : 'visible';
+  }
+
+  // ---- State -------------------------------------------------------------
+
+  function save() {
+    var clean = { m: cfg.m, o: cfg.o, u: cfg.u };
+    if (cfg.z) { clean.z = cfg.z; clean.loc = cfg.loc; clean.mi = cfg.mi; }
+    if (cfg.intl) clean.intl = true;
+    if (cfg.nosite) clean.nosite = true;
+    var query = cfg.m ? '?config=' + B.encode(clean) : '';
+    history.replaceState(null, '', location.pathname + query + '#' + current);
+    $('share-link').value = location.href.split('#')[0];
+    $('fin-link').href = '../financing/' + query;
+  }
+
+  function update() {
+    save();
+    renderSummary();
+    renderStepbar();
+  }
+
+  function showNotice(id, text) {
+    var el = $(id);
+    el.textContent = text;
+    el.hidden = !text;
+  }
+
+  // ---- Steps and validation -------------------------------------------------
+
+  function stepValid(step) {
+    if (step === 'model') return !!cfg.m;
+    if (data.steps[step]) return B.missing(data, cfg, step).length === 0;
+    return true;
+  }
+
+  function showErrors(step) {
+    if (step === 'model') { $('err-model').hidden = !!cfg.m; return; }
+    (data.steps[step] || []).forEach(function (g) {
+      var err = $('err-' + g.id);
+      if (err) err.hidden = !(g.required && !cfg.o[g.id]);
+    });
+  }
+
+  function goTo(step, focus) {
+    current = step;
+    document.querySelectorAll('.cfg-step').forEach(function (s) { s.hidden = s.dataset.step !== step; });
+    update();
+    if (focus) {
+      $('h-' + step).focus({ preventScroll: true });
+      $('cfg').scrollIntoView({ block: 'start' });
+    }
+  }
+
+  // Moving forward checks every step on the way; the first one missing something wins.
+  function requestStep(target) {
+    var idx = target === 'review' ? STEPS.length : STEPS.indexOf(target);
+    for (var i = 0; i < idx; i++) {
+      if (!stepValid(STEPS[i])) {
+        goTo(STEPS[i], true);
+        showErrors(STEPS[i]);
+        var firstErr = document.querySelector('.cfg-step:not([hidden]) .cfg-err:not([hidden])');
+        if (firstErr) firstErr.scrollIntoView({ block: 'center' });
+        return;
+      }
+    }
+    if (target === 'review') {
+      location.href = 'review/' + location.search;
+      return;
+    }
+    goTo(target, true);
+  }
+
+  function next() {
+    var idx = STEPS.indexOf(current);
+    requestStep(idx === STEPS.length - 1 ? 'review' : STEPS[idx + 1]);
+  }
+
+  // ---- Events ---------------------------------------------------------------
+
+  function bind() {
+    document.addEventListener('click', function (e) {
+      var go = e.target.closest('[data-goto]');
+      if (go) { e.preventDefault(); requestStep(go.dataset.goto); closeSheet(); return; }
+
+      var pick = e.target.closest('[data-model]');
+      if (pick) {
+        cfg.m = pick.dataset.model;
+        $('err-model').hidden = true;
+        var removed = B.normalize(data, cfg);
+        renderAll();
+        var note = removed.length ? removed.join(', ') + (removed.length === 1 ? ' isn\'t' : ' aren\'t') + ' available on ' + B.model(data, cfg.m).name + ', so we took ' + (removed.length === 1 ? 'it' : 'them') + ' out.' : '';
+        showNotice('notice-exterior', note);
+        showNotice('notice-interior', note);
+        showNotice('notice-upgrades', note);
+        requestStep('exterior');
+      }
+    });
+
+    document.addEventListener('change', function (e) {
+      var t = e.target;
+      if (t.dataset.group) {
+        cfg.o[t.dataset.group] = t.value;
+        var err = $('err-' + t.dataset.group);
+        if (err) err.hidden = true;
+        update();
+      } else if (t.hasAttribute('data-upgrade')) {
+        var u = B.upgrade(data, t.value);
+        if (t.checked) {
+          var msg = [];
+          (u.conflicts || []).forEach(function (id) {
+            var i = cfg.u.indexOf(id);
+            if (i !== -1) { cfg.u.splice(i, 1); msg.push(B.upgrade(data, id).label); }
+          });
+          cfg.u.push(u.id);
+          if (msg.length) renderUpgrades();
+          var replaced = u.replaces ? [u.replaces] : [];
+          replaced = replaced.concat(msg);
+          showNotice('notice-upgrades', replaced.length ? 'Adding ' + u.label + ' replaces ' + replaced.join(' and ') + '. Your total is updated.' : '');
+        } else {
+          cfg.u = cfg.u.filter(function (id) { return id !== u.id; });
+          showNotice('notice-upgrades', '');
+        }
+        update();
+      } else if (t.name === 'dest') {
+        cfg.intl = t.value === 'intl';
+        renderDelivery();
+        update();
+      } else if (t.id === 'nosite') {
+        cfg.nosite = t.checked;
+        update();
+      }
+    });
+
+    $('zip').addEventListener('input', function () {
+      this.value = this.value.replace(/\D/g, '').slice(0, 5);
+      $('zip-err').hidden = true;
+      if (this.value.length === 5 && this.value !== cfg.z) checkZip();
+    });
+    $('zip-check').addEventListener('click', checkZip);
+    $('zip').addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); checkZip(); } });
+
+    $('next-btn').addEventListener('click', next);
+    $('sum-next').addEventListener('click', function () { closeSheet(); next(); });
+    $('back-btn').addEventListener('click', function () {
+      var idx = STEPS.indexOf(current);
+      if (idx > 0) goTo(STEPS[idx - 1], true);
+    });
+
+    $('bar-open').addEventListener('click', function () {
+      $('summary').classList.add('is-open');
+      this.setAttribute('aria-expanded', 'true');
+      $('sum-close').focus();
+    });
+    $('sum-close').addEventListener('click', closeSheet);
+
+    $('share-toggle').addEventListener('click', function () {
+      var open = $('share-pop').hidden;
+      $('share-pop').hidden = !open;
+      this.setAttribute('aria-expanded', String(open));
+    });
+    $('share-copy').addEventListener('click', copyLink);
+    $('share-email').addEventListener('submit', emailBuild);
+  }
+
+  function closeSheet() {
+    $('summary').classList.remove('is-open');
+    $('bar-open').setAttribute('aria-expanded', 'false');
+  }
+
+  function checkZip() {
+    var zip = $('zip').value.trim();
+    var err = $('zip-err');
+    if (!/^\d{5}$/.test(zip)) {
+      err.textContent = 'We couldn\'t find that ZIP. Check the number, or skip it and we\'ll sort out delivery on our call.';
+      err.hidden = false;
+      return;
+    }
+    $('zip-check').disabled = true;
+    B.lookupZip(zip).then(function (place) {
+      cfg.z = zip;
+      cfg.loc = place.city + ', ' + place.state;
+      cfg.mi = B.milesFromShop(data, place.lat, place.lng);
+      err.hidden = true;
+    }).catch(function (e) {
+      cfg.z = null; cfg.loc = null; cfg.mi = null;
+      err.textContent = e.message === 'notfound'
+        ? 'We couldn\'t find that ZIP. Check the number, or skip it and we\'ll sort out delivery on our call.'
+        : 'We couldn\'t check delivery right now. Keep going, and we\'ll sort out delivery on our call.';
+      err.hidden = false;
+    }).then(function () {
+      $('zip-check').disabled = false;
+      renderDelivery();
+      update();
+    });
+  }
+
+  function copyLink() {
+    var btn = $('share-copy');
+    var input = $('share-link');
+    var done = function () {
+      btn.textContent = 'Copied';
+      setTimeout(function () { btn.textContent = 'Copy link'; }, 2000);
+    };
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(input.value).then(done, function () { input.select(); });
+    } else {
+      input.select();
+      try { document.execCommand('copy'); done(); } catch (e) { /* the link stays selected to copy by hand */ }
+    }
+  }
+
+  function emailBuild(e) {
+    e.preventDefault();
+    var input = $('share-email-input');
+    var msg = $('share-email-msg');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(input.value.trim())) {
+      msg.textContent = 'That email doesn\'t look right. Check for typos.';
+      input.focus();
+      return;
+    }
+    var body = new FormData();
+    body.append('email', input.value.trim());
+    body.append('link', $('share-link').value);
+    body.append('summary', B.summaryText(data, cfg));
+    msg.textContent = 'Sending…';
+    fetch(data.endpoints.emailBuild, { method: 'POST', body: body, headers: { Accept: 'application/json' } })
+      .then(function (res) {
+        if (!res.ok) throw new Error(res.status);
+        msg.textContent = 'Sent. Check your inbox.';
+      })
+      .catch(function () {
+        msg.textContent = 'That didn\'t send. Copy the link above instead.';
+      });
+  }
+
+  function renderAll() {
+    renderModels();
+    renderGroups('exterior');
+    renderGroups('interior');
+    renderUpgrades();
+    renderDelivery();
+  }
+
+  // ---- Start ----------------------------------------------------------------
+
+  B.load('../').then(function (d) {
+    data = d;
+    B.normalize(data, cfg);
+    renderAll();
+    bind();
+    $('cfg').hidden = false;
+    $('sum-bar').hidden = false;
+    var start = location.hash.slice(1);
+    goTo(cfg.m && STEPS.indexOf(start) > 0 ? start : 'model', false);
+  }).catch(function () {
+    $('load-error').hidden = false;
+  });
+})();
+</script>
+<script src="../assets/js/mega-menu.js" defer></script>
+</body></html>
