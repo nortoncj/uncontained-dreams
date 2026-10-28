@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>Container Home Gallery · Real Builds, Photos &amp; 3D Tour</title>
+<meta name="description" content="Photos, videos, and a 3D tour of real UnContained Dreams container homes: exteriors, interiors, custom furniture, shop builds, and delivery days.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="/gallery/">
+<link rel="icon" href="../assets/brand/icon.png" sizes="any"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F1F3F2;color:#1B2429;font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:#14324A}a:hover{color:#B04E25}
+h1,h2,h3{font-family:"Archivo","Arial Narrow",Arial,sans-serif;text-wrap:balance;margin:0}
+p{margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,4vw);padding-right:max(20px,4vw);box-sizing:border-box}
+.media{position:relative;box-sizing:border-box;border:1.5px dashed #8FA0A6;background:#DCE3E5;color:#14324A;border-radius:2px;display:flex;flex-direction:column;justify-content:flex-end;gap:4px;padding:16px;overflow:hidden}
+.media.dark{background:#1E425E;border-color:#5C7D95;color:#F1F3F2}
+.mtag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.mnote{font-size:13px;line-height:19px;max-width:44ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:6px;font-weight:600;font-size:16px;text-decoration:none;box-sizing:border-box}
+.btn.primary{background:#B04E25;color:#FFFFFF}
+.btn.primary:hover{background:#963F1C;color:#FFFFFF}
+.btn.ghost{border:1.5px solid currentColor;color:#14324A}
+.btn.ghost.light{color:#FFFFFF}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5A666C}
+.chip{display:inline-flex;align-items:center;padding:4px 12px;border-radius:999px;font-size:13px;font-weight:600}
+a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{outline:3px solid #B04E25;outline-offset:2px}
+.media.filled{border:0;padding:0;background:#1E425E}
+.media>img,.media>video,.media>a>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+/* Gallery page */
+.page-h1{font-size:clamp(40px,6vw,60px);line-height:1;font-weight:800;letter-spacing:-.015em}
+.g-filters{display:flex;gap:8px;overflow-x:auto;padding:16px 0;scrollbar-width:none}
+.g-filters::-webkit-scrollbar{display:none}
+.g-filter{flex:none;min-height:44px;padding:0 18px;border:1.5px solid #B9C4C8;border-radius:999px;background:#FFFFFF;color:#14324A;font:inherit;font-size:15px;font-weight:600;cursor:pointer}
+.g-filter:hover{border-color:#14324A}
+.g-filter[aria-pressed="true"]{background:#14324A;border-color:#14324A;color:#FFFFFF}
+.g-section{padding-top:72px;scroll-margin-top:96px}
+.g-head{display:flex;flex-direction:column;gap:8px;margin-bottom:24px;max-width:640px}
+.g-intro{font-size:17px;line-height:28px;color:#5A666C}
+.g-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px 12px}
+.g-item{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+.g-item--wide{grid-column:span 2}
+@media (max-width:620px){.g-item--wide{grid-column:auto}}
+.g-open{position:relative;display:block;width:100%;aspect-ratio:4/3;padding:0;border:0;border-radius:2px;background:#1E425E;overflow:hidden;cursor:zoom-in}
+.g-item--wide .g-open{aspect-ratio:auto;height:100%;min-height:240px}
+.g-open img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease}
+.g-open:hover img{transform:scale(1.03)}
+.g-item figcaption{font-size:13px;line-height:19px;color:#5A666C}
+/* Renderings: add <span class="tag-render">Rendering</span> inside .g-open so the label sits on the image. */
+.tag-render{position:absolute;top:12px;left:12px;background:#14324A;color:#E9B872;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.g-empty{background:#FFFFFF;border:1px solid #D5DCDE;border-radius:2px;padding:32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.v-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px 12px}
+.v-item{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+.v-item h3{font-size:17px;line-height:22px;color:#14324A}
+.v-time{font-variant-numeric:tabular-nums}
+.lb{width:min(1200px,calc(100vw - 32px));max-height:calc(100vh - 32px);padding:0;border:0;background:transparent;color:#FFFFFF;overflow:visible}
+.lb::backdrop{background:rgba(15,27,36,.92)}
+.lb figure{margin:0;display:flex;flex-direction:column;gap:12px}
+.lb img{width:100%;max-height:calc(100vh - 140px);object-fit:contain;display:block;border-radius:2px}
+.lb figcaption{font-size:15px;line-height:22px;color:#DCE6EE;padding-right:120px;min-height:22px}
+.lb-btn{position:absolute;min-width:44px;min-height:44px;border:0;border-radius:6px;background:#14324A;color:#FFFFFF;font:inherit;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.lb-btn:hover{background:#1E425E}
+.lb-close{top:-8px;right:-8px}
+.lb-nav{position:absolute;right:0;bottom:-11px;display:flex;gap:8px}
+.lb-nav .lb-btn{position:static}
+</style>
+<link rel="stylesheet" href="../assets/css/mega-menu.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "UnContained Dreams container home gallery",
+  "description": "Photos, videos, and a 3D tour of real UnContained Dreams container homes: exteriors, interiors, custom furniture, shop builds, and delivery days.",
+  "url": "/gallery/"
+}
+</script>
+<script type="application/ld+json">
+[
+  { "@context": "https://schema.org", "@type": "VideoObject", "name": "The full walkthrough", "description": "3-minute tour of The Rising Sun, start to finish.", "thumbnailUrl": "/assets/img/gallery/video-poster-rising-sun-walkthrough.jpg", "uploadDate": "2023-05-21", "duration": "PT2M52S" },
+  { "@context": "https://schema.org", "@type": "VideoObject", "name": "Delivery day in [CITY, STATE]", "description": "Drone fly-in to a finished home set on its lot.", "thumbnailUrl": "/assets/img/gallery/video-poster-teal-home-fly-in.jpg", "uploadDate": "2026-02-07", "duration": "PT1M19S" },
+  { "@context": "https://schema.org", "@type": "VideoObject", "name": "Exterior walk-around", "description": "A slow lap around The Rising Sun on its lot.", "thumbnailUrl": "/assets/img/gallery/video-poster-rising-sun-exterior.jpg", "uploadDate": "2023-05-17", "duration": "PT2M51S" },
+  { "@context": "https://schema.org", "@type": "VideoObject", "name": "Walking up to the finished home", "description": "From the walkway through the front door of a finished home.", "thumbnailUrl": "/assets/img/gallery/video-poster-teal-home-arrival.jpg", "uploadDate": "2026-02-07", "duration": "PT2M3S" },
+  { "@context": "https://schema.org", "@type": "VideoObject", "name": "Glass end wall, up close", "description": "The cedar-clad glass end wall of The Rising Sun.", "thumbnailUrl": "/assets/img/gallery/video-poster-rising-sun-glass-end.jpg", "uploadDate": "2023-05-17", "duration": "PT1M7S" }
+]
+</script>
+</head>
+<body>
+<div style="display: flex; flex-direction: column; min-width: 0;">
+
+<!-- HEADER + MEGA MENU: reuse from index.html -->
+
+<main>
+
+<!-- HERO -->
+<section id="top" style="position: relative; background: #14324A; color: #FFFFFF;">
+  <div class="media dark filled" style="position: absolute; inset: 0; border-radius: 0;">
+    <img src="../assets/img/gallery/rising-sun-exterior-front-2400.jpg" alt="Grey shipping container home with wood-trimmed windows and front steps on a grass lot, The Rising Sun model" fetchpriority="high">
+  </div>
+  <div class="wrap" style="position: relative; padding-top: 160px; padding-bottom: 72px;">
+    <div style="background: #14324A; max-width: 620px; padding: 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 22px; border-radius: 2px;">
+      <span class="eyebrow" style="color: #B7C8D6;">Gallery</span>
+      <h1 class="page-h1">No renders. Just the homes we've built.</h1>
+      <p style="font-size: 19px; line-height: 30px; color: #DCE6EE;">Every photo and video here is a real home, built in our Texas shop and delivered to a real lot. If something is a rendering, we label it.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+        <a class="btn primary" href="#tour">Take the 3D tour</a>
+        <a class="btn ghost light" href="../#build">Build Your Home</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<nav style="background: #FFFFFF; border-bottom: 1px solid #D5DCDE;" aria-label="Filter the gallery">
+  <div class="wrap">
+    <div class="g-filters">
+      <button class="g-filter" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="g-filter" type="button" data-filter="exteriors" aria-pressed="false">Exteriors</button>
+      <button class="g-filter" type="button" data-filter="interiors" aria-pressed="false">Interiors</button>
+      <button class="g-filter" type="button" data-filter="furniture" aria-pressed="false">Custom furniture</button>
+      <button class="g-filter" type="button" data-filter="build" aria-pressed="false">Build process</button>
+      <button class="g-filter" type="button" data-filter="delivery" aria-pressed="false">Delivery day</button>
+      <button class="g-filter" type="button" data-filter="video" aria-pressed="false">Video</button>
+    </div>
+    <!-- Second row once there's more than one model:
+    <div class="g-filters" style="padding-top: 0;">
+      <button class="g-filter" type="button" data-model="all" aria-pressed="true">All models</button>
+      <button class="g-filter" type="button" data-model="rising-sun" aria-pressed="false">The Rising Sun</button>
+      <button class="g-filter" type="button" data-model="[model-2]" aria-pressed="false">[MODEL 2]</button>
+    </div> -->
+  </div>
+</nav>
+
+<div class="wrap" style="padding-bottom: 96px;">
+
+<section class="g-section" id="exteriors" data-cat="exteriors" data-label="Exteriors">
+  <div class="g-head">
+    <h2 style="font-size: 32px; line-height: 38px; font-weight: 800; color: #14324A;">Exteriors</h2>
+    <p class="g-intro">Steel outside, finished like a real home. These are homes on their actual lots.</p>
+  </div>
+  <div class="g-grid">
+    <figure class="g-item g-item--wide">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/rising-sun-exterior-front-1600.jpg"><img src="../assets/img/gallery/rising-sun-exterior-front-800.jpg" alt="Grey shipping container home with wood-trimmed windows and front steps on a grass lot, The Rising Sun model" width="800" height="533" loading="lazy"></button>
+      <figcaption>The Rising Sun · Front entry and cedar-trimmed windows · Delivered to [CITY, STATE] · [YEAR]</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/rising-sun-exterior-corner-1600.jpg"><img src="../assets/img/gallery/rising-sun-exterior-corner-800.jpg" alt="Grey container home from the corner, three wood-framed windows and a mini-split unit, The Rising Sun model" width="800" height="533" loading="lazy"></button>
+      <figcaption>The Rising Sun · Side wall with the mini-split condenser · [CITY, STATE] · [YEAR]</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/rising-sun-exterior-glass-doors-1600.jpg"><img src="../assets/img/gallery/rising-sun-exterior-glass-doors-800.jpg" alt="Container home end wall with sliding glass doors, cedar siding, and steel doors swung open, The Rising Sun" width="800" height="533" loading="lazy"></button>
+      <figcaption>The Rising Sun · Glass end wall, original steel doors kept · [CITY, STATE] · [YEAR]</figcaption>
+    </figure>
+    <figure class="g-item g-item--wide">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/teal-home-exterior-aerial-walkway-1600.jpg"><img src="../assets/img/gallery/teal-home-exterior-aerial-walkway-800.jpg" alt="Aerial view of a teal container home with glass doors beside a curved concrete walkway" width="800" height="450" loading="lazy"></button>
+      <figcaption>[MODEL] · Set on its lot with a poured walkway · [CITY, STATE] · [YEAR]</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="g-section" id="interiors" data-cat="interiors" data-label="Interiors">
+  <div class="g-head">
+    <h2 style="font-size: 32px; line-height: 38px; font-weight: 800; color: #14324A;">Interiors</h2>
+    <p class="g-intro">Full kitchens, full baths, and room to live. Shot as delivered, furniture included.</p>
+  </div>
+  <div class="g-grid">
+    <figure class="g-item g-item--wide">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/rising-sun-living-room-1600.jpg"><img src="../assets/img/gallery/rising-sun-living-room-800.jpg" alt="Living room with sofa, wall-mounted TV, and the galley kitchen beyond, The Rising Sun model" width="800" height="533" loading="lazy"></button>
+      <figcaption>The Rising Sun · Living room with the custom sofa, looking toward the kitchen</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/rising-sun-living-room-glass-doors-1600.jpg"><img src="../assets/img/gallery/rising-sun-living-room-glass-doors-800.jpg" alt="Living room with sliding glass doors, walnut console table, and wall-mounted TV, The Rising Sun" width="800" height="533" loading="lazy"></button>
+      <figcaption>The Rising Sun · Sliding glass doors at the living room end</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/rising-sun-kitchen-to-bedroom-1600.jpg"><img src="../assets/img/gallery/rising-sun-kitchen-to-bedroom-800.jpg" alt="Galley kitchen with floating wood shelves, bedroom visible at the far end, The Rising Sun model" width="800" height="533" loading="lazy"></button>
+      <figcaption>The Rising Sun · Kitchen, looking down the full length to the bedroom</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/rising-sun-kitchen-range-1600.jpg"><img src="../assets/img/gallery/rising-sun-kitchen-range-800.jpg" alt="Kitchen with navy cabinets, marble-look counters, stainless range, and floating shelves, The Rising Sun" width="800" height="533" loading="lazy"></button>
+      <figcaption>The Rising Sun · Full-size range and floating shelves</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/rising-sun-kitchen-sink-1600.jpg"><img src="../assets/img/gallery/rising-sun-kitchen-sink-800.jpg" alt="Kitchen sink with black faucet, marble-look counters, and a full-size fridge, The Rising Sun model" width="800" height="533" loading="lazy"></button>
+      <figcaption>The Rising Sun · Sink side of the kitchen, full-size fridge</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/rising-sun-kitchen-coat-hooks-1600.jpg"><img src="../assets/img/gallery/rising-sun-kitchen-coat-hooks-800.jpg" alt="Kitchen sink under a window with wood coat hooks beside the side door, The Rising Sun model" width="800" height="450" loading="lazy"></button>
+      <figcaption>The Rising Sun · Sink and wood coat hooks by the side door</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/rising-sun-hallway-1600.jpg"><img src="../assets/img/gallery/rising-sun-hallway-800.jpg" alt="Hallway past the bathroom toward the bedroom, cedar ceiling overhead, The Rising Sun model" width="800" height="533" loading="lazy"></button>
+      <figcaption>The Rising Sun · Hallway from the bath to the bedroom</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/rising-sun-bedroom-1600.jpg"><img src="../assets/img/gallery/rising-sun-bedroom-800.jpg" alt="Bedroom with a queen bed, cedar ceiling, and ductless mini-split, The Rising Sun model" width="800" height="533" loading="lazy"></button>
+      <figcaption>The Rising Sun · Bedroom at the far end of the home</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/rising-sun-vanity-to-bedroom-1600.jpg"><img src="../assets/img/gallery/rising-sun-vanity-to-bedroom-800.jpg" alt="Bathroom vanity with vessel sink and round mirror, bedroom beyond, The Rising Sun model" width="800" height="533" loading="lazy"></button>
+      <figcaption>The Rising Sun · Vanity and glass shower outside the bedroom</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/rising-sun-vanity-mirror-1600.jpg"><img src="../assets/img/gallery/rising-sun-vanity-mirror-800.jpg" alt="Backlit round mirror over a navy vanity with a vessel sink, The Rising Sun model" width="800" height="533" loading="lazy"></button>
+      <figcaption>The Rising Sun · Backlit mirror at the vanity</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/rising-sun-shower-and-vanity-1600.jpg"><img src="../assets/img/gallery/rising-sun-shower-and-vanity-800.jpg" alt="Glass walk-in shower beside the vanity, seen from the bedroom, The Rising Sun model" width="800" height="533" loading="lazy"></button>
+      <figcaption>The Rising Sun · Walk-in shower and vanity, seen from the bedroom</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="g-section" id="furniture" data-cat="furniture" data-label="Custom furniture">
+  <div class="g-head">
+    <h2 style="font-size: 32px; line-height: 38px; font-weight: 800; color: #14324A;">Custom furniture</h2>
+    <p class="g-intro">Every piece is designed and built for the space, and it all comes with the home.</p>
+  </div>
+  <div class="g-grid">
+    <figure class="g-item g-item--wide">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/furniture-walnut-dining-table-1600.jpg"><img src="../assets/img/gallery/furniture-walnut-dining-table-800.jpg" alt="Walnut dining table set for dinner in front of sliding glass doors, The Rising Sun" width="800" height="450" loading="lazy"></button>
+      <figcaption>Walnut dining table · Set by the glass doors · Comes with The Rising Sun</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/furniture-fold-down-table-hinges-1600.jpg"><img src="../assets/img/gallery/furniture-fold-down-table-hinges-800.jpg" alt="Close-up of a walnut fold-down table with brass hinges and bowls of fruit" width="800" height="450" loading="lazy"></button>
+      <figcaption>Fold-down walnut table · Hinged so it drops out of the way</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/furniture-fold-down-table-counter-1600.jpg"><img src="../assets/img/gallery/furniture-fold-down-table-counter-800.jpg" alt="Walnut fold-down table extending off the kitchen counter beside a bench seat" width="800" height="360" loading="lazy"></button>
+      <figcaption>Fold-down table · Extends off the counter, folds away to open the room</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/furniture-bench-seat-1600.jpg"><img src="../assets/img/gallery/furniture-bench-seat-800.jpg" alt="Wood-framed bench seat with patterned and yellow cushions beside a window" width="800" height="360" loading="lazy"></button>
+      <figcaption>Bench seat · Wood frame built for the space, cushions included</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/furniture-sofa-side-table-1600.jpg"><img src="../assets/img/gallery/furniture-sofa-side-table-800.jpg" alt="Walnut side table beside the sofa, holding a bowl of popcorn and a remote" width="800" height="450" loading="lazy"></button>
+      <figcaption>Sofa side table · Sized to fit between the sofa and the glass doors</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/furniture-floating-shelves-1600.jpg"><img src="../assets/img/gallery/furniture-floating-shelves-800.jpg" alt="Wood floating shelves with a hanging wine glass rack above the kitchen counter" width="800" height="360" loading="lazy"></button>
+      <figcaption>Floating shelves · Hanging glass rack underneath</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/furniture-walnut-side-table-1600.jpg"><img src="../assets/img/gallery/furniture-walnut-side-table-800.jpg" alt="Walnut end table with a maple stripe, fresh off the bench" width="800" height="533" loading="lazy"></button>
+      <figcaption>Walnut end table · Maple inlay stripe · Built in our shop</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/furniture-walnut-tabletop-1600.jpg"><img src="../assets/img/gallery/furniture-walnut-tabletop-800.jpg" alt="Top view of a walnut table with a light maple center stripe" width="800" height="533" loading="lazy"></button>
+      <figcaption>Walnut tabletop · Maple center stripe</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="g-section" id="build" data-cat="build" data-label="Build process">
+  <div class="g-head">
+    <h2 style="font-size: 32px; line-height: 38px; font-weight: 800; color: #14324A;">Build process</h2>
+    <p class="g-intro">From bare container to finished home in our Texas shop. This is the part most builders won't show you.</p>
+  </div>
+  <div class="g-grid">
+    <figure class="g-item g-item--wide">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/build-window-openings-aerial-1600.jpg"><img src="../assets/img/gallery/build-window-openings-aerial-800.jpg" alt="Aerial view of a bare container with window and door openings cut into the steel" width="800" height="450" loading="lazy"></button>
+      <figcaption>Window openings cut · Week [X] of the build · Our Texas shop</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/build-interior-framing-1600.jpg"><img src="../assets/img/gallery/build-interior-framing-800.jpg" alt="Builder framing a wall section on the shop floor" width="800" height="534" loading="lazy"></button>
+      <figcaption>Framing in progress · Week [X] of the build · Our Texas shop</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/build-wall-framing-outdoors-1600.jpg"><img src="../assets/img/gallery/build-wall-framing-outdoors-800.jpg" alt="Builder fastening a tall framed wall section in a backyard" width="800" height="534" loading="lazy"></button>
+      <figcaption>Wall framing · Week [X] of the build</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/build-cabinet-boxes-1600.jpg"><img src="../assets/img/gallery/build-cabinet-boxes-800.jpg" alt="Unfinished birch cabinet boxes stacked in the shop" width="800" height="533" loading="lazy"></button>
+      <figcaption>Cabinet boxes, built to the layout · Our Texas shop</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/build-cabinet-drawer-slides-1600.jpg"><img src="../assets/img/gallery/build-cabinet-drawer-slides-800.jpg" alt="Unfinished cabinet with drawer slides installed" width="800" height="450" loading="lazy"></button>
+      <figcaption>Drawer slides going in · Our Texas shop</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/build-cabinet-face-frame-1600.jpg"><img src="../assets/img/gallery/build-cabinet-face-frame-800.jpg" alt="Close-up of an unfinished cabinet with full-extension drawer slides" width="800" height="533" loading="lazy"></button>
+      <figcaption>Cabinet before paint · Our Texas shop</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/build-tabletop-glue-up-1600.jpg"><img src="../assets/img/gallery/build-tabletop-glue-up-800.jpg" alt="Walnut tabletop clamped during glue-up on the shop bench" width="800" height="534" loading="lazy"></button>
+      <figcaption>Walnut tabletop in clamps · Our Texas shop</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/build-routing-panel-1600.jpg"><img src="../assets/img/gallery/build-routing-panel-800.jpg" alt="Hands guiding a grooved wood panel across the shop table" width="800" height="450" loading="lazy"></button>
+      <figcaption>Routing a slatted panel · Our Texas shop</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/build-shower-tile-1600.jpg"><img src="../assets/img/gallery/build-shower-tile-800.jpg" alt="Large marble-look shower tiles set with leveling clips" width="800" height="450" loading="lazy"></button>
+      <figcaption>Shower tile going in · Week [X] of the build</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/build-backsplash-tile-1600.jpg"><img src="../assets/img/gallery/build-backsplash-tile-800.jpg" alt="Grey-green subway tile backsplash being installed above a counter" width="800" height="450" loading="lazy"></button>
+      <figcaption>Backsplash tile · Week [X] of the build</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="g-section" id="delivery" data-cat="delivery" data-label="Delivery day">
+  <div class="g-head">
+    <h2 style="font-size: 32px; line-height: 38px; font-weight: 800; color: #14324A;">Delivery day</h2>
+    <p class="g-intro">Trucked to the site and set by crane. [X] homes delivered to [X] states so far.</p>
+  </div>
+  <div class="g-grid">
+    <figure class="g-item g-item--wide">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/delivery-home-on-flatbed-1600.jpg"><img src="../assets/img/gallery/delivery-home-on-flatbed-800.jpg" alt="Teal container home on a flatbed trailer pulled by a pickup truck" width="800" height="450" loading="lazy"></button>
+      <figcaption>[MODEL] on the trailer, headed to the lot · [CITY, STATE] · [YEAR]</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/delivery-crane-on-site-1600.jpg"><img src="../assets/img/gallery/delivery-crane-on-site-800.jpg" alt="Crane truck beside a teal container home on a trailer at a fenced lot" width="800" height="450" loading="lazy"></button>
+      <figcaption>Crane on site to set [MODEL] · [CITY, STATE] · [YEAR]</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/delivery-site-aerial-1600.jpg"><img src="../assets/img/gallery/delivery-site-aerial-800.jpg" alt="Aerial view of a lot with pier footings set beside a poured L-shaped walkway" width="800" height="450" loading="lazy"></button>
+      <figcaption>Site ready: piers set, walkway poured · [CITY, STATE] · [YEAR]</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/delivery-pier-footings-walkway-1600.jpg"><img src="../assets/img/gallery/delivery-pier-footings-walkway-800.jpg" alt="Row of concrete pier footings beside a new concrete walkway" width="800" height="450" loading="lazy"></button>
+      <figcaption>Pier footings ready for the home · [CITY, STATE]</figcaption>
+    </figure>
+    <figure class="g-item">
+      <button class="g-open" type="button" data-full="../assets/img/gallery/delivery-pier-footings-1600.jpg"><img src="../assets/img/gallery/delivery-pier-footings-800.jpg" alt="Close-up of a round concrete pier footing on a gravel pad" width="800" height="450" loading="lazy"></button>
+      <figcaption>Concrete pier, set before delivery day · [CITY, STATE]</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- Videos aren't in git (too large for GitHub). Host them and swap each src before launch. Click to play only, no autoplay. -->
+<section class="g-section" id="video" data-cat="video" data-label="Video">
+  <div class="g-head">
+    <h2 style="font-size: 32px; line-height: 38px; font-weight: 800; color: #14324A;">Video</h2>
+    <p class="g-intro">Walkthroughs, build time-lapses, and delivery days. Hit play, sound on.</p>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 32px;">
+    <figure class="v-item">
+      <div class="media dark filled" style="aspect-ratio: 16 / 9; max-width: 100%;"><video src="../assets/Website/Videos/Walk%20through%20floating.mp4" poster="../assets/img/gallery/video-poster-rising-sun-walkthrough.jpg" controls playsinline preload="none" aria-label="The full walkthrough of The Rising Sun"></video></div>
+      <figcaption style="display: flex; flex-direction: column; gap: 4px;">
+        <h3 style="font-size: 24px; line-height: 30px;">The full walkthrough</h3>
+        <span style="font-size: 15px; color: #5A666C;">3-minute tour of The Rising Sun, start to finish.</span>
+      </figcaption>
+    </figure>
+    <div class="v-grid">
+      <figure class="v-item">
+        <div class="media dark filled" style="aspect-ratio: 16 / 9; max-width: 100%;"><video src="../assets/Website/Videos/DJI%20finished%20container%20fly%20in.MP4" poster="../assets/img/gallery/video-poster-teal-home-fly-in.jpg" controls playsinline preload="none" aria-label="Delivery day drone fly-in"></video></div>
+        <figcaption style="display: flex; flex-direction: column; gap: 2px;"><h3>Delivery day in [CITY, STATE]</h3><span style="font-size: 13px; color: #5A666C;"><span class="v-time">1:19</span> · Drone fly-in to [MODEL] on its lot</span></figcaption>
+      </figure>
+      <figure class="v-item">
+        <div class="media dark filled" style="aspect-ratio: 16 / 9; max-width: 100%;"><video src="../assets/Website/Videos/exterior%20slow%20walk%20around.mp4" poster="../assets/img/gallery/video-poster-rising-sun-exterior.jpg" controls playsinline preload="none" aria-label="Exterior walk-around of The Rising Sun"></video></div>
+        <figcaption style="display: flex; flex-direction: column; gap: 2px;"><h3>Exterior walk-around</h3><span style="font-size: 13px; color: #5A666C;"><span class="v-time">2:51</span> · A slow lap around The Rising Sun</span></figcaption>
+      </figure>
+      <figure class="v-item">
+        <div class="media dark filled" style="aspect-ratio: 16 / 9; max-width: 100%;"><video src="../assets/Website/Videos/finished%20container%20opening%20door%20entering.MP4" poster="../assets/img/gallery/video-poster-teal-home-arrival.jpg" controls playsinline preload="none" aria-label="Walking up to and into a finished home"></video></div>
+        <figcaption style="display: flex; flex-direction: column; gap: 2px;"><h3>Walking up to the finished home</h3><span style="font-size: 13px; color: #5A666C;"><span class="v-time">2:03</span> · Up the walkway and through the door of [MODEL]</span></figcaption>
+      </figure>
+      <figure class="v-item">
+        <div class="media dark filled" style="aspect-ratio: 16 / 9; max-width: 100%;"><video src="../assets/Website/Videos/VID_20230517_112601.mp4" poster="../assets/img/gallery/video-poster-rising-sun-glass-end.jpg" controls playsinline preload="none" aria-label="Close-up of The Rising Sun's glass end wall"></video></div>
+        <figcaption style="display: flex; flex-direction: column; gap: 2px;"><h3>Glass end wall, up close</h3><span style="font-size: 13px; color: #5A666C;"><span class="v-time">1:07</span> · Cedar cladding and the glass doors on The Rising Sun</span></figcaption>
+      </figure>
+      <!-- Add when shot: Build time-lapse · Custom furniture close-ups · Owner testimonial -->
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- 3D TOUR: link out, don't iframe it (it tanks page speed) -->
+<section id="tour" style="background: #14324A; color: #FFFFFF; padding-top: 96px; padding-bottom: 96px;">
+  <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center;">
+    <a class="media dark filled" href="[3D TOUR URL]" target="_blank" rel="noopener" style="flex: 1 1 520px; min-width: 0; aspect-ratio: 16 / 9; max-width: 100%;" aria-label="Open the 3D tour of The Rising Sun (opens in a new tab)">
+      <img src="../assets/img/gallery/rising-sun-kitchen-to-bedroom-1600.jpg" alt="" loading="lazy">
+      <span class="chip" style="position: absolute; left: 16px; bottom: 16px; background: #E9B872; color: #14324A;">3D tour</span>
+    </a>
+    <div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
+      <span class="eyebrow" style="color: #B7C8D6;">3D tour</span>
+      <h2 style="font-size: 40px; line-height: 44px; font-weight: 800;">Walk through The Rising Sun from your couch.</h2>
+      <p style="font-size: 17px; line-height: 28px; color: #DCE6EE;">Open every door and look in every corner. It's the next best thing to standing inside.</p>
+      <a class="btn ghost light" href="[3D TOUR URL]" target="_blank" rel="noopener" style="width: max-content;">Open the 3D tour <span style="font-weight: 400; color: #B7C8D6;">(opens in a new tab)</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section style="position: relative; background: #14324A; color: #FFFFFF;">
+  <div class="media dark filled" style="position: absolute; inset: 0; border-radius: 0;"><img src="../assets/img/gallery/rising-sun-exterior-glass-doors-1600.jpg" alt="" loading="lazy"></div>
+  <div class="wrap" style="position: relative; padding-top: 112px; padding-bottom: 112px;">
+    <div style="background: #14324A; max-width: 560px; padding: 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px; border-radius: 2px;">
+      <h2 style="font-size: 44px; line-height: 46px; font-weight: 800;">Like what you see? Build yours.</h2>
+      <p style="font-size: 17px; line-height: 28px; color: #DCE6EE;">Pick a model, choose your finishes, and see the price in about five minutes.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px;"><a class="btn primary" href="../#build">Build Your Home</a><a class="btn ghost light" href="tel:[PHONE]">Book a call</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER: reuse from index.html -->
+
+</div>
+
+<!-- Shown in a filtered section that has nothing in it yet -->
+<template id="g-empty">
+  <div class="g-empty">
+    <p style="font-size: 17px; line-height: 28px; max-width: 52ch;">More <span data-label></span> photos coming soon. Want to see a specific detail? Ask us and we'll send it.</p>
+    <a class="btn ghost" href="mailto:[EMAIL]?subject=Photo%20request">Ask for photos</a>
+  </div>
+</template>
+
+<dialog class="lb" aria-label="Photo viewer">
+  <figure>
+    <img src="" alt="">
+    <figcaption></figcaption>
+  </figure>
+  <button class="lb-btn lb-close" type="button" aria-label="Close">
+    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M5 5l14 14M19 5L5 19"/></svg>
+  </button>
+  <div class="lb-nav">
+    <button class="lb-btn lb-prev" type="button" aria-label="Previous photo"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="lb-btn lb-next" type="button" aria-label="Next photo"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  var filters = document.querySelectorAll('.g-filter[data-filter]');
+  var sections = document.querySelectorAll('.g-section');
+  var emptyTpl = document.getElementById('g-empty');
+
+  function applyFilter(name) {
+    filters.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.filter === name)); });
+    sections.forEach(function (s) {
+      var show = name === 'all' || s.dataset.cat === name;
+      s.hidden = !show;
+      s.querySelector('.g-intro').hidden = name !== 'all';
+      // Empty state only when this category is filtered on and has nothing in it.
+      var empty = s.querySelector('.g-empty');
+      var hasItems = s.querySelector('.g-item, .v-item');
+      if (show && name !== 'all' && !hasItems && !empty) {
+        var node = emptyTpl.content.cloneNode(true);
+        node.querySelector('[data-label]').textContent = s.dataset.label;
+        s.appendChild(node);
+      } else if (empty) {
+        empty.hidden = name === 'all' || !!hasItems;
+      }
+    });
+  }
+
+  filters.forEach(function (b) {
+    b.addEventListener('click', function () {
+      applyFilter(b.dataset.filter);
+      history.replaceState(null, '', b.dataset.filter === 'all' ? location.pathname : '#' + b.dataset.filter);
+    });
+  });
+
+  var start = location.hash.slice(1);
+  if (document.querySelector('.g-filter[data-filter="' + start + '"]')) applyFilter(start);
+
+  // Lightbox: steps through the photos currently visible.
+  var lb = document.querySelector('.lb');
+  var lbImg = lb.querySelector('img');
+  var lbCap = lb.querySelector('figcaption');
+  var list = [];
+  var index = 0;
+
+  function show(i) {
+    index = (i + list.length) % list.length;
+    var btn = list[index];
+    var img = btn.querySelector('img');
+    lbImg.src = btn.dataset.full;
+    lbImg.alt = img.alt;
+    lbCap.textContent = btn.closest('figure').querySelector('figcaption').textContent;
+  }
+
+  document.querySelectorAll('.g-open').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      list = Array.prototype.filter.call(document.querySelectorAll('.g-open'), function (b) { return !b.closest('[hidden]'); });
+      show(list.indexOf(btn));
+      lb.showModal();
+    });
+  });
+
+  lb.querySelector('.lb-close').addEventListener('click', function () { lb.close(); });
+  lb.querySelector('.lb-prev').addEventListener('click', function () { show(index - 1); });
+  lb.querySelector('.lb-next').addEventListener('click', function () { show(index + 1); });
+  lb.addEventListener('click', function (e) { if (e.target === lb) lb.close(); });
+  lb.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') show(index - 1);
+    if (e.key === 'ArrowRight') show(index + 1);
+  });
+})();
+</script>
+<script src="../assets/js/mega-menu.js" defer></script>
+</body></html>
