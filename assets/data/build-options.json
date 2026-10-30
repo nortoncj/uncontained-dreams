@@ -1,6 +1,6 @@
 {
   "_readme": [
-    "Prices and options for /build/. Edit this file, not the page.",
+    "Prices and options for /build/. Edit this file, not the page. Models and base prices live in models.json.",
     "price: a number adds that many dollars; 0 shows 'Included'; null shows 'Quoted' and stays out of the total.",
     "Only put a number on something the written quote will honor. If it isn't confirmed, leave it null.",
     "required: true means the buyer has to pick one. default: the choice id picked to start with.",
@@ -18,21 +18,6 @@
     "submitBuild": "[BUILD FORM ENDPOINT]",
     "emailBuild": "[EMAIL BUILD ENDPOINT]"
   },
-
-  "models": [
-    {
-      "id": "rising-sun",
-      "name": "The Rising Sun",
-      "basePrice": 85000,
-      "sqft": "[000 sq ft]",
-      "beds": "[0] bed",
-      "baths": "[0] bath",
-      "line": "[ONE-LINE DESCRIPTION, e.g. \"Our flagship. Full kitchen, full bath, and a deck made for evenings.\"]",
-      "image": "assets/img/gallery/rising-sun-exterior-front-800.jpg",
-      "tourUrl": "gallery/#tour",
-      "photosUrl": "gallery/"
-    }
-  ],
 
   "steps": {
     "exterior": [

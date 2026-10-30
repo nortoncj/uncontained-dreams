@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>Where We Deliver · Container Homes Shipped to All 50 States</title>
+<meta name="description" content="Texas-built container homes delivered finished to all 50 states. Find your state for local zoning rules, delivery times, and homes we have delivered nearby.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="/service-areas/">
+<link rel="icon" href="../assets/brand/icon.png" sizes="any"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F1F3F2;color:#1B2429;font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:#14324A}a:hover{color:#B04E25}
+h1,h2,h3{font-family:"Archivo","Arial Narrow",Arial,sans-serif;text-wrap:balance;margin:0}
+p{margin:0}
+[hidden]{display:none!important}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,4vw);padding-right:max(20px,4vw);box-sizing:border-box}
+.media{position:relative;box-sizing:border-box;border:1.5px dashed #8FA0A6;background:#DCE3E5;color:#14324A;border-radius:2px;display:flex;flex-direction:column;justify-content:flex-end;gap:4px;padding:16px;overflow:hidden}
+.media.filled{border:0;padding:0;background:#1E425E}
+.media>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:6px;font-weight:600;font-size:16px;text-decoration:none;box-sizing:border-box}
+.btn.primary{background:#B04E25;color:#FFFFFF}
+.btn.primary:hover{background:#963F1C;color:#FFFFFF}
+.btn.ghost{border:1.5px solid currentColor;color:#14324A}
+.btn.ghost.light{color:#FFFFFF}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5A666C}
+.field{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600;color:#1B2429}
+.field input{min-height:48px;border:1px solid #B9C4C8;border-radius:2px;padding:0 12px;font:inherit;font-weight:400;font-size:16px;background:#FFFFFF;color:#1B2429;box-sizing:border-box}
+.field input[aria-invalid="true"]{border-color:#B3261E}
+a:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid #B04E25;outline-offset:2px}
+/* Service areas hub */
+.page-h1{font-size:clamp(40px,6vw,60px);line-height:1;font-weight:800;letter-spacing:-.015em}
+.h2{font-size:40px;line-height:44px;font-weight:800;color:#14324A}
+@media (max-width:600px){.h2{font-size:32px;line-height:36px}}
+.crumbs{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px;font-size:14px;color:#B7C8D6}
+.crumbs li+li::before{content:"›";margin-right:6px}
+.crumbs a{color:#FFFFFF}
+.zip{display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px}
+.zip .field{flex:0 1 200px;color:#FFFFFF}
+.zip-err{font-size:14px;color:#F4B8B0;flex-basis:100%}
+.zip-result{background:#FFFFFF;color:#1B2429;border-radius:2px;padding:18px 20px;display:flex;flex-direction:column;gap:6px;font-size:16px;line-height:24px}
+.zip-result strong{font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-size:19px;color:#14324A}
+.zip-result.good{border-left:4px solid #2F5D47}
+.zip-result.quoted{border-left:4px solid #14324A}
+.tilemap{width:100%;height:auto;display:block}
+.tilemap text{font-family:"Public Sans",system-ui,sans-serif;font-size:13px;font-weight:700;text-anchor:middle;dominant-baseline:central}
+.legend{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;color:#DCE6EE}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.legend i{width:14px;height:14px;border-radius:2px;display:inline-block}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.steps li{background:#FFFFFF;border:1px solid #D5DCDE;border-radius:2px;display:flex;flex-direction:column;overflow:hidden}
+.steps .media{aspect-ratio:3/2;border-radius:0}
+.steps__body{padding:22px 24px 24px;display:flex;flex-direction:column;gap:8px}
+.steps__n{font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-weight:800;font-size:32px;line-height:1;color:#B04E25}
+.steps h3{font-size:20px;color:#14324A}
+.steps p{font-size:15px;line-height:24px;color:#5A666C}
+.region{display:grid;grid-template-columns:220px minmax(0,1fr);gap:16px 32px;padding:28px 0;border-top:1px solid #D5DCDE}
+@media (max-width:760px){.region{grid-template-columns:minmax(0,1fr)}}
+.region h3{font-size:20px;color:#14324A;padding-top:4px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.scard{background:#FFFFFF;border:1px solid #D5DCDE;border-radius:2px;padding:22px 24px;display:flex;flex-direction:column;gap:10px}
+.scard.is-live{border-top:4px solid #14324A}
+.scard h4{margin:0;font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-size:22px;line-height:26px;color:#14324A}
+.scard p{font-size:15px;line-height:22px;color:#5A666C}
+.scard .go{font-weight:600;font-size:15px;margin-top:auto}
+.scard .btn{min-height:44px;font-size:15px;padding:0 16px;align-self:flex-start;margin-top:auto}
+section[id]{scroll-margin-top:var(--ucd-header-h,76px)}
+</style>
+<link rel="stylesheet" href="../assets/css/mega-menu.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "/" },
+    { "@type": "ListItem", "position": 2, "name": "Service Areas", "item": "/service-areas/" }
+  ]
+}
+</script>
+</head>
+<body>
+<div style="display: flex; flex-direction: column; min-width: 0;">
+
+<!-- HEADER + MEGA MENU: reuse from index.html -->
+
+<main>
+
+<!-- HERO -->
+<section id="top" style="background: #14324A; color: #FFFFFF; padding-top: 72px; padding-bottom: 80px;">
+  <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center;">
+    <div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 22px;">
+      <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="../">Home</a></li><li aria-current="page">Service Areas</li></ol></nav>
+      <span class="eyebrow" style="color: #B7C8D6;">Service areas</span>
+      <h1 class="page-h1">Built in Texas. Delivered to all 50 states.</h1>
+      <p style="font-size: 19px; line-height: 30px; color: #DCE6EE;">Every home is built in our shop near Sugar Land and shipped finished to your lot. Find your state for local rules, delivery times, and homes we've delivered nearby.</p>
+      <form class="zip" id="zip-form" novalidate>
+        <label class="field" for="zip">Enter your ZIP to estimate delivery
+          <input id="zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" aria-describedby="zip-err">
+        </label>
+        <button class="btn primary" type="submit" style="border: 0; cursor: pointer; font-family: inherit;">Check delivery</button>
+        <span class="zip-err" id="zip-err" hidden></span>
+      </form>
+      <div class="zip-result" id="zip-result" aria-live="polite" hidden></div>
+    </div>
+    <!-- Tile map: one square per state. Texas is home base, target states are shaded.
+         Delivered-home dots go here once there's a list of real deliveries. Only plot real ones. -->
+    <figure style="flex: 1 1 460px; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 14px;">
+      <svg class="tilemap" viewBox="0 0 572 380" role="img" aria-labelledby="map-title">
+        <title id="map-title">Map of the United States. Texas is our home base. California, Colorado, Utah, Wyoming, and New York are where most of our homes go. We deliver to all 50 states.</title>
+        <g><rect x="0" y="0" width="44" height="44" rx="2" fill="#2A4B66"/><text x="22" y="22" fill="#B7C8D6">AK</text></g>
+        <g><rect x="528" y="0" width="44" height="44" rx="2" fill="#2A4B66"/><text x="550" y="22" fill="#B7C8D6">ME</text></g>
+        <g><rect x="288" y="48" width="44" height="44" rx="2" fill="#2A4B66"/><text x="310" y="70" fill="#B7C8D6">WI</text></g>
+        <g><rect x="480" y="48" width="44" height="44" rx="2" fill="#2A4B66"/><text x="502" y="70" fill="#B7C8D6">VT</text></g>
+        <g><rect x="528" y="48" width="44" height="44" rx="2" fill="#2A4B66"/><text x="550" y="70" fill="#B7C8D6">NH</text></g>
+        <g><rect x="48" y="96" width="44" height="44" rx="2" fill="#2A4B66"/><text x="70" y="118" fill="#B7C8D6">WA</text></g>
+        <g><rect x="96" y="96" width="44" height="44" rx="2" fill="#2A4B66"/><text x="118" y="118" fill="#B7C8D6">ID</text></g>
+        <g><rect x="144" y="96" width="44" height="44" rx="2" fill="#2A4B66"/><text x="166" y="118" fill="#B7C8D6">MT</text></g>
+        <g><rect x="192" y="96" width="44" height="44" rx="2" fill="#2A4B66"/><text x="214" y="118" fill="#B7C8D6">ND</text></g>
+        <g><rect x="240" y="96" width="44" height="44" rx="2" fill="#2A4B66"/><text x="262" y="118" fill="#B7C8D6">MN</text></g>
+        <g><rect x="288" y="96" width="44" height="44" rx="2" fill="#2A4B66"/><text x="310" y="118" fill="#B7C8D6">IL</text></g>
+        <g><rect x="336" y="96" width="44" height="44" rx="2" fill="#2A4B66"/><text x="358" y="118" fill="#B7C8D6">MI</text></g>
+        <g><rect x="432" y="96" width="44" height="44" rx="2" fill="#8FB3CF"/><text x="454" y="118" fill="#14324A">NY</text></g>
+        <g><rect x="480" y="96" width="44" height="44" rx="2" fill="#2A4B66"/><text x="502" y="118" fill="#B7C8D6">MA</text></g>
+        <g><rect x="48" y="144" width="44" height="44" rx="2" fill="#2A4B66"/><text x="70" y="166" fill="#B7C8D6">OR</text></g>
+        <g><rect x="96" y="144" width="44" height="44" rx="2" fill="#2A4B66"/><text x="118" y="166" fill="#B7C8D6">NV</text></g>
+        <g><rect x="144" y="144" width="44" height="44" rx="2" fill="#8FB3CF"/><text x="166" y="166" fill="#14324A">WY</text></g>
+        <g><rect x="192" y="144" width="44" height="44" rx="2" fill="#2A4B66"/><text x="214" y="166" fill="#B7C8D6">SD</text></g>
+        <g><rect x="240" y="144" width="44" height="44" rx="2" fill="#2A4B66"/><text x="262" y="166" fill="#B7C8D6">IA</text></g>
+        <g><rect x="288" y="144" width="44" height="44" rx="2" fill="#2A4B66"/><text x="310" y="166" fill="#B7C8D6">IN</text></g>
+        <g><rect x="336" y="144" width="44" height="44" rx="2" fill="#2A4B66"/><text x="358" y="166" fill="#B7C8D6">OH</text></g>
+        <g><rect x="384" y="144" width="44" height="44" rx="2" fill="#2A4B66"/><text x="406" y="166" fill="#B7C8D6">PA</text></g>
+        <g><rect x="432" y="144" width="44" height="44" rx="2" fill="#2A4B66"/><text x="454" y="166" fill="#B7C8D6">NJ</text></g>
+        <g><rect x="480" y="144" width="44" height="44" rx="2" fill="#2A4B66"/><text x="502" y="166" fill="#B7C8D6">CT</text></g>
+        <g><rect x="528" y="144" width="44" height="44" rx="2" fill="#2A4B66"/><text x="550" y="166" fill="#B7C8D6">RI</text></g>
+        <g><rect x="48" y="192" width="44" height="44" rx="2" fill="#8FB3CF"/><text x="70" y="214" fill="#14324A">CA</text></g>
+        <g><rect x="96" y="192" width="44" height="44" rx="2" fill="#8FB3CF"/><text x="118" y="214" fill="#14324A">UT</text></g>
+        <g><rect x="144" y="192" width="44" height="44" rx="2" fill="#8FB3CF"/><text x="166" y="214" fill="#14324A">CO</text></g>
+        <g><rect x="192" y="192" width="44" height="44" rx="2" fill="#2A4B66"/><text x="214" y="214" fill="#B7C8D6">NE</text></g>
+        <g><rect x="240" y="192" width="44" height="44" rx="2" fill="#2A4B66"/><text x="262" y="214" fill="#B7C8D6">MO</text></g>
+        <g><rect x="288" y="192" width="44" height="44" rx="2" fill="#2A4B66"/><text x="310" y="214" fill="#B7C8D6">KY</text></g>
+        <g><rect x="336" y="192" width="44" height="44" rx="2" fill="#2A4B66"/><text x="358" y="214" fill="#B7C8D6">WV</text></g>
+        <g><rect x="384" y="192" width="44" height="44" rx="2" fill="#2A4B66"/><text x="406" y="214" fill="#B7C8D6">VA</text></g>
+        <g><rect x="432" y="192" width="44" height="44" rx="2" fill="#2A4B66"/><text x="454" y="214" fill="#B7C8D6">MD</text></g>
+        <g><rect x="480" y="192" width="44" height="44" rx="2" fill="#2A4B66"/><text x="502" y="214" fill="#B7C8D6">DE</text></g>
+        <g><rect x="96" y="240" width="44" height="44" rx="2" fill="#2A4B66"/><text x="118" y="262" fill="#B7C8D6">AZ</text></g>
+        <g><rect x="144" y="240" width="44" height="44" rx="2" fill="#2A4B66"/><text x="166" y="262" fill="#B7C8D6">NM</text></g>
+        <g><rect x="192" y="240" width="44" height="44" rx="2" fill="#2A4B66"/><text x="214" y="262" fill="#B7C8D6">KS</text></g>
+        <g><rect x="240" y="240" width="44" height="44" rx="2" fill="#2A4B66"/><text x="262" y="262" fill="#B7C8D6">AR</text></g>
+        <g><rect x="288" y="240" width="44" height="44" rx="2" fill="#2A4B66"/><text x="310" y="262" fill="#B7C8D6">TN</text></g>
+        <g><rect x="336" y="240" width="44" height="44" rx="2" fill="#2A4B66"/><text x="358" y="262" fill="#B7C8D6">NC</text></g>
+        <g><rect x="384" y="240" width="44" height="44" rx="2" fill="#2A4B66"/><text x="406" y="262" fill="#B7C8D6">SC</text></g>
+        <g><rect x="192" y="288" width="44" height="44" rx="2" fill="#2A4B66"/><text x="214" y="310" fill="#B7C8D6">OK</text></g>
+        <g><rect x="240" y="288" width="44" height="44" rx="2" fill="#2A4B66"/><text x="262" y="310" fill="#B7C8D6">LA</text></g>
+        <g><rect x="288" y="288" width="44" height="44" rx="2" fill="#2A4B66"/><text x="310" y="310" fill="#B7C8D6">MS</text></g>
+        <g><rect x="336" y="288" width="44" height="44" rx="2" fill="#2A4B66"/><text x="358" y="310" fill="#B7C8D6">AL</text></g>
+        <g><rect x="384" y="288" width="44" height="44" rx="2" fill="#2A4B66"/><text x="406" y="310" fill="#B7C8D6">GA</text></g>
+        <g><rect x="0" y="336" width="44" height="44" rx="2" fill="#2A4B66"/><text x="22" y="358" fill="#B7C8D6">HI</text></g>
+        <g><rect x="192" y="336" width="44" height="44" rx="2" fill="#E9B872"/><text x="214" y="358" fill="#14324A">TX</text></g>
+        <g><rect x="432" y="336" width="44" height="44" rx="2" fill="#2A4B66"/><text x="454" y="358" fill="#B7C8D6">FL</text></g>
+      </svg>
+      <figcaption class="legend">
+        <span><i style="background: #E9B872;"></i>Home base: Texas</span>
+        <span><i style="background: #8FB3CF;"></i>Where most homes go</span>
+        <span><i style="background: #2A4B66; outline: 1px solid #5C7D95;"></i>Delivered on request</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- HOW DELIVERY WORKS -->
+<section id="how" style="padding-top: 96px; padding-bottom: 96px;">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 40px;">
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <span class="eyebrow">How delivery works</span>
+      <h2 class="h2">One shop. Every state.</h2>
+    </div>
+    <ol class="steps">
+      <li>
+        <div class="media filled"><img src="../assets/img/gallery/rising-sun-kitchen-range-800.jpg" alt="Finished kitchen inside a home in our shop, ready to ship" loading="lazy"></div>
+        <div class="steps__body"><span class="steps__n">1</span><h3>We build it in Texas.</h3><p>Your home is finished in our shop, furniture and all.</p></div>
+      </li>
+      <li>
+        <div class="media filled"><img src="../assets/img/gallery/delivery-home-on-flatbed-800.jpg" alt="Finished container home on a flatbed trailer, headed to its lot" loading="lazy"></div>
+        <div class="steps__body"><span class="steps__n">2</span><h3>We truck it to you.</h3><p>It ships on a flatbed. The first 1,000 miles are included, and the rest is quoted before you sign.</p></div>
+      </li>
+      <li>
+        <div class="media filled"><img src="../assets/img/gallery/delivery-crane-on-site-800.jpg" alt="Crane truck on site beside a container home on its trailer" loading="lazy"></div>
+        <div class="steps__body"><span class="steps__n">3</span><h3>A crane sets it on your site.</h3><p>Your foundation and utility stubs need to be ready. <a href="../how-it-works/#site-prep" style="font-weight: 600;">See site prep</a></p></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- STATE LIST -->
+<section id="states" style="background: #FFFFFF; padding-top: 96px; padding-bottom: 96px; border-top: 1px solid #D5DCDE; border-bottom: 1px solid #D5DCDE;">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 24px;">
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <span class="eyebrow">State list</span>
+      <h2 class="h2">Where we deliver most.</h2>
+    </div>
+    <!-- Built from assets/data/routes.json. A state without a live page gets no link and a
+         "Get a delivery quote" button, so nobody hits a dead page. Below is the no-script fallback. -->
+    <div id="regions">
+      <div class="region"><h3>Home base</h3><div class="cards">
+        <article class="scard is-live"><h4>Texas</h4><p>[X] homes delivered · About [X] days from our shop</p><a class="go" href="../container-homes/texas/">See Texas details</a></article>
+      </div></div>
+      <div class="region"><h3>West Coast</h3><div class="cards">
+        <article class="scard"><h4>California</h4><p>[X] homes delivered · About [X] days from our shop</p><a class="btn ghost" href="../contact/">Get a delivery quote</a></article>
+      </div></div>
+      <div class="region"><h3>Mountain West</h3><div class="cards">
+        <article class="scard"><h4>Colorado</h4><p>[X] homes delivered · About [X] days from our shop</p><a class="btn ghost" href="../contact/">Get a delivery quote</a></article>
+        <article class="scard"><h4>Utah</h4><p>[X] homes delivered · About [X] days from our shop</p><a class="btn ghost" href="../contact/">Get a delivery quote</a></article>
+        <article class="scard"><h4>Wyoming</h4><p>[X] homes delivered · About [X] days from our shop</p><a class="btn ghost" href="../contact/">Get a delivery quote</a></article>
+      </div></div>
+      <div class="region"><h3>East Coast &amp; Northeast</h3><div class="cards">
+        <article class="scard"><h4>New York</h4><p>[X] homes delivered · About [X] days from our shop</p><a class="btn ghost" href="../contact/">Get a delivery quote</a></article>
+      </div></div>
+    </div>
+    <p style="font-size: 17px; line-height: 28px; border-top: 1px solid #D5DCDE; padding-top: 28px;">Don't see your state? We deliver to all 50, plus Canada, the U.S. Virgin Islands, and other international destinations case by case. <a href="#top" id="zip-jump" style="font-weight: 600;">Check delivery to your ZIP</a></p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta" style="position: relative; background: #14324A; color: #FFFFFF;">
+  <div class="media filled" style="position: absolute; inset: 0; border-radius: 0;"><img src="../assets/img/gallery/delivery-site-aerial-1600.jpg" alt="" loading="lazy"></div>
+  <div class="wrap" style="position: relative; padding-top: 112px; padding-bottom: 112px;">
+    <div style="background: #14324A; max-width: 560px; padding: 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px; border-radius: 2px;">
+      <h2 style="font-size: 44px; line-height: 46px; font-weight: 800;">See your price, delivery included.</h2>
+      <p style="font-size: 17px; line-height: 28px; color: #DCE6EE;">Pick a model, choose your upgrades, and add your ZIP. You'll see what's included and what gets quoted before you sign.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px;"><a class="btn primary" href="../build/">Build Your Home</a><a class="btn ghost light" href="tel:[PHONE]">Book a call</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER: reuse from index.html -->
+
+</div>
+
+<script src="../assets/js/build-config.js"></script>
+<script>
+(function () {
+  var B = window.UCDBuild;
+  var esc = function (s) { var d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; };
+  var routes = null;
+  var options = null;
+
+  fetch('../assets/data/routes.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (json) {
+    routes = json;
+    var order = [];
+    json.states.forEach(function (s) { if (order.indexOf(s.region) === -1) order.push(s.region); });
+    document.getElementById('regions').innerHTML = order.map(function (region) {
+      return '<div class="region"><h3>' + esc(region) + '</h3><div class="cards">' +
+        json.states.filter(function (s) { return s.region === region; }).map(card).join('') +
+        '</div></div>';
+    }).join('');
+  }).catch(function () { /* keep the built-in list */ });
+
+  function card(s) {
+    var meta = esc(s.homesDelivered) + ' homes delivered · About ' + esc(s.transitDays) + ' days from our shop';
+    var action = s.live
+      ? '<a class="go" href="../' + esc(s.url) + '">See ' + esc(s.name) + ' details</a>'
+      : '<a class="btn ghost" href="../contact/">Get a delivery quote</a>';
+    return '<article class="scard' + (s.live ? ' is-live' : '') + '"><h4>' + esc(s.name) + '</h4><p>' + meta + '</p>' + action + '</article>';
+  }
+
+  // ZIP estimate: same lookup and distance math as the configurator's delivery step.
+  var form = document.getElementById('zip-form');
+  var input = document.getElementById('zip');
+  var err = document.getElementById('zip-err');
+  var out = document.getElementById('zip-result');
+
+  function fail(msg) {
+    err.textContent = msg;
+    err.hidden = false;
+    input.setAttribute('aria-invalid', 'true');
+    out.hidden = true;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var zip = input.value.trim();
+    err.hidden = true;
+    input.removeAttribute('aria-invalid');
+    if (!/^\d{5}$/.test(zip)) { fail('Enter a 5-digit ZIP code.'); input.focus(); return; }
+    out.hidden = false;
+    out.className = 'zip-result';
+    out.textContent = 'Checking ' + zip + '…';
+    var ready = options ? Promise.resolve(options) : B.load('../').then(function (d) { options = d; return d; });
+    Promise.all([ready, B.lookupZip(zip)]).then(function (r) {
+      var data = r[0];
+      var place = r[1];
+      var miles = B.milesFromShop(data, place.lat, place.lng);
+      var where = place.city + ', ' + place.state;
+      var included = miles <= data.includedMiles;
+      var state = routes && routes.states.filter(function (s) { return s.abbr === place.state && s.live; })[0];
+      out.className = 'zip-result ' + (included ? 'good' : 'quoted');
+      var distance = miles < 50 ? ' is close to our shop.' : ' is about ' + miles.toLocaleString('en-US') + ' road miles from our shop.';
+      out.innerHTML = '<strong>' + esc(where) + distance + '</strong>' +
+        '<span>' + (included
+          ? 'That\'s inside the first 1,000 miles, so delivery is included in your price.'
+          : 'The first 1,000 miles are included. The rest is quoted before you sign.') + '</span>' +
+        '<span style="font-size: 14px; color: #5A666C;">An estimate from the map, not a quote. Your written quote has the final number.</span>' +
+        (state ? '<a href="../' + esc(state.url) + '" style="font-weight: 600;">See ' + esc(state.name) + ' details</a>' : '');
+    }).catch(function (e2) {
+      if (e2 && e2.message === 'notfound') fail('We couldn\'t find that ZIP. Check it and try again.');
+      else fail('We couldn\'t check that right now. Try again, or call us at [PHONE].');
+    });
+  });
+
+  document.getElementById('zip-jump').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('top').scrollIntoView({ behavior: 'smooth' });
+    input.focus({ preventScroll: true });
+  });
+})();
+</script>
+<script src="../assets/js/mega-menu.js" defer></script>
+</body></html>

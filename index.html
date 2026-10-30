@@ -31,6 +31,9 @@ a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{ou
 .media>img,.media>video,.media>a>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .hero-video{display:block}
 @media (max-width:767px){.hero-video{display:none}}
+/* Seven top-level links: widen the header bar and tighten spacing so they stay on one line.
+   Prefixed with .site-header so these beat mega-menu.css, which loads after this block. */
+@media (min-width:1100px){.site-header .site-header__bar{max-width:1440px;gap:20px}.site-header .primary-nav{gap:16px}.site-header .primary-nav .menu{gap:0}.site-header .primary-nav .menu>.menu-item>a,.site-header .menu-trigger,.site-header .header-actions .btn,.site-header .header-phone{white-space:nowrap}.site-header .primary-nav .menu>.menu-item>a,.site-header .menu-trigger{padding:0 9px;font-size:15px}.site-header .header-actions{gap:14px}.site-header .header-actions .btn{padding:0 16px;font-size:15px}.site-header .site-logo__img{width:170px;height:auto}}@media (min-width:1100px) and (max-width:1159px){.site-header .primary-nav .menu>.menu-item>a,.site-header .menu-trigger{padding:0 6px}}
 </style>
 <link rel="stylesheet" href="assets/css/mega-menu.css">
 </head>
@@ -64,7 +67,7 @@ a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{ou
               <div class="mega-col">
                 <p class="mega-heading">Our homes</p>
                 <ul class="sub-menu">
-                  <li class="menu-item"><a href="#models">The Rising Sun <span class="menu-desc">Our flagship. From $85,000, furnished.</span></a></li>
+                  <li class="menu-item"><a href="models/the-rising-sun/">The Rising Sun <span class="menu-desc">Our flagship. From $85,000, furnished.</span></a></li>
                   <li class="menu-item"><a href="#build">Custom build <span class="menu-desc">Your layout, our shop.</span></a></li>
                   <li class="menu-item"><a href="#models">Compare models <span class="menu-desc">Size, beds, baths and price side by side.</span></a></li>
                 </ul>
@@ -78,7 +81,7 @@ a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{ou
                 </ul>
               </div>
               <div class="mega-col mega-col--span-6 mega-col--feature">
-                <a class="mega-card" href="#models">
+                <a class="mega-card" href="models/the-rising-sun/">
                   <div class="mega-card__img"><img src="assets/Website/Main%20Site%20professional%20pics/Copy%20of%20Front%20View.jpg" alt="" loading="lazy"></div>
                   <div class="mega-card__body">
                     <span class="mega-card__price">From $85,000</span>
@@ -133,6 +136,9 @@ a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{ou
           </div>
         </li>
 
+        <li class="menu-item"><a href="#financing">Financing</a></li>
+        <li class="menu-item"><a href="#diy">DIY Plans</a></li>
+
         <!-- Gallery -->
         <li class="menu-item menu-item-has-children">
           <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="mega-gallery">
@@ -167,23 +173,23 @@ a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{ou
           <div class="mega-panel" id="mega-areas">
             <div class="wrap mega-panel__inner">
               <div class="mega-col mega-col--span-7">
-                <p class="mega-heading">Fort Bend County &amp; nearby</p>
+                <p class="mega-heading">Where we deliver</p>
                 <ul class="sub-menu sub-menu--cities">
-                  <li class="menu-item"><a href="#areas">Sugar Land</a></li>
-                  <li class="menu-item"><a href="#areas">Missouri City</a></li>
-                  <li class="menu-item"><a href="#areas">Richmond</a></li>
-                  <li class="menu-item"><a href="#areas">Rosenberg</a></li>
-                  <li class="menu-item"><a href="#areas">Fulshear</a></li>
-                  <li class="menu-item"><a href="#areas">Katy</a></li>
-                  <li class="menu-item"><a href="#areas">All service areas</a></li>
+                  <li class="menu-item"><a href="#areas">California</a></li>
+                  <li class="menu-item"><a href="#areas">Colorado</a></li>
+                  <li class="menu-item"><a href="#areas">Utah</a></li>
+                  <li class="menu-item"><a href="#areas">Wyoming</a></li>
+                  <li class="menu-item"><a href="#areas">New York</a></li>
+                  <li class="menu-item"><a href="container-homes/texas/">Texas</a></li>
+                  <li class="menu-item"><a href="service-areas/">All 50 states</a></li>
                 </ul>
               </div>
               <div class="mega-col mega-col--span-5 mega-col--feature">
-                <a class="mega-card" href="#areas">
+                <a class="mega-card" href="service-areas/">
                   <div class="mega-card__img"><img src="assets/Website/Gallery/DJI_0411.JPG" alt="" loading="lazy"></div>
                   <div class="mega-card__body">
-                    <span class="mega-card__title">Delivering across Texas</span>
-                    <span class="mega-card__text">Based near Sugar Land. The first 1,000 delivery miles are included in the price.</span>
+                    <span class="mega-card__title">Built in Texas. Delivered nationwide.</span>
+                    <span class="mega-card__text">Shipped to all 50 states. The first 1,000 delivery miles are included in the price.</span>
                   </div>
                 </a>
               </div>
@@ -210,9 +216,9 @@ a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{ou
   </div>
   <div class="wrap" style="position: relative; padding-top: 120px; padding-bottom: 120px;">
     <div style="background: #14324A; max-width: 620px; padding: 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 22px; border-radius: 2px;">
-      <span class="chip" style="background: #E9B872; color: #14324A; width: max-content;">Serving Sugar Land &amp; Fort Bend County</span>
-      <h1 style="font-size: 60px; line-height: 60px; font-weight: 800; letter-spacing: -.015em;">Container homes, built for America.</h1>
-      <p style="font-size: 19px; line-height: 30px; color: #DCE6EE;">Finished, furnished, and delivered. The Rising Sun starts at $85,000 with custom furniture and 1,000 miles of delivery included.</p>
+      <span class="chip" style="background: #E9B872; color: #14324A; width: max-content;">Built in Texas · Shipped to all 50 states</span>
+      <h1 style="font-size: 60px; line-height: 60px; font-weight: 800; letter-spacing: -.015em;">Texas-built container homes, delivered anywhere.</h1>
+      <p style="font-size: 19px; line-height: 30px; color: #DCE6EE;">Finished, furnished, and shipped to your lot, from California to New York. The Rising Sun starts at $85,000 with custom furniture and the first 1,000 miles of delivery included.</p>
       <div style="display: flex; flex-wrap: wrap; gap: 12px;">
         <a class="btn primary" href="#build">Build Your Home</a>
         <a class="btn ghost light" href="#tour">Take the 3D Tour</a>
@@ -227,7 +233,7 @@ a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{ou
   <div class="wrap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; padding-top: 28px; padding-bottom: 28px;">
     <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 26px; color: #14324A;">$85k to $120k</span><span style="font-size: 15px; color: #5A666C;">Real prices, posted before you call</span></div>
     <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 26px; color: #14324A;">Fully furnished</span><span style="font-size: 15px; color: #5A666C;">Custom furniture built for the space</span></div>
-    <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 26px; color: #14324A;">1,000 miles</span><span style="font-size: 15px; color: #5A666C;">Of delivery included in the price</span></div>
+    <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 26px; color: #14324A;">All 50 states</span><span style="font-size: 15px; color: #5A666C;">Shipped nationwide, first 1,000 miles included</span></div>
     <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 26px; color: #14324A;">[★ 4.9 · 00 reviews]</span><span style="font-size: 15px; color: #5A666C;">Google rating, pulled live</span></div>
   </div>
 </section>
@@ -255,7 +261,7 @@ a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{ou
       </div>
       <div style="display: flex; flex-wrap: wrap; gap: 12px;">
         <a class="btn primary" href="#build">Customize The Rising Sun</a>
-        <a class="btn ghost" href="#models">See full specs</a>
+        <a class="btn ghost" href="models/the-rising-sun/">See full specs</a>
       </div>
     </div>
   </div>
@@ -288,25 +294,26 @@ a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{ou
     </div>
     <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px;">
       <li style="background: #FFFFFF; border: 1px solid #D5DCDE; border-radius: 2px; padding: 24px; display: flex; flex-direction: column; gap: 10px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 36px; color: #B04E25;">1</span><h3 style="font-size: 20px; color: #14324A;">Build it online</h3><p style="font-size: 15px; line-height: 24px; color: #5A666C;">Pick your model, finishes, and upgrades. The price updates as you go.</p></li>
-      <li style="background: #FFFFFF; border: 1px solid #D5DCDE; border-radius: 2px; padding: 24px; display: flex; flex-direction: column; gap: 10px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 36px; color: #B04E25;">2</span><h3 style="font-size: 20px; color: #14324A;">Check financing</h3><p style="font-size: 15px; line-height: 24px; color: #5A666C;">Send your info and a financing rep reaches out with options.</p></li>
+      <li style="background: #FFFFFF; border: 1px solid #D5DCDE; border-radius: 2px; padding: 24px; display: flex; flex-direction: column; gap: 10px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 36px; color: #B04E25;">2</span><h3 style="font-size: 20px; color: #14324A;">Check financing</h3><p style="font-size: 15px; line-height: 24px; color: #5A666C;">Send your info and a financing representative reaches out with options.</p></li>
       <li style="background: #FFFFFF; border: 1px solid #D5DCDE; border-radius: 2px; padding: 24px; display: flex; flex-direction: column; gap: 10px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 36px; color: #B04E25;">3</span><h3 style="font-size: 20px; color: #14324A;">We build it</h3><p style="font-size: 15px; line-height: 24px; color: #5A666C;">[BUILD TIME] weeks in our shop, with photo updates at each stage.</p></li>
-      <li style="background: #FFFFFF; border: 1px solid #D5DCDE; border-radius: 2px; padding: 24px; display: flex; flex-direction: column; gap: 10px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 36px; color: #B04E25;">4</span><h3 style="font-size: 20px; color: #14324A;">We deliver it</h3><p style="font-size: 15px; line-height: 24px; color: #5A666C;">Set on your site, furnished and ready. First 1,000 miles are on us.</p></li>
+      <li style="background: #FFFFFF; border: 1px solid #D5DCDE; border-radius: 2px; padding: 24px; display: flex; flex-direction: column; gap: 10px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 36px; color: #B04E25;">4</span><h3 style="font-size: 20px; color: #14324A;">We deliver it</h3><p style="font-size: 15px; line-height: 24px; color: #5A666C;">Shipped anywhere in the U.S. and set on your site, furnished and ready. First 1,000 miles are on us.</p></li>
     </ol>
   </div>
 </section>
 
-<!-- BUILT for America -->
+<!-- BUILT TO TRAVEL -->
 <section style="background: #FFFFFF; padding-top: 96px; padding-bottom: 96px; border-top: 1px solid #D5DCDE; border-bottom: 1px solid #D5DCDE;">
   <div class="wrap" style="display: flex; flex-wrap: wrap-reverse; gap: 48px; align-items: center;">
     <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
-      <span class="eyebrow">Built for America</span>
-      <h2 style="font-size: 40px; line-height: 44px; font-weight: 800; color: #14324A;">Steel shell. Gulf Coast ready.</h2>
-      <p style="font-size: 17px; line-height: 28px;">A container home lives or dies by how it handles heat and humidity. Here's what goes into every build.</p>
+      <span class="eyebrow">Built to travel</span>
+      <h2 style="font-size: 40px; line-height: 44px; font-weight: 800; color: #14324A;">Built for Texas. Ready for anywhere.</h2>
+      <p style="font-size: 17px; line-height: 28px;">If a home can handle August in Texas, it's off to a good start. Here's what goes into every build, plus what changes for colder states.</p>
       <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; font-size: 16px; line-height: 24px;">
         <li style="display: flex; gap: 12px;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F5D47" stroke-width="2.2" stroke-linecap="square" style="flex: none; margin-top: 1px;"><path d="M4 12l5 5L20 6"></path></svg><span><strong>[INSULATION SPEC]</strong> keeps the steel from turning into an oven in August</span></li>
         <li style="display: flex; gap: 12px;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F5D47" stroke-width="2.2" stroke-linecap="square" style="flex: none; margin-top: 1px;"><path d="M4 12l5 5L20 6"></path></svg><span><strong>[HVAC SPEC]</strong> sized for Southeast Texas summers</span></li>
         <li style="display: flex; gap: 12px;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F5D47" stroke-width="2.2" stroke-linecap="square" style="flex: none; margin-top: 1px;"><path d="M4 12l5 5L20 6"></path></svg><span><strong>[COATING / RUST SPEC]</strong> for a humid, salty-air climate</span></li>
         <li style="display: flex; gap: 12px;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F5D47" stroke-width="2.2" stroke-linecap="square" style="flex: none; margin-top: 1px;"><path d="M4 12l5 5L20 6"></path></svg><span><strong>[TIE-DOWN / WIND SPEC]</strong> for hurricane season</span></li>
+        <li style="display: flex; gap: 12px;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F5D47" stroke-width="2.2" stroke-linecap="square" style="flex: none; margin-top: 1px;"><path d="M4 12l5 5L20 6"></path></svg><span><strong>[COLD-CLIMATE PACKAGE]</strong> for snow-country states like Colorado and Wyoming</span></li>
       </ul>
     </div>
     <div class="media filled" style="flex: 1 1 460px; min-width: 0; aspect-ratio: 4 / 5; max-width: 100%;"><img src="assets/Website/Build%20%20plans/DJIvwindow%20cut%20out%20pic%207.JPG" alt="Aerial view of a container mid-build with window openings cut into the steel" loading="lazy"></div>
@@ -334,7 +341,7 @@ a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{ou
       <label class="field" for="zp">ZIP code<input id="zp" type="text" inputmode="numeric" autocomplete="postal-code"></label>
       <label class="field" for="md" style="grid-column: span 2;">Which home?<select id="md"><option>The Rising Sun</option><option>A custom build</option><option>Not sure yet</option></select></label>
       <button type="button" class="btn primary" style="grid-column: span 2; border: 0; cursor: pointer; font-family: inherit;">Apply for financing</button>
-      <p style="grid-column: span 2; font-size: 13px; line-height: 19px; color: #5A666C;">Contact info only. A real person from UnContained Dreams follows up within [1 business day].</p>
+      <p style="grid-column: span 2; font-size: 13px; line-height: 19px; color: #5A666C;">Submitting doesn't commit you to anything. Financing is arranged through [FINANCING AGENT / LENDER].</p>
     </form>
   </div>
 </section>
@@ -368,10 +375,27 @@ a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{ou
       <h2 style="font-size: 40px; line-height: 44px; font-weight: 800; color: #14324A;">What owners say.</h2>
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
-      <!-- <figure style="margin: 0; border: 1px solid #D5DCDE; border-radius: 2px; padding: 24px; display: flex; flex-direction: column; gap: 16px;"><blockquote style="margin: 0; font-size: 17px; line-height: 28px;">[REAL GOOGLE REVIEW, verbatim, with permission]</blockquote><figcaption style="font-size: 14px; color: #5A666C;">[First name, last initial] · [City], TX</figcaption></figure>
       <figure style="margin: 0; border: 1px solid #D5DCDE; border-radius: 2px; padding: 24px; display: flex; flex-direction: column; gap: 16px;"><blockquote style="margin: 0; font-size: 17px; line-height: 28px;">[REAL GOOGLE REVIEW, verbatim, with permission]</blockquote><figcaption style="font-size: 14px; color: #5A666C;">[First name, last initial] · [City], TX</figcaption></figure>
-      <div class="media dark" style="min-height: 200px;"><span class="mtag">Video testimonial · 30–60s</span><span class="mnote">An owner on camera beats ten written reviews. Shoot it at the next delivery.</span> -->
+      <figure style="margin: 0; border: 1px solid #D5DCDE; border-radius: 2px; padding: 24px; display: flex; flex-direction: column; gap: 16px;"><blockquote style="margin: 0; font-size: 17px; line-height: 28px;">[REAL GOOGLE REVIEW, verbatim, with permission]</blockquote><figcaption style="font-size: 14px; color: #5A666C;">[First name, last initial] · [City], TX</figcaption></figure>
+      <div class="media dark" style="min-height: 200px;"><span class="mtag">Video testimonial · 30–60s</span><span class="mnote">An owner on camera beats ten written reviews. Shoot it at the next delivery.</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIY -->
+<section id="diy" style="background: #FFFFFF; padding-top: 96px; padding-bottom: 96px; border-bottom: 1px solid #D5DCDE;">
+  <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center;">
+    <div class="media filled" style="flex: 1 1 420px; min-width: 0; aspect-ratio: 3 / 2; max-width: 100%;"><img src="assets/img/gallery/build-interior-framing-1600.jpg" srcset="assets/img/gallery/build-interior-framing-800.jpg 800w, assets/img/gallery/build-interior-framing-1600.jpg 1600w" sizes="(min-width: 1100px) 520px, 100vw" alt="A builder assembling a wood cabinet frame on the workbench in our shop" loading="lazy"></div>
+    <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
+      <span class="eyebrow">Building your own?</span>
+      <h2 style="font-size: 40px; line-height: 44px; font-weight: 800; color: #14324A;">Get help from people who've done it.</h2>
+      <p style="font-size: 17px; line-height: 28px;">Book a free discovery call to talk through your idea, or a one-hour paid consult when you're stuck mid-build. Our building plans and a step-by-step DIY course are coming soon.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+        <a class="btn ghost" href="#contact">Book a free discovery call</a>
+        <a class="btn ghost" href="#contact">Get notified when plans launch</a>
+      </div>
+      <p style="font-size: 14px; line-height: 20px; color: #5A666C;">Plans and course: join the list and you'll hear first. [Later: Buy plans · Enroll in the course]</p>
     </div>
   </div>
 </section>
@@ -385,7 +409,7 @@ a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{ou
     </div>
     <div style="flex: 2 1 560px; min-width: 0; display: flex; flex-direction: column; border-top: 1px solid #D5DCDE;">
       <details open="" style="border-bottom: 1px solid #D5DCDE; padding: 20px 0;"><summary style="font-weight: 700; font-size: 18px; cursor: pointer; color: #14324A;">What does it actually cost?</summary><p style="margin-top: 12px; font-size: 16px; line-height: 26px;">The Rising Sun starts at $85,000 and runs up to $120,000 with every upgrade. That includes the custom furniture and the first 1,000 miles of delivery. Site prep, foundation, and utility hookups are [INCLUDED / QUOTED SEPARATELY].</p></details>
-      <details style="border-bottom: 1px solid #D5DCDE; padding: 20px 0;"><summary style="font-weight: 700; font-size: 18px; cursor: pointer; color: #14324A;">Can I put one in my backyard in Sugar Land?</summary><p style="margin-top: 12px; font-size: 16px; line-height: 26px;">[ANSWER: city zoning + HOA approval process]</p></details>
+      <details style="border-bottom: 1px solid #D5DCDE; padding: 20px 0;"><summary style="font-weight: 700; font-size: 18px; cursor: pointer; color: #14324A;">Do you deliver to my state?</summary><p style="margin-top: 12px; font-size: 16px; line-height: 26px;">Yes. We ship to all 50 states, and to Canada, the U.S. Virgin Islands, and other international destinations case by case. The first 1,000 miles are included, and longer trips are quoted up front [CONFIRM]. Zoning rules vary by city and county, and we'll help you check yours.</p></details>
       <details style="border-bottom: 1px solid #D5DCDE; padding: 20px 0;"><summary style="font-weight: 700; font-size: 18px; cursor: pointer; color: #14324A;">How long does a build take?</summary><p style="margin-top: 12px; font-size: 16px; line-height: 26px;">[BUILD TIME]</p></details>
       <details style="border-bottom: 1px solid #D5DCDE; padding: 20px 0;"><summary style="font-weight: 700; font-size: 18px; cursor: pointer; color: #14324A;">Can I finance it?</summary><p style="margin-top: 12px; font-size: 16px; line-height: 26px;">Yes. Apply online and a financing representative will contact you to go over your options.</p></details>
       <details style="border-bottom: 1px solid #D5DCDE; padding: 20px 0;"><summary style="font-weight: 700; font-size: 18px; cursor: pointer; color: #14324A;">What's the warranty?</summary><p style="margin-top: 12px; font-size: 16px; line-height: 26px;">[WARRANTY TERMS]</p></details>
@@ -397,15 +421,16 @@ a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{ou
 <section id="areas" style="background: #FFFFFF; padding-top: 72px; padding-bottom: 72px; border-top: 1px solid #D5DCDE;">
   <div class="wrap" style="display: flex; flex-direction: column; gap: 20px;">
     <span class="eyebrow">Where we deliver</span>
-    <h2 style="font-size: 32px; line-height: 38px; font-weight: 800; color: #14324A;">Based near Sugar Land. Delivering across the United States.</h2>
+    <h2 style="font-size: 32px; line-height: 38px; font-weight: 800; color: #14324A;">Built in Texas. Delivered nationwide.</h2>
+    <p style="font-size: 17px; line-height: 28px; color: #5A666C; max-width: 620px;">Most of our homes head to the West Coast, the Mountain West, and the Northeast. Canada, the U.S. Virgin Islands, and other international destinations are quoted case by case.</p>
     <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-      <a class="chip" href="#areas" style="background: #DCE3E5; color: #14324A; text-decoration: none; min-height: 44px; box-sizing: border-box;">Sugar Land</a>
-      <a class="chip" href="#areas" style="background: #DCE3E5; color: #14324A; text-decoration: none; min-height: 44px; box-sizing: border-box;">Missouri City</a>
-      <a class="chip" href="#areas" style="background: #DCE3E5; color: #14324A; text-decoration: none; min-height: 44px; box-sizing: border-box;">Richmond</a>
-      <a class="chip" href="#areas" style="background: #DCE3E5; color: #14324A; text-decoration: none; min-height: 44px; box-sizing: border-box;">Rosenberg</a>
-      <a class="chip" href="#areas" style="background: #DCE3E5; color: #14324A; text-decoration: none; min-height: 44px; box-sizing: border-box;">Fulshear</a>
-      <a class="chip" href="#areas" style="background: #DCE3E5; color: #14324A; text-decoration: none; min-height: 44px; box-sizing: border-box;">Katy</a>
-      <a class="chip" href="#areas" style="background: #DCE3E5; color: #14324A; text-decoration: none; min-height: 44px; box-sizing: border-box;">All service areas</a>
+      <a class="chip" href="#areas" style="background: #DCE3E5; color: #14324A; text-decoration: none; min-height: 44px; box-sizing: border-box;">California</a>
+      <a class="chip" href="#areas" style="background: #DCE3E5; color: #14324A; text-decoration: none; min-height: 44px; box-sizing: border-box;">Colorado</a>
+      <a class="chip" href="#areas" style="background: #DCE3E5; color: #14324A; text-decoration: none; min-height: 44px; box-sizing: border-box;">Utah</a>
+      <a class="chip" href="#areas" style="background: #DCE3E5; color: #14324A; text-decoration: none; min-height: 44px; box-sizing: border-box;">Wyoming</a>
+      <a class="chip" href="#areas" style="background: #DCE3E5; color: #14324A; text-decoration: none; min-height: 44px; box-sizing: border-box;">New York</a>
+      <a class="chip" href="container-homes/texas/" style="background: #DCE3E5; color: #14324A; text-decoration: none; min-height: 44px; box-sizing: border-box;">Texas</a>
+      <a class="chip" href="service-areas/" style="background: #DCE3E5; color: #14324A; text-decoration: none; min-height: 44px; box-sizing: border-box;">All 50 states</a>
     </div>
   </div>
 </section>
@@ -429,12 +454,12 @@ a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{ou
       <div style="display: flex; flex-direction: column; gap: 8px;"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 20px; color: #FFFFFF;">
 
         <img src="./assets/brand/logo-dark.png" alt="UnContained Dreams logo" style="width: 240px; height: auto; margin-top: 8px;">
-      </span><span>Container homes, built for America.</span></div>
+      </span><span>Texas-built container homes, delivered anywhere.</span></div>
       <div style="display: flex; flex-direction: column; gap: 4px;"><span style="color: #FFFFFF; font-weight: 600;">Contact</span><span>[PHONE]</span><span>[EMAIL]</span><span>[STREET ADDRESS], Sugar Land, TX [ZIP]</span></div>
-      <div style="display: flex; flex-direction: column; gap: 4px;"><span style="color: #FFFFFF; font-weight: 600;">Explore</span><a href="#models" style="color: #B7C8D6;">Models</a><a href="#build" style="color: #B7C8D6;">Build Your Home</a><a href="#financing" style="color: #B7C8D6;">Financing</a><a href="#gallery" style="color: #B7C8D6;">Gallery</a></div>
+      <div style="display: flex; flex-direction: column; gap: 4px;"><span style="color: #FFFFFF; font-weight: 600;">Explore</span><a href="#models" style="color: #B7C8D6;">Models</a><a href="#build" style="color: #B7C8D6;">Build Your Home</a><a href="#financing" style="color: #B7C8D6;">Financing</a><a href="#diy" style="color: #B7C8D6;">DIY Plans &amp; Consulting</a><a href="#gallery" style="color: #B7C8D6;">Gallery</a></div>
       <div style="display: flex; flex-direction: column; gap: 4px;"><span style="color: #FFFFFF; font-weight: 600;">Trust</span><span>[LICENSE / REGISTRATION #]</span><span>[INSURANCE: general liability]</span><a href="#faq" style="color: #B7C8D6;">Warranty terms</a></div>
     </div>
-    <p style="font-size: 13px; color: #8FA3B3; border-top: 1px solid #2A3A44; padding-top: 20px;">© 2026 UnContained Dreams. Financing provided by [LENDER PARTNER]; UnContained Dreams does not make credit decisions. <a href="#contact" style="color: #B7C8D6;">Privacy</a> · <a href="#contact" style="color: #B7C8D6;">Terms</a></p>
+    <p style="font-size: 13px; color: #8FA3B3; border-top: 1px solid #2A3A44; padding-top: 20px;">© 2026 UnContained Dreams. Financing arranged through [FINANCING AGENT / LENDER]; UnContained Dreams does not make credit decisions. <a href="#contact" style="color: #B7C8D6;">Privacy</a> · <a href="#contact" style="color: #B7C8D6;">Terms</a></p>
   </div>
 </footer>
 

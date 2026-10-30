@@ -2,13 +2,23 @@
    ?config= build state, and works out line items and totals. */
 (function () {
   var DATA_PATH = 'assets/data/build-options.json';
+  var MODELS_PATH = 'assets/data/models.json';
   // Free ZIP lookup (city, state, coordinates). Swap for another service if needed.
   var ZIP_API = 'https://api.zippopotam.us/us/';
 
-  function load(root) {
-    return fetch(root + DATA_PATH, { cache: 'no-cache' }).then(function (res) {
-      if (!res.ok) throw new Error('prices ' + res.status);
+  function getJson(url) {
+    return fetch(url, { cache: 'no-cache' }).then(function (res) {
+      if (!res.ok) throw new Error(url + ' ' + res.status);
       return res.json();
+    });
+  }
+
+  // Options and prices from build-options.json, models from models.json.
+  function load(root) {
+    return Promise.all([getJson(root + DATA_PATH), getJson(root + MODELS_PATH)]).then(function (r) {
+      var data = r[0];
+      data.models = r[1].models;
+      return data;
     });
   }
 
