@@ -1,0 +1,42 @@
+/*
+Theme Name: UnContained Dreams
+Description: Texas-built container homes, delivered anywhere. Converted from the static site one page at a time.
+Author: Chris Norton
+Version: 1.0.0
+Requires at least: 6.3
+Requires PHP: 7.4
+Text Domain: uncontained-dreams
+*/
+
+body{margin:0;background:#F1F3F2;color:#1B2429;font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:#14324A}a:hover{color:#B04E25}
+h1,h2,h3{font-family:"Archivo","Arial Narrow",Arial,sans-serif;text-wrap:balance;margin:0}
+p{margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,4vw);padding-right:max(20px,4vw);box-sizing:border-box}
+.media{position:relative;box-sizing:border-box;border:1.5px dashed #8FA0A6;background:#DCE3E5;color:#14324A;border-radius:2px;display:flex;flex-direction:column;justify-content:flex-end;gap:4px;padding:16px;overflow:hidden}
+.media.dark{background:#1E425E;border-color:#5C7D95;color:#F1F3F2}
+.mtag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.mnote{font-size:13px;line-height:19px;max-width:44ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:6px;font-weight:600;font-size:16px;text-decoration:none;box-sizing:border-box}
+.btn.primary{background:#B04E25;color:#FFFFFF}
+.btn.primary:hover{background:#963F1C;color:#FFFFFF}
+.btn.ghost{border:1.5px solid currentColor;color:#14324A}
+.btn.ghost.light{color:#FFFFFF}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5A666C}
+.chip{display:inline-flex;align-items:center;padding:4px 12px;border-radius:999px;font-size:13px;font-weight:600}
+.field{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600;color:#1B2429}
+.field input,.field select{min-height:46px;border:1px solid #B9C4C8;border-radius:2px;padding:0 12px;font:inherit;font-weight:400;font-size:16px;background:#FFFFFF;color:#1B2429}
+a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{outline:3px solid #B04E25;outline-offset:2px}
+.media.filled{border:0;padding:0;background:#1E425E}
+.media>img,.media>video,.media>a>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.hero-video{display:block}
+@media (max-width:767px){.hero-video{display:none}}
+/* Seven top-level links: widen the header bar and tighten spacing so they stay on one line.
+   Prefixed with .site-header so these beat mega-menu.css, which loads after this file. */
+@media (min-width:1100px){.site-header .site-header__bar{max-width:1440px;gap:20px}.site-header .primary-nav{gap:16px}.site-header .primary-nav .menu{gap:0}.site-header .primary-nav .menu>.menu-item>a,.site-header .menu-trigger,.site-header .header-actions .btn,.site-header .header-phone{white-space:nowrap}.site-header .primary-nav .menu>.menu-item>a,.site-header .menu-trigger{padding:0 9px;font-size:15px}.site-header .header-actions{gap:14px}.site-header .header-actions .btn{padding:0 16px;font-size:15px}.site-header .site-logo__img{width:170px;height:auto}}@media (min-width:1100px) and (max-width:1159px){.site-header .primary-nav .menu>.menu-item>a,.site-header .menu-trigger{padding:0 6px}}
+/* Keep the sticky header and mobile drawer below the WordPress admin bar when logged in.
+   The admin bar is 32px tall, 46px under 783px, and stops being fixed under 601px. */
+.admin-bar .site-header{top:32px}
+@media (max-width:1099px){.admin-bar .primary-nav{top:calc(var(--ucd-header-h) + 32px)}}
+@media (max-width:782px){.admin-bar .site-header{top:46px}.admin-bar .primary-nav{top:calc(var(--ucd-header-h) + 46px)}}
+@media (max-width:600px){.admin-bar .site-header{top:0}.admin-bar .primary-nav{top:var(--ucd-header-h)}}
