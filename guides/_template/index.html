@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!--
+  ARTICLE TEMPLATE: every guide, build update, and news post uses this shape.
+  To publish an article:
+    1. Copy this folder to guides/{slug}/ (the slug from assets/data/posts.json).
+    2. Remove the robots noindex tag below. Fill every [BRACKET]: title, meta, canonical, schema, byline.
+    3. Set data-topic and data-slug on <body>. data-topic picks the inline CTA and the related guides.
+    4. In posts.json, set status to "live" and fill published and updated (YYYY-MM).
+  Rules: every article gets an Updated date; anything about laws or prices gets rechecked every 6 months.
+  No stock photos: use our builds, or no photo. Sources are required on every permits and financing article.
+-->
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>[TITLE, under 60 characters] · UnContained Dreams</title>
+<meta name="description" content="[The short answer, rewritten to under 160 characters.]">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="/guides/[slug]/">
+<link rel="icon" href="../../assets/brand/icon.png" sizes="any"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F1F3F2;color:#1B2429;font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:#14324A}a:hover{color:#B04E25}
+h1,h2,h3{font-family:"Archivo","Arial Narrow",Arial,sans-serif;text-wrap:balance;margin:0}
+p{margin:0}
+[hidden]{display:none!important}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,4vw);padding-right:max(20px,4vw);box-sizing:border-box}
+.media{position:relative;box-sizing:border-box;border:1.5px dashed #8FA0A6;background:#DCE3E5;color:#14324A;border-radius:2px;display:flex;flex-direction:column;justify-content:flex-end;gap:4px;padding:16px;overflow:hidden}
+.media.filled{border:0;padding:0;background:#1E425E}
+.media>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:6px;font-weight:600;font-size:16px;text-decoration:none;box-sizing:border-box}
+.btn.primary{background:#B04E25;color:#FFFFFF}
+.btn.primary:hover{background:#963F1C;color:#FFFFFF}
+.btn.ghost{border:1.5px solid currentColor;color:#14324A}
+.btn.ghost.light{color:#FFFFFF}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5A666C}
+.chip{display:inline-flex;align-items:center;padding:4px 12px;border-radius:999px;font-size:13px;font-weight:600}
+a:focus-visible,button:focus-visible{outline:3px solid #B04E25;outline-offset:2px}
+/* Article */
+.article{max-width:760px;margin:0 auto}
+.crumbs{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px;font-size:14px;color:#5A666C}
+.crumbs li+li::before{content:"›";margin-right:6px}
+.a-h1{font-size:clamp(36px,5vw,52px);line-height:1.06;font-weight:800;letter-spacing:-.015em;color:#14324A}
+.byline{font-size:15px;line-height:22px;color:#5A666C}
+.byline strong{color:#1B2429;font-weight:600}
+.short{background:#FFFFFF;border:1px solid #D5DCDE;border-left:4px solid #14324A;border-radius:2px;padding:22px 26px;display:flex;flex-direction:column;gap:8px}
+.short p{font-size:19px;line-height:30px}
+.prose{display:flex;flex-direction:column;gap:20px;font-size:18px;line-height:30px}
+.prose h2{font-size:30px;line-height:36px;font-weight:800;color:#14324A;margin-top:28px}
+.prose h3{font-size:21px;line-height:28px;color:#14324A;margin-top:8px}
+.prose ul,.prose ol{margin:0;padding-left:24px;display:flex;flex-direction:column;gap:8px}
+.prose figure{margin:8px 0;display:flex;flex-direction:column;gap:10px}
+.prose figure .media{aspect-ratio:3/2}
+.prose figcaption{font-size:14px;line-height:20px;color:#5A666C}
+.table-wrap{overflow-x:auto;margin:4px 0}
+.table{width:100%;border-collapse:collapse;background:#FFFFFF;border:1px solid #D5DCDE;font-size:16px;line-height:24px}
+.table th,.table td{text-align:left;padding:12px 16px;border-bottom:1px solid #D5DCDE;vertical-align:top}
+.table thead th{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5A666C;background:#F1F3F2}
+.table tbody th{font-weight:600;color:#14324A}
+.means{background:#14324A;color:#FFFFFF;border-radius:2px;padding:28px;display:flex;flex-direction:column;gap:12px;font-size:17px;line-height:28px}
+.means h2{font-size:26px;line-height:32px;font-weight:800}
+/* Inline CTA: one block per topic group. body[data-topic] shows the matching one. */
+.cta{display:none;background:#FFFFFF;border:1px solid #D5DCDE;border-top:4px solid #B04E25;border-radius:2px;padding:28px;flex-direction:column;gap:16px}
+.cta h2{font-size:24px;line-height:30px;font-weight:800;color:#14324A}
+.cta p{font-size:16px;line-height:26px}
+.cta__btns{display:flex;flex-wrap:wrap;gap:12px}
+body[data-topic="costs-financing"] .cta[data-for~="costs-financing"],
+body[data-topic="permits-zoning"] .cta[data-for~="permits-zoning"],
+body[data-topic="delivery"] .cta[data-for~="delivery"],
+body[data-topic="building-design"] .cta[data-for~="building-design"],
+body[data-topic="diy"] .cta[data-for~="diy"],
+body[data-topic="build-updates"] .cta[data-for~="build-updates"]{display:flex}
+.sources ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:23px}
+.ggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.gcard{background:#FFFFFF;border:1px solid #D5DCDE;border-radius:2px;display:flex;flex-direction:column;overflow:hidden;position:relative}
+.gcard:hover{border-color:#14324A}
+.gcard .media{aspect-ratio:16/9;border-radius:0}
+.gcard__body{padding:20px 24px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.gcard .chip{background:#F1F3F2;color:#14324A;border:1px solid #D5DCDE;font-size:12px;padding:3px 10px;align-self:flex-start}
+.gcard h3{font-size:19px;line-height:25px;color:#14324A}
+.gcard h3 a{color:inherit;text-decoration:none}
+.gcard h3 a::after{content:"";position:absolute;inset:0}
+.gcard p{font-size:15px;line-height:23px}
+.gcard__meta{font-size:13px;color:#5A666C;margin-top:auto}
+</style>
+<link rel="stylesheet" href="../../assets/css/mega-menu.css">
+<!-- Article schema: dates are ISO (YYYY-MM-DD). Bump dateModified with every recheck. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "[TITLE]",
+  "description": "[The short answer, rewritten to under 160 characters.]",
+  "image": ["/assets/img/gallery/[photo]-1600.jpg"],
+  "author": { "@type": "Person", "name": "[OWNER NAME]", "jobTitle": "Founder", "worksFor": { "@type": "Organization", "name": "UnContained Dreams" } },
+  "publisher": { "@type": "Organization", "name": "UnContained Dreams", "logo": { "@type": "ImageObject", "url": "/assets/brand/logo.png" } },
+  "datePublished": "[YYYY-MM-DD]",
+  "dateModified": "[YYYY-MM-DD]",
+  "mainEntityOfPage": "/guides/[slug]/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "/" },
+    { "@type": "ListItem", "position": 2, "name": "Guides", "item": "/guides/" },
+    { "@type": "ListItem", "position": 3, "name": "[TITLE]", "item": "/guides/[slug]/" }
+  ]
+}
+</script>
+<!-- FAQPage: add only when the article ends with questions, and only answers with no brackets.
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "[Question]", "acceptedAnswer": { "@type": "Answer", "text": "[Answer]" } }
+  ]
+}
+</script>
+-->
+</head>
+<!-- data-topic: costs-financing · permits-zoning · delivery · building-design · diy · build-updates -->
+<body data-topic="costs-financing" data-slug="[slug]">
+<div style="display: flex; flex-direction: column; min-width: 0;">
+
+<!-- HEADER + MEGA MENU: reuse from index.html -->
+
+<main style="padding-top: 56px; padding-bottom: 96px;">
+  <div class="wrap">
+    <article class="article" style="display: flex; flex-direction: column; gap: 28px;">
+
+      <!-- 1. Breadcrumb: Home › Guides › [Topic]. The topic link opens the hub filtered to it. -->
+      <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="../../">Home</a></li><li><a href="../">Guides</a></li><li><a href="../?topic=costs-financing">[Topic]</a></li></ol></nav>
+
+      <header style="display: flex; flex-direction: column; gap: 18px;">
+        <!-- 2. Title: the question the reader typed, answered. Under 60 characters when possible. -->
+        <h1 class="a-h1">[TITLE]</h1>
+        <!-- 3. Byline -->
+        <p class="byline">By <strong>[OWNER NAME]</strong>, founder of UnContained Dreams · Updated <time datetime="[YYYY-MM]">[Month Year]</time> · [X] min read</p>
+      </header>
+
+      <!-- Lead photo: one of our builds, or delete this figure. No stock photos. -->
+      <figure style="margin: 0; display: flex; flex-direction: column; gap: 10px;">
+        <div class="media filled" style="aspect-ratio: 16 / 9;"><img src="../../assets/img/gallery/rising-sun-living-room-1600.jpg" alt="[What the photo shows]" fetchpriority="high"></div>
+        <figcaption style="font-size: 14px; color: #5A666C;">[Model · What you're looking at · Where · When]</figcaption>
+      </figure>
+
+      <!-- 4. The short answer: 2 to 3 sentences, before any background. This is what Google and AI search pull. -->
+      <section class="short" aria-labelledby="short-h">
+        <span class="eyebrow" id="short-h">The short answer</span>
+        <p>[Answer the question in the title in 2 to 3 sentences. Lead with the number or the yes/no.]</p>
+      </section>
+
+      <!-- 5. Body: H2s phrased as the follow-up questions people ask. Real numbers, real photos, a table where things get compared. -->
+      <div class="prose">
+        <p>[One short paragraph of context: why this question matters and who it's for.]</p>
+
+        <h2>[Follow-up question people ask?]</h2>
+        <p>[Plain-English answer with real numbers from our builds.]</p>
+
+        <h2>[Another follow-up question?]</h2>
+        <p>[Answer.]</p>
+        <figure>
+          <div class="media filled"><img src="../../assets/img/gallery/build-window-openings-aerial-1600.jpg" alt="[What the photo shows]" loading="lazy"></div>
+          <figcaption>[Model · What you're looking at · Where · When]</figcaption>
+        </figure>
+
+        <h2>[A question where options get compared?]</h2>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th scope="col">[Option]</th><th scope="col">[Cost]</th><th scope="col">[What it means for you]</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">[Option A]</th><td>[$X]</td><td>[Plain-English trade-off]</td></tr>
+              <tr><th scope="row">[Option B]</th><td>[$X]</td><td>[Plain-English trade-off]</td></tr>
+              <tr><th scope="row">[Option C]</th><td>[$X]</td><td>[Plain-English trade-off]</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 6. What this means for you: turn the info into a decision or next step. -->
+      <section class="means" aria-labelledby="means-h">
+        <h2 id="means-h">What this means for you</h2>
+        <p>[One short paragraph: what to do next, given everything above.]</p>
+      </section>
+
+      <!-- 7. Inline CTA, matched to the topic. Only the block for this page's data-topic shows. -->
+      <aside class="cta" data-for="costs-financing">
+        <h2>See your number.</h2>
+        <p>Build your home online and see the total, or apply and a financing representative will reach out.</p>
+        <div class="cta__btns"><a class="btn primary" href="../../build/">Build Your Home</a><a class="btn ghost" href="../../financing/">Apply for financing</a></div>
+      </aside>
+      <aside class="cta" data-for="permits-zoning delivery">
+        <h2>Find out what it takes to get one to you.</h2>
+        <p>Get a delivery quote, or see the rules where you're building.</p>
+        <!-- Swap the second link for the matching state page, e.g. ../../container-homes/texas/ -->
+        <div class="cta__btns"><a class="btn primary" href="../../contact/">Get a delivery quote</a><a class="btn ghost" href="../../service-areas/">[See your state]</a></div>
+      </aside>
+      <aside class="cta" data-for="building-design diy">
+        <h2>Building your own?</h2>
+        <p>Talk it through on a free call, or join the list for our building plans.</p>
+        <div class="cta__btns"><a class="btn primary" href="../../plans/#talk">Book a free discovery call</a><a class="btn ghost" href="../../plans/#plans-list">Join the plans list</a></div>
+      </aside>
+      <aside class="cta" data-for="build-updates">
+        <h2>See the finished home.</h2>
+        <p>Walk through The Rising Sun in 3D, or see every spec and piece of furniture.</p>
+        <div class="cta__btns"><a class="btn primary" href="[STUDIO VOS TOUR URL]" target="_blank" rel="noopener">Take the 3D tour</a><a class="btn ghost" href="../../models/the-rising-sun/">See the model</a></div>
+      </aside>
+
+      <!-- 9. Sources: required on every permits and financing article. Link the primary source, not a summary of it. -->
+      <section class="sources" aria-labelledby="sources-h" style="display: flex; flex-direction: column; gap: 12px; border-top: 1px solid #D5DCDE; padding-top: 24px;">
+        <h2 id="sources-h" style="font-size: 18px; color: #14324A;">Sources</h2>
+        <ol>
+          <li><a href="[URL]" rel="noopener">[Source name: document title, publisher, Month Year]</a></li>
+        </ol>
+      </section>
+    </article>
+  </div>
+
+  <!-- 8. Related guides: up to 3 live guides from the same topic, from assets/data/posts.json. Hidden when there are none. -->
+  <section id="related" style="padding-top: 72px;" hidden>
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 24px;">
+      <h2 style="font-size: 30px; line-height: 36px; font-weight: 800; color: #14324A;">Related guides</h2>
+      <div class="ggrid" id="related-grid"></div>
+      <a href="../" style="font-weight: 600;">All guides</a>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER: reuse from index.html -->
+
+</div>
+
+<script>
+(function () {
+  var esc = function (s) { var d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; };
+  var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  var topic = document.body.getAttribute('data-topic');
+  var slug = document.body.getAttribute('data-slug');
+
+  fetch('../../assets/data/posts.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (json) {
+    var labels = {};
+    json.topics.forEach(function (t) { labels[t.id] = t.label; });
+    var related = json.posts.filter(function (p) {
+      return p.status === 'live' && p.topic === topic && p.slug !== slug;
+    }).sort(function (a, b) { return String(b.published).localeCompare(String(a.published)); }).slice(0, 3);
+    if (!related.length) return;
+    document.getElementById('related-grid').innerHTML = related.map(function (p) {
+      var ym = (p.updated || '').split('-');
+      var upd = ym.length === 2 ? 'Updated ' + MONTHS[parseInt(ym[1], 10) - 1] + ' ' + ym[0] : '';
+      return '<article class="gcard">' +
+        (p.image ? '<div class="media filled"><img src="../../' + esc(p.image) + '" alt="" loading="lazy"></div>' : '') +
+        '<div class="gcard__body"><span class="chip">' + esc(labels[p.topic]) + '</span>' +
+        '<h3><a href="../' + esc(p.slug) + '/">' + esc(p.title) + '</a></h3><p>' + esc(p.summary) + '</p>' +
+        '<p class="gcard__meta">' + esc(p.readMinutes) + ' min read' + (upd ? ' · ' + upd : '') + '</p></div></article>';
+    }).join('');
+    document.getElementById('related').hidden = false;
+  }).catch(function () { /* no related guides */ });
+})();
+</script>
+<script src="../../assets/js/mega-menu.js" defer></script>
+</body></html>

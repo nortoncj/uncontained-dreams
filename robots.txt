@@ -4,3 +4,8 @@ Disallow: /*?config=
 Disallow: /build/review/
 Disallow: /order/
 Disallow: /contact/thank-you/
+Disallow: /plans/thank-you/
+# Guides: topic filters and the draft preview change the list on /guides/ only, so they never become thin duplicate pages.
+Disallow: /*?topic=
+Disallow: /*?drafts=
+Disallow: /guides/_template/

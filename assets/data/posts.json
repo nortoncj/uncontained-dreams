@@ -1,0 +1,114 @@
+{
+  "_readme": [
+    "Every guide, build update, and news post. The /guides/ hub and each article's related-guides list read this file.",
+    "status: draft until the article page exists at guides/{slug}/ and is ready. Flip it to live to publish; drafts never show on the hub or in the sitemap.",
+    "hold: a reason the article can't be published yet. Leave it in place until the owner answers it. A wrong answer on permits or credit is worse than no article.",
+    "updated is YYYY-MM. Anything about laws or prices gets rechecked every 6 months: bump updated (and dateModified in the article's schema) when you do.",
+    "image: one of our own photos, or null for no photo. No stock photos.",
+    "Square-bracket text is a placeholder for the owner to fill in."
+  ],
+  "topics": [
+    { "id": "costs-financing", "label": "Costs & financing" },
+    { "id": "permits-zoning", "label": "Permits & zoning" },
+    { "id": "delivery", "label": "Delivery" },
+    { "id": "building-design", "label": "Building & design" },
+    { "id": "diy", "label": "DIY" },
+    { "id": "build-updates", "label": "Build updates" }
+  ],
+  "startHere": ["container-home-cost", "container-home-permits", "shipping-a-container-home-out-of-state"],
+  "posts": [
+    {
+      "slug": "container-home-cost",
+      "title": "What a Finished Container Home Really Costs",
+      "topic": "costs-financing",
+      "summary": "A finished, furnished home runs [X to X]; ours start at $85,000. Then the costs people forget: site prep, foundation, delivery, permits.",
+      "readMinutes": "[X]",
+      "published": null,
+      "updated": null,
+      "status": "draft",
+      "order": 1,
+      "image": "assets/img/gallery/rising-sun-living-room-800.jpg",
+      "needs": "What's included vs. extra, typical site prep costs his buyers paid"
+    },
+    {
+      "slug": "container-home-permits",
+      "title": "Container Home Permits: How Zoning Works by State",
+      "topic": "permits-zoning",
+      "summary": "Almost always you need one. City limits, county land, and HOAs each work differently, and here's how to check yours.",
+      "readMinutes": "[X]",
+      "published": null,
+      "updated": null,
+      "status": "draft",
+      "order": 2,
+      "image": "assets/img/gallery/delivery-site-aerial-800.jpg",
+      "needs": "Permit documents he provides buyers"
+    },
+    {
+      "slug": "california-container-home-adu",
+      "title": "Container Home ADUs in California: What State Law Allows",
+      "topic": "permits-zoning",
+      "summary": "State law makes most single-family lots eligible, with a 60-day approval clock.",
+      "readMinutes": "[X]",
+      "published": null,
+      "updated": null,
+      "status": "draft",
+      "order": 3,
+      "hold": "How his homes get approved in California (state certification or local plan check).",
+      "image": "assets/img/gallery/rising-sun-exterior-front-800.jpg",
+      "needs": "How his homes get approved in California"
+    },
+    {
+      "slug": "shipping-a-container-home-out-of-state",
+      "title": "Shipping a Container Home Out of State",
+      "topic": "delivery",
+      "summary": "How a finished home gets from Texas to your lot, what it costs past 1,000 miles, and what your site needs.",
+      "readMinutes": "[X]",
+      "published": null,
+      "updated": null,
+      "status": "draft",
+      "order": 4,
+      "image": "assets/img/gallery/delivery-home-on-flatbed-800.jpg",
+      "needs": "Freight pricing, transit times, a real out-of-state delivery story"
+    },
+    {
+      "slug": "container-home-insulation",
+      "title": "Insulating a Container Home for Heat, Cold, and Condensation",
+      "topic": "building-design",
+      "summary": "Steel conducts heat and sweats, so insulation choice decides comfort. What we use and why.",
+      "readMinutes": "[X]",
+      "published": null,
+      "updated": null,
+      "status": "draft",
+      "order": 5,
+      "image": "assets/img/gallery/build-window-openings-aerial-800.jpg",
+      "needs": "His actual insulation method and cold-climate package"
+    },
+    {
+      "slug": "financing-a-container-home",
+      "title": "How to Finance a Container Home",
+      "topic": "costs-financing",
+      "summary": "Traditional mortgages are hard to get for container homes, so here are the options buyers actually use.",
+      "readMinutes": "[X]",
+      "published": null,
+      "updated": null,
+      "status": "draft",
+      "order": 6,
+      "hold": "Lender or agent details, and whether applying affects credit.",
+      "image": "assets/img/gallery/rising-sun-kitchen-range-800.jpg",
+      "needs": "Lender or agent details, whether applying affects credit"
+    },
+    {
+      "slug": "rising-sun-build-log",
+      "title": "Building The Rising Sun: From Bare Container to Delivery",
+      "topic": "build-updates",
+      "summary": "A photo-by-photo build log of our flagship.",
+      "readMinutes": "[X]",
+      "published": null,
+      "updated": null,
+      "status": "draft",
+      "order": 7,
+      "image": "assets/img/gallery/build-interior-framing-800.jpg",
+      "needs": "Build-process photos and video in order"
+    }
+  ]
+}

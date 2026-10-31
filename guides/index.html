@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>Container Home Guides · Costs, Permits, Delivery &amp; DIY</title>
+<meta name="description" content="Straight answers on container homes from people who build them: real costs, permits by state, delivery, financing, insulation, and build updates.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="/guides/">
+<link rel="icon" href="../assets/brand/icon.png" sizes="any"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F1F3F2;color:#1B2429;font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:#14324A}a:hover{color:#B04E25}
+h1,h2,h3{font-family:"Archivo","Arial Narrow",Arial,sans-serif;text-wrap:balance;margin:0}
+p{margin:0}
+[hidden]{display:none!important}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,4vw);padding-right:max(20px,4vw);box-sizing:border-box}
+.media{position:relative;box-sizing:border-box;border:1.5px dashed #8FA0A6;background:#DCE3E5;color:#14324A;border-radius:2px;display:flex;flex-direction:column;justify-content:flex-end;gap:4px;padding:16px;overflow:hidden}
+.media.filled{border:0;padding:0;background:#1E425E}
+.media>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:6px;font-weight:600;font-size:16px;text-decoration:none;box-sizing:border-box}
+.btn.primary{background:#B04E25;color:#FFFFFF}
+.btn.primary:hover{background:#963F1C;color:#FFFFFF}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5A666C}
+.chip{display:inline-flex;align-items:center;padding:4px 12px;border-radius:999px;font-size:13px;font-weight:600}
+.field{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600;color:#1B2429}
+.field input{min-height:48px;border:1px solid #B9C4C8;border-radius:2px;padding:0 12px;font:inherit;font-weight:400;font-size:16px;background:#FFFFFF;color:#1B2429;box-sizing:border-box}
+.field .err{font-size:14px;line-height:20px;font-weight:600;color:#A3321A}
+.field [aria-invalid="true"]{border-color:#A3321A;border-width:2px}
+a:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid #B04E25;outline-offset:2px}
+/* Guides hub */
+.page-h1{font-size:clamp(38px,5.4vw,56px);line-height:1.04;font-weight:800;letter-spacing:-.015em}
+.h2{font-size:36px;line-height:40px;font-weight:800;color:#14324A}
+@media (max-width:600px){.h2{font-size:30px;line-height:34px}}
+.crumbs{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px;font-size:14px;color:#B7C8D6}
+.crumbs li+li::before{content:"›";margin-right:6px}
+.crumbs a{color:#FFFFFF}
+.search{position:relative;max-width:560px}
+.search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);pointer-events:none}
+.search input{width:100%;min-height:56px;padding:0 16px 0 48px;border:0;border-radius:2px;font:inherit;font-size:17px;background:#FFFFFF;color:#1B2429;box-sizing:border-box}
+.search input::-webkit-search-cancel-button{cursor:pointer}
+.filters{display:flex;gap:8px;overflow-x:auto;padding:4px 0;scrollbar-width:none}
+.filters::-webkit-scrollbar{display:none}
+.filter{flex:none;min-height:44px;padding:0 18px;border:1.5px solid #B9C4C8;border-radius:999px;background:#FFFFFF;color:#14324A;font:inherit;font-size:15px;font-weight:600;cursor:pointer}
+.filter:hover{border-color:#14324A}
+.filter[aria-pressed="true"]{background:#14324A;border-color:#14324A;color:#FFFFFF}
+.ggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.gcard{background:#FFFFFF;border:1px solid #D5DCDE;border-radius:2px;display:flex;flex-direction:column;overflow:hidden;position:relative}
+.gcard:hover{border-color:#14324A}
+.gcard .media{aspect-ratio:16/9;border-radius:0}
+.gcard__body{padding:20px 24px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.gcard__tags{display:flex;flex-wrap:wrap;gap:6px}
+.gcard__tags .chip{background:#F1F3F2;color:#14324A;border:1px solid #D5DCDE;font-size:12px;padding:3px 10px}
+.gcard__tags .chip.draft{background:#14324A;color:#E9B872;border-color:#14324A}
+.gcard h3{font-size:20px;line-height:26px;color:#14324A}
+.gcard h3 a{color:inherit;text-decoration:none}
+.gcard h3 a::after{content:"";position:absolute;inset:0}
+.gcard p{font-size:15px;line-height:23px;color:#1B2429}
+.gcard__meta{font-size:13px;color:#5A666C;margin-top:auto}
+.empty{background:#FFFFFF;border:1px solid #D5DCDE;border-radius:2px;padding:32px;font-size:17px;line-height:28px}
+.news{background:#14324A;color:#FFFFFF;border-radius:2px;padding:40px;display:flex;flex-wrap:wrap;gap:24px 48px;align-items:center}
+@media (max-width:600px){.news{padding:28px 24px}}
+.news form{flex:1 1 380px;display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end}
+.news .field{flex:1 1 240px;color:#FFFFFF}
+.news .field .err{color:#F4B8B0}
+.news .field [aria-invalid="true"]{border-color:#F4B8B0}
+section[id]{scroll-margin-top:var(--ucd-header-h,76px)}
+</style>
+<link rel="stylesheet" href="../assets/css/mega-menu.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Container Home Guides",
+  "description": "Straight answers on container homes from people who build them: real costs, permits by state, delivery, financing, insulation, and build updates.",
+  "url": "/guides/",
+  "publisher": { "@type": "Organization", "name": "UnContained Dreams" },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "/" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "/guides/" }
+    ]
+  }
+}
+</script>
+</head>
+<body>
+<div style="display: flex; flex-direction: column; min-width: 0;">
+
+<!-- HEADER + MEGA MENU: reuse from index.html -->
+
+<main>
+
+<!-- HERO -->
+<section id="top" style="background: #14324A; color: #FFFFFF; padding-top: 72px; padding-bottom: 80px;">
+  <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center;">
+    <div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 22px;">
+      <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="../">Home</a></li><li aria-current="page">Guides</li></ol></nav>
+      <span class="eyebrow" style="color: #B7C8D6;">Guides</span>
+      <h1 class="page-h1">Container homes, explained by the people who build them.</h1>
+      <p style="font-size: 19px; line-height: 30px; color: #DCE6EE;">Real costs, permit rules by state, what delivery takes, and what we've learned building our own homes. No fluff, no sales pitch.</p>
+      <form class="search" role="search" id="search-form">
+        <label for="q" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">Search guides</label>
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5A666C" stroke-width="2.2" stroke-linecap="square"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.8-4.8"/></svg>
+        <input id="q" type="search" placeholder="Search guides, like &quot;permits&quot; or &quot;insulation&quot;" autocomplete="off">
+      </form>
+    </div>
+    <div class="media filled" style="flex: 1 1 360px; min-width: 0; aspect-ratio: 4 / 3; max-width: 100%;"><img src="../assets/img/gallery/build-cabinet-boxes-800.jpg" alt="Unfinished cabinet boxes stacked in our shop, built to the layout" fetchpriority="high"></div>
+  </div>
+</section>
+
+<!-- START HERE: three hand-picked guides (startHere in assets/data/posts.json). Hidden until at least one is live. -->
+<section id="start" style="padding-top: 80px;" hidden>
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 28px;">
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <span class="eyebrow">Start here</span>
+      <h2 class="h2">New to container homes? Start with these.</h2>
+    </div>
+    <div class="ggrid" id="start-grid"></div>
+  </div>
+</section>
+
+<!-- ALL GUIDES -->
+<section id="all" style="padding-top: 80px; padding-bottom: 96px;">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 24px;">
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <span class="eyebrow">All guides</span>
+      <h2 class="h2" id="list-h">Every guide and build update.</h2>
+    </div>
+    <!-- ?topic= changes the list on this page only. robots.txt blocks it so filtered views never become thin duplicate pages. -->
+    <div class="filters" role="group" aria-label="Filter by topic" id="filters">
+      <button class="filter" type="button" data-topic="" aria-pressed="true">All</button>
+      <button class="filter" type="button" data-topic="costs-financing" aria-pressed="false">Costs &amp; financing</button>
+      <button class="filter" type="button" data-topic="permits-zoning" aria-pressed="false">Permits &amp; zoning</button>
+      <button class="filter" type="button" data-topic="delivery" aria-pressed="false">Delivery</button>
+      <button class="filter" type="button" data-topic="building-design" aria-pressed="false">Building &amp; design</button>
+      <button class="filter" type="button" data-topic="diy" aria-pressed="false">DIY</button>
+      <button class="filter" type="button" data-topic="build-updates" aria-pressed="false">Build updates</button>
+    </div>
+    <p id="count" aria-live="polite" style="font-size: 14px; color: #5A666C;"></p>
+    <div class="ggrid" id="list"></div>
+    <div class="empty" id="empty" hidden>
+      Nothing here yet. Have a question you want answered? <a href="../contact/" style="font-weight: 600;">Ask us</a> and it might be our next guide.
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER: same email list as the plans waitlist, tagged "guides". -->
+<section id="newsletter" style="padding-bottom: 96px;">
+  <div class="wrap">
+    <div class="news">
+      <div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 12px;">
+        <h2 style="font-size: 32px; line-height: 36px; font-weight: 800;">Get new guides and build updates.</h2>
+        <p style="font-size: 17px; line-height: 28px; color: #DCE6EE;">About once a month. Building plans and course news go to this list first.</p>
+      </div>
+      <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 10px;">
+        <form id="news-form" action="[PLANS LIST ENDPOINT]" method="post" novalidate>
+          <div class="field">
+            <label for="n-email">Email</label>
+            <input id="n-email" name="email" type="email" autocomplete="email" aria-describedby="n-email-err">
+            <span class="err" id="n-email-err" hidden>Enter an email like name@example.com.</span>
+          </div>
+          <input type="hidden" name="tags" value="guides">
+          <button class="btn primary" type="submit" style="border: 0; cursor: pointer; font-family: inherit;">Sign me up</button>
+        </form>
+        <p id="news-note" style="font-size: 13px; color: #B7C8D6;">No spam. Unsubscribe anytime.</p>
+        <p id="news-done" role="status" hidden style="font-size: 17px; line-height: 26px; color: #FFFFFF; font-weight: 600;">You're on the list. The next guide comes straight to your inbox.</p>
+        <p id="news-fail" role="alert" hidden style="font-size: 15px; color: #F4B8B0;">That didn't go through. Try again in a minute.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER: reuse from index.html -->
+
+</div>
+
+<script>
+(function () {
+  var esc = function (s) { var d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; };
+  var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  var params = new URLSearchParams(location.search);
+  // ?drafts=1 previews draft articles (tagged "Draft", not linked) so the owner can check the layout.
+  var preview = params.get('drafts') === '1';
+  var topic = params.get('topic') || '';
+  var labels = {};
+  var posts = [];
+
+  function updated(ym) {
+    if (!ym) return 'Updated [Month Year]';
+    var p = ym.split('-');
+    return 'Updated ' + MONTHS[parseInt(p[1], 10) - 1] + ' ' + p[0];
+  }
+
+  function card(p) {
+    var live = p.status === 'live';
+    var title = live ? '<a href="' + esc(p.slug) + '/">' + esc(p.title) + '</a>' : esc(p.title);
+    return '<article class="gcard">' +
+      (p.image ? '<div class="media filled"><img src="../' + esc(p.image) + '" alt="" loading="lazy"></div>' : '') +
+      '<div class="gcard__body">' +
+        '<div class="gcard__tags"><span class="chip">' + esc(labels[p.topic] || p.topic) + '</span>' +
+          (live ? '' : '<span class="chip draft">Draft</span>') + '</div>' +
+        '<h3>' + title + '</h3>' +
+        '<p>' + esc(p.summary) + '</p>' +
+        '<p class="gcard__meta">' + esc(p.readMinutes) + ' min read · ' + updated(p.updated) + '</p>' +
+      '</div></article>';
+  }
+
+  var list = document.getElementById('list');
+  var empty = document.getElementById('empty');
+  var count = document.getElementById('count');
+  var q = document.getElementById('q');
+  var start = document.getElementById('start');
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('.filter'));
+
+  function render() {
+    var term = q.value.trim().toLowerCase();
+    var shown = posts.filter(function (p) {
+      if (topic && p.topic !== topic) return false;
+      if (!term) return true;
+      return (p.title + ' ' + p.summary + ' ' + (labels[p.topic] || '')).toLowerCase().indexOf(term) !== -1;
+    });
+    list.innerHTML = shown.map(card).join('');
+    empty.hidden = shown.length > 0;
+    count.textContent = shown.length ? shown.length + (shown.length === 1 ? ' guide' : ' guides') : '';
+    buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-topic') === topic)); });
+    // Start here is for first-time readers; hide it while someone is filtering or searching.
+    start.hidden = !start.dataset.ready || !!topic || !!term;
+  }
+
+  function setTopic(t) {
+    topic = t;
+    var url = new URL(location.href);
+    if (t) url.searchParams.set('topic', t); else url.searchParams.delete('topic');
+    history.replaceState(null, '', url);
+    render();
+  }
+
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () { setTopic(b.getAttribute('data-topic')); });
+  });
+  q.addEventListener('input', render);
+  document.getElementById('search-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('all').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  fetch('../assets/data/posts.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (json) {
+    json.topics.forEach(function (t) { labels[t.id] = t.label; });
+    if (!labels[topic]) topic = '';
+    // Newest first; drafts (preview only) in writing order.
+    posts = json.posts.filter(function (p) { return p.status === 'live' || preview; }).sort(function (a, b) {
+      if (a.status !== b.status) return a.status === 'live' ? -1 : 1;
+      return a.status === 'live' ? String(b.published).localeCompare(String(a.published)) : a.order - b.order;
+    });
+    var picks = json.startHere.map(function (slug) {
+      return posts.filter(function (p) { return p.slug === slug; })[0];
+    }).filter(Boolean);
+    if (picks.length) {
+      document.getElementById('start-grid').innerHTML = picks.map(card).join('');
+      start.dataset.ready = '1';
+    }
+    render();
+  }).catch(function () { render(); });
+
+  // Newsletter signup
+  var form = document.getElementById('news-form');
+  var email = document.getElementById('n-email');
+  var err = document.getElementById('n-email-err');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim());
+    email.setAttribute('aria-invalid', String(!ok));
+    err.hidden = ok;
+    document.getElementById('news-fail').hidden = true;
+    if (!ok) { email.focus(); return; }
+    var btn = form.querySelector('button');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+      .then(function (res) {
+        if (!res.ok) throw new Error(res.status);
+        form.hidden = true;
+        document.getElementById('news-note').hidden = true;
+        document.getElementById('news-done').hidden = false;
+        // Conversion event. Swap for the site's analytics call once it's chosen.
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'newsletter_signup', tag: 'guides' });
+      })
+      .catch(function () {
+        document.getElementById('news-fail').hidden = false;
+        btn.disabled = false;
+        btn.textContent = 'Sign me up';
+      });
+  });
+  email.addEventListener('input', function () {
+    if (email.getAttribute('aria-invalid') === 'true' && /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim())) {
+      email.setAttribute('aria-invalid', 'false');
+      err.hidden = true;
+    }
+  });
+})();
+</script>
+<script src="../assets/js/mega-menu.js" defer></script>
+</body></html>

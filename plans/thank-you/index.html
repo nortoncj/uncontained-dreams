@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>You're on the list · UnContained Dreams</title>
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../../assets/brand/icon.png" sizes="any"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F1F3F2;color:#1B2429;font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:#14324A}a:hover{color:#B04E25}
+h1,h2,h3{font-family:"Archivo","Arial Narrow",Arial,sans-serif;text-wrap:balance;margin:0}
+p{margin:0}
+[hidden]{display:none!important}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,4vw);padding-right:max(20px,4vw);box-sizing:border-box}
+.media{position:relative;box-sizing:border-box;border:1.5px dashed #8FA0A6;background:#DCE3E5;color:#14324A;border-radius:2px;display:flex;flex-direction:column;justify-content:flex-end;gap:4px;padding:16px;overflow:hidden}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5A666C}
+a:focus-visible,button:focus-visible{outline:3px solid #B04E25;outline-offset:2px}
+.media.filled{border:0;padding:0;background:#1E425E}
+.media>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.page-h1{font-size:clamp(40px,6vw,60px);line-height:1;font-weight:800;letter-spacing:-.015em}
+.next-card{background:#FFFFFF;border:1px solid #D5DCDE;border-radius:2px;display:flex;flex-direction:column;overflow:hidden;text-decoration:none;color:#14324A}
+.next-card:hover{border-color:#14324A;color:#14324A}
+.next-card span{padding:16px 20px;font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-weight:700;font-size:18px}
+</style>
+<link rel="stylesheet" href="../../assets/css/mega-menu.css">
+</head>
+<body>
+<div style="display: flex; flex-direction: column; min-width: 0;">
+
+<!-- HEADER + MEGA MENU: reuse from index.html -->
+
+<main>
+<section style="background: #14324A; color: #FFFFFF; padding-top: 96px; padding-bottom: 96px;">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 22px;">
+    <svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#7FB89A" stroke-width="2" stroke-linecap="square"><path d="M4 12l5 5L20 6"></path></svg>
+    <h1 class="page-h1">You're on the list.</h1>
+    <p style="font-size: 19px; line-height: 30px; color: #DCE6EE; max-width: 58ch;">We'll email you the day our building plans launch<span id="course-line" hidden>, and when the course opens</span>. Check your inbox for a welcome email from [SENDER NAME].</p>
+  </div>
+</section>
+
+<section style="padding-top: 72px; padding-bottom: 96px;">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 24px;">
+    <span class="eyebrow">While you wait</span>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+      <a class="next-card" href="../#talk"><div class="media filled" style="aspect-ratio: 16 / 9; border-radius: 0;"><img src="../../assets/img/gallery/build-interior-framing-800.jpg" alt="" loading="lazy"></div><span>Book a free discovery call</span></a>
+      <a class="next-card" href="../../models/the-rising-sun/"><div class="media filled" style="aspect-ratio: 16 / 9; border-radius: 0;"><img src="../../assets/img/gallery/rising-sun-exterior-front-800.jpg" alt="" loading="lazy"></div><span>See The Rising Sun</span></a>
+      <a class="next-card" href="../../faq/#diy"><div class="media filled" style="aspect-ratio: 16 / 9; border-radius: 0;"><img src="../../assets/img/gallery/build-cabinet-boxes-800.jpg" alt="" loading="lazy"></div><span>Read the FAQ</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER: reuse from index.html -->
+
+</div>
+
+<script>
+(function () {
+  var course = new URLSearchParams(location.search).get('course') === '1';
+  document.getElementById('course-line').hidden = !course;
+  // Conversion event. Swap for the site's analytics call once it's chosen.
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'plans_list_signup', tag: course ? 'plans + course' : 'plans' });
+})();
+</script>
+<script src="../../assets/js/mega-menu.js" defer></script>
+</body></html>

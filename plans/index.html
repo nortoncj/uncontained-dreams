@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>DIY Container Home Help · Consults, Plans &amp; Course</title>
+<meta name="description" content="Building your own shipping container home? Book a free discovery call or a 1-hour consult, and get first access to our building plans and DIY course.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="/plans/">
+<link rel="icon" href="../assets/brand/icon.png" sizes="any"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F1F3F2;color:#1B2429;font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:#14324A}a:hover{color:#B04E25}
+h1,h2,h3{font-family:"Archivo","Arial Narrow",Arial,sans-serif;text-wrap:balance;margin:0}
+p{margin:0}
+[hidden]{display:none!important}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,4vw);padding-right:max(20px,4vw);box-sizing:border-box}
+.media{position:relative;box-sizing:border-box;border:1.5px dashed #8FA0A6;background:#DCE3E5;color:#14324A;border-radius:2px;display:flex;flex-direction:column;justify-content:flex-end;gap:4px;padding:16px;overflow:hidden}
+.media.dark{background:#1E425E;border-color:#5C7D95;color:#F1F3F2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:6px;font-weight:600;font-size:16px;text-decoration:none;box-sizing:border-box}
+.btn.primary{background:#B04E25;color:#FFFFFF}
+.btn.primary:hover{background:#963F1C;color:#FFFFFF}
+.btn.ghost{border:1.5px solid currentColor;color:#14324A}
+.btn.ghost.light{color:#FFFFFF}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5A666C}
+.chip{display:inline-flex;align-items:center;padding:4px 12px;border-radius:999px;font-size:13px;font-weight:600}
+.field{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600;color:#1B2429}
+.field input,.field select{min-height:46px;border:1px solid #B9C4C8;border-radius:2px;padding:0 12px;font:inherit;font-weight:400;font-size:16px;background:#FFFFFF;color:#1B2429}
+.field .req{color:#B04E25}
+.field .opt{font-weight:400;color:#5A666C}
+.field .err{font-size:14px;line-height:20px;font-weight:600;color:#A3321A}
+.field [aria-invalid="true"]{border-color:#A3321A;border-width:2px}
+a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #B04E25;outline-offset:2px}
+.media.filled{border:0;padding:0;background:#1E425E}
+.media>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+/* DIY plans and consulting */
+.page-h1{font-size:clamp(40px,6vw,60px);line-height:1;font-weight:800;letter-spacing:-.015em}
+.h2{font-size:40px;line-height:44px;font-weight:800;color:#14324A}
+@media (max-width:600px){.h2{font-size:32px;line-height:36px}}
+.lede{font-size:17px;line-height:28px}
+.crumbs{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px;font-size:14px;color:#B7C8D6}
+.crumbs li+li::before{content:"›";margin-right:6px}
+.crumbs a{color:#FFFFFF}
+.offer{background:#FFFFFF;border:1px solid #D5DCDE;border-radius:2px;display:flex;flex-direction:column;overflow:hidden}
+.offer .media{aspect-ratio:16/9;border-radius:0}
+.offer__body{padding:28px;display:flex;flex-direction:column;gap:14px;flex:1}
+.offer h3{font-size:24px;line-height:28px;color:#14324A}
+.offer__meta{display:flex;flex-wrap:wrap;gap:8px}
+.offer__meta .chip{background:#F1F3F2;color:#14324A;border:1px solid #D5DCDE;font-size:14px;padding:5px 12px}
+.offer__meta .chip.price{background:#14324A;color:#E9B872;border-color:#14324A}
+.offer p{font-size:16px;line-height:26px}
+.offer .btn{align-self:flex-start;margin-top:auto}
+.plans-form{background:#FFFFFF;border:1px solid #D5DCDE;border-radius:2px;padding:32px;box-sizing:border-box;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.plans-form .full{grid-column:1/-1}
+@media (max-width:600px){.plans-form{grid-template-columns:minmax(0,1fr);padding:24px}}
+.check{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:24px;cursor:pointer}
+.check input{width:22px;height:22px;margin:1px 0 0;flex:none;accent-color:#14324A}
+.form-alert{background:#FBEDE7;border-left:4px solid #A3321A;padding:14px 16px;font-size:15px;line-height:22px;color:#1B2429}
+.list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;font-size:16px;line-height:24px}
+.list li{display:flex;gap:12px}
+.list svg{flex:none;margin-top:1px}
+.faq-q{border-bottom:1px solid #D5DCDE}
+.faq-q summary{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:20px 0;font-weight:700;font-size:18px;line-height:26px;color:#14324A;cursor:pointer;list-style:none}
+.faq-q summary::-webkit-details-marker{display:none}
+.faq-q summary::after{content:"";flex:none;width:12px;height:12px;margin:6px 4px 0 0;border-right:2px solid #5A666C;border-bottom:2px solid #5A666C;transform:rotate(45deg);transition:transform .2s}
+.faq-q[open] summary::after{transform:rotate(-135deg);margin-top:11px}
+.faq-q p{padding-bottom:20px;font-size:16px;line-height:26px;max-width:68ch}
+section[id]{scroll-margin-top:var(--ucd-header-h,76px)}
+@media (prefers-reduced-motion:reduce){.faq-q summary::after{transition:none}}
+</style>
+<link rel="stylesheet" href="../assets/css/mega-menu.css">
+<!-- Schema: one Service per consultation. Add the paid consult's price once it's set.
+     Add Product (plans) and Course only once they're for sale. -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Free discovery call",
+    "serviceType": "Container home planning consultation",
+    "description": "A free call for anyone getting started with a container home: whether it fits your plans, rough costs, and where to start.",
+    "provider": { "@type": "Organization", "name": "UnContained Dreams" },
+    "areaServed": { "@type": "Country", "name": "United States" },
+    "offers": { "@type": "Offer", "price": 0, "priceCurrency": "USD" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Paid container home build consultation",
+    "serviceType": "Container home building consultation",
+    "description": "A one-hour consultation for builders mid-project: structural changes, insulation and climate, permits and inspections, and layout problems.",
+    "provider": { "@type": "Organization", "name": "UnContained Dreams" },
+    "areaServed": { "@type": "Country", "name": "United States" }
+  }
+]
+</script>
+<!-- FAQPage: only answers with no brackets. Add the other two once they're filled in. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Should I build it myself or buy one finished?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on your time, skills, and budget. A discovery call is free, and we'll tell you honestly which makes more sense for you. If buying finished is the better fit, see our homes." } }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "/" },
+    { "@type": "ListItem", "position": 2, "name": "DIY Plans & Consulting", "item": "/plans/" }
+  ]
+}
+</script>
+</head>
+<body>
+<div style="display: flex; flex-direction: column; min-width: 0;">
+
+<!-- HEADER + MEGA MENU: reuse from index.html -->
+
+<main>
+
+<!-- HERO -->
+<section id="top" style="position: relative; background: #14324A; color: #FFFFFF;">
+  <div class="media dark filled" style="position: absolute; inset: 0; border-radius: 0;">
+    <img src="../assets/img/gallery/build-interior-framing-1600.jpg" alt="A builder assembling a wood cabinet frame on the workbench in our shop" fetchpriority="high" style="object-position: 70% 50%;">
+  </div>
+  <div class="wrap" style="position: relative; padding-top: 112px; padding-bottom: 96px;">
+    <div style="background: #14324A; max-width: 640px; padding: 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px; border-radius: 2px;">
+      <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="../">Home</a></li><li aria-current="page">DIY Plans &amp; Consulting</li></ol></nav>
+      <span class="eyebrow" style="color: #B7C8D6;">DIY container homes</span>
+      <h1 class="page-h1">Building your own? Start with people who've done it.</h1>
+      <p style="font-size: 19px; line-height: 30px; color: #DCE6EE;">Talk through your project, get expert help mid-build, and be first in line for our building plans and step-by-step course.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+        <a class="btn primary" href="#talk" data-book="discovery">Book a free discovery call</a>
+        <a class="btn ghost light" href="#plans-list">Get plans updates</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TALK TO US -->
+<section id="talk" style="padding-top: 96px; padding-bottom: 96px;">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 40px;">
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <span class="eyebrow">Talk to us</span>
+      <h2 class="h2">Two ways to get help.</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px;">
+      <article class="offer">
+        <div class="media filled"><img src="../assets/img/gallery/rising-sun-exterior-front-800.jpg" alt="A finished container home on its lot, the kind of project a discovery call starts" loading="lazy"></div>
+        <div class="offer__body">
+          <h3>Free discovery call</h3>
+          <div class="offer__meta"><span class="chip">[20] minutes</span><span class="chip price">Free</span></div>
+          <p>For anyone just getting started, learning about container homes, or sizing up an idea. We'll talk through whether a container home fits your plans, rough costs, and where to start.</p>
+          <a class="btn ghost" href="../contact/" data-book="discovery">Book a free call</a>
+        </div>
+      </article>
+      <article class="offer">
+        <div class="media filled"><img src="../assets/img/gallery/build-cabinet-drawer-slides-800.jpg" alt="Unfinished cabinet with drawer slides installed, mid-build in the shop" loading="lazy"></div>
+        <div class="offer__body">
+          <h3>Paid consultation</h3>
+          <div class="offer__meta"><span class="chip">1 hour</span><span class="chip price">$[PRICE]</span></div>
+          <p>For builders already in the middle of a project. Bring your plans, photos, and questions. We cover structural changes, insulation and climate, permits and inspections, layout problems, and whatever is holding up your build.</p>
+          <!-- CONFIRM: does the consult fee count toward plans or a home purchase? If yes, say so here.
+               It removes the main reason people hesitate to pay. -->
+          <p style="font-size: 15px; color: #5A666C;">[CONFIRM: consult fee counts toward plans or a home purchase]</p>
+          <a class="btn ghost" href="../contact/" data-book="consult">Book a consultation</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- BUILDING PLANS · Now (at launch) -->
+<section id="plans-list" style="background: #FFFFFF; padding-top: 96px; padding-bottom: 96px; border-top: 1px solid #D5DCDE; border-bottom: 1px solid #D5DCDE;">
+  <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start;">
+    <div style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
+      <span class="eyebrow">Building plans</span>
+      <h2 class="h2">Our building plans are almost ready.</h2>
+      <p class="lede">Full architectural plans drawn from the homes we build, plus furniture plans for pieces like the wall-mounted desk in The Rising Sun. Join the list and you'll hear first when they launch.</p>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;">
+        <div class="media filled" style="aspect-ratio: 4 / 3;"><img src="../assets/img/gallery/build-cabinet-boxes-800.jpg" alt="Unfinished birch cabinet boxes stacked in the shop, built to the layout" loading="lazy"></div>
+        <div class="media filled" style="aspect-ratio: 4 / 3;"><img src="../assets/img/gallery/rising-sun-living-room-glass-doors-800.jpg" alt="The wall-mounted walnut desk under the TV in The Rising Sun" loading="lazy"></div>
+      </div>
+    </div>
+
+    <!-- One list with tags (plans, course, project type, state). The hidden tags field is filled on submit. -->
+    <form class="plans-form" id="plans-form" action="[PLANS LIST ENDPOINT]" method="post" novalidate style="flex: 1 1 460px; min-width: 0;">
+      <div class="form-alert full" id="form-alert" role="alert" hidden>That didn't go through. Try again, or email us at [EMAIL].</div>
+      <div class="field">
+        <label for="p-first">First name <span class="req" aria-hidden="true">*</span></label>
+        <input id="p-first" name="first_name" type="text" autocomplete="given-name" required aria-describedby="p-first-err">
+        <span class="err" id="p-first-err" hidden>Enter your first name.</span>
+      </div>
+      <div class="field">
+        <label for="p-email">Email <span class="req" aria-hidden="true">*</span></label>
+        <input id="p-email" name="email" type="email" autocomplete="email" required aria-describedby="p-email-err">
+        <span class="err" id="p-email-err" hidden>Enter an email like name@example.com.</span>
+      </div>
+      <div class="field">
+        <label for="p-phone">Phone <span class="opt">(optional)</span></label>
+        <input id="p-phone" name="phone" type="tel" autocomplete="tel">
+      </div>
+      <div class="field">
+        <label for="p-state">State <span class="req" aria-hidden="true">*</span></label>
+        <select id="p-state" name="state" required aria-describedby="p-state-err">
+          <option value="">Choose one</option>
+          <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option><option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option><option>District of Columbia</option><option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option><option>Outside the U.S.</option>
+        </select>
+        <span class="err" id="p-state-err" hidden>Choose your state.</span>
+      </div>
+      <div class="field full">
+        <label for="p-project">What are you planning to build? <span class="req" aria-hidden="true">*</span></label>
+        <select id="p-project" name="project" required aria-describedby="p-project-err">
+          <option value="">Choose one</option>
+          <option value="full-time-home">Full-time home</option>
+          <option value="guest-house-adu">Guest house or ADU</option>
+          <option value="cabin-getaway">Cabin or getaway</option>
+          <option value="rental">Rental</option>
+          <option value="researching">Just researching</option>
+        </select>
+        <span class="err" id="p-project-err" hidden>Choose what you're planning to build.</span>
+      </div>
+      <label class="check full" for="p-course"><input id="p-course" name="course" type="checkbox" value="yes">Also tell me when the DIY course opens</label>
+      <input type="hidden" name="tags" value="plans">
+      <button class="btn primary full" type="submit" style="border: 0; cursor: pointer; font-family: inherit;">Notify me when plans launch</button>
+      <p class="full" style="font-size: 13px; line-height: 19px; color: #5A666C;">We'll email you when plans and the course launch. No spam, unsubscribe anytime.</p>
+    </form>
+  </div>
+</section>
+
+<!-- BUILDING PLANS · Later (when plans go live). Swap in for the section above.
+<section id="plans-list">
+  Headline: Building plans for [MODEL NAME]
+  Body: A [NUMBER]-page plan set: floor plan, framing and cut details, electrical and plumbing layouts, and a full materials list. Instant PDF download.
+  Price and button: $[PRICE] · Buy plans
+  Fine print: Plans aren't stamped for your jurisdiction. Most permit offices require a local engineer to review them. [CONFIRM wording with the owner]
+  Schema: add a Product with the price.
+</section>
+-->
+
+<!-- DIY COURSE · Now (at launch) -->
+<section id="course" style="padding-top: 96px; padding-bottom: 96px;">
+  <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center;">
+    <div style="flex: 1 1 460px; min-width: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px;">
+      <div class="media filled" style="aspect-ratio: 3 / 4;"><img src="../assets/img/gallery/build-window-openings-aerial-800.jpg" alt="Aerial view of a bare container with window openings cut into the steel" loading="lazy"></div>
+      <div class="media filled" style="aspect-ratio: 3 / 4;"><img src="../assets/img/gallery/build-wall-framing-outdoors-800.jpg" alt="Builder fastening a tall framed wall section" loading="lazy"></div>
+      <div class="media filled" style="aspect-ratio: 3 / 4;"><img src="../assets/img/gallery/build-shower-tile-800.jpg" alt="Marble-look shower tile going in with leveling clips" loading="lazy"></div>
+    </div>
+    <div style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
+      <span class="eyebrow">DIY course</span>
+      <h2 class="h2">A step-by-step course is on the way.</h2>
+      <p class="lede">We're building a complete course that takes you from buying your first container to final inspection. Join the plans list above and check the course box, and we'll tell you when enrollment opens.</p>
+      <a href="#plans-list" id="course-jump" style="font-weight: 600;">Join the list</a>
+    </div>
+  </div>
+</section>
+
+<!-- DIY COURSE · Later (when the course opens). Swap in for the section above.
+<section id="course">
+  Headline: [COURSE NAME]
+  Body: [NUMBER] lessons covering sourcing a container, foundations, cutting and framing, insulation, electrical and plumbing, finishes, and permits. Learn at your own pace.
+  Price and button: $[PRICE] · Enroll now
+  Schema: add a Course.
+</section>
+-->
+
+<!-- WHY LEARN FROM US -->
+<section id="why" style="background: #FFFFFF; padding-top: 96px; padding-bottom: 96px; border-top: 1px solid #D5DCDE; border-bottom: 1px solid #D5DCDE;">
+  <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center;">
+    <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
+      <span class="eyebrow">Why learn from us</span>
+      <h2 class="h2">We've built the hard parts already.</h2>
+      <p class="lede">We design and build finished container homes for a living, down to the furniture. Every plan, consult, and lesson comes from what we've actually built and fixed on our own jobs, not from theory.</p>
+      <ul class="list">
+        <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F5D47" stroke-width="2.2" stroke-linecap="square"><path d="M4 12l5 5L20 6"></path></svg>[NUMBER] homes built and delivered [CONFIRM]</li>
+        <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F5D47" stroke-width="2.2" stroke-linecap="square"><path d="M4 12l5 5L20 6"></path></svg>Custom furniture designed for tight spaces, like the fold-out dining table in The Rising Sun</li>
+        <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F5D47" stroke-width="2.2" stroke-linecap="square"><path d="M4 12l5 5L20 6"></path></svg>Real answers on insulation, condensation, and permits, the three things that sink most DIY builds</li>
+      </ul>
+    </div>
+    <!-- Split shot: the bare container, then the finished interior. -->
+    <div style="flex: 1 1 460px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px;">
+      <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px;">
+        <div class="media filled" style="aspect-ratio: 4 / 5;"><img src="../assets/img/gallery/build-cabinet-face-frame-800.jpg" alt="Unfinished cabinet frame before paint in the shop" loading="lazy" style="object-position: 30% 50%;"></div>
+        <figcaption style="font-size: 13px; color: #5A666C;">In the shop</figcaption>
+      </figure>
+      <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px;">
+        <div class="media filled" style="aspect-ratio: 4 / 5;"><img src="../assets/img/gallery/rising-sun-kitchen-range-800.jpg" alt="The finished kitchen with navy cabinets and quartz counters" loading="lazy"></div>
+        <figcaption style="font-size: 13px; color: #5A666C;">Finished, in The Rising Sun</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- DIY FAQ -->
+<section id="faq" style="padding-top: 96px; padding-bottom: 96px;">
+  <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 48px;">
+    <div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 12px;">
+      <span class="eyebrow">DIY FAQ</span>
+      <h2 class="h2">Before you start.</h2>
+      <a href="../faq/#diy" style="font-weight: 600; margin-top: 8px;">See all questions</a>
+    </div>
+    <div style="flex: 2 1 560px; min-width: 0; display: flex; flex-direction: column; border-top: 1px solid #D5DCDE;">
+      <details class="faq-q"><summary>Do I need building experience?</summary><p>[ANSWER]</p></details>
+      <details class="faq-q"><summary>Will your plans work in my state?</summary><p>Codes vary by state and county. [ANSWER: what the plans cover and what needs local review]</p></details>
+      <details class="faq-q"><summary>Should I build it myself or buy one finished?</summary><p>It depends on your time, skills, and budget. A discovery call is free, and we'll tell you honestly which makes more sense for you. If buying finished is the better fit, <a href="../container-homes/">see our homes</a>.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING CTA -->
+<section id="cta" style="position: relative; background: #14324A; color: #FFFFFF;">
+  <div class="media dark filled" style="position: absolute; inset: 0; border-radius: 0;"><img src="../assets/img/gallery/build-tabletop-glue-up-1600.jpg" alt="" loading="lazy"></div>
+  <div class="wrap" style="position: relative; padding-top: 112px; padding-bottom: 112px;">
+    <div style="background: #14324A; max-width: 560px; padding: 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px; border-radius: 2px;">
+      <h2 style="font-size: 44px; line-height: 46px; font-weight: 800;">Start with a free call.</h2>
+      <p style="font-size: 17px; line-height: 28px; color: #DCE6EE;">Tell us what you're planning and we'll point you in the right direction, whether that's a consult, our plans, or a finished home.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px;"><a class="btn primary" href="#talk" data-book="discovery">Book a free discovery call</a><a class="btn ghost light" href="#plans-list">Get plans updates</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER: reuse from index.html -->
+
+</div>
+
+<script>
+(function () {
+  // Booking links (Calendly or Cal.com). The paid consult takes payment at booking through
+  // their Stripe connection, so the site never touches card info. Until a link is filled in,
+  // the buttons keep their fallback (the cards on this page, or the contact form).
+  var BOOKING = {
+    discovery: '[DISCOVERY CALL BOOKING URL]',
+    consult: '[PAID CONSULT BOOKING URL]'
+  };
+  Array.prototype.forEach.call(document.querySelectorAll('[data-book]'), function (a) {
+    var url = BOOKING[a.getAttribute('data-book')];
+    if (url && url.charAt(0) !== '[') {
+      a.href = url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+    }
+  });
+
+  var form = document.getElementById('plans-form');
+  var alertBox = document.getElementById('form-alert');
+  var submit = form.querySelector('button[type="submit"]');
+
+  var checks = [
+    { el: form.first_name, ok: function (v) { return v.trim() !== ''; } },
+    { el: form.email, ok: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()); } },
+    { el: form.state, ok: function (v) { return v !== ''; } },
+    { el: form.project, ok: function (v) { return v !== ''; } }
+  ];
+
+  function setError(el, bad) {
+    el.setAttribute('aria-invalid', String(bad));
+    document.getElementById(el.id + '-err').hidden = !bad;
+  }
+
+  function validate() {
+    var firstBad = null;
+    checks.forEach(function (c) {
+      var bad = !c.ok(c.el.value);
+      setError(c.el, bad);
+      if (bad && !firstBad) firstBad = c.el;
+    });
+    if (firstBad) firstBad.focus();
+    return !firstBad;
+  }
+
+  // Clear an error as soon as the field is fixed.
+  checks.forEach(function (c) {
+    c.el.addEventListener(c.el.tagName === 'SELECT' ? 'change' : 'input', function () {
+      if (c.el.getAttribute('aria-invalid') === 'true' && c.ok(c.el.value)) setError(c.el, false);
+    });
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    alertBox.hidden = true;
+    if (!validate()) return;
+    var course = form.course.checked;
+    form.tags.value = ['plans', course ? 'course' : '', 'project:' + form.project.value, 'state:' + form.state.value]
+      .filter(Boolean).join(',');
+    submit.disabled = true;
+    submit.textContent = 'Sending…';
+    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+      .then(function (res) {
+        if (!res.ok) throw new Error(res.status);
+        location.href = 'thank-you/' + (course ? '?course=1' : '');
+      })
+      .catch(function () {
+        alertBox.hidden = false;
+        alertBox.scrollIntoView({ block: 'center' });
+        submit.disabled = false;
+        submit.textContent = 'Notify me when plans launch';
+      });
+  });
+
+  // "Join the list" from the course section ticks the course box on the way.
+  document.getElementById('course-jump').addEventListener('click', function () {
+    form.course.checked = true;
+  });
+})();
+</script>
+<script src="../assets/js/mega-menu.js" defer></script>
+</body></html>
