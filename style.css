@@ -3,7 +3,7 @@ Theme Name: UnContained Dreams
 Description: Texas-built container homes, delivered anywhere. Converted from the static site one page at a time.
 Author: Chris Norton
 Version: 1.0.0
-Requires at least: 6.3
+Requires at least: 6.6
 Requires PHP: 7.4
 Text Domain: uncontained-dreams
 */
@@ -12,6 +12,8 @@ body{margin:0;background:#F1F3F2;color:#1B2429;font-family:"Public Sans",system-
 a{color:#14324A}a:hover{color:#B04E25}
 h1,h2,h3{font-family:"Archivo","Arial Narrow",Arial,sans-serif;text-wrap:balance;margin:0}
 p{margin:0}
+[hidden]{display:none!important}
+.screen-reader-text{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,4vw);padding-right:max(20px,4vw);box-sizing:border-box}
 .media{position:relative;box-sizing:border-box;border:1.5px dashed #8FA0A6;background:#DCE3E5;color:#14324A;border-radius:2px;display:flex;flex-direction:column;justify-content:flex-end;gap:4px;padding:16px;overflow:hidden}
 .media.dark{background:#1E425E;border-color:#5C7D95;color:#F1F3F2}
@@ -26,7 +28,7 @@ p{margin:0}
 .chip{display:inline-flex;align-items:center;padding:4px 12px;border-radius:999px;font-size:13px;font-weight:600}
 .field{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600;color:#1B2429}
 .field input,.field select{min-height:46px;border:1px solid #B9C4C8;border-radius:2px;padding:0 12px;font:inherit;font-weight:400;font-size:16px;background:#FFFFFF;color:#1B2429}
-a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{outline:3px solid #B04E25;outline-offset:2px}
+a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #B04E25;outline-offset:2px}
 .media.filled{border:0;padding:0;background:#1E425E}
 .media>img,.media>video,.media>a>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .hero-video{display:block}
@@ -40,3 +42,311 @@ a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{ou
 @media (max-width:1099px){.admin-bar .primary-nav{top:calc(var(--ucd-header-h) + 32px)}}
 @media (max-width:782px){.admin-bar .site-header{top:46px}.admin-bar .primary-nav{top:calc(var(--ucd-header-h) + 46px)}}
 @media (max-width:600px){.admin-bar .site-header{top:0}.admin-bar .primary-nav{top:var(--ucd-header-h)}}
+
+/* ==========================================================================
+   Block content
+   Styles for pages edited in the block editor. Section patterns in patterns/
+   are full-width Groups with the ucd-* classes below; headings, paragraphs,
+   images and buttons inside them pick up the site styles automatically.
+   ========================================================================== */
+
+.entry-content>:not(.alignfull){max-width:1200px;margin-left:auto;margin-right:auto;padding-left:max(20px,4vw);padding-right:max(20px,4vw);box-sizing:border-box}
+.entry-content--plain{padding-top:72px;padding-bottom:96px;font-size:17px;line-height:28px}
+.entry-content--plain>*+*{margin-top:20px}
+.entry-content--plain h1{font-size:44px;line-height:46px;font-weight:800;color:#14324A}
+.entry-content--plain h2{margin-top:40px;font-size:28px;line-height:34px;font-weight:800;color:#14324A}
+
+/* Buttons: default is the corten primary, Outline is the ghost button */
+.wp-block-button .wp-block-button__link{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border:0;border-radius:6px;background:#B04E25;color:#FFFFFF;font-family:inherit;font-weight:600;font-size:16px;line-height:1.2;text-decoration:none;box-sizing:border-box}
+.wp-block-button .wp-block-button__link:hover{background:#963F1C;color:#FFFFFF}
+.wp-block-button.is-style-outline>.wp-block-button__link.wp-element-button{padding:0 22px;border:1.5px solid currentColor;background:transparent;color:#14324A}
+.ucd-section--harbor .wp-block-button.is-style-outline>.wp-block-button__link.wp-element-button,.ucd-cta .wp-block-button.is-style-outline>.wp-block-button__link.wp-element-button{color:#FFFFFF}
+
+/* Sections */
+.ucd-section{padding-top:96px;padding-bottom:96px}
+.ucd-section--white{background:#FFFFFF;border-top:1px solid #D5DCDE;border-bottom:1px solid #D5DCDE}
+.ucd-section--harbor{background:#14324A;color:#FFFFFF;padding-top:88px;padding-bottom:88px}
+.ucd-section :is(h1,h2,h3,p,ul,figure,.wp-block-buttons,.wp-block-image,.wp-block-video,.wp-block-table,.wp-block-details,.wp-block-group:not(.wrap)){margin:0}
+.ucd-section h1{font-size:clamp(40px,6vw,60px);line-height:1;font-weight:800;letter-spacing:-.015em}
+.ucd-section h2{font-size:40px;line-height:44px;font-weight:800;color:#14324A}
+.ucd-section h3{font-size:20px;color:#14324A}
+.ucd-section p{font-size:17px;line-height:28px}
+.ucd-section .eyebrow{font-size:12px;line-height:normal}
+.ucd-section .chip{font-size:13px;line-height:normal}
+.ucd-section--harbor h2,.ucd-section--harbor h3{color:#FFFFFF}
+.ucd-section--harbor p{color:#DCE6EE}
+.ucd-section--harbor .eyebrow{color:#B7C8D6}
+.ucd-section--harbor p a,.ucd-cta p a{color:#FFFFFF;font-weight:600}
+.ucd-lead{font-size:19px!important;line-height:30px!important;max-width:56ch}
+.ucd-section .wp-block-buttons{display:flex;flex-wrap:wrap;gap:12px}
+
+/* Layout */
+.ucd-stack{display:flex;flex-direction:column;gap:40px}
+.ucd-text{display:flex;flex-direction:column;gap:20px}
+.ucd-intro{display:flex;flex-direction:column;gap:12px;max-width:620px}
+.ucd-split{display:flex;flex-wrap:wrap;gap:48px;align-items:center}
+.ucd-split>*{flex:1 1 420px;min-width:0}
+.ucd-split>.ucd-wide{flex:2 1 560px}
+.ucd-split>.ucd-narrow{flex-basis:300px}
+.ucd-split--top{align-items:flex-start}
+.ucd-split--reverse{flex-wrap:wrap-reverse}
+.ucd-chips{display:flex;flex-wrap:wrap;gap:8px}
+.ucd-section .chip--sand{background:#E9B872;color:#14324A}
+.ucd-section .chip--deep{background:#1E425E;color:#DCE6EE}
+.ucd-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.ucd-mosaic{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.ucd-mosaic>:first-child{grid-column:span 2}
+
+/* Media: set the shape with the image block's Aspect ratio control */
+.ucd-section .wp-block-image img,.ucd-cta .wp-block-image img{display:block;width:100%;height:auto;border-radius:2px;background:#1E425E}
+.ucd-section .wp-block-video video{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px;background:#1E425E}
+.ucd-section .wp-element-caption{margin:8px 0 0;font-size:13px;line-height:19px;color:#5A666C;text-align:left}
+
+/* Cards and panels */
+.ucd-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.ucd-card{display:flex;flex-direction:column;overflow:hidden;border:1px solid #D5DCDE;border-radius:2px}
+.ucd-card .wp-block-image img{border-radius:0}
+.ucd-card__body{display:flex;flex-direction:column;gap:10px;padding:24px}
+.ucd-card__body p{font-size:15px;line-height:24px;color:#5A666C}
+.ucd-panel{display:flex;flex-direction:column;gap:16px;padding:24px;background:#FFFFFF;border:1px solid #D5DCDE;border-radius:2px;box-sizing:border-box}
+.ucd-panel__note{padding-top:16px;border-top:1px solid #D5DCDE;font-size:14px!important;line-height:22px!important;color:#5A666C}
+.ucd-checklist{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;font-size:16px;line-height:24px}
+.ucd-checklist li{position:relative;padding-left:34px}
+.ucd-checklist li::before{content:"";position:absolute;left:0;top:1px;width:22px;height:22px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232F5D47' stroke-width='2.2' stroke-linecap='square'%3E%3Cpath d='M4 12l5 5L20 6'/%3E%3C/svg%3E") no-repeat center/contain}
+
+/* Team cards: the headshot column collapses until a photo is added */
+.team-card{background:#FFFFFF;border:1px solid #D5DCDE;border-radius:2px;display:grid;grid-template-columns:minmax(0,200px) minmax(0,1fr);gap:24px;padding:24px;align-items:start}
+.team-card>:only-child{grid-column:1/-1}
+.team-card>.wp-block-group{display:flex;flex-direction:column;gap:8px}
+.team-card h3{font-size:22px;line-height:28px}
+.team-card p{font-size:16px;line-height:26px}
+.ucd-section .team-card__role{font-size:14px;font-weight:600;color:#5A666C}
+@media (max-width:560px){.team-card{grid-template-columns:minmax(0,1fr)}.team-card>.wp-block-image{max-width:200px}}
+
+/* Fact table: a two-column table block */
+.ucd-section .ucd-facts table{width:100%;border-collapse:collapse;border-top:1px solid #D5DCDE}
+.ucd-section .ucd-facts td{padding:16px 24px 16px 0;border:0;border-bottom:1px solid #D5DCDE;vertical-align:top;font-size:16px;line-height:24px}
+.ucd-section .ucd-facts td:first-child{width:220px;font-size:14px;font-weight:600;color:#5A666C}
+@media (max-width:560px){.ucd-section .ucd-facts tr{display:grid;gap:8px;padding:16px 0;border-bottom:1px solid #D5DCDE}.ucd-section .ucd-facts td{width:auto!important;padding:0;border:0}}
+
+/* Build sequence: the images in the group crossfade in order, captions become labels */
+.ucd-seq{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:2px;background:#1E425E}
+.ucd-seq>.wp-block-image{position:absolute;inset:0;opacity:0;animation:ucd-seq 16s infinite}
+.ucd-seq>.wp-block-image:nth-child(1){opacity:1;animation-delay:0s}
+.ucd-seq>.wp-block-image:nth-child(2){animation-delay:4s}
+.ucd-seq>.wp-block-image:nth-child(3){animation-delay:8s}
+.ucd-seq>.wp-block-image:nth-child(4){animation-delay:12s}
+.ucd-seq>.wp-block-image img{width:100%;height:100%;object-fit:cover;border-radius:0}
+.ucd-section .ucd-seq .wp-element-caption{position:absolute;left:16px;bottom:16px;margin:0;padding:6px 12px;border-radius:999px;background:#14324A;color:#FFFFFF;font-size:13px;font-weight:600;line-height:normal}
+@keyframes ucd-seq{0%{opacity:0}4%{opacity:1}25%{opacity:1}29%{opacity:0}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.ucd-seq>.wp-block-image{animation:none}.ucd-seq>.wp-block-image:not(:first-child){display:none}}
+/* In the editor, show the frames side by side so each one can be edited */
+.ucd-seq:has(>.block-editor-block-list__block){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;aspect-ratio:auto;background:none}
+.ucd-seq>.block-editor-block-list__block{position:relative;inset:auto;opacity:1;animation:none}
+
+/* Numbered step cards: numbers come from the order of the cards */
+.ucd-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;counter-reset:ucd-step}
+.ucd-step{counter-increment:ucd-step;display:flex;flex-direction:column;gap:10px;padding:24px;background:#FFFFFF;border:1px solid #D5DCDE;border-radius:2px}
+.ucd-step::before{content:counter(ucd-step);font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-weight:800;font-size:36px;line-height:1.2;color:#B04E25}
+.ucd-step p{font-size:15px;line-height:24px;color:#5A666C}
+
+/* Data tables: a table block with a header row */
+.ucd-section .ucd-table table{width:100%;border-collapse:collapse;font-size:16px;line-height:24px}
+.ucd-section .ucd-table thead{border:0}
+.ucd-section .ucd-table :is(th,td){text-align:left;padding:14px 16px 14px 0;border:0;border-bottom:1px solid #D5DCDE;vertical-align:top}
+.ucd-section .ucd-table thead th{font-size:12px;line-height:16px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5A666C;border-bottom-color:#B9C4C8}
+.ucd-section .ucd-table td:last-child{font-weight:600;color:#14324A;padding-right:0}
+.ucd-panel .ucd-table tbody tr:last-child td{border-bottom:0}
+.ucd-note{font-size:14px!important;line-height:22px!important;color:#5A666C}
+.ucd-link a{font-weight:600}
+
+/* List cards: a heading and checklist with a colored top edge */
+.ucd-listcard{display:flex;flex-direction:column;gap:16px;padding:24px;background:#FFFFFF;border:1px solid #D5DCDE;border-top:4px solid #B9C4C8;border-radius:2px}
+.ucd-listcard--oak{border-top-color:#2F5D47}
+.ucd-listcard--harbor{border-top-color:#14324A}
+.ucd-checklist--harbor li::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2314324A' stroke-width='2.2' stroke-linecap='square'%3E%3Cpath d='M4 12l5 5L20 6'/%3E%3C/svg%3E")}
+.ucd-checklist--dash li::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235A666C' stroke-width='2.2' stroke-linecap='square'%3E%3Cpath d='M6 12h12'/%3E%3C/svg%3E")}
+.ucd-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+
+/* FAQ: a stack of Details blocks */
+.ucd-faq{display:flex;flex-direction:column;border-top:1px solid #D5DCDE}
+.ucd-faq .wp-block-details{padding:20px 0;border-bottom:1px solid #D5DCDE}
+.ucd-faq summary{font-weight:700;font-size:18px;color:#14324A;cursor:pointer}
+.ucd-section .ucd-faq .wp-block-details p{margin-top:12px;font-size:16px;line-height:26px}
+
+/* FAQ page: topic groups of Details blocks. The "Jump to" nav is added by
+   functions.php from the topic headings; faq.js adds the search box. */
+.ucd-section.ucd-faq-hero{padding-bottom:72px}
+.ucd-section.ucd-faq-page{padding-top:64px}
+.ucd-faq-search{position:relative;max-width:620px}
+.ucd-faq-search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);pointer-events:none}
+.ucd-faq-search input{width:100%;box-sizing:border-box;min-height:56px;padding:0 16px 0 48px;border:0;border-radius:2px;background:#FFFFFF;color:#1B2429;font:inherit;font-size:17px}
+.ucd-faq-search input::placeholder{color:#5A666C}
+.ucd-section .ucd-faq-count{min-height:22px;font-size:14px;line-height:22px;color:#B7C8D6}
+.ucd-faq-layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:48px;align-items:start}
+.ucd-faq-jump{position:sticky;top:calc(var(--ucd-header-h,76px) + 24px)}
+.ucd-faq-jump ul{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-direction:column;border-left:2px solid #D5DCDE}
+.ucd-faq-jump a{display:block;padding:8px 0 8px 16px;margin-left:-2px;border-left:2px solid transparent;text-decoration:none;font-weight:600;font-size:15px;color:#5A666C}
+.ucd-faq-jump a:hover{color:#14324A;border-left-color:#14324A}
+@media (max-width:860px){.ucd-faq-layout{grid-template-columns:minmax(0,1fr);gap:24px}.ucd-faq-jump{position:static}.ucd-faq-jump .eyebrow{display:none}.ucd-faq-jump ul{flex-direction:row;gap:8px;margin:0;border-left:0;overflow-x:auto;scrollbar-width:none}.ucd-faq-jump a{white-space:nowrap;margin:0;padding:10px 16px;border:1.5px solid #B9C4C8;border-radius:999px;background:#FFFFFF;color:#14324A}.ucd-faq-jump a:hover{border-color:#14324A}}
+.ucd-faq-groups{display:flex;flex-direction:column;gap:56px}
+.ucd-faq-group{scroll-margin-top:calc(var(--ucd-header-h,76px) + 24px)}
+.ucd-section .ucd-faq-group h2{margin-bottom:8px;font-size:28px;line-height:34px}
+.ucd-faq-group .wp-block-details{border-bottom:1px solid #D5DCDE;scroll-margin-top:calc(var(--ucd-header-h,76px) + 24px)}
+.ucd-faq-group .wp-block-details:first-of-type{border-top:1px solid #D5DCDE}
+.ucd-faq-group summary{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:20px 0;font-weight:700;font-size:18px;line-height:26px;color:#14324A;cursor:pointer;list-style:none}
+.ucd-faq-group summary::-webkit-details-marker{display:none}
+.ucd-faq-group summary::after{content:"";flex:none;width:12px;height:12px;margin:6px 4px 0 0;border-right:2px solid #5A666C;border-bottom:2px solid #5A666C;transform:rotate(45deg);transition:transform .2s}
+.ucd-faq-group .wp-block-details[open] summary::after{transform:rotate(-135deg);margin-top:11px}
+.ucd-section .ucd-faq-group .wp-block-details p{max-width:68ch;padding-bottom:20px;font-size:16px;line-height:26px}
+.ucd-faq-group .wp-block-details:target summary{color:#B04E25}
+.ucd-faq-empty{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:32px;background:#FFFFFF;border:1px solid #D5DCDE;border-radius:2px}
+.ucd-section .ucd-faq-empty h2{font-size:24px;line-height:30px}
+.ucd-section .ucd-faq-empty p{font-size:16px;line-height:26px}
+@media (prefers-reduced-motion:reduce){.ucd-faq-group summary::after{transition:none}}
+
+/* Smaller section variants */
+.ucd-section.ucd-section--compact{padding-top:72px;padding-bottom:72px}
+.ucd-stack--tight{gap:28px}
+.ucd-intro--small{gap:8px}
+.ucd-section .ucd-intro--small h2{font-size:32px;line-height:38px}
+.ucd-section h1.ucd-short{max-width:16ch}
+
+/* Action cards: photo, heading, line of text and a button pinned to the bottom */
+.ucd-cards--4{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.ucd-card--action{background:#FFFFFF}
+.ucd-card--action .ucd-card__body{flex:1}
+.ucd-card--action .wp-block-buttons{margin-top:auto}
+
+/* Contact page: details column beside the form ([ucd_contact_form] in a Shortcode block) */
+.ucd-split.ucd-contact-split{gap:56px}
+.ucd-contact-split>.ucd-contact-details{flex:1 1 320px}
+.ucd-contact-split>.ucd-contact-form{flex:2 1 520px}
+.ucd-contact-details{display:flex;flex-direction:column;gap:32px}
+.ucd-section .ucd-contact-details h2{font-size:28px;line-height:34px}
+.ucd-contact-list{display:flex;flex-direction:column;gap:20px}
+.ucd-contact-item{display:flex;flex-direction:column;gap:4px}
+.ucd-section .ucd-contact-item p{font-size:16px;line-height:24px}
+.ucd-section .ucd-contact-item .eyebrow{font-size:12px;line-height:normal}
+.ucd-section .ucd-contact-item .ucd-contact-hours{color:#5A666C}
+.ucd-contact-phone a{font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-weight:800;font-size:30px;line-height:36px;color:#14324A;text-decoration:none}
+
+.ucd-contact-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px;min-width:0;padding:32px;background:#F1F3F2;border:1px solid #D5DCDE;border-radius:2px;box-sizing:border-box}
+.ucd-contact-form>h2,.ucd-contact-form>p,.ucd-contact-form .form-alert,.ucd-contact-form__full,.ucd-contact-form__submit{grid-column:1/-1}
+.ucd-section .ucd-contact-form h2{font-size:28px;line-height:34px}
+.ucd-section .ucd-contact-form__note{font-size:14px;line-height:22px;color:#5A666C}
+.ucd-contact-form__trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.ucd-contact-form fieldset{margin:0;padding:0;border:0}
+.ucd-contact-form legend{padding:0;margin-bottom:8px}
+.ucd-contact-form__submit{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.ucd-contact-form__submit .btn{border:0;cursor:pointer;font-family:inherit}
+.ucd-contact-form__submit .btn:disabled{opacity:.7;cursor:progress}
+.ucd-section .ucd-contact-form__submit p{font-size:13px;line-height:19px;color:#5A666C}
+.field textarea{min-height:140px;border:1px solid #B9C4C8;border-radius:2px;padding:12px;font:inherit;font-weight:400;font-size:16px;line-height:24px;background:#FFFFFF;color:#1B2429;resize:vertical}
+.field .req,.ucd-contact-form .req{color:#B04E25}
+.field .help{font-size:13px;line-height:19px;font-weight:400;color:#5A666C}
+.field .err{font-size:14px;line-height:20px;font-weight:600;color:#A3321A}
+.field [aria-invalid="true"]{border-color:#A3321A;border-width:2px}
+.choice-row{display:flex;flex-wrap:wrap;gap:8px}
+.choice{position:relative}
+.choice input{position:absolute;inset:0;margin:0;opacity:0;cursor:pointer}
+.choice span{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1.5px solid #B9C4C8;border-radius:999px;background:#FFFFFF;color:#14324A;font-size:15px;font-weight:600}
+.choice input:checked+span{background:#14324A;border-color:#14324A;color:#FFFFFF}
+.choice input:focus-visible+span{outline:3px solid #B04E25;outline-offset:2px}
+.form-alert{padding:14px 16px;background:#FBEDE7;border-left:4px solid #A3321A;font-size:15px;line-height:22px;color:#1B2429}
+@media (max-width:560px){.ucd-contact-form{grid-template-columns:minmax(0,1fr);padding:24px 20px}.ucd-shop-photo{display:none}}
+
+/* Thank-you pages: a check mark over the heading, then "while you wait" link cards */
+.ucd-section.ucd-success{padding-top:96px;padding-bottom:96px}
+.ucd-success .ucd-text::before{content:"";width:44px;height:44px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237FB89A' stroke-width='2' stroke-linecap='square'%3E%3Cpath d='M4 12l5 5L20 6'/%3E%3C/svg%3E") no-repeat center/contain}
+.ucd-section.ucd-next{padding-top:72px}
+.ucd-next-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.ucd-next-card{position:relative;display:flex;flex-direction:column;overflow:hidden;background:#FFFFFF;border:1px solid #D5DCDE;border-radius:2px}
+.ucd-next-card:hover{border-color:#14324A}
+.ucd-next-card .wp-block-image img{border-radius:0}
+.ucd-section .ucd-next-card p{padding:16px 20px;font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-weight:700;font-size:18px;line-height:24px}
+.ucd-next-card a{color:#14324A;text-decoration:none}
+/* The whole card is the link's click target (not in the editor, where it would block selecting the image) */
+.ucd-next-card:not(.block-editor-block-list__block) a::after{content:"";position:absolute;inset:0}
+
+/* Closing call to action: the first image block is the background */
+.ucd-cta{position:relative;background:#14324A;color:#FFFFFF}
+.ucd-cta>.wp-block-image{position:absolute;inset:0;margin:0}
+.ucd-cta>.wp-block-image img{width:100%;height:100%;object-fit:cover;border-radius:0}
+.ucd-cta>.wrap{position:relative;padding-top:112px;padding-bottom:112px}
+.ucd-cta__box{display:flex;flex-direction:column;gap:20px;max-width:560px;padding:40px;background:#14324A;border-radius:2px;box-sizing:border-box}
+.ucd-cta :is(h1,h2,p,.wp-block-buttons){margin:0}
+.ucd-cta h1{font-size:clamp(40px,6vw,60px);line-height:1;font-weight:800;letter-spacing:-.015em}
+.ucd-cta .eyebrow{font-size:12px;line-height:normal;color:#B7C8D6}
+.ucd-cta h2{font-size:44px;line-height:46px;font-weight:800}
+.ucd-cta p{font-size:17px;line-height:28px;color:#DCE6EE}
+.ucd-cta .wp-block-buttons{display:flex;flex-wrap:wrap;gap:12px}
+/* Hero variant: taller photo above, box sits low */
+.ucd-cta--hero>.wrap{padding-top:160px;padding-bottom:72px}
+.ucd-cta--hero .ucd-cta__box{max-width:620px;gap:22px}
+
+/* Gallery page: category sections, each a heading, an intro and a Gallery block.
+   gallery.js adds the filter bar and lightbox. */
+.ucd-gallery-body{padding-bottom:96px}
+.ucd-gallery-section{display:flex;flex-direction:column;gap:24px;padding-top:72px;scroll-margin-top:96px}
+.ucd-gallery-section :is(h2,h3,p,figure,.wp-block-gallery,.wp-block-video,.wp-block-group){margin:0}
+.ucd-gallery-head{display:flex;flex-direction:column;gap:8px;max-width:640px}
+.ucd-gallery-head h2{font-size:32px;line-height:38px;font-weight:800;color:#14324A}
+.ucd-gallery-head p{font-size:17px;line-height:28px;color:#5A666C}
+
+.ucd-filters{background:#FFFFFF;border-bottom:1px solid #D5DCDE}
+.ucd-filters__row{display:flex;gap:8px;overflow-x:auto;padding-top:16px;padding-bottom:16px;scrollbar-width:none}
+.ucd-filters__row::-webkit-scrollbar{display:none}
+.ucd-filter{flex:none;min-height:44px;padding:0 18px;border:1.5px solid #B9C4C8;border-radius:999px;background:#FFFFFF;color:#14324A;font:inherit;font-size:15px;font-weight:600;cursor:pointer}
+.ucd-filter:hover{border-color:#14324A}
+.ucd-filter[aria-pressed="true"]{background:#14324A;border-color:#14324A;color:#FFFFFF}
+
+/* Photo grid: overrides the Gallery block's column layout and overlay captions.
+   Give an image the is-wide class to span two columns. */
+.ucd-gallery.wp-block-gallery.has-nested-images{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px 12px}
+.ucd-gallery.wp-block-gallery.has-nested-images figure.wp-block-image{width:auto!important;margin:0!important;display:flex;flex-direction:column;justify-content:flex-start;gap:8px}
+.ucd-gallery.wp-block-gallery.has-nested-images figure.wp-block-image>a{display:block;flex:none;position:relative;overflow:hidden;border-radius:2px;background:#1E425E;cursor:zoom-in}
+.ucd-gallery.wp-block-gallery.has-nested-images figure.wp-block-image img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:2px;cursor:zoom-in;transition:transform .3s ease}
+.ucd-gallery.wp-block-gallery.has-nested-images figure.wp-block-image>a:hover img{transform:scale(1.03)}
+.ucd-gallery.wp-block-gallery.has-nested-images figure.wp-block-image figcaption{position:static;max-height:none;margin:0;padding:0;overflow:visible;background:none;color:#5A666C;text-shadow:none;text-align:left;font-size:13px;line-height:19px}
+.ucd-gallery.wp-block-gallery.has-nested-images figure.wp-block-image:has(figcaption)::before{content:none}
+.ucd-gallery.wp-block-gallery.has-nested-images figure.wp-block-image.is-wide{grid-column:span 2}
+.ucd-gallery.wp-block-gallery.has-nested-images figure.wp-block-image.is-wide>a{flex:1 1 auto;min-height:240px}
+.ucd-gallery.wp-block-gallery.has-nested-images figure.wp-block-image.is-wide>a img{position:absolute;inset:0;height:100%;aspect-ratio:auto}
+.ucd-gallery.wp-block-gallery.has-nested-images figure.wp-block-image.is-wide>img{flex:1 1 0;min-height:240px;aspect-ratio:auto}
+@media (max-width:620px){.ucd-gallery.wp-block-gallery.has-nested-images figure.wp-block-image.is-wide{grid-column:auto}.ucd-gallery.wp-block-gallery.has-nested-images figure.wp-block-image.is-wide>a{flex:none;min-height:0}.ucd-gallery.wp-block-gallery.has-nested-images figure.wp-block-image.is-wide>a img{position:static;height:auto;aspect-ratio:4/3}.ucd-gallery.wp-block-gallery.has-nested-images figure.wp-block-image.is-wide>img{flex:none;min-height:0;aspect-ratio:4/3}}
+@media (prefers-reduced-motion:reduce){.ucd-gallery.wp-block-gallery.has-nested-images figure.wp-block-image img{transition:none}}
+
+.ucd-gallery-empty{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:32px;background:#FFFFFF;border:1px solid #D5DCDE;border-radius:2px}
+.ucd-gallery-empty p{max-width:52ch;font-size:17px;line-height:28px}
+
+/* Videos: a featured video over a grid, each with a title and a "1:19 · description" line */
+.ucd-video-list{display:flex;flex-direction:column;gap:32px}
+.ucd-videos{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px 12px}
+.ucd-video-item{display:flex;flex-direction:column;gap:2px;min-width:0}
+.ucd-gallery-section .ucd-video-item>.wp-block-video{margin-bottom:6px}
+.ucd-video-item video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:2px;background:#1E425E}
+.ucd-video-item h3{font-size:17px;line-height:22px;color:#14324A}
+.ucd-video-item p{font-size:13px;line-height:19px;color:#5A666C;font-variant-numeric:tabular-nums}
+.ucd-video-item--feature{gap:4px}
+.ucd-video-item--feature h3{font-size:24px;line-height:30px}
+.ucd-video-item--feature p{font-size:15px;line-height:22px}
+
+/* 3D tour: a linked image whose caption sits on it as a badge */
+.ucd-tour-link{position:relative}
+.ucd-section .ucd-tour-link .wp-element-caption{position:absolute;left:16px;bottom:16px;margin:0;padding:4px 12px;border-radius:999px;background:#E9B872;color:#14324A;font-size:13px;font-weight:600;line-height:normal}
+
+/* Lightbox (built by gallery.js) */
+.ucd-lb{width:min(1200px,calc(100vw - 32px));max-height:calc(100vh - 32px);padding:0;border:0;background:transparent;color:#FFFFFF;overflow:visible}
+.ucd-lb::backdrop{background:rgba(15,27,36,.92)}
+.ucd-lb figure{margin:0;display:flex;flex-direction:column;gap:12px}
+.ucd-lb img{display:block;width:100%;max-height:calc(100vh - 140px);object-fit:contain;border-radius:2px}
+.ucd-lb figcaption{min-height:22px;padding-right:120px;font-size:15px;line-height:22px;color:#DCE6EE}
+.ucd-lb__btn{position:absolute;display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;border:0;border-radius:6px;background:#14324A;color:#FFFFFF;font:inherit;font-weight:600;cursor:pointer}
+.ucd-lb__btn:hover{background:#1E425E}
+.ucd-lb__close{top:-8px;right:-8px}
+.ucd-lb__nav{position:absolute;right:0;bottom:-11px;display:flex;gap:8px}
+.ucd-lb__nav .ucd-lb__btn{position:static}
+
+/* Block editor: let nested blocks use the section layouts instead of the editor's 840px column */
+.ucd-section .wp-block:not(.wrap),.ucd-cta .wp-block:not(.wrap){max-width:none;margin-left:0;margin-right:0}
