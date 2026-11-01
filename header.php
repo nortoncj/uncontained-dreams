@@ -43,14 +43,14 @@
                 <p class="mega-heading">Our homes</p>
                 <ul class="sub-menu">
                   <li class="menu-item"><a href="<?php ucd_url( '/models/the-rising-sun/' ); ?>">The Rising Sun <span class="menu-desc">Our flagship. From $85,000, furnished.</span></a></li>
-                  <li class="menu-item"><a href="<?php ucd_url( '/#build' ); ?>">Custom build <span class="menu-desc">Your layout, our shop.</span></a></li>
+                  <li class="menu-item"><a href="<?php ucd_url( '/build/' ); ?>">Custom build <span class="menu-desc">Your layout, our shop.</span></a></li>
                   <li class="menu-item"><a href="<?php ucd_url( '/#models' ); ?>">Compare models <span class="menu-desc">Size, beds, baths and price side by side.</span></a></li>
                 </ul>
               </div>
               <div class="mega-col">
                 <p class="mega-heading">Plan it</p>
                 <ul class="sub-menu">
-                  <li class="menu-item"><a href="<?php ucd_url( '/#build' ); ?>">Build Your Home <span class="menu-desc">Pick upgrades, see the total.</span></a></li>
+                  <li class="menu-item"><a href="<?php ucd_url( '/build/' ); ?>">Build Your Home <span class="menu-desc">Pick upgrades, see the total.</span></a></li>
                   <li class="menu-item"><a href="<?php ucd_url( '/#models' ); ?>">Spec sheets <span class="menu-desc">Insulation, HVAC and wind ratings.</span></a></li>
                   <li class="menu-item"><a href="<?php ucd_url( '/#tour' ); ?>">3D tour <span class="menu-desc">Walk through before you commit.</span></a></li>
                 </ul>
@@ -82,7 +82,7 @@
                 <p class="mega-heading">Four steps</p>
                 <ul class="sub-menu sub-menu--steps">
                   <li class="menu-item"><a href="<?php ucd_url( '/#how' ); ?>"><span>Build it online <span class="menu-desc">Choose your model and finishes.</span></span></a></li>
-                  <li class="menu-item"><a href="<?php ucd_url( '/#financing' ); ?>"><span>Check financing <span class="menu-desc">A real person reviews every request.</span></span></a></li>
+                  <li class="menu-item"><a href="<?php ucd_url( '/financing/' ); ?>"><span>Check financing <span class="menu-desc">A real person reviews every request.</span></span></a></li>
                   <li class="menu-item"><a href="<?php ucd_url( '/#how' ); ?>"><span>We build it <span class="menu-desc">Photo updates at every stage.</span></span></a></li>
                   <li class="menu-item"><a href="<?php ucd_url( '/#how' ); ?>"><span>We deliver it <span class="menu-desc">First 1,000 miles on us.</span></span></a></li>
                 </ul>
@@ -98,7 +98,7 @@
                 </a>
               </div>
               <div class="mega-col mega-col--span-4 mega-col--feature">
-                <a class="mega-card mega-card--oak" href="<?php ucd_url( '/#financing' ); ?>">
+                <a class="mega-card mega-card--oak" href="<?php ucd_url( '/financing/' ); ?>">
                   <div class="mega-card__img"><img src="<?php ucd_asset( 'Website/Main%20Site%20professional%20pics/Copy%20of%20Living%20room%20_%20Kitchen%20view.jpg' ); ?>" alt="" loading="lazy"></div>
                   <div class="mega-card__body">
                     <span class="mega-card__title">See your monthly payment</span>
@@ -111,7 +111,7 @@
           </div>
         </li>
 
-        <li class="menu-item"><a href="<?php ucd_url( '/#financing' ); ?>">Financing</a></li>
+        <li class="menu-item"><a href="<?php ucd_url( '/financing/' ); ?>">Financing</a></li>
         <li class="menu-item"><a href="<?php ucd_url( '/plans/' ); ?>">DIY Plans</a></li>
 
         <!-- Gallery -->
@@ -177,7 +177,7 @@
 
       <div class="header-actions">
         <a class="header-phone" href="#contact">[PHONE]</a>
-        <a class="btn primary" href="<?php ucd_url( '/#build' ); ?>">Build Your Home</a>
+        <a class="btn primary" href="<?php ucd_url( '/build/' ); ?>">Build Your Home</a>
       </div>
     </nav>
   </div>

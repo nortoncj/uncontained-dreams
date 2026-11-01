@@ -1,10 +1,14 @@
 <?php
 /**
- * Default page template.
+ * Default page template, also used for the homepage.
  *
  * Pages built from the full-width section patterns (see patterns/) render
  * edge to edge and bring their own hero heading. Plain text pages get the
  * page title and a readable column.
+ *
+ * The homepage is the page chosen under Settings > Reading > A static page
+ * (start it from the "Home page" pattern). If that's set to "Your latest
+ * posts" instead, WordPress shows the post list from index.php.
  */
 
 get_header();

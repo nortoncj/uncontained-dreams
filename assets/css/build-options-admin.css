@@ -1,0 +1,33 @@
+/* Build Options screen (wp-admin) */
+.ucd-build-admin { max-width: 1100px; }
+.ucd-build-admin .ucd-intro { max-width: 75ch; font-size: 14px; }
+.ucd-build-admin h2 { margin-top: 32px; }
+.ucd-panel { background: #fff; border: 1px solid #c3c4c7; padding: 16px; }
+
+.ucd-rows { display: flex; flex-direction: column; gap: 8px; }
+.ucd-row { background: #fff; border: 1px solid #c3c4c7; }
+.ucd-row > summary { padding: 12px 16px; font-weight: 600; font-size: 14px; cursor: pointer; }
+.ucd-row > summary em { margin-left: 8px; font-style: normal; font-weight: 400; color: #646970; }
+.ucd-row[open] > summary { border-bottom: 1px solid #dcdcde; }
+.ucd-row__body { display: flex; flex-direction: column; gap: 16px; padding: 16px; }
+.ucd-row__actions { display: flex; flex-wrap: wrap; gap: 16px; padding-top: 8px; border-top: 1px solid #f0f0f1; }
+
+.ucd-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px 16px; align-items: start; }
+.ucd-field { display: flex; flex-direction: column; gap: 4px; margin: 0; padding: 0; border: 0; }
+.ucd-field > span, .ucd-field > legend { font-weight: 600; }
+.ucd-field input[type="text"], .ucd-field input[type="url"], .ucd-field input[type="number"], .ucd-field textarea { width: 100%; }
+.ucd-field small { color: #646970; }
+.ucd-field input[readonly] { background: #f6f7f7; color: #50575e; }
+.ucd-field--check, .ucd-field--default { flex-direction: row; align-items: center; gap: 6px; }
+.ucd-field--checks { gap: 6px; }
+.ucd-field--checks label { display: block; }
+
+.ucd-choices { display: flex; flex-direction: column; gap: 8px; }
+.ucd-choice { display: grid; grid-template-columns: 140px minmax(160px, 2fr) minmax(140px, 1.5fr) 110px minmax(140px, 1.5fr); gap: 12px; align-items: start; padding: 12px; background: #f6f7f7; border: 1px solid #dcdcde; }
+.ucd-choice .ucd-row__actions { grid-column: 1 / -1; padding-top: 6px; }
+.ucd-choice .ucd-field--default { padding-top: 24px; }
+@media (max-width: 960px) { .ucd-choice { grid-template-columns: 1fr 1fr; } }
+.ucd-clear-default { margin-left: 12px; color: #50575e; }
+
+.ucd-image img { display: block; max-width: 240px; height: auto; margin-bottom: 4px; border: 1px solid #dcdcde; }
+.ucd-image .button { align-self: flex-start; }

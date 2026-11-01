@@ -13,8 +13,10 @@
     });
   }
 
-  // Options and prices from build-options.json, models from models.json.
+  // Options, prices and models: handed to the page by WordPress as window.UCDBuildData,
+  // or read from build-options.json and models.json on the static site.
   function load(root) {
+    if (window.UCDBuildData) return Promise.resolve(window.UCDBuildData);
     return Promise.all([getJson(root + DATA_PATH), getJson(root + MODELS_PATH)]).then(function (r) {
       var data = r[0];
       data.models = r[1].models;

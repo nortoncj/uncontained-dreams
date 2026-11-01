@@ -14,6 +14,9 @@ define( 'UCD_VERSION', '1.0.0' );
 define( 'UCD_FONTS_URL', 'https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap' );
 
 require_once get_template_directory() . '/inc/contact-form.php';
+require_once get_template_directory() . '/inc/build-options.php';
+require_once get_template_directory() . '/inc/build.php';
+require_once get_template_directory() . '/inc/financing.php';
 
 function ucd_setup() {
 	add_theme_support( 'title-tag' );
@@ -72,6 +75,30 @@ function ucd_fallback_icon() {
 	}
 }
 add_action( 'wp_head', 'ucd_fallback_icon' );
+
+// Pages for people who just sent something, or are mid-build, stay out of search results.
+function ucd_noindex_pages( $robots ) {
+	$private = is_page( array( 'thank-you', 'confirmation' ) )
+		|| ( is_singular() && has_shortcode( (string) get_post_field( 'post_content', get_queried_object_id() ), 'ucd_build_review' ) );
+	if ( $private ) {
+		$robots['noindex'] = true;
+		$robots['follow']  = true;
+	}
+	return $robots;
+}
+add_filter( 'wp_robots', 'ucd_noindex_pages' );
+
+// "Chip" style for Button blocks: small rounded links, like the delivery regions on the homepage.
+function ucd_register_block_styles() {
+	register_block_style(
+		'core/button',
+		array(
+			'name'  => 'chip',
+			'label' => 'Chip',
+		)
+	);
+}
+add_action( 'init', 'ucd_register_block_styles' );
 
 // Groups the section patterns in patterns/ under one heading in the block inserter.
 function ucd_register_pattern_category() {

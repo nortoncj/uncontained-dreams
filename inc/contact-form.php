@@ -310,10 +310,13 @@ function ucd_render_message_box( $post ) {
 	echo '</tbody></table>';
 }
 
-// Email and phone become links, so a reply is one click away.
+// Email and phone become links, so a reply is one click away; so does a link to a build.
 function ucd_message_value( $label, $value ) {
 	if ( '' === $value ) {
 		return '-';
+	}
+	if ( 0 === strpos( $value, home_url( '/' ) ) ) {
+		return sprintf( '<a href="%s" target="_blank" rel="noopener">Open in the builder</a>', esc_url( $value ) );
 	}
 	if ( 'Email' === $label ) {
 		return sprintf( '<a href="mailto:%1$s">%2$s</a>', esc_attr( $value ), esc_html( $value ) );
@@ -366,7 +369,7 @@ add_action( 'admin_init', 'ucd_contact_settings' );
 
 function ucd_contact_email_field() {
 	printf(
-		'<input name="ucd_contact_email" type="email" id="ucd_contact_email" value="%1$s" class="regular-text" placeholder="%2$s"><p class="description">Where contact form messages are sent. Leave empty to use the administration email address. Every message is also saved under Messages.</p>',
+		'<input name="ucd_contact_email" type="email" id="ucd_contact_email" value="%1$s" class="regular-text" placeholder="%2$s"><p class="description">Where contact form messages and submitted builds are sent. Leave empty to use the administration email address. Every one is also saved under Messages or Builds.</p>',
 		esc_attr( get_option( 'ucd_contact_email' ) ),
 		esc_attr( get_option( 'admin_email' ) )
 	);
@@ -391,16 +394,6 @@ add_shortcode( 'ucd_reply_method', 'ucd_reply_method_shortcode' );
 function ucd_is_contact_thank_you() {
 	return is_page() && 'contact/thank-you' === get_page_uri( get_queried_object() );
 }
-
-// Thank-you pages are for people who just sent something, not for search results.
-function ucd_noindex_thank_you( $robots ) {
-	if ( is_page( 'thank-you' ) ) {
-		$robots['noindex'] = true;
-		$robots['follow']  = true;
-	}
-	return $robots;
-}
-add_filter( 'wp_robots', 'ucd_noindex_thank_you' );
 
 // Conversion event, tagged with the topic. Swap for the site's analytics call once it's chosen.
 function ucd_contact_conversion_event() {
