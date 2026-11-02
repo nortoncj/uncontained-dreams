@@ -164,6 +164,64 @@ function ucd_business_schema() {
 add_action( 'wp_head', 'ucd_business_schema' );
 
 /**
+ * Product and service details for search engines, carried over from the
+ * static Container Homes, model and state pages. Keep the prices matching the
+ * pages. Add a model to $models, and a state page's slug to $states, as they
+ * go live.
+ */
+function ucd_offer_schema() {
+	$models = array(
+		'the-rising-sun' => array(
+			'@type'       => 'Product',
+			'name'        => 'The Rising Sun',
+			'description' => 'A finished container home with quartz counters, a tiled shower, a washer and dryer, and eight pieces of custom walnut furniture. Furniture and the first 1,000 delivery miles included.',
+			'image'       => array_map( 'ucd_get_asset', array( 'img/gallery/rising-sun-exterior-glass-doors-1600.jpg', 'img/gallery/rising-sun-exterior-front-1600.jpg', 'img/gallery/rising-sun-living-room-1600.jpg', 'img/gallery/rising-sun-kitchen-range-1600.jpg' ) ),
+			'brand'       => array( '@type' => 'Brand', 'name' => 'UnContained Dreams' ),
+			'offers'      => array( '@type' => 'AggregateOffer', 'lowPrice' => 85000, 'highPrice' => 120000, 'priceCurrency' => 'USD' ),
+		),
+	);
+	$states = array( 'texas' => 'Texas', 'california' => 'California' );
+
+	if ( is_page( 'container-homes' ) ) {
+		$list = array();
+		foreach ( array_values( $models ) as $i => $model ) {
+			$list[] = array( '@type' => 'ListItem', 'position' => $i + 1, 'item' => $model );
+		}
+		$schema = array( '@type' => 'ItemList', 'name' => 'UnContained Dreams container home models', 'itemListElement' => $list );
+	} elseif ( is_page( array_keys( $models ) ) ) {
+		$schema = $models[ get_post_field( 'post_name', get_queried_object_id() ) ];
+	} elseif ( is_page( array_keys( $states ) ) ) {
+		$state  = $states[ get_post_field( 'post_name', get_queried_object_id() ) ];
+		$schema = array(
+			'@type'       => 'Service',
+			'name'        => 'Container homes in ' . $state,
+			'serviceType' => 'Container home building and delivery',
+			'description' => 'Finished, furnished container homes built in our Texas shop and delivered anywhere in ' . $state . '.',
+			'provider'    => array( '@type' => 'Organization', 'name' => 'UnContained Dreams' ),
+			'areaServed'  => array( '@type' => 'State', 'name' => $state ),
+		);
+	} else {
+		return;
+	}
+
+	printf( "<script type=\"application/ld+json\">%s</script>\n", wp_json_encode( array( '@context' => 'https://schema.org' ) + $schema, JSON_UNESCAPED_SLASHES ) );
+}
+add_action( 'wp_head', 'ucd_offer_schema' );
+
+/**
+ * Model pages live under an empty "Models" parent page so their address is
+ * /models/<model>/. Until that parent has content of its own, send visitors
+ * to the models on the Container Homes page.
+ */
+function ucd_redirect_models_parent() {
+	if ( is_page( 'models' ) && '' === trim( get_post_field( 'post_content', get_queried_object_id() ) ) ) {
+		wp_safe_redirect( home_url( '/container-homes/#models' ) );
+		exit;
+	}
+}
+add_action( 'template_redirect', 'ucd_redirect_models_parent' );
+
+/**
  * Structured data read from the page's own blocks, so it stays in step with
  * what's written in the editor:
  * - step cards (Groups with the ucd-step class) become a HowTo

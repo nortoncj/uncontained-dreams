@@ -44,15 +44,15 @@
                 <ul class="sub-menu">
                   <li class="menu-item"><a href="<?php ucd_url( '/models/the-rising-sun/' ); ?>">The Rising Sun <span class="menu-desc">Our flagship. From $85,000, furnished.</span></a></li>
                   <li class="menu-item"><a href="<?php ucd_url( '/build/' ); ?>">Custom build <span class="menu-desc">Your layout, our shop.</span></a></li>
-                  <li class="menu-item"><a href="<?php ucd_url( '/#models' ); ?>">Compare models <span class="menu-desc">Size, beds, baths and price side by side.</span></a></li>
+                  <li class="menu-item"><a href="<?php ucd_url( '/container-homes/#models' ); ?>">Compare models <span class="menu-desc">Size, beds, baths and price side by side.</span></a></li>
                 </ul>
               </div>
               <div class="mega-col">
                 <p class="mega-heading">Plan it</p>
                 <ul class="sub-menu">
                   <li class="menu-item"><a href="<?php ucd_url( '/build/' ); ?>">Build Your Home <span class="menu-desc">Pick upgrades, see the total.</span></a></li>
-                  <li class="menu-item"><a href="<?php ucd_url( '/#models' ); ?>">Spec sheets <span class="menu-desc">Insulation, HVAC and wind ratings.</span></a></li>
-                  <li class="menu-item"><a href="<?php ucd_url( '/#tour' ); ?>">3D tour <span class="menu-desc">Walk through before you commit.</span></a></li>
+                  <li class="menu-item"><a href="<?php ucd_url( '/models/the-rising-sun/#features' ); ?>">Spec sheets <span class="menu-desc">Insulation, HVAC and wind ratings.</span></a></li>
+                  <li class="menu-item"><a href="<?php ucd_url( '/gallery/#tour' ); ?>">3D tour <span class="menu-desc">Walk through before you commit.</span></a></li>
                 </ul>
               </div>
               <div class="mega-col mega-col--span-6 mega-col--feature">
@@ -81,14 +81,14 @@
               <div class="mega-col mega-col--span-4">
                 <p class="mega-heading">Four steps</p>
                 <ul class="sub-menu sub-menu--steps">
-                  <li class="menu-item"><a href="<?php ucd_url( '/#how' ); ?>"><span>Build it online <span class="menu-desc">Choose your model and finishes.</span></span></a></li>
+                  <li class="menu-item"><a href="<?php ucd_url( '/how-it-works/#process' ); ?>"><span>Build it online <span class="menu-desc">Choose your model and finishes.</span></span></a></li>
                   <li class="menu-item"><a href="<?php ucd_url( '/financing/' ); ?>"><span>Check financing <span class="menu-desc">A real person reviews every request.</span></span></a></li>
-                  <li class="menu-item"><a href="<?php ucd_url( '/#how' ); ?>"><span>We build it <span class="menu-desc">Photo updates at every stage.</span></span></a></li>
-                  <li class="menu-item"><a href="<?php ucd_url( '/#how' ); ?>"><span>We deliver it <span class="menu-desc">First 1,000 miles on us.</span></span></a></li>
+                  <li class="menu-item"><a href="<?php ucd_url( '/how-it-works/#process' ); ?>"><span>We build it <span class="menu-desc">Photo updates at every stage.</span></span></a></li>
+                  <li class="menu-item"><a href="<?php ucd_url( '/how-it-works/#delivery' ); ?>"><span>We deliver it <span class="menu-desc">First 1,000 miles on us.</span></span></a></li>
                 </ul>
               </div>
               <div class="mega-col mega-col--span-4 mega-col--feature">
-                <a class="mega-card" href="<?php ucd_url( '/#how' ); ?>">
+                <a class="mega-card" href="<?php ucd_url( '/how-it-works/' ); ?>">
                   <div class="mega-card__img"><img src="<?php ucd_asset( 'Website/Build%20%20plans/File%20Name%20Lost%20(491).jpg' ); ?>" alt="" loading="lazy"></div>
                   <div class="mega-card__body">
                     <span class="mega-card__title">Built in our shop</span>
@@ -125,15 +125,15 @@
               <div class="mega-col mega-col--full">
                 <p class="mega-heading">From real builds</p>
                 <ul class="mega-tiles">
-                  <li class="mega-tile"><a href="<?php ucd_url( '/#gallery' ); ?>"><span class="mega-tile__img"><img src="<?php ucd_asset( 'Website/Main%20Site%20professional%20pics/Copy%20of%20Front%20Corner.jpg' ); ?>" alt="" loading="lazy"></span>Finished homes</a></li>
-                  <li class="mega-tile"><a href="<?php ucd_url( '/#gallery' ); ?>"><span class="mega-tile__img"><img src="<?php ucd_asset( 'Website/Gallery/20230601_163705.jpg' ); ?>" alt="" loading="lazy"></span>Interiors</a></li>
-                  <li class="mega-tile"><a href="<?php ucd_url( '/#gallery' ); ?>"><span class="mega-tile__img"><img src="<?php ucd_asset( 'Website/Build%20%20plans/Cabinet%20Stacked.JPG' ); ?>" alt="" loading="lazy"></span>Build process</a></li>
-                  <li class="mega-tile"><a href="<?php ucd_url( '/#gallery' ); ?>"><span class="mega-tile__img"><img src="<?php ucd_asset( 'Website/Gallery/DJI_0434.JPG' ); ?>" alt="" loading="lazy"></span>Delivery day</a></li>
+                  <li class="mega-tile"><a href="<?php ucd_url( '/gallery/#exteriors' ); ?>"><span class="mega-tile__img"><img src="<?php ucd_asset( 'Website/Main%20Site%20professional%20pics/Copy%20of%20Front%20Corner.jpg' ); ?>" alt="" loading="lazy"></span>Finished homes</a></li>
+                  <li class="mega-tile"><a href="<?php ucd_url( '/gallery/#interiors' ); ?>"><span class="mega-tile__img"><img src="<?php ucd_asset( 'Website/Gallery/20230601_163705.jpg' ); ?>" alt="" loading="lazy"></span>Interiors</a></li>
+                  <li class="mega-tile"><a href="<?php ucd_url( '/gallery/#build' ); ?>"><span class="mega-tile__img"><img src="<?php ucd_asset( 'Website/Build%20%20plans/Cabinet%20Stacked.JPG' ); ?>" alt="" loading="lazy"></span>Build process</a></li>
+                  <li class="mega-tile"><a href="<?php ucd_url( '/gallery/#delivery' ); ?>"><span class="mega-tile__img"><img src="<?php ucd_asset( 'Website/Gallery/DJI_0434.JPG' ); ?>" alt="" loading="lazy"></span>Delivery day</a></li>
                 </ul>
               </div>
               <div class="mega-footer">
                 <span>No renders. Every photo is a home we built.</span>
-                <a href="<?php ucd_url( '/#tour' ); ?>">Watch the video walkthrough</a>
+                <a href="<?php ucd_url( '/gallery/#video' ); ?>">Watch the video walkthrough</a>
               </div>
             </div>
           </div>
@@ -172,7 +172,7 @@
           </div>
         </li>
 
-        <li class="menu-item"><a href="<?php ucd_url( '/#faq' ); ?>">FAQ</a></li>
+        <li class="menu-item"><a href="<?php ucd_url( '/faq/' ); ?>">FAQ</a></li>
       </ul>
 
       <div class="header-actions">
