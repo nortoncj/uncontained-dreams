@@ -86,7 +86,8 @@ function ucd_contact_form_shortcode() {
 			'email'      => '',
 			'phone'      => '',
 			'location'   => '',
-			'topic'      => '',
+			// Links can pick the topic, e.g. /contact/?topic=diy-consultation.
+			'topic'      => isset( $_GET['topic'] ) && isset( ucd_contact_topics()[ sanitize_key( wp_unslash( $_GET['topic'] ) ) ] ) ? sanitize_key( wp_unslash( $_GET['topic'] ) ) : '',
 			'message'    => '',
 			'reach'      => 'call',
 		)

@@ -17,6 +17,9 @@ require_once get_template_directory() . '/inc/contact-form.php';
 require_once get_template_directory() . '/inc/build-options.php';
 require_once get_template_directory() . '/inc/build.php';
 require_once get_template_directory() . '/inc/financing.php';
+require_once get_template_directory() . '/inc/plans.php';
+require_once get_template_directory() . '/inc/service-areas.php';
+require_once get_template_directory() . '/inc/guides.php';
 
 function ucd_setup() {
 	add_theme_support( 'title-tag' );
@@ -87,6 +90,18 @@ function ucd_noindex_pages( $robots ) {
 	return $robots;
 }
 add_filter( 'wp_robots', 'ucd_noindex_pages' );
+
+// WordPress serves its own robots.txt, so the rules from the static site's robots.txt are added here.
+function ucd_robots_txt( $output, $public ) {
+	if ( ! $public ) {
+		return $output;
+	}
+	$path = wp_parse_url( home_url( '/' ), PHP_URL_PATH );
+	$path = $path ? $path : '/';
+	return $output . "\n# Saved builds are one person's choices, and topic filters and searches only change the list on /guides/.\n"
+		. "Disallow: {$path}*?config=\nDisallow: {$path}build/review/\nDisallow: {$path}contact/thank-you/\nDisallow: {$path}plans/thank-you/\nDisallow: {$path}*?topic=\nDisallow: {$path}*?q=\n";
+}
+add_filter( 'robots_txt', 'ucd_robots_txt', 10, 2 );
 
 // "Chip" style for Button blocks: small rounded links, like the delivery regions on the homepage.
 function ucd_register_block_styles() {
@@ -165,7 +180,7 @@ add_action( 'wp_head', 'ucd_business_schema' );
 
 /**
  * Product and service details for search engines, carried over from the
- * static Container Homes, model and state pages. Keep the prices matching the
+ * static Container Homes, model, state and DIY Plans pages. Keep the prices matching the
  * pages. Add a model to $models, and a state page's slug to $states, as they
  * go live.
  */
@@ -200,11 +215,36 @@ function ucd_offer_schema() {
 			'provider'    => array( '@type' => 'Organization', 'name' => 'UnContained Dreams' ),
 			'areaServed'  => array( '@type' => 'State', 'name' => $state ),
 		);
+	} elseif ( is_page( 'plans' ) ) {
+		// Add the consult price as an Offer once it's set, and a Product or Course when plans or the course go on sale.
+		$provider = array( '@type' => 'Organization', 'name' => 'UnContained Dreams' );
+		$country  = array( '@type' => 'Country', 'name' => 'United States' );
+		$schema   = array(
+			array(
+				'@type'       => 'Service',
+				'name'        => 'Free discovery call',
+				'serviceType' => 'Container home planning consultation',
+				'description' => 'A free call for anyone getting started with a container home: whether it fits your plans, rough costs, and where to start.',
+				'provider'    => $provider,
+				'areaServed'  => $country,
+				'offers'      => array( '@type' => 'Offer', 'price' => 0, 'priceCurrency' => 'USD' ),
+			),
+			array(
+				'@type'       => 'Service',
+				'name'        => 'Paid container home build consultation',
+				'serviceType' => 'Container home building consultation',
+				'description' => 'A one-hour consultation for builders mid-project: structural changes, insulation and climate, permits and inspections, and layout problems.',
+				'provider'    => $provider,
+				'areaServed'  => $country,
+			),
+		);
 	} else {
 		return;
 	}
 
-	printf( "<script type=\"application/ld+json\">%s</script>\n", wp_json_encode( array( '@context' => 'https://schema.org' ) + $schema, JSON_UNESCAPED_SLASHES ) );
+	foreach ( isset( $schema['@type'] ) ? array( $schema ) : $schema as $item ) {
+		printf( "<script type=\"application/ld+json\">%s</script>\n", wp_json_encode( array( '@context' => 'https://schema.org' ) + $item, JSON_UNESCAPED_SLASHES ) );
+	}
 }
 add_action( 'wp_head', 'ucd_offer_schema' );
 
@@ -407,18 +447,48 @@ function ucd_faq_render( $content, $block ) {
 }
 add_filter( 'render_block', 'ucd_faq_render', 10, 2 );
 
-function ucd_faq_topics( $blocks ) {
+// The groups with $class (FAQ topics, legal sections), each as an id and its heading.
+function ucd_faq_topics( $blocks, $class = 'ucd-faq-group' ) {
 	$topics = array();
 	foreach ( $blocks as $block ) {
 		$classes = explode( ' ', isset( $block['attrs']['className'] ) ? $block['attrs']['className'] : '' );
-		if ( 'core/group' === $block['blockName'] && in_array( 'ucd-faq-group', $classes, true ) ) {
+		if ( 'core/group' === $block['blockName'] && in_array( $class, $classes, true ) ) {
 			$topics[] = ucd_faq_topic( $block );
 		} else {
-			$topics = array_merge( $topics, ucd_faq_topics( $block['innerBlocks'] ) );
+			$topics = array_merge( $topics, ucd_faq_topics( $block['innerBlocks'], $class ) );
 		}
 	}
 	return $topics;
 }
+
+/**
+ * Legal pages' "On this page" links. The layout group (ucd-legal-layout) gets
+ * a nav built from its sections (ucd-legal-section), so a section added in
+ * the editor shows up there. Sections need an HTML anchor to be linked.
+ */
+function ucd_legal_render( $content, $block ) {
+	$classes = explode( ' ', isset( $block['attrs']['className'] ) ? $block['attrs']['className'] : '' );
+	if ( 'core/group' !== $block['blockName'] || ! in_array( 'ucd-legal-layout', $classes, true ) ) {
+		return $content;
+	}
+	$links = '';
+	foreach ( ucd_faq_topics( $block['innerBlocks'], 'ucd-legal-section' ) as $section ) {
+		if ( $section['id'] && $section['label'] ) {
+			$links .= sprintf( '<li><a href="#%s">%s</a></li>', esc_attr( $section['id'] ), esc_html( $section['label'] ) );
+		}
+	}
+	$nav = '<nav class="ucd-legal-toc" aria-label="On this page"><span class="eyebrow">On this page</span><ol>' . $links . '</ol></nav>';
+	// First inside the layout group, so it takes the left column.
+	return preg_replace_callback(
+		'/^\s*<[^>]+>/',
+		function ( $open ) use ( $nav ) {
+			return $open[0] . $nav;
+		},
+		$content,
+		1
+	);
+}
+add_filter( 'render_block', 'ucd_legal_render', 10, 2 );
 
 function ucd_faq_topic( $group ) {
 	$label = '';
