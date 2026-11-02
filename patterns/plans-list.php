@@ -23,11 +23,11 @@
 
 <!-- wp:group {"className":"ucd-pair"} -->
 <div class="wp-block-group ucd-pair"><!-- wp:image {"aspectRatio":"4/3","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/build-cabinet-boxes-800.jpg' ); ?>" alt="Unfinished birch cabinet boxes stacked in the shop, built to the layout" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Unfinished birch cabinet boxes stacked in the shop, built to the layout" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"4/3","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-living-room-glass-doors-800.jpg' ); ?>" alt="The wall-mounted walnut desk under the TV in The Rising Sun" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="The wall-mounted walnut desk under the TV in The Rising Sun" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

@@ -3,7 +3,7 @@
  * Title: About: hero
  * Slug: uncontained-dreams/about-hero
  * Categories: uncontained-dreams
- * Description: Navy hero with the page heading, intro and a founder photo. The photo slot stays hidden on the site until an image is added.
+ * Description: Navy hero with the page heading and intro beside a founder photo, which is the page's Featured image. The photo slot stays hidden until one is set.
  */
 ?>
 <!-- wp:group {"anchor":"top","align":"full","className":"ucd-section ucd-section--harbor"} -->

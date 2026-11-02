@@ -49,7 +49,7 @@
         (state ? '<a href="' + esc(state.url) + '">See ' + esc(state.name) + ' details</a>' : '');
     }).catch(function (e2) {
       if (e2 && e2.message === 'notfound') fail('We couldn\'t find that ZIP. Check it and try again.');
-      else fail('We couldn\'t check that right now. Try again, or call us at [PHONE].');
+      else fail('We couldn\'t check that right now. Try again' + (form.getAttribute('data-phone') ? ', or call us at ' + form.getAttribute('data-phone') : '') + '.');
     });
   });
 

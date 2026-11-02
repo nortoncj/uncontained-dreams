@@ -27,7 +27,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"aspectRatio":"4/3","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/build-window-openings-aerial-1600.jpg' ); ?>" alt="Aerial view of a bare container mid-build with window and door openings cut into the steel" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Aerial view of a bare container mid-build with window and door openings cut into the steel" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

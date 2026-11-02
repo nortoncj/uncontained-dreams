@@ -3,6 +3,10 @@
  * Site header and mega menu. Opens the page wrapper that footer.php closes.
  *
  * Links to homepage sections use /#anchor so the menu works from every page.
+ * The logo is Appearance > Customize > Site Identity > Logo, the phone number
+ * comes from Business details, and each menu photo is the Featured image of
+ * the page it links to (the gallery tiles use the first photo in each section
+ * of the Gallery page). A card without a photo shows its text only.
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -19,7 +23,11 @@
 <header class="site-header">
   <div class="wrap site-header__bar">
     <a class="site-logo" href="<?php ucd_url( '/' ); ?>">
-      <img class="site-logo__img" src="<?php ucd_asset( 'brand/logo.png' ); ?>" alt="UnContained Dreams logo" width="230" height="80"/>
+      <?php if ( has_custom_logo() ) : ?>
+        <?php echo wp_get_attachment_image( get_theme_mod( 'custom_logo' ), 'full', false, array( 'class' => 'site-logo__img', 'alt' => ucd_detail( 'name' ) . ' logo' ) ); ?>
+      <?php else : ?>
+        <span class="site-logo__text"><?php echo esc_html( ucd_detail( 'name' ) ); ?></span>
+      <?php endif; ?>
     </a>
 
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
@@ -57,7 +65,8 @@
               </div>
               <div class="mega-col mega-col--span-6 mega-col--feature">
                 <a class="mega-card" href="<?php ucd_url( '/models/the-rising-sun/' ); ?>">
-                  <div class="mega-card__img"><img src="<?php ucd_asset( 'Website/Main%20Site%20professional%20pics/Copy%20of%20Front%20View.jpg' ); ?>" alt="" loading="lazy"></div>
+                  <?php $ucd_photo = ucd_page_photo( 'models/the-rising-sun' ); ?>
+                  <?php if ( $ucd_photo ) : ?><div class="mega-card__img"><?php echo $ucd_photo; // phpcs:ignore WordPress.Security.EscapeOutput -- core image markup. ?></div><?php endif; ?>
                   <div class="mega-card__body">
                     <span class="mega-card__price">From $85,000</span>
                     <span class="mega-card__title">The Rising Sun</span>
@@ -89,7 +98,8 @@
               </div>
               <div class="mega-col mega-col--span-4 mega-col--feature">
                 <a class="mega-card" href="<?php ucd_url( '/how-it-works/' ); ?>">
-                  <div class="mega-card__img"><img src="<?php ucd_asset( 'Website/Build%20%20plans/File%20Name%20Lost%20(491).jpg' ); ?>" alt="" loading="lazy"></div>
+                  <?php $ucd_photo = ucd_page_photo( 'how-it-works' ); ?>
+                  <?php if ( $ucd_photo ) : ?><div class="mega-card__img"><?php echo $ucd_photo; // phpcs:ignore WordPress.Security.EscapeOutput -- core image markup. ?></div><?php endif; ?>
                   <div class="mega-card__body">
                     <span class="mega-card__title">Built in our shop</span>
                     <span class="mega-card__text">Cabinets, tables and framing made by hand for each layout.</span>
@@ -99,7 +109,8 @@
               </div>
               <div class="mega-col mega-col--span-4 mega-col--feature">
                 <a class="mega-card mega-card--oak" href="<?php ucd_url( '/financing/' ); ?>">
-                  <div class="mega-card__img"><img src="<?php ucd_asset( 'Website/Main%20Site%20professional%20pics/Copy%20of%20Living%20room%20_%20Kitchen%20view.jpg' ); ?>" alt="" loading="lazy"></div>
+                  <?php $ucd_photo = ucd_page_photo( 'financing' ); ?>
+                  <?php if ( $ucd_photo ) : ?><div class="mega-card__img"><?php echo $ucd_photo; // phpcs:ignore WordPress.Security.EscapeOutput -- core image markup. ?></div><?php endif; ?>
                   <div class="mega-card__body">
                     <span class="mega-card__title">See your monthly payment</span>
                     <span class="mega-card__text">Apply online and a financing representative will reach out.</span>
@@ -125,10 +136,10 @@
               <div class="mega-col mega-col--full">
                 <p class="mega-heading">From real builds</p>
                 <ul class="mega-tiles">
-                  <li class="mega-tile"><a href="<?php ucd_url( '/gallery/#exteriors' ); ?>"><span class="mega-tile__img"><img src="<?php ucd_asset( 'Website/Main%20Site%20professional%20pics/Copy%20of%20Front%20Corner.jpg' ); ?>" alt="" loading="lazy"></span>Finished homes</a></li>
-                  <li class="mega-tile"><a href="<?php ucd_url( '/gallery/#interiors' ); ?>"><span class="mega-tile__img"><img src="<?php ucd_asset( 'Website/Gallery/20230601_163705.jpg' ); ?>" alt="" loading="lazy"></span>Interiors</a></li>
-                  <li class="mega-tile"><a href="<?php ucd_url( '/gallery/#build' ); ?>"><span class="mega-tile__img"><img src="<?php ucd_asset( 'Website/Build%20%20plans/Cabinet%20Stacked.JPG' ); ?>" alt="" loading="lazy"></span>Build process</a></li>
-                  <li class="mega-tile"><a href="<?php ucd_url( '/gallery/#delivery' ); ?>"><span class="mega-tile__img"><img src="<?php ucd_asset( 'Website/Gallery/DJI_0434.JPG' ); ?>" alt="" loading="lazy"></span>Delivery day</a></li>
+                  <li class="mega-tile"><a href="<?php ucd_url( '/gallery/#exteriors' ); ?>"><?php $ucd_photo = ucd_gallery_photo( 'exteriors' ); ?><?php if ( $ucd_photo ) : ?><span class="mega-tile__img"><?php echo $ucd_photo; // phpcs:ignore WordPress.Security.EscapeOutput -- core image markup. ?></span><?php endif; ?>Finished homes</a></li>
+                  <li class="mega-tile"><a href="<?php ucd_url( '/gallery/#interiors' ); ?>"><?php $ucd_photo = ucd_gallery_photo( 'interiors' ); ?><?php if ( $ucd_photo ) : ?><span class="mega-tile__img"><?php echo $ucd_photo; // phpcs:ignore WordPress.Security.EscapeOutput -- core image markup. ?></span><?php endif; ?>Interiors</a></li>
+                  <li class="mega-tile"><a href="<?php ucd_url( '/gallery/#build' ); ?>"><?php $ucd_photo = ucd_gallery_photo( 'build' ); ?><?php if ( $ucd_photo ) : ?><span class="mega-tile__img"><?php echo $ucd_photo; // phpcs:ignore WordPress.Security.EscapeOutput -- core image markup. ?></span><?php endif; ?>Build process</a></li>
+                  <li class="mega-tile"><a href="<?php ucd_url( '/gallery/#delivery' ); ?>"><?php $ucd_photo = ucd_gallery_photo( 'delivery' ); ?><?php if ( $ucd_photo ) : ?><span class="mega-tile__img"><?php echo $ucd_photo; // phpcs:ignore WordPress.Security.EscapeOutput -- core image markup. ?></span><?php endif; ?>Delivery day</a></li>
                 </ul>
               </div>
               <div class="mega-footer">
@@ -161,7 +172,8 @@
               </div>
               <div class="mega-col mega-col--span-5 mega-col--feature">
                 <a class="mega-card" href="<?php ucd_url( '/service-areas/' ); ?>">
-                  <div class="mega-card__img"><img src="<?php ucd_asset( 'Website/Gallery/DJI_0411.JPG' ); ?>" alt="" loading="lazy"></div>
+                  <?php $ucd_photo = ucd_page_photo( 'service-areas' ); ?>
+                  <?php if ( $ucd_photo ) : ?><div class="mega-card__img"><?php echo $ucd_photo; // phpcs:ignore WordPress.Security.EscapeOutput -- core image markup. ?></div><?php endif; ?>
                   <div class="mega-card__body">
                     <span class="mega-card__title">Built in Texas. Delivered nationwide.</span>
                     <span class="mega-card__text">Shipped to all 50 states. The first 1,000 delivery miles are included in the price.</span>
@@ -176,7 +188,9 @@
       </ul>
 
       <div class="header-actions">
-        <a class="header-phone" href="#contact">[PHONE]</a>
+        <?php if ( ucd_detail( 'phone' ) ) : ?>
+        <a class="header-phone" href="<?php echo esc_url( ucd_phone_href(), array( 'tel' ) ); ?>"><?php echo esc_html( ucd_detail( 'phone' ) ); ?></a>
+        <?php endif; ?>
         <a class="btn primary" href="<?php ucd_url( '/build/' ); ?>">Build Your Home</a>
       </div>
     </nav>

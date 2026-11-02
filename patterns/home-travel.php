@@ -45,7 +45,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"aspectRatio":"4/5","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'Website/Build%20%20plans/DJIvwindow%20cut%20out%20pic%207.JPG' ); ?>" alt="Aerial view of a container mid-build with window openings cut into the steel" style="aspect-ratio:4/5;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Aerial view of a container mid-build with window openings cut into the steel" style="aspect-ratio:4/5;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

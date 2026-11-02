@@ -3,7 +3,7 @@
  * Title: Guides: hero
  * Slug: uncontained-dreams/guides-hero
  * Categories: uncontained-dreams
- * Description: Navy hero with the heading and the guides search box ([ucd_guides_search]) beside a shop photo. The search filters the guide list further down the page as you type.
+ * Description: Navy hero with the heading and the guides search box ([ucd_guides_search]) beside a shop photo. The search filters the guide list further down the page as you type. The photo is the page's Featured image.
  */
 ?>
 <!-- wp:group {"anchor":"top","align":"full","className":"ucd-section ucd-section--harbor"} -->
@@ -26,8 +26,6 @@
 <!-- /wp:shortcode --></div>
 <!-- /wp:group -->
 
-<!-- wp:image {"aspectRatio":"4/3","scale":"cover","className":"ucd-narrow"} -->
-<figure class="wp-block-image ucd-narrow"><img src="<?php ucd_asset( 'img/gallery/build-cabinet-boxes-800.jpg' ); ?>" alt="Unfinished cabinet boxes stacked in our shop, built to the layout" style="aspect-ratio:4/3;object-fit:cover"/></figure>
-<!-- /wp:image --></div>
+<!-- wp:post-featured-image {"aspectRatio":"4/3","className":"ucd-narrow","sizeSlug":"large"} /--></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

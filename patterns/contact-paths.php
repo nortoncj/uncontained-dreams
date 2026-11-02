@@ -21,7 +21,7 @@
 <!-- wp:group {"className":"ucd-cards ucd-cards--4"} -->
 <div class="wp-block-group ucd-cards ucd-cards--4"><!-- wp:group {"className":"ucd-card ucd-card--action"} -->
 <div class="wp-block-group ucd-card ucd-card--action"><!-- wp:image {"aspectRatio":"16/9","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-exterior-front-800.jpg' ); ?>" alt="" style="aspect-ratio:16/9;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="" style="aspect-ratio:16/9;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->
@@ -43,7 +43,7 @@
 
 <!-- wp:group {"className":"ucd-card ucd-card--action"} -->
 <div class="wp-block-group ucd-card ucd-card--action"><!-- wp:image {"aspectRatio":"16/9","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-living-room-800.jpg' ); ?>" alt="" style="aspect-ratio:16/9;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="" style="aspect-ratio:16/9;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->
@@ -65,7 +65,7 @@
 
 <!-- wp:group {"className":"ucd-card ucd-card--action"} -->
 <div class="wp-block-group ucd-card ucd-card--action"><!-- wp:image {"aspectRatio":"16/9","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/build-wall-framing-outdoors-800.jpg' ); ?>" alt="" style="aspect-ratio:16/9;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="" style="aspect-ratio:16/9;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->
@@ -87,7 +87,7 @@
 
 <!-- wp:group {"className":"ucd-card ucd-card--action"} -->
 <div class="wp-block-group ucd-card ucd-card--action"><!-- wp:image {"aspectRatio":"16/9","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/build-cabinet-boxes-800.jpg' ); ?>" alt="" style="aspect-ratio:16/9;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="" style="aspect-ratio:16/9;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->

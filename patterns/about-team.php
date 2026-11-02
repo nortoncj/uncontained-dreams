@@ -45,7 +45,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"aspectRatio":"4/5","scale":"cover","className":"ucd-narrow"} -->
-<figure class="wp-block-image ucd-narrow"><img src="<?php ucd_asset( 'Website/Build%20%20plans/C3986T01.JPG' ); ?>" alt="Hands guiding a routed wood panel across the shop table" style="aspect-ratio:4/5;object-fit:cover"/><figcaption class="wp-element-caption">Cutting cabinet parts in the shop.</figcaption></figure>
+<figure class="wp-block-image ucd-narrow"><img alt="Hands guiding a routed wood panel across the shop table" style="aspect-ratio:4/5;object-fit:cover"/><figcaption class="wp-element-caption">Cutting cabinet parts in the shop.</figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

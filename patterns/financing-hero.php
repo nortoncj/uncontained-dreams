@@ -3,7 +3,7 @@
  * Title: Financing: hero
  * Slug: uncontained-dreams/financing-hero
  * Categories: uncontained-dreams
- * Description: Navy hero with the promise, three reassurances and a button down to the form, beside a photo. Only claim "won't affect your credit" or drop the SSN line once the financing agent confirms how their application works.
+ * Description: Navy hero with the promise, three reassurances and a button down to the form, beside a photo. Only claim "won't affect your credit" or drop the SSN line once the financing agent confirms how their application works. The photo is the page's Featured image.
  */
 ?>
 <!-- wp:group {"anchor":"top","align":"full","className":"ucd-section ucd-section--harbor"} -->
@@ -42,8 +42,6 @@
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
 
-<!-- wp:image {"aspectRatio":"4/5","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-living-room-glass-doors-1600.jpg' ); ?>" alt="The Rising Sun living room with sliding glass doors, walnut console table, and wall-mounted TV" style="aspect-ratio:4/5;object-fit:cover"/></figure>
-<!-- /wp:image --></div>
+<!-- wp:post-featured-image {"aspectRatio":"4/5","sizeSlug":"large"} /--></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

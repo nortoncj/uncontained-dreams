@@ -25,7 +25,7 @@
 <!-- wp:group {"className":"ucd-cards ucd-cards--4"} -->
 <div class="wp-block-group ucd-cards ucd-cards--4"><!-- wp:group {"className":"ucd-card"} -->
 <div class="wp-block-group ucd-card"><!-- wp:image {"aspectRatio":"3/2","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-kitchen-range-800.jpg' ); ?>" alt="Finished kitchen with navy cabinets, marble-look counters, and a full-size range" style="aspect-ratio:3/2;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Finished kitchen with navy cabinets, marble-look counters, and a full-size range" style="aspect-ratio:3/2;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->
@@ -41,7 +41,7 @@
 
 <!-- wp:group {"className":"ucd-card"} -->
 <div class="wp-block-group ucd-card"><!-- wp:image {"aspectRatio":"3/2","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/furniture-walnut-dining-table-800.jpg' ); ?>" alt="Custom walnut dining table set for dinner by the glass doors" style="aspect-ratio:3/2;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Custom walnut dining table set for dinner by the glass doors" style="aspect-ratio:3/2;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->
@@ -57,7 +57,7 @@
 
 <!-- wp:group {"className":"ucd-card"} -->
 <div class="wp-block-group ucd-card"><!-- wp:image {"aspectRatio":"3/2","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/delivery-home-on-flatbed-800.jpg' ); ?>" alt="Finished container home on a flatbed trailer, headed to its lot" style="aspect-ratio:3/2;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Finished container home on a flatbed trailer, headed to its lot" style="aspect-ratio:3/2;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->

@@ -3,13 +3,11 @@
  * Title: Container homes: hero
  * Slug: uncontained-dreams/container-homes-hero
  * Categories: uncontained-dreams
- * Description: Full-width model photo with the page heading in a navy box. The first image in the section is the background; split it between two model photos once there's a second model.
+ * Description: Full-width model photo with the page heading in a navy box. The photo is the page's Featured image (Page settings > Featured image); the section stays navy until one is set.
  */
 ?>
 <!-- wp:group {"anchor":"top","align":"full","className":"ucd-cta ucd-cta--hero"} -->
-<div id="top" class="wp-block-group alignfull ucd-cta ucd-cta--hero"><!-- wp:image -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-exterior-corner-1600.jpg' ); ?>" alt="The Rising Sun, a grey shipping container home with wood-trimmed windows, on its lot"/></figure>
-<!-- /wp:image -->
+<div id="top" class="wp-block-group alignfull ucd-cta ucd-cta--hero"><!-- wp:post-featured-image {"sizeSlug":"full"} /-->
 
 <!-- wp:group {"className":"wrap"} -->
 <div class="wp-block-group wrap"><!-- wp:group {"className":"ucd-cta__box"} -->

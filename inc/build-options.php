@@ -4,8 +4,9 @@
  * settings behind the Build Your Home configurator, edited under Build Options
  * in wp-admin and stored in the ucd_build_options option.
  *
- * Until the screen is first saved, values come from assets/data/build-options.json
- * and models.json, the files the static site used.
+ * Until the screen is first saved, values come from the theme's
+ * data/build-options.json and data/models.json. Model photos start empty:
+ * choose each one from the Media Library on the Build Options screen.
  *
  * Prices: a number adds that many dollars, 0 shows "Included", and an empty
  * price shows "Quoted" and stays out of the total.
@@ -31,7 +32,7 @@ function ucd_build_options() {
 // Today's values from the static site's data files.
 function ucd_build_default_options() {
 	$read     = function ( $file ) {
-		$json = json_decode( (string) file_get_contents( get_template_directory() . '/assets/data/' . $file ), true );
+		$json = json_decode( (string) file_get_contents( get_template_directory() . '/data/' . $file ), true );
 		return is_array( $json ) ? $json : array();
 	};
 	$options  = $read( 'build-options.json' );
@@ -58,7 +59,7 @@ function ucd_build_default_options() {
 			'beds'      => $model['beds'],
 			'baths'     => $model['baths'],
 			'line'      => $model['line'],
-			'image'     => get_theme_file_uri( $model['image'] ),
+			'image'     => '',
 			'tourUrl'   => $site_url( $model['tourUrl'] ),
 			'photosUrl' => $site_url( $model['photosUrl'] ),
 		);

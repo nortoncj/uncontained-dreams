@@ -29,7 +29,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"aspectRatio":"3/2","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/build-window-openings-aerial-1600.jpg' ); ?>" alt="[What the photo shows]" style="aspect-ratio:3/2;object-fit:cover"/><figcaption class="wp-element-caption">[Model · What you're looking at · Where · When]</figcaption></figure>
+<figure class="wp-block-image"><img alt="[What the photo shows]" style="aspect-ratio:3/2;object-fit:cover"/><figcaption class="wp-element-caption">[Model · What you're looking at · Where · When]</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading -->

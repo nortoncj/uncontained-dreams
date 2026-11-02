@@ -9,7 +9,7 @@
 <!-- wp:group {"anchor":"diy","align":"full","className":"ucd-section ucd-section--white ucd-section--no-top"} -->
 <div id="diy" class="wp-block-group alignfull ucd-section ucd-section--white ucd-section--no-top"><!-- wp:group {"className":"wrap ucd-split"} -->
 <div class="wp-block-group wrap ucd-split"><!-- wp:image {"aspectRatio":"3/2","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/build-interior-framing-1600.jpg' ); ?>" alt="A builder assembling a wood cabinet frame on the workbench in our shop" style="aspect-ratio:3/2;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="A builder assembling a wood cabinet frame on the workbench in our shop" style="aspect-ratio:3/2;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-text"} -->

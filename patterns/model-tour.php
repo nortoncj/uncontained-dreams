@@ -30,7 +30,7 @@
 
 <!-- wp:group {"className":"ucd-media-row ucd-wide"} -->
 <div class="wp-block-group ucd-media-row ucd-wide"><!-- wp:video {"anchor":"walkthrough"} -->
-<figure id="walkthrough" class="wp-block-video"><video controls poster="<?php ucd_asset( 'img/gallery/video-poster-rising-sun-walkthrough.jpg' ); ?>" preload="none" src="<?php ucd_asset( 'Website/Videos/Walk%20through%20floating.mp4' ); ?>" playsinline aria-label="Interior walkthrough of The Rising Sun"></video></figure>
+<figure id="walkthrough" class="wp-block-video"></figure>
 <!-- /wp:video --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

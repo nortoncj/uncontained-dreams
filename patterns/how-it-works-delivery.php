@@ -28,11 +28,11 @@
 
 <!-- wp:group {"className":"ucd-pair"} -->
 <div class="wp-block-group ucd-pair"><!-- wp:image {"aspectRatio":"4/5","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'Website/Gallery/DJI_0411.JPG' ); ?>" alt="Finished container home strapped to a flatbed, ready to leave" style="aspect-ratio:4/5;object-fit:cover"/><figcaption class="wp-element-caption">Strapped down and ready to roll.</figcaption></figure>
+<figure class="wp-block-image"><img alt="Finished container home strapped to a flatbed, ready to leave" style="aspect-ratio:4/5;object-fit:cover"/><figcaption class="wp-element-caption">Strapped down and ready to roll.</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"4/5","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'Website/Gallery/DJI_0434.JPG' ); ?>" alt="Crane positioned beside a container home on delivery day" style="aspect-ratio:4/5;object-fit:cover"/><figcaption class="wp-element-caption">Crane on site to set it in place.</figcaption></figure>
+<figure class="wp-block-image"><img alt="Crane positioned beside a container home on delivery day" style="aspect-ratio:4/5;object-fit:cover"/><figcaption class="wp-element-caption">Crane on site to set it in place.</figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

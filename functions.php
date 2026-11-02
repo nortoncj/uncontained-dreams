@@ -2,8 +2,11 @@
 /**
  * UnContained Dreams theme setup.
  *
- * The theme lives at the repo root so it shares assets/ with the static pages
- * that haven't been converted yet.
+ * The theme only uses its own files (css/, js/, data/, inc/, patterns/).
+ * Every photo and video comes from the Media Library: a page's hero photo is
+ * its Featured image, and everything else is an Image, Video or Gallery block
+ * filled in the editor. Phone, email, address and the other business details
+ * are set once under Appearance > Customize > Business details.
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -13,6 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'UCD_VERSION', '1.0.0' );
 define( 'UCD_FONTS_URL', 'https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap' );
 
+require_once get_template_directory() . '/inc/business.php';
 require_once get_template_directory() . '/inc/contact-form.php';
 require_once get_template_directory() . '/inc/build-options.php';
 require_once get_template_directory() . '/inc/build.php';
@@ -24,6 +28,15 @@ require_once get_template_directory() . '/inc/guides.php';
 function ucd_setup() {
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
+	add_theme_support(
+		'custom-logo',
+		array(
+			'height'      => 80,
+			'width'       => 230,
+			'flex-height' => true,
+			'flex-width'  => true,
+		)
+	);
 	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script' ) );
 	add_theme_support( 'align-wide' );
 	add_theme_support( 'responsive-embeds' );
@@ -44,7 +57,7 @@ function ucd_enqueue_assets() {
 	// Filters and lightbox, only on pages built with the gallery section patterns.
 	if ( is_singular() && false !== strpos( get_post_field( 'post_content', get_queried_object_id() ), 'ucd-gallery-section' ) ) {
 		wp_enqueue_script( 'ucd-gallery', ucd_get_asset( 'js/gallery.js' ), array(), UCD_VERSION, array( 'in_footer' => true, 'strategy' => 'defer' ) );
-		wp_localize_script( 'ucd-gallery', 'ucdGallery', array( 'photoRequestUrl' => 'mailto:[EMAIL]?subject=Photo%20request' ) );
+		wp_localize_script( 'ucd-gallery', 'ucdGallery', array( 'photoRequestUrl' => ucd_detail( 'email' ) ? 'mailto:' . ucd_detail( 'email' ) . '?subject=Photo%20request' : home_url( '/contact/' ) ) );
 	}
 
 	// Question search, only on pages built with the FAQ patterns.
@@ -54,8 +67,8 @@ function ucd_enqueue_assets() {
 			'ucd-faq',
 			'ucdFaq',
 			array(
-				'phone' => '[PHONE]',
-				'email' => '[EMAIL]',
+				'phone' => ucd_detail( 'phone', '[PHONE]' ),
+				'email' => ucd_detail( 'email', '[EMAIL]' ),
 			)
 		);
 	}
@@ -71,13 +84,14 @@ function ucd_resource_hints( $urls, $relation_type ) {
 }
 add_filter( 'wp_resource_hints', 'ucd_resource_hints', 10, 2 );
 
-// Use the brand icon until a Site Icon is set under Appearance > Customize.
-function ucd_fallback_icon() {
-	if ( ! has_site_icon() ) {
-		printf( "<link rel=\"icon\" href=\"%s\" sizes=\"any\">\n", esc_url( ucd_get_asset( 'brand/icon.png' ) ) );
-	}
-}
-add_action( 'wp_head', 'ucd_fallback_icon' );
+/*
+ * Without a theme.json, WordPress wraps every Group block's contents in an
+ * extra <div class="wp-block-group__inner-container">. The section layouts
+ * style a group's direct children (side-by-side columns, photo grids, the
+ * background photo behind a box), so that wrapper stacks everything. Groups
+ * render as saved instead.
+ */
+remove_filter( 'render_block_core/group', 'wp_restore_group_inner_container', 10 );
 
 // Pages for people who just sent something, or are mid-build, stay out of search results.
 function ucd_noindex_pages( $robots ) {
@@ -138,8 +152,9 @@ function ucd_page_has_sections( $post = null ) {
 
 /**
  * Business details for search engines, carried over from the static About and
- * Contact pages. Keep the name, phone and address matching the Google
- * Business Profile exactly.
+ * Contact pages, from Appearance > Customize > Business details. Keep the
+ * name, phone and address matching the Google Business Profile exactly.
+ * Details that aren't filled in yet are left out.
  */
 function ucd_business_schema() {
 	if ( ! is_page( array( 'about', 'contact' ) ) ) {
@@ -148,31 +163,34 @@ function ucd_business_schema() {
 	$schema = array(
 		'@context'   => 'https://schema.org',
 		'@type'      => 'HomeAndConstructionBusiness',
-		'name'       => 'UnContained Dreams',
+		'name'       => ucd_detail( 'name' ),
 		'url'        => home_url( '/' ),
-		'telephone'  => '[PHONE]',
-		'address'    => array(
-			'@type'           => 'PostalAddress',
-			'streetAddress'   => '[STREET ADDRESS]',
-			'addressLocality' => 'Sugar Land',
-			'addressRegion'   => 'TX',
-			'postalCode'      => '[ZIP]',
-			'addressCountry'  => 'US',
+		'telephone'  => ucd_detail( 'phone' ),
+		'address'    => array_filter(
+			array(
+				'@type'           => 'PostalAddress',
+				'streetAddress'   => ucd_detail( 'street' ),
+				'addressLocality' => ucd_detail( 'city' ),
+				'addressRegion'   => ucd_detail( 'region' ),
+				'postalCode'      => ucd_detail( 'zip' ),
+				'addressCountry'  => 'US',
+			)
 		),
 		'areaServed' => array( array( '@type' => 'Country', 'name' => 'United States' ) ),
 	);
 
 	if ( is_page( 'about' ) ) {
 		$schema['url']          = get_permalink();
-		$schema['foundingDate'] = '[YEAR]';
-		$schema['founder']      = array( '@type' => 'Person', 'name' => '[FOUNDER FULL NAME]' );
+		$schema['foundingDate'] = ucd_detail( 'founded' );
+		$schema['founder']      = ucd_detail( 'founder' ) ? array( '@type' => 'Person', 'name' => ucd_detail( 'founder' ) ) : '';
 		foreach ( array( 'California', 'Colorado', 'Utah', 'Wyoming', 'New York' ) as $state ) {
 			$schema['areaServed'][] = array( '@type' => 'State', 'name' => $state );
 		}
 	} else {
-		$schema['email']        = '[EMAIL]';
-		$schema['openingHours'] = '[Mo-Fr 08:00-17:00]';
+		$schema['email']        = ucd_detail( 'email' );
+		$schema['openingHours'] = ucd_detail( 'opening_hours' );
 	}
+	$schema = array_filter( $schema );
 
 	printf( "<script type=\"application/ld+json\">%s</script>\n", wp_json_encode( $schema, JSON_UNESCAPED_SLASHES ) );
 }
@@ -490,6 +508,28 @@ function ucd_legal_render( $content, $block ) {
 }
 add_filter( 'render_block', 'ucd_legal_render', 10, 2 );
 
+/**
+ * A video uploaded into a full-width photo section (ucd-cta: the heroes and
+ * closing calls to action) plays behind the box as a silent loop, so there
+ * are no player settings to remember. Phones get the still photo instead.
+ */
+function ucd_background_video( $content, $block ) {
+	$classes = explode( ' ', isset( $block['attrs']['className'] ) ? $block['attrs']['className'] : '' );
+	if ( 'core/group' !== $block['blockName'] || ! in_array( 'ucd-cta', $classes, true ) || false === strpos( $content, '<video' ) ) {
+		return $content;
+	}
+	$tags = new WP_HTML_Tag_Processor( $content );
+	while ( $tags->next_tag( 'video' ) ) {
+		foreach ( array( 'autoplay', 'muted', 'loop', 'playsinline' ) as $attribute ) {
+			$tags->set_attribute( $attribute, true );
+		}
+		$tags->remove_attribute( 'controls' );
+		$tags->set_attribute( 'aria-hidden', 'true' );
+	}
+	return $tags->get_updated_html();
+}
+add_filter( 'render_block', 'ucd_background_video', 10, 2 );
+
 function ucd_faq_topic( $group ) {
 	$label = '';
 	foreach ( $group['innerBlocks'] as $inner ) {
@@ -513,16 +553,37 @@ function ucd_plain_text( $html ) {
 	return trim( preg_replace( '/\s+/', ' ', html_entity_decode( wp_strip_all_tags( $html ), ENT_QUOTES, 'UTF-8' ) ) );
 }
 
-/**
- * URL of a file in assets/. Pass the path URL-encoded (spaces as %20), as it
- * appears in the static HTML.
- */
-function ucd_get_asset( $path ) {
-	return get_theme_file_uri( 'assets/' . ltrim( $path, '/' ) );
+// A page's Featured image as an <img>, by its path (e.g. 'how-it-works'). Empty when it has none.
+function ucd_page_photo( $path, $size = 'medium_large' ) {
+	$page = get_page_by_path( $path );
+	return $page ? get_the_post_thumbnail( $page, $size, array( 'alt' => '', 'loading' => 'lazy' ) ) : '';
 }
 
-function ucd_asset( $path ) {
-	echo esc_url( ucd_get_asset( $path ) );
+// The first photo in a section of the Gallery page (by its HTML anchor, e.g. 'interiors'), as an <img>.
+function ucd_gallery_photo( $anchor, $size = 'medium' ) {
+	static $sections = null;
+	if ( null === $sections ) {
+		$sections = array();
+		$page     = get_page_by_path( 'gallery' );
+		$collect  = function ( $blocks, $section ) use ( &$collect, &$sections ) {
+			foreach ( $blocks as $block ) {
+				$anchor = isset( $block['attrs']['anchor'] ) ? $block['attrs']['anchor'] : $section;
+				if ( $anchor && 'core/image' === $block['blockName'] && ! empty( $block['attrs']['id'] ) && ! isset( $sections[ $anchor ] ) ) {
+					$sections[ $anchor ] = (int) $block['attrs']['id'];
+				}
+				$collect( $block['innerBlocks'], $anchor );
+			}
+		};
+		if ( $page ) {
+			$collect( parse_blocks( $page->post_content ), '' );
+		}
+	}
+	return isset( $sections[ $anchor ] ) ? wp_get_attachment_image( $sections[ $anchor ], $size, false, array( 'alt' => '', 'loading' => 'lazy' ) ) : '';
+}
+
+// URL of one of the theme's own files, e.g. ucd_get_asset( 'js/faq.js' ).
+function ucd_get_asset( $path ) {
+	return get_theme_file_uri( ltrim( $path, '/' ) );
 }
 
 // Echoes a site-root URL, e.g. ucd_url( '/plans/' ) or ucd_url( '/#faq' ).

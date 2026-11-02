@@ -3,12 +3,12 @@
  * Title: Model: make it yours
  * Slug: uncontained-dreams/model-cta
  * Categories: uncontained-dreams
- * Description: Closing navy box over a full-width photo, with buttons to customize the model and apply for financing. The first image in the section is the background.
+ * Description: Closing navy box over a full-width photo, with buttons to customize the model and apply for financing. Upload the background photo to the Image block at the top of the section (or replace it with a Video block for a silent looping video); it stays navy until you do.
  */
 ?>
 <!-- wp:group {"anchor":"cta","align":"full","className":"ucd-cta"} -->
 <div id="cta" class="wp-block-group alignfull ucd-cta"><!-- wp:image -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-exterior-front-1600.jpg' ); ?>" alt=""/></figure>
+<figure class="wp-block-image"><img alt=""/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"wrap"} -->

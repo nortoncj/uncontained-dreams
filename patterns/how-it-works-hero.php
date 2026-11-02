@@ -34,19 +34,19 @@
 
 <!-- wp:group {"className":"ucd-seq"} -->
 <div class="wp-block-group ucd-seq"><!-- wp:image {"aspectRatio":"4/5","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'Website/Build%20%20plans/DJIvwindow%20cut%20out%20pic%207.JPG' ); ?>" alt="Bare steel container with window openings cut" style="aspect-ratio:4/5;object-fit:cover"/><figcaption class="wp-element-caption">Steel shell, windows cut</figcaption></figure>
+<figure class="wp-block-image"><img alt="Bare steel container with window openings cut" style="aspect-ratio:4/5;object-fit:cover"/><figcaption class="wp-element-caption">Steel shell, windows cut</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"4/5","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'Website/Build%20%20plans/File%20Name%20Lost%20(491).jpg' ); ?>" alt="Interior framing going up in the shop" style="aspect-ratio:4/5;object-fit:cover"/><figcaption class="wp-element-caption">Framing in the shop</figcaption></figure>
+<figure class="wp-block-image"><img alt="Interior framing going up in the shop" style="aspect-ratio:4/5;object-fit:cover"/><figcaption class="wp-element-caption">Framing in the shop</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"4/5","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'Website/Main%20Site%20professional%20pics/Copy%20of%20Living%20Room%20in%20View.jpg' ); ?>" alt="Finished, furnished living room" style="aspect-ratio:4/5;object-fit:cover"/><figcaption class="wp-element-caption">Finished and furnished</figcaption></figure>
+<figure class="wp-block-image"><img alt="Finished, furnished living room" style="aspect-ratio:4/5;object-fit:cover"/><figcaption class="wp-element-caption">Finished and furnished</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"4/5","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'Website/Gallery/DJI_0411.JPG' ); ?>" alt="Finished home on a truck for delivery" style="aspect-ratio:4/5;object-fit:cover"/><figcaption class="wp-element-caption">On the truck</figcaption></figure>
+<figure class="wp-block-image"><img alt="Finished home on a truck for delivery" style="aspect-ratio:4/5;object-fit:cover"/><figcaption class="wp-element-caption">On the truck</figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

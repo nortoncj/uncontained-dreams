@@ -5,13 +5,11 @@
  * Categories: uncontained-dreams
  * Post Types: page
  * Block Types: core/post-content
- * Description: The full California state page (slug california, parent Container Homes): hero, ADU rules, delivery, climate, homes delivered, models, financing, California FAQ and closing call to action. Keep the page as a draft until the approval line in the ADU section is confirmed and there's a real California delivery to show.
+ * Description: The full California state page (slug california, parent Container Homes): hero, ADU rules, delivery, climate, homes delivered, models, financing, California FAQ and closing call to action. Keep the page as a draft until the approval line in the ADU section is confirmed and there's a real California delivery to show. The hero photo is the page's Featured image; add photos to the other image and gallery blocks from the Media Library.
  */
 ?>
 <!-- wp:group {"anchor":"top","align":"full","className":"ucd-cta ucd-cta--hero"} -->
-<div id="top" class="wp-block-group alignfull ucd-cta ucd-cta--hero"><!-- wp:image -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-exterior-glass-doors-1600.jpg' ); ?>" alt="The Rising Sun's glass end wall with cedar siding, ready to set as a backyard home"/></figure>
-<!-- /wp:image -->
+<div id="top" class="wp-block-group alignfull ucd-cta ucd-cta--hero"><!-- wp:post-featured-image {"sizeSlug":"full"} /-->
 
 <!-- wp:group {"className":"wrap"} -->
 <div class="wp-block-group wrap"><!-- wp:group {"className":"ucd-cta__box"} -->
@@ -69,7 +67,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"aspectRatio":"4/5","scale":"cover","className":"ucd-narrow"} -->
-<figure class="wp-block-image ucd-narrow"><img src="<?php ucd_asset( 'img/gallery/rising-sun-exterior-front-1600.jpg' ); ?>" alt="A single-container home on a grass lot, about the footprint of a backyard ADU" style="aspect-ratio:4/5;object-fit:cover"/></figure>
+<figure class="wp-block-image ucd-narrow"><img alt="A single-container home on a grass lot, about the footprint of a backyard ADU" style="aspect-ratio:4/5;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
@@ -77,7 +75,7 @@
 <!-- wp:group {"anchor":"delivery","align":"full","className":"ucd-section ucd-section--white"} -->
 <div id="delivery" class="wp-block-group alignfull ucd-section ucd-section--white"><!-- wp:group {"className":"wrap ucd-split ucd-split--reverse"} -->
 <div class="wp-block-group wrap ucd-split ucd-split--reverse"><!-- wp:image {"aspectRatio":"3/2","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/delivery-home-on-flatbed-1600.jpg' ); ?>" alt="Finished container home on a flatbed trailer, headed out of the shop" style="aspect-ratio:3/2;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Finished container home on a flatbed trailer, headed out of the shop" style="aspect-ratio:3/2;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-text"} -->
@@ -159,7 +157,7 @@
 <!-- wp:group {"className":"ucd-cards"} -->
 <div class="wp-block-group ucd-cards"><!-- wp:group {"className":"ucd-card ucd-card--action"} -->
 <div class="wp-block-group ucd-card ucd-card--action"><!-- wp:image {"aspectRatio":"3/2","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-living-room-800.jpg' ); ?>" alt="The Rising Sun living room with the custom sofa" style="aspect-ratio:3/2;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="The Rising Sun living room with the custom sofa" style="aspect-ratio:3/2;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->
@@ -236,7 +234,7 @@
 
 <!-- wp:group {"anchor":"cta","align":"full","className":"ucd-cta"} -->
 <div id="cta" class="wp-block-group alignfull ucd-cta"><!-- wp:image -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-exterior-corner-1600.jpg' ); ?>" alt=""/></figure>
+<figure class="wp-block-image"><img alt=""/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"wrap"} -->

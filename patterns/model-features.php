@@ -21,7 +21,7 @@
 <!-- wp:group {"className":"ucd-cards"} -->
 <div class="wp-block-group ucd-cards"><!-- wp:group {"className":"ucd-card"} -->
 <div class="wp-block-group ucd-card"><!-- wp:image {"aspectRatio":"3/2","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-kitchen-range-800.jpg' ); ?>" alt="Kitchen with full-size range, quartz counters, and custom navy cabinets" style="aspect-ratio:3/2;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Kitchen with full-size range, quartz counters, and custom navy cabinets" style="aspect-ratio:3/2;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->
@@ -55,7 +55,7 @@
 
 <!-- wp:group {"className":"ucd-card"} -->
 <div class="wp-block-group ucd-card"><!-- wp:image {"aspectRatio":"3/2","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-shower-and-vanity-800.jpg' ); ?>" alt="Custom tiled walk-in shower beside the vanity" style="aspect-ratio:3/2;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Custom tiled walk-in shower beside the vanity" style="aspect-ratio:3/2;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->
@@ -89,7 +89,7 @@
 
 <!-- wp:group {"className":"ucd-card"} -->
 <div class="wp-block-group ucd-card"><!-- wp:image {"aspectRatio":"3/2","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-exterior-corner-800.jpg' ); ?>" alt="Painted exterior with cedar-trimmed windows and the mini-split condenser" style="aspect-ratio:3/2;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Painted exterior with cedar-trimmed windows and the mini-split condenser" style="aspect-ratio:3/2;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->

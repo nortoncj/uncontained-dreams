@@ -3,13 +3,11 @@
  * Title: Plans: hero
  * Slug: uncontained-dreams/plans-hero
  * Categories: uncontained-dreams
- * Description: Full-width shop photo with the page heading in a navy box. The discovery call button (class ucd-book-discovery) opens the booking link from Settings > General once it's set; until then it scrolls to the two ways to get help.
+ * Description: Full-width shop photo with the page heading in a navy box. The discovery call button (class ucd-book-discovery) opens the booking link from Settings > General once it's set; until then it scrolls to the two ways to get help. The photo is the page's Featured image (Page settings > Featured image); the section stays navy until one is set.
  */
 ?>
 <!-- wp:group {"anchor":"top","align":"full","className":"ucd-cta ucd-cta--hero"} -->
-<div id="top" class="wp-block-group alignfull ucd-cta ucd-cta--hero"><!-- wp:image -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/build-interior-framing-1600.jpg' ); ?>" alt="A builder assembling a wood cabinet frame on the workbench in our shop"/></figure>
-<!-- /wp:image -->
+<div id="top" class="wp-block-group alignfull ucd-cta ucd-cta--hero"><!-- wp:post-featured-image {"sizeSlug":"full"} /-->
 
 <!-- wp:group {"className":"wrap"} -->
 <div class="wp-block-group wrap"><!-- wp:group {"className":"ucd-cta__box"} -->

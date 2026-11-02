@@ -10,11 +10,11 @@
 <div id="delivery" class="wp-block-group alignfull ucd-section ucd-section--white"><!-- wp:group {"className":"wrap ucd-split ucd-split--reverse"} -->
 <div class="wp-block-group wrap ucd-split ucd-split--reverse"><!-- wp:group {"className":"ucd-pair"} -->
 <div class="wp-block-group ucd-pair"><!-- wp:image {"aspectRatio":"4/5","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/delivery-crane-on-site-800.jpg' ); ?>" alt="Crane truck on site beside a container home on a trailer" style="aspect-ratio:4/5;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Crane truck on site beside a container home on a trailer" style="aspect-ratio:4/5;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"4/5","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/delivery-pier-footings-walkway-800.jpg' ); ?>" alt="Concrete pier footings set beside a new walkway before delivery" style="aspect-ratio:4/5;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Concrete pier footings set beside a new walkway before delivery" style="aspect-ratio:4/5;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 

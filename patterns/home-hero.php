@@ -3,16 +3,14 @@
  * Title: Home: hero
  * Slug: uncontained-dreams/home-hero
  * Categories: uncontained-dreams
- * Description: Full-width photo with a background video (hidden on phones), and the headline in a navy box. The image and video in the section are the background: replace the image for the still and phones, the video for the moving version.
+ * Description: Full-width hero with the headline in a navy box. The photo is the page's Featured image (Page settings > Featured image). For a moving background, upload a video to the Video block in the section: it plays as a silent loop on larger screens, and phones get the photo.
  */
 ?>
 <!-- wp:group {"anchor":"top","align":"full","className":"ucd-cta ucd-cta--hero ucd-cta--home"} -->
-<div id="top" class="wp-block-group alignfull ucd-cta ucd-cta--hero ucd-cta--home"><!-- wp:image -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'Website/Main%20Site%20professional%20pics/Copy%20of%20Front%20Corner.jpg' ); ?>" alt=""/></figure>
-<!-- /wp:image -->
+<div id="top" class="wp-block-group alignfull ucd-cta ucd-cta--hero ucd-cta--home"><!-- wp:post-featured-image {"sizeSlug":"full"} /-->
 
 <!-- wp:video -->
-<figure class="wp-block-video"><video autoplay loop muted poster="<?php ucd_asset( 'Website/Main%20Site%20professional%20pics/Copy%20of%20Front%20Corner.jpg' ); ?>" src="<?php ucd_asset( 'Website/Videos/exterior%20slow%20walk%20around.mp4' ); ?>" playsinline></video></figure>
+<figure class="wp-block-video"></figure>
 <!-- /wp:video -->
 
 <!-- wp:group {"className":"wrap"} -->

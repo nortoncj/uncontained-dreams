@@ -32,11 +32,11 @@
 
 <!-- wp:group {"className":"ucd-media-row"} -->
 <div class="wp-block-group ucd-media-row"><!-- wp:video -->
-<figure class="wp-block-video"><video controls poster="<?php ucd_asset( 'Website/Main%20Site%20professional%20pics/Copy%20of%20living%20room%20view.jpg' ); ?>" preload="none" src="<?php ucd_asset( 'Website/Videos/Walk%20through%20floating.mp4' ); ?>" playsinline></video></figure>
+<figure class="wp-block-video"></figure>
 <!-- /wp:video -->
 
 <!-- wp:image {"aspectRatio":"4/3","scale":"cover","linkDestination":"custom"} -->
-<figure class="wp-block-image"><a href="[3D TOUR URL]" target="_blank" rel="noopener"><img src="<?php ucd_asset( 'Website/Main%20Site%20professional%20pics/Copy%20of%20hallway%20in%20View.jpg' ); ?>" alt="Hallway looking toward the bedroom" style="aspect-ratio:4/3;object-fit:cover"/></a></figure>
+<figure class="wp-block-image"><a href="[3D TOUR URL]" target="_blank" rel="noopener"><img alt="Hallway looking toward the bedroom" style="aspect-ratio:4/3;object-fit:cover"/></a></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

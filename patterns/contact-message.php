@@ -60,7 +60,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"aspectRatio":"4/3","scale":"cover","className":"ucd-shop-photo"} -->
-<figure class="wp-block-image ucd-shop-photo"><img src="<?php ucd_asset( 'img/gallery/build-tabletop-glue-up-800.jpg' ); ?>" alt="Walnut tabletop clamped during glue-up on the shop bench" style="aspect-ratio:4/3;object-fit:cover"/><figcaption class="wp-element-caption">In the shop. The person who answers the phone is the one building your home.</figcaption></figure>
+<figure class="wp-block-image ucd-shop-photo"><img alt="Walnut tabletop clamped during glue-up on the shop bench" style="aspect-ratio:4/3;object-fit:cover"/><figcaption class="wp-element-caption">In the shop. The person who answers the phone is the one building your home.</figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 

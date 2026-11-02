@@ -29,7 +29,7 @@
 <!-- wp:group {"className":"ucd-next-cards"} -->
 <div class="wp-block-group ucd-next-cards"><!-- wp:group {"className":"ucd-next-card"} -->
 <div class="wp-block-group ucd-next-card"><!-- wp:image {"aspectRatio":"16/9","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/build-interior-framing-800.jpg' ); ?>" alt="" style="aspect-ratio:16/9;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="" style="aspect-ratio:16/9;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->
@@ -39,7 +39,7 @@
 
 <!-- wp:group {"className":"ucd-next-card"} -->
 <div class="wp-block-group ucd-next-card"><!-- wp:image {"aspectRatio":"16/9","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-exterior-front-800.jpg' ); ?>" alt="" style="aspect-ratio:16/9;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="" style="aspect-ratio:16/9;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->
@@ -49,7 +49,7 @@
 
 <!-- wp:group {"className":"ucd-next-card"} -->
 <div class="wp-block-group ucd-next-card"><!-- wp:image {"aspectRatio":"16/9","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/build-cabinet-boxes-800.jpg' ); ?>" alt="" style="aspect-ratio:16/9;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="" style="aspect-ratio:16/9;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->

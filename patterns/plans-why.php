@@ -38,11 +38,11 @@
 
 <!-- wp:group {"className":"ucd-pair"} -->
 <div class="wp-block-group ucd-pair"><!-- wp:image {"aspectRatio":"4/5","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/build-cabinet-face-frame-800.jpg' ); ?>" alt="Unfinished cabinet frame before paint in the shop" style="aspect-ratio:4/5;object-fit:cover"/><figcaption class="wp-element-caption">In the shop</figcaption></figure>
+<figure class="wp-block-image"><img alt="Unfinished cabinet frame before paint in the shop" style="aspect-ratio:4/5;object-fit:cover"/><figcaption class="wp-element-caption">In the shop</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"4/5","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-kitchen-range-800.jpg' ); ?>" alt="The finished kitchen with navy cabinets and quartz counters" style="aspect-ratio:4/5;object-fit:cover"/><figcaption class="wp-element-caption">Finished, in The Rising Sun</figcaption></figure>
+<figure class="wp-block-image"><img alt="The finished kitchen with navy cabinets and quartz counters" style="aspect-ratio:4/5;object-fit:cover"/><figcaption class="wp-element-caption">Finished, in The Rising Sun</figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

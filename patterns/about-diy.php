@@ -9,7 +9,7 @@
 <!-- wp:group {"anchor":"diy","align":"full","className":"ucd-section"} -->
 <div id="diy" class="wp-block-group alignfull ucd-section"><!-- wp:group {"className":"wrap ucd-split ucd-split--reverse"} -->
 <div class="wp-block-group wrap ucd-split ucd-split--reverse"><!-- wp:image {"aspectRatio":"4/3","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'Website/Build%20%20plans/File%20Name%20Lost%20(124).jpg' ); ?>" alt="Builder fastening a framed wall section in a backyard" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Builder fastening a framed wall section in a backyard" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-text"} -->

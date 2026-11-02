@@ -15,7 +15,7 @@
  * - [ucd_newsletter_form] adds people to the same mailing list as the plans
  *   form, tagged guides.
  *
- * The topics and the planned articles in assets/data/posts.json are added
+ * The topics and the planned articles in the theme's data/posts.json are added
  * once, as categories and draft posts, the first time an admin opens
  * wp-admin with this theme.
  */
@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 function ucd_guides_data() {
 	static $data = null;
 	if ( null === $data ) {
-		$data = json_decode( (string) file_get_contents( get_theme_file_path( 'assets/data/posts.json' ) ), true );
+		$data = json_decode( (string) file_get_contents( get_theme_file_path( 'data/posts.json' ) ), true );
 		$data = is_array( $data ) ? $data : array();
 	}
 	return $data;
@@ -318,9 +318,9 @@ function ucd_guide_cta( $topic_slug ) {
 		case 'diy':
 			return array( 'Building your own?', 'Talk it through on a free call, or join the list for our building plans.', array( 'Book a free discovery call' => home_url( '/plans/#talk' ), 'Join the plans list' => home_url( '/plans/#plans-list' ) ) );
 		case 'build-updates':
-			return array( 'See the finished home.', 'Walk through The Rising Sun in 3D, or see every spec and piece of furniture.', array( 'Take the 3D tour' => home_url( '/gallery/#tour' ), 'See the model' => home_url( '/models/the-rising-sun/' ) ) );
+			return array( 'See the finished home.', 'Walk through The Rising Sun in 3D, or see every spec and piece of furniture.', array( 'Take the 3D tour' => ucd_detail( 'tour_url', home_url( '/gallery/#tour' ) ), 'See the model' => home_url( '/models/the-rising-sun/' ) ) );
 	}
-	return array( 'See what yours would cost.', 'Pick a model, choose your finishes and upgrades, and get your total in about five minutes.', array( 'Build Your Home' => home_url( '/build/' ), 'Book a call' => 'tel:[PHONE]' ) );
+	return array( 'See what yours would cost.', 'Pick a model, choose your finishes and upgrades, and get your total in about five minutes.', array( 'Build Your Home' => home_url( '/build/' ), 'Book a call' => ucd_phone_href() ? ucd_phone_href() : home_url( '/contact/' ) ) );
 }
 
 // Up to three other published guides on the same topic, newest first.
@@ -401,9 +401,7 @@ function ucd_guides_seed() {
 		if ( ! empty( $planned['hold'] ) ) {
 			$notes[] = 'HOLD, DON\'T PUBLISH UNTIL ANSWERED: ' . $planned['hold'];
 		}
-		if ( ! empty( $planned['image'] ) ) {
-			$notes[] = 'FEATURED IMAGE: upload ' . basename( str_replace( '-800', '-1600', $planned['image'] ) ) . ' from assets/img/gallery/.';
-		}
+		$notes[] = 'FEATURED IMAGE: set one of our own build photos under Featured image. No stock photos.';
 		$content = '';
 		foreach ( $notes as $note ) {
 			$content .= "<!-- wp:paragraph -->\n<p>[" . esc_html( $note ) . "]</p>\n<!-- /wp:paragraph -->\n\n";

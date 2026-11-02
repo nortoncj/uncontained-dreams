@@ -28,15 +28,15 @@
 
 <!-- wp:group {"className":"ucd-mosaic ucd-media-col"} -->
 <div class="wp-block-group ucd-mosaic ucd-media-col"><!-- wp:image {"aspectRatio":"16/10","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-kitchen-to-bedroom-1600.jpg' ); ?>" alt="Galley kitchen with floating wood shelves, bedroom visible at the far end" style="aspect-ratio:16/10;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Galley kitchen with floating wood shelves, bedroom visible at the far end" style="aspect-ratio:16/10;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"4/3","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-living-room-800.jpg' ); ?>" alt="Living room with the custom sofa and wall-mounted TV" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Living room with the custom sofa and wall-mounted TV" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"4/3","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-shower-and-vanity-800.jpg' ); ?>" alt="Glass walk-in shower beside the vanity" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Glass walk-in shower beside the vanity" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

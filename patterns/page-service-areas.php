@@ -16,7 +16,7 @@
 
 <!-- wp:group {"anchor":"cta","align":"full","className":"ucd-cta"} -->
 <div id="cta" class="wp-block-group alignfull ucd-cta"><!-- wp:image -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/delivery-site-aerial-1600.jpg' ); ?>" alt=""/></figure>
+<figure class="wp-block-image"><img alt=""/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"wrap"} -->

@@ -1,0 +1,68 @@
+{
+  "_readme": [
+    "Every model on the site. /container-homes/, /build/ and the sitemap all read this file, so a new model shows up everywhere at once.",
+    "id is what saved builds use (?config=). Never change it once a model is live. slug is the page URL: /models/{slug}/.",
+    "basePrice and maxPrice are the published range. Only publish numbers the written quote will honor.",
+    "rendering: true puts a visible 'Rendering' tag on the photo. Use it for anything that isn't a finished build.",
+    "pageLive: false until /models/{slug}/ exists. Until then the card links to photos instead of a dead page.",
+    "The fields from subhead down are the model page template. The page is plain HTML (copy /models/the-rising-sun/ for a new model); keep it in step with this entry.",
+    "Square-bracket text is a placeholder for the owner to fill in."
+  ],
+  "models": [
+    {
+      "id": "rising-sun",
+      "slug": "the-rising-sun",
+      "name": "The Rising Sun",
+      "basePrice": 85000,
+      "maxPrice": 120000,
+      "sqft": "[000 sq ft]",
+      "beds": "[0] bed",
+      "baths": "[0] bath",
+      "bedsBaths": "[0 / 0]",
+      "containers": "[X × 40 ft]",
+      "furniturePieces": "8, custom walnut",
+      "bestFor": "[Guest house, full-time living for one or two, rental]",
+      "line": "[ONE-LINE DESCRIPTION, e.g. \"Our flagship. Full kitchen, full bath, and a deck made for evenings.\"]",
+      "image": "assets/img/gallery/rising-sun-exterior-front-800.jpg",
+      "imageAlt": "Grey shipping container home with wood-trimmed windows and front steps on a grass lot, The Rising Sun model",
+      "rendering": false,
+      "page": "models/the-rising-sun/",
+      "pageLive": true,
+      "tourUrl": "gallery/#tour",
+      "studioVosUrl": "[STUDIO VOS TOUR URL]",
+      "videoUrl": "assets/Website/Videos/Walk%20through%20floating.mp4",
+      "photosUrl": "gallery/",
+
+      "subhead": "A full-size home packed into a container footprint. Quartz counters, a tiled shower, a washer and dryer, and eight pieces of custom walnut furniture, all included.",
+      "features": {
+        "kitchen": ["French door refrigerator", "Full-size stove and oven", "In-cabinet drawer microwave", "Quartz countertops", "Custom all-wood cabinets"],
+        "livingBath": ["Custom tiled shower", "Washer and dryer", "On-demand water heater, so hot water never runs out", "Custom closets", "Privacy blinds on every window and door"],
+        "outsideSystems": ["Custom exterior paint", "Cedar and shou sugi ban trim (charred wood that holds up to weather and pests)", "Efficient mini splits for heating and cooling", "Low-profile faucets [CONFIRM: or low-flow?]", "[INSULATION SPEC] · [ELECTRICAL: panel size, outlets] · [WATER AND SEWER CONNECTIONS]"]
+      },
+      "furniture": [
+        { "name": "Walnut futon sofa", "job": "Seating sized to fit the living room", "details": "72 in. long, 25 in. deep, 15 in. back", "photo": "assets/img/gallery/furniture-bench-seat-800.jpg" },
+        { "name": "Walnut futon bed", "job": "The sofa folds out to sleep two adults", "details": "72 in. by 43 in., holds up to 450 lbs", "photo": null },
+        { "name": "Compact sofa table", "job": "Coffee table, snack spot, or a place to eat, without the bulk", "details": "Walnut and latte finish", "photo": "assets/img/gallery/furniture-sofa-side-table-800.jpg" },
+        { "name": "Entertainment stand", "job": "Holds the TV gear, then folds out into a dining table", "details": "Solid walnut", "photo": "assets/img/gallery/furniture-walnut-dining-table-800.jpg" },
+        { "name": "Dual-leaf dining table", "job": "Works with the counter to seat 3 to 5, then folds back into the TV stand", "details": "Counter height", "photo": "assets/img/gallery/furniture-fold-down-table-counter-800.jpg" },
+        { "name": "Storage platform bed", "job": "Holds clothes, shoes, and seasonal gear, with two built-in nightstands", "details": "About 40 cu. ft. of storage, backlit Japanese-style headboard", "photo": "assets/img/gallery/rising-sun-bedroom-800.jpg" },
+        { "name": "Wall-mounted standing desk", "job": "Work standing or on a stool, with the TV above as a monitor", "details": "Built-in storage for remotes, tablets, and a laptop", "photo": "assets/img/gallery/rising-sun-living-room-glass-doors-800.jpg" },
+        { "name": "Fold-up coat and towel hooks", "job": "Coats, bags, and leashes by the door, towels by the vanity", "details": "Fold flat when not in use, walnut and latte finish", "photo": "assets/img/gallery/rising-sun-kitchen-coat-hooks-800.jpg" }
+      ],
+      "configurations": [
+        { "name": "Base", "price": 85000, "different": "[What base includes, e.g. standard finishes, no deck]" },
+        { "name": "[Mid-tier example]", "price": null, "priceLabel": "~$[X]", "different": "[e.g. deck, upgraded flooring, appliance package]" },
+        { "name": "Fully upgraded", "price": 120000, "different": "[Every upgrade: list the big ones]" }
+      ],
+      "greatFor": ["[One or two people living full time]", "[A guest house or backyard ADU]", "[A short-term rental that books on its looks]", "[Working from home, thanks to the built-in desk]"],
+      "floorPlan": { "image": null, "caption": "[Overall size, e.g. 40 ft × 8 ft] · [000 sq ft] · Furniture shown in place" },
+      "faq": [
+        { "q": "How many people can it sleep?", "a": "[X] in the bedroom, plus two on the futon bed in the living room." },
+        { "q": "Can I change the layout?", "a": "[ANSWER: finishes and upgrades only, or layout changes too.]" },
+        { "q": "Can I see one in person?", "a": "[ANSWER: model home visits by appointment, or the 3D tour and video only.]" },
+        { "q": "Does it work off-grid?", "a": "[ANSWER: solar, water tank, composting toilet options, or not offered.]" },
+        { "q": "How long until it's built?", "a": "About [X] weeks once your deposit is in." }
+      ]
+    }
+  ]
+}

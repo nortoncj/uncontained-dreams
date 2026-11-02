@@ -31,6 +31,8 @@ p{margin:0}
 a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #B04E25;outline-offset:2px}
 .media.filled{border:0;padding:0;background:#1E425E}
 .media>img,.media>video,.media>a>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+/* Header logo: the business name until a logo is set under Site Identity */
+.site-logo__text{font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-weight:800;font-size:22px;line-height:1.1;color:#14324A;white-space:nowrap}
 /* Seven top-level links: widen the header bar and tighten spacing so they stay on one line.
    Prefixed with .site-header so these beat mega-menu.css, which loads after this file. */
 @media (min-width:1100px){.site-header .site-header__bar{max-width:1440px;gap:20px}.site-header .primary-nav{gap:16px}.site-header .primary-nav .menu{gap:0}.site-header .primary-nav .menu>.menu-item>a,.site-header .menu-trigger,.site-header .header-actions .btn,.site-header .header-phone{white-space:nowrap}.site-header .primary-nav .menu>.menu-item>a,.site-header .menu-trigger{padding:0 9px;font-size:15px}.site-header .header-actions{gap:14px}.site-header .header-actions .btn{padding:0 16px;font-size:15px}.site-header .site-logo__img{width:170px;height:auto}}@media (min-width:1100px) and (max-width:1159px){.site-header .primary-nav .menu>.menu-item>a,.site-header .menu-trigger{padding:0 6px}}
@@ -474,7 +476,8 @@ a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible,su
 .ucd-reviews .wp-block-quote cite{font-size:14px;font-style:normal;color:#5A666C}
 .ucd-reviews .wp-block-video video{height:100%;min-height:200px}
 /* The video testimonial slot stays hidden on the site until a video is added */
-.ucd-reviews .wp-block-video:not(:has(video)):not(.block-editor-block-list__block){display:none}
+/* Media slots with nothing uploaded yet stay hidden on the site (the editor still shows them to fill in) */
+:is(.wp-block-video:not(:has(video,iframe)),.wp-block-gallery:not(:has(img)),:is(.ucd-pair,.ucd-mosaic,.ucd-trio,.ucd-seq,.ucd-media-row,.ucd-grid):not(:has(img,video))):not(.block-editor-block-list__block){display:none}
 
 /* "Chip" style for Button blocks */
 .ucd-chip-row.wp-block-buttons{gap:10px}
@@ -495,8 +498,11 @@ a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible,su
 
 /* Closing call to action: the first image block is the background */
 .ucd-cta{position:relative;background:#14324A;color:#FFFFFF}
-.ucd-cta>.wp-block-image{position:absolute;inset:0;margin:0}
-.ucd-cta>.wp-block-image img{width:100%;height:100%;object-fit:cover;border-radius:0}
+.ucd-cta>:is(.wp-block-image,.wp-block-post-featured-image){position:absolute;inset:0;margin:0}
+.ucd-cta>:is(.wp-block-image,.wp-block-post-featured-image) img{width:100%;height:100%;object-fit:cover;border-radius:0}
+/* Heroes: the page's Featured image is the photo. Navy until one is set. */
+.ucd-section .wp-block-post-featured-image{margin:0}
+.ucd-section .wp-block-post-featured-image img{display:block;width:100%;height:100%;object-fit:cover;border-radius:2px;background:#1E425E}
 .ucd-cta>.wrap{position:relative;padding-top:112px;padding-bottom:112px}
 .ucd-cta__box{display:flex;flex-direction:column;gap:20px;max-width:560px;padding:40px;background:#14324A;border-radius:2px;box-sizing:border-box}
 .ucd-cta :is(h1,h2,p,.wp-block-buttons){margin:0}

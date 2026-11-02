@@ -21,7 +21,7 @@
 <!-- wp:group {"className":"ucd-cards"} -->
 <div class="wp-block-group ucd-cards"><!-- wp:group {"className":"ucd-card ucd-card--action"} -->
 <div class="wp-block-group ucd-card ucd-card--action"><!-- wp:image {"aspectRatio":"3/2","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-kitchen-range-800.jpg' ); ?>" alt="Finished kitchen inside a home in our shop, ready to ship" style="aspect-ratio:3/2;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Finished kitchen inside a home in our shop, ready to ship" style="aspect-ratio:3/2;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->
@@ -41,7 +41,7 @@
 
 <!-- wp:group {"className":"ucd-card ucd-card--action"} -->
 <div class="wp-block-group ucd-card ucd-card--action"><!-- wp:image {"aspectRatio":"3/2","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/delivery-home-on-flatbed-800.jpg' ); ?>" alt="Finished container home on a flatbed trailer, headed to its lot" style="aspect-ratio:3/2;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Finished container home on a flatbed trailer, headed to its lot" style="aspect-ratio:3/2;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->
@@ -61,7 +61,7 @@
 
 <!-- wp:group {"className":"ucd-card ucd-card--action"} -->
 <div class="wp-block-group ucd-card ucd-card--action"><!-- wp:image {"aspectRatio":"3/2","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/delivery-crane-on-site-800.jpg' ); ?>" alt="Crane truck on site beside a container home on its trailer" style="aspect-ratio:3/2;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Crane truck on site beside a container home on its trailer" style="aspect-ratio:3/2;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->

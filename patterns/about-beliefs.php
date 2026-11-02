@@ -21,7 +21,7 @@
 <!-- wp:group {"className":"ucd-cards"} -->
 <div class="wp-block-group ucd-cards"><!-- wp:group {"className":"ucd-card"} -->
 <div class="wp-block-group ucd-card"><!-- wp:image {"aspectRatio":"3/2","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'Website/Main%20Site%20professional%20pics/Copy%20of%20Kitchen%20Sink%20View.jpg' ); ?>" alt="Galley kitchen with navy cabinets, a cedar ceiling, and the glass door at the far end" style="aspect-ratio:3/2;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Galley kitchen with navy cabinets, a cedar ceiling, and the glass door at the far end" style="aspect-ratio:3/2;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->
@@ -37,7 +37,7 @@
 
 <!-- wp:group {"className":"ucd-card"} -->
 <div class="wp-block-group ucd-card"><!-- wp:image {"aspectRatio":"3/2","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'Website/Gallery/20230601_163743.jpg' ); ?>" alt="Walnut dining table set for dinner, with a cushioned bench and glass doors behind" style="aspect-ratio:3/2;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Walnut dining table set for dinner, with a cushioned bench and glass doors behind" style="aspect-ratio:3/2;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->
@@ -53,7 +53,7 @@
 
 <!-- wp:group {"className":"ucd-card"} -->
 <div class="wp-block-group ucd-card"><!-- wp:image {"aspectRatio":"3/2","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'Website/Build%20%20plans/C3876T01.JPG' ); ?>" alt="Large marble-look wall tiles set with leveling clips during install" style="aspect-ratio:3/2;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Large marble-look wall tiles set with leveling clips during install" style="aspect-ratio:3/2;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->

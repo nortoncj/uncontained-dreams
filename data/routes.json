@@ -1,0 +1,47 @@
+{
+  "_readme": [
+    "Pages the sitemap, the /service-areas/ hub, and the state links read. url is relative to the site root.",
+    "State pages live at container-homes/{state}/ only (decided Oct 29). /service-areas/ is the hub that links to them.",
+    "gate: the four things a state page needs before it goes live. Set live: true only when all four are true and the page exists, so a held page never shows up as a link.",
+    "homesDelivered and transitDays fill the hub card. Leave them as [X] until they're real; never round up.",
+    "Square-bracket text is a placeholder for the owner to fill in."
+  ],
+  "states": [
+    {
+      "name": "Texas", "abbr": "TX", "region": "Home base", "url": "container-homes/texas/", "live": true,
+      "homesDelivered": "[X]", "transitDays": "[X]",
+      "gate": { "zoningNotes": true, "deliveryNotes": true, "climateNotes": true, "localProof": true }
+    },
+    {
+      "name": "California", "abbr": "CA", "region": "West Coast", "url": "container-homes/california/", "live": false,
+      "homesDelivered": "[X]", "transitDays": "[X]",
+      "gate": { "zoningNotes": false, "deliveryNotes": false, "climateNotes": false, "localProof": false },
+      "holdReason": "Approval route (state factory-built certification or local plan check), delivery pricing, climate specs, and a delivered home or named review."
+    },
+    {
+      "name": "Colorado", "abbr": "CO", "region": "Mountain West", "url": "container-homes/colorado/", "live": false,
+      "homesDelivered": "[X]", "transitDays": "[X]",
+      "gate": { "zoningNotes": false, "deliveryNotes": false, "climateNotes": false, "localProof": false },
+      "holdReason": "Cold-climate package: insulation, heat source, snow load rating."
+    },
+    {
+      "name": "Utah", "abbr": "UT", "region": "Mountain West", "url": "container-homes/utah/", "live": false,
+      "homesDelivered": "[X]", "transitDays": "[X]",
+      "gate": { "zoningNotes": false, "deliveryNotes": false, "climateNotes": false, "localProof": false },
+      "holdReason": "Cold-climate package, plus local zoning for rural land."
+    },
+    {
+      "name": "Wyoming", "abbr": "WY", "region": "Mountain West", "url": "container-homes/wyoming/", "live": false,
+      "homesDelivered": "[X]", "transitDays": "[X]",
+      "gate": { "zoningNotes": false, "deliveryNotes": false, "climateNotes": false, "localProof": false },
+      "holdReason": "Cold-climate package and snow load, plus delivery to remote sites."
+    },
+    {
+      "name": "New York", "abbr": "NY", "region": "East Coast & Northeast", "url": "container-homes/new-york/", "live": false,
+      "homesDelivered": "[X]", "transitDays": "[X]",
+      "gate": { "zoningNotes": false, "deliveryNotes": false, "climateNotes": false, "localProof": false },
+      "holdReason": "Local zoning (varies a lot by town), cold-climate package, delivery cost from Texas."
+    }
+  ],
+  "serviceAreas": { "name": "All service areas", "url": "service-areas/", "live": true }
+}

@@ -21,7 +21,7 @@
 <!-- wp:group {"className":"ucd-cards"} -->
 <div class="wp-block-group ucd-cards"><!-- wp:group {"className":"ucd-card ucd-card--action"} -->
 <div class="wp-block-group ucd-card ucd-card--action"><!-- wp:image {"aspectRatio":"3/2","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-exterior-front-800.jpg' ); ?>" alt="Grey shipping container home with wood-trimmed windows and front steps on a grass lot, The Rising Sun model" style="aspect-ratio:3/2;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Grey shipping container home with wood-trimmed windows and front steps on a grass lot, The Rising Sun model" style="aspect-ratio:3/2;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->

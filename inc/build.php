@@ -10,7 +10,7 @@
  *
  * Prices are recalculated here from the build's choices, never taken from the
  * browser, and every emailed link is built here too. The calculations mirror
- * assets/js/build-config.js; change both together.
+ * js/build-config.js; change both together.
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -630,7 +630,7 @@ function ucd_build_save_and_send( $data, $cfg, $contact ) {
 	wp_mail(
 		$contact['email'],
 		sprintf( 'Your UnContained Dreams build (%s)', $number ),
-		sprintf( "Thanks, %s. Here's the build you sent us.\n\n%s\n\nOpen it again: %s\n\nWhat happens next: we call you within [1 business day] to go over it, then send a written quote with every cost. Nothing is charged until you sign.\n\nQuestions? Reply to this email or call [PHONE].\n", $contact['first_name'], $summary, $link ),
+		ucd_fill_details( sprintf( "Thanks, %s. Here's the build you sent us.\n\n%s\n\nOpen it again: %s\n\nWhat happens next: we call you within [1 business day] to go over it, then send a written quote with every cost. Nothing is charged until you sign.\n\nQuestions? Reply to this email or call [PHONE].\n", $contact['first_name'], $summary, $link ) ),
 		array( 'Reply-To: ' . ucd_contact_recipient() )
 	);
 
@@ -659,7 +659,7 @@ function ucd_build_rest_email( WP_REST_Request $request ) {
 	$sent = wp_mail(
 		$email,
 		'Your UnContained Dreams build',
-		sprintf( "Here's the container home build you saved on our site.\n\n%s\n\nOpen it again or keep changing it: %s\n\nQuestions? Reply to this email or call [PHONE].\n", ucd_build_summary_text( $data, $cfg ), ucd_build_config_url( $cfg ) ),
+		ucd_fill_details( sprintf( "Here's the container home build you saved on our site.\n\n%s\n\nOpen it again or keep changing it: %s\n\nQuestions? Reply to this email or call [PHONE].\n", ucd_build_summary_text( $data, $cfg ), ucd_build_config_url( $cfg ) ) ),
 		array( 'Reply-To: ' . ucd_contact_recipient() )
 	);
 	return $sent ? array( 'sent' => true ) : new WP_Error( 'ucd_not_sent', 'The email didn\'t send.', array( 'status' => 500 ) );

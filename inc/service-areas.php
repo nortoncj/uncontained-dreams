@@ -3,7 +3,7 @@
  * Service Areas: the ZIP delivery check ([ucd_zip_check]) and the state list
  * ([ucd_state_cards]).
  *
- * Both read assets/data/routes.json, the same file the static site uses. A
+ * Both read the theme's data/routes.json (a copy of the static site's). A
  * state links to its page only when routes.json marks it live and the page is
  * published in WordPress, so a held state never shows up as a dead link; the
  * rest get a "Get a delivery quote" button to the contact form.
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 function ucd_service_area_states() {
 	static $states = null;
 	if ( null === $states ) {
-		$json   = json_decode( (string) file_get_contents( get_theme_file_path( 'assets/data/routes.json' ) ), true );
+		$json   = json_decode( (string) file_get_contents( get_theme_file_path( 'data/routes.json' ) ), true );
 		$states = array();
 		foreach ( isset( $json['states'] ) ? $json['states'] : array() as $state ) {
 			$page          = get_page_by_path( trim( $state['url'], '/' ) );
@@ -45,7 +45,7 @@ function ucd_zip_check_shortcode() {
 	ob_start();
 	?>
 <div class="ucd-zip-check">
-	<form class="ucd-zip" id="zip-form" novalidate data-states="<?php echo esc_attr( wp_json_encode( (object) $live ) ); ?>">
+	<form class="ucd-zip" id="zip-form" novalidate data-phone="<?php echo esc_attr( ucd_detail( 'phone' ) ); ?>" data-states="<?php echo esc_attr( wp_json_encode( (object) $live ) ); ?>">
 		<label class="field" for="zip">Enter your ZIP to estimate delivery
 			<input id="zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" aria-describedby="zip-err">
 		</label>

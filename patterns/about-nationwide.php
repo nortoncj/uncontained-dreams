@@ -54,15 +54,15 @@
 
 <!-- wp:group {"className":"ucd-grid"} -->
 <div class="wp-block-group ucd-grid"><!-- wp:image {"aspectRatio":"4/3","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'Website/Build%20%20plans/DJI_0462.JPG' ); ?>" alt="Concrete pier footings set on a cleared lot before the home arrives" style="aspect-ratio:4/3;object-fit:cover"/><figcaption class="wp-element-caption">Piers go in before the home ships.</figcaption></figure>
+<figure class="wp-block-image"><img alt="Concrete pier footings set on a cleared lot before the home arrives" style="aspect-ratio:4/3;object-fit:cover"/><figcaption class="wp-element-caption">Piers go in before the home ships.</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"4/3","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'Website/Build%20%20plans/DJI_0454.JPG' ); ?>" alt="Aerial view of pier footings beside a new concrete walkway" style="aspect-ratio:4/3;object-fit:cover"/><figcaption class="wp-element-caption">Footings and walkway, ready for delivery day.</figcaption></figure>
+<figure class="wp-block-image"><img alt="Aerial view of pier footings beside a new concrete walkway" style="aspect-ratio:4/3;object-fit:cover"/><figcaption class="wp-element-caption">Footings and walkway, ready for delivery day.</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls poster="<?php ucd_asset( 'Website/Build%20%20plans/DJI%20finished%20container%20birdseye%20right%20front%20street%20view%201.JPG' ); ?>" preload="none" src="<?php ucd_asset( 'Website/Videos/DJI%20finished%20container%20fly%20in.MP4' ); ?>" playsinline></video><figcaption class="wp-element-caption">The finished home, set on its lot.</figcaption></figure>
+<figure class="wp-block-video"><figcaption class="wp-element-caption">The finished home, set on its lot.</figcaption></figure>
 <!-- /wp:video --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

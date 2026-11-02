@@ -5,13 +5,11 @@
  * Categories: uncontained-dreams
  * Post Types: page
  * Block Types: core/post-content
- * Description: The full Texas state page (slug texas, parent Container Homes): hero, zoning, delivery, climate, homes delivered, models, financing, Texas FAQ and closing call to action. To add a state, duplicate this page and rewrite each section for that state.
+ * Description: The full Texas state page (slug texas, parent Container Homes): hero, zoning, delivery, climate, homes delivered, models, financing, Texas FAQ and closing call to action. To add a state, duplicate this page and rewrite each section for that state. The hero photo is the page's Featured image; add photos to the other image and gallery blocks from the Media Library.
  */
 ?>
 <!-- wp:group {"anchor":"top","align":"full","className":"ucd-cta ucd-cta--hero"} -->
-<div id="top" class="wp-block-group alignfull ucd-cta ucd-cta--hero"><!-- wp:image -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-exterior-front-1600.jpg' ); ?>" alt="The Rising Sun container home on a grass lot in Texas"/></figure>
-<!-- /wp:image -->
+<div id="top" class="wp-block-group alignfull ucd-cta ucd-cta--hero"><!-- wp:post-featured-image {"sizeSlug":"full"} /-->
 
 <!-- wp:group {"className":"wrap"} -->
 <div class="wp-block-group wrap"><!-- wp:group {"className":"ucd-cta__box"} -->
@@ -61,7 +59,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"aspectRatio":"4/5","scale":"cover","className":"ucd-narrow"} -->
-<figure class="wp-block-image ucd-narrow"><img src="<?php ucd_asset( 'img/gallery/delivery-site-aerial-1600.jpg' ); ?>" alt="Aerial view of a lot with pier footings set beside a poured walkway, ready for a home" style="aspect-ratio:4/5;object-fit:cover"/></figure>
+<figure class="wp-block-image ucd-narrow"><img alt="Aerial view of a lot with pier footings set beside a poured walkway, ready for a home" style="aspect-ratio:4/5;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
@@ -69,7 +67,7 @@
 <!-- wp:group {"anchor":"delivery","align":"full","className":"ucd-section ucd-section--white"} -->
 <div id="delivery" class="wp-block-group alignfull ucd-section ucd-section--white"><!-- wp:group {"className":"wrap ucd-split ucd-split--reverse"} -->
 <div class="wp-block-group wrap ucd-split ucd-split--reverse"><!-- wp:image {"aspectRatio":"3/2","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/delivery-home-on-flatbed-1600.jpg' ); ?>" alt="Finished container home on a flatbed trailer, headed to its lot" style="aspect-ratio:3/2;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Finished container home on a flatbed trailer, headed to its lot" style="aspect-ratio:3/2;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-text"} -->
@@ -114,11 +112,11 @@
 
 <!-- wp:group {"className":"ucd-pair"} -->
 <div class="wp-block-group ucd-pair"><!-- wp:image {"aspectRatio":"4/5","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/build-window-openings-aerial-800.jpg' ); ?>" alt="Aerial view of a container mid-build in our Texas shop yard" style="aspect-ratio:4/5;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Aerial view of a container mid-build in our Texas shop yard" style="aspect-ratio:4/5;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"4/5","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-exterior-corner-800.jpg' ); ?>" alt="Side wall with the mini-split condenser and cedar-trimmed windows" style="aspect-ratio:4/5;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Side wall with the mini-split condenser and cedar-trimmed windows" style="aspect-ratio:4/5;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
@@ -143,29 +141,7 @@
 <!-- /wp:group -->
 
 <!-- wp:gallery {"linkTo":"none","imageCrop":false,"className":"ucd-gallery"} -->
-<figure class="wp-block-gallery has-nested-images columns-default ucd-gallery"><!-- wp:image -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-exterior-front-800.jpg' ); ?>" alt="The Rising Sun on its lot, front entry and cedar-trimmed windows"/><figcaption class="wp-element-caption">The Rising Sun · [CITY], TX · [YEAR]</figcaption></figure>
-<!-- /wp:image -->
-
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/teal-home-exterior-aerial-walkway-800.jpg' ); ?>" alt="Aerial view of a teal container home beside a curved concrete walkway"/><figcaption class="wp-element-caption">[MODEL] · [CITY], TX · [YEAR]</figcaption></figure>
-<!-- /wp:image -->
-
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/delivery-crane-on-site-800.jpg' ); ?>" alt="Crane truck on site to set a teal container home"/><figcaption class="wp-element-caption">Delivery day · [CITY], TX · [YEAR]</figcaption></figure>
-<!-- /wp:image -->
-
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-exterior-glass-doors-800.jpg' ); ?>" alt="The Rising Sun's glass end wall with cedar siding"/><figcaption class="wp-element-caption">The Rising Sun · [CITY], TX · [YEAR]</figcaption></figure>
-<!-- /wp:image -->
-
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/delivery-pier-footings-walkway-800.jpg' ); ?>" alt="Concrete pier footings beside a new walkway, ready for delivery"/><figcaption class="wp-element-caption">Site ready for delivery · [CITY], TX · [YEAR]</figcaption></figure>
-<!-- /wp:image -->
-
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-living-room-800.jpg' ); ?>" alt="Finished living room with the custom sofa"/><figcaption class="wp-element-caption">The Rising Sun, inside · [CITY], TX · [YEAR]</figcaption></figure>
-<!-- /wp:image --></figure>
+<figure class="wp-block-gallery has-nested-images columns-default ucd-gallery"></figure>
 <!-- /wp:gallery -->
 
 <!-- wp:group {"className":"ucd-reviews"} -->
@@ -193,7 +169,7 @@
 <!-- wp:group {"className":"ucd-cards"} -->
 <div class="wp-block-group ucd-cards"><!-- wp:group {"className":"ucd-card ucd-card--action"} -->
 <div class="wp-block-group ucd-card ucd-card--action"><!-- wp:image {"aspectRatio":"3/2","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-exterior-corner-800.jpg' ); ?>" alt="The Rising Sun, a grey container home with wood-trimmed windows" style="aspect-ratio:3/2;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="The Rising Sun, a grey container home with wood-trimmed windows" style="aspect-ratio:3/2;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->
@@ -276,7 +252,7 @@
 
 <!-- wp:group {"anchor":"cta","align":"full","className":"ucd-cta"} -->
 <div id="cta" class="wp-block-group alignfull ucd-cta"><!-- wp:image -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-living-room-glass-doors-1600.jpg' ); ?>" alt=""/></figure>
+<figure class="wp-block-image"><img alt=""/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"wrap"} -->

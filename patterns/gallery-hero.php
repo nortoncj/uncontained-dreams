@@ -3,13 +3,11 @@
  * Title: Gallery: hero
  * Slug: uncontained-dreams/gallery-hero
  * Categories: uncontained-dreams
- * Description: Full-width photo with the page heading in a navy box. The first image in the section is the background; replace it to change the photo.
+ * Description: Full-width photo with the page heading in a navy box. The photo is the page's Featured image (Page settings > Featured image); the section stays navy until one is set.
  */
 ?>
 <!-- wp:group {"anchor":"top","align":"full","className":"ucd-cta ucd-cta--hero"} -->
-<div id="top" class="wp-block-group alignfull ucd-cta ucd-cta--hero"><!-- wp:image -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-exterior-front-2400.jpg' ); ?>" alt="Grey shipping container home with wood-trimmed windows and front steps on a grass lot, The Rising Sun model"/></figure>
-<!-- /wp:image -->
+<div id="top" class="wp-block-group alignfull ucd-cta ucd-cta--hero"><!-- wp:post-featured-image {"sizeSlug":"full"} /-->
 
 <!-- wp:group {"className":"wrap"} -->
 <div class="wp-block-group wrap"><!-- wp:group {"className":"ucd-cta__box"} -->

@@ -29,7 +29,7 @@
 <!-- wp:group {"className":"ucd-cards ucd-cards--4"} -->
 <div class="wp-block-group ucd-cards ucd-cards--4"><!-- wp:group {"className":"ucd-card ucd-card--action"} -->
 <div class="wp-block-group ucd-card ucd-card--action"><!-- wp:image {"aspectRatio":"4/3","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/furniture-bench-seat-800.jpg' ); ?>" alt="Walnut futon sofa with patterned and yellow cushions beside a window" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Walnut futon sofa with patterned and yellow cushions beside a window" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->
@@ -69,7 +69,7 @@
 
 <!-- wp:group {"className":"ucd-card ucd-card--action"} -->
 <div class="wp-block-group ucd-card ucd-card--action"><!-- wp:image {"aspectRatio":"4/3","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/furniture-sofa-side-table-800.jpg' ); ?>" alt="Compact walnut sofa table beside the sofa, holding a bowl of popcorn" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Compact walnut sofa table beside the sofa, holding a bowl of popcorn" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->
@@ -89,7 +89,7 @@
 
 <!-- wp:group {"className":"ucd-card ucd-card--action"} -->
 <div class="wp-block-group ucd-card ucd-card--action"><!-- wp:image {"aspectRatio":"4/3","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/furniture-walnut-dining-table-800.jpg' ); ?>" alt="Walnut entertainment stand folded out into a dining table, set for dinner" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Walnut entertainment stand folded out into a dining table, set for dinner" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->
@@ -109,7 +109,7 @@
 
 <!-- wp:group {"className":"ucd-card ucd-card--action"} -->
 <div class="wp-block-group ucd-card ucd-card--action"><!-- wp:image {"aspectRatio":"4/3","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/furniture-fold-down-table-counter-800.jpg' ); ?>" alt="Walnut dining leaf extending off the kitchen counter" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Walnut dining leaf extending off the kitchen counter" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->
@@ -129,7 +129,7 @@
 
 <!-- wp:group {"className":"ucd-card ucd-card--action"} -->
 <div class="wp-block-group ucd-card ucd-card--action"><!-- wp:image {"aspectRatio":"4/3","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-bedroom-800.jpg' ); ?>" alt="Storage platform bed with a backlit headboard under the cedar ceiling" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Storage platform bed with a backlit headboard under the cedar ceiling" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->
@@ -149,7 +149,7 @@
 
 <!-- wp:group {"className":"ucd-card ucd-card--action"} -->
 <div class="wp-block-group ucd-card ucd-card--action"><!-- wp:image {"aspectRatio":"4/3","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-living-room-glass-doors-800.jpg' ); ?>" alt="Wall-mounted walnut standing desk under the TV by the glass doors" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Wall-mounted walnut standing desk under the TV by the glass doors" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->
@@ -169,7 +169,7 @@
 
 <!-- wp:group {"className":"ucd-card ucd-card--action"} -->
 <div class="wp-block-group ucd-card ucd-card--action"><!-- wp:image {"aspectRatio":"4/3","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-kitchen-coat-hooks-800.jpg' ); ?>" alt="Wood fold-up hooks by the side door holding a backpack" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Wood fold-up hooks by the side door holding a backpack" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->

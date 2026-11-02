@@ -21,7 +21,7 @@
 <!-- wp:group {"className":"ucd-cards"} -->
 <div class="wp-block-group ucd-cards"><!-- wp:group {"className":"ucd-card ucd-card--action"} -->
 <div class="wp-block-group ucd-card ucd-card--action"><!-- wp:image {"aspectRatio":"16/9","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/rising-sun-exterior-front-800.jpg' ); ?>" alt="A finished container home on its lot, the kind of project a discovery call starts" style="aspect-ratio:16/9;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="A finished container home on its lot, the kind of project a discovery call starts" style="aspect-ratio:16/9;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->
@@ -53,7 +53,7 @@
 
 <!-- wp:group {"className":"ucd-card ucd-card--action"} -->
 <div class="wp-block-group ucd-card ucd-card--action"><!-- wp:image {"aspectRatio":"16/9","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/build-cabinet-drawer-slides-800.jpg' ); ?>" alt="Unfinished cabinet with drawer slides installed, mid-build in the shop" style="aspect-ratio:16/9;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Unfinished cabinet with drawer slides installed, mid-build in the shop" style="aspect-ratio:16/9;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-card__body"} -->

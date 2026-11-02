@@ -8,8 +8,8 @@
 ?>
 <!-- wp:group {"anchor":"tour","align":"full","className":"ucd-section ucd-section--harbor"} -->
 <div id="tour" class="wp-block-group alignfull ucd-section ucd-section--harbor"><!-- wp:group {"className":"wrap ucd-split"} -->
-<div class="wp-block-group wrap ucd-split"><!-- wp:image {"aspectRatio":"16/9","scale":"cover","linkDestination":"custom","className":"ucd-tour-link"} -->
-<figure class="wp-block-image ucd-tour-link"><a href="[3D TOUR URL]" target="_blank" rel="noopener"><img src="<?php ucd_asset( 'img/gallery/rising-sun-kitchen-to-bedroom-1600.jpg' ); ?>" alt="Open the 3D tour of The Rising Sun (opens in a new tab)" style="aspect-ratio:16/9;object-fit:cover"/></a><figcaption class="wp-element-caption">3D tour</figcaption></figure>
+<div class="wp-block-group wrap ucd-split"><!-- wp:image {"aspectRatio":"16/9","scale":"cover","className":"ucd-tour-link","linkDestination":"custom"} -->
+<figure class="wp-block-image ucd-tour-link"><a href="[3D TOUR URL]" target="_blank" rel="noopener"><img alt="Open the 3D tour of The Rising Sun (opens in a new tab)" style="aspect-ratio:16/9;object-fit:cover"/></a><figcaption class="wp-element-caption">3D tour</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-text"} -->

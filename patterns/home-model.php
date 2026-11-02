@@ -10,15 +10,15 @@
 <div id="models" class="wp-block-group alignfull ucd-section"><!-- wp:group {"className":"wrap ucd-split"} -->
 <div class="wp-block-group wrap ucd-split"><!-- wp:group {"className":"ucd-mosaic ucd-media-col"} -->
 <div class="wp-block-group ucd-mosaic ucd-media-col"><!-- wp:image {"aspectRatio":"16/9","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'Website/Main%20Site%20professional%20pics/Copy%20of%20Living%20Room%20in%20View.jpg' ); ?>" alt="The Rising Sun living room with the included sofa, wall-mounted TV, and kitchen beyond" style="aspect-ratio:16/9;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="The Rising Sun living room with the included sofa, wall-mounted TV, and kitchen beyond" style="aspect-ratio:16/9;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"4/3","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'Website/Main%20Site%20professional%20pics/Copy%20of%20Front%20of%20Kitchen.jpg' ); ?>" alt="Kitchen with navy cabinets, marble-look counters, and floating wood shelves" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Kitchen with navy cabinets, marble-look counters, and floating wood shelves" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"4/3","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'Website/Main%20Site%20professional%20pics/Copy%20of%20Bedroom%20In%20View.jpg' ); ?>" alt="Bedroom with queen bed under a cedar ceiling" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Bedroom with queen bed under a cedar ceiling" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 

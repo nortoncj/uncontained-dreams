@@ -3,7 +3,7 @@
  * Title: Service areas: state list
  * Slug: uncontained-dreams/service-areas-states
  * Categories: uncontained-dreams
- * Description: White section with the state cards ([ucd_state_cards]), grouped by region, from assets/data/routes.json. A state links to its page once routes.json marks it live and the page is published; the rest get a delivery-quote button. Fill in homes delivered and transit days in routes.json.
+ * Description: White section with the state cards ([ucd_state_cards]), grouped by region, from the theme's data/routes.json. A state links to its page once routes.json marks it live and the page is published; the rest get a delivery-quote button. Fill in homes delivered and transit days in routes.json.
  */
 ?>
 <!-- wp:group {"anchor":"states","align":"full","className":"ucd-section ucd-section--white"} -->

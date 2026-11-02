@@ -10,15 +10,15 @@
 <div id="course" class="wp-block-group alignfull ucd-section"><!-- wp:group {"className":"wrap ucd-split ucd-split--reverse"} -->
 <div class="wp-block-group wrap ucd-split ucd-split--reverse"><!-- wp:group {"className":"ucd-trio"} -->
 <div class="wp-block-group ucd-trio"><!-- wp:image {"aspectRatio":"3/4","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/build-window-openings-aerial-800.jpg' ); ?>" alt="Aerial view of a bare container with window openings cut into the steel" style="aspect-ratio:3/4;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Aerial view of a bare container with window openings cut into the steel" style="aspect-ratio:3/4;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"3/4","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/build-wall-framing-outdoors-800.jpg' ); ?>" alt="Builder fastening a tall framed wall section" style="aspect-ratio:3/4;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Builder fastening a tall framed wall section" style="aspect-ratio:3/4;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"3/4","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'img/gallery/build-shower-tile-800.jpg' ); ?>" alt="Marble-look shower tile going in with leveling clips" style="aspect-ratio:3/4;object-fit:cover"/></figure>
+<figure class="wp-block-image"><img alt="Marble-look shower tile going in with leveling clips" style="aspect-ratio:3/4;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 

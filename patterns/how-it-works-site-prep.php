@@ -9,7 +9,7 @@
 <!-- wp:group {"anchor":"site-prep","align":"full","className":"ucd-section ucd-section--white"} -->
 <div id="site-prep" class="wp-block-group alignfull ucd-section ucd-section--white"><!-- wp:group {"className":"wrap ucd-split ucd-split--reverse"} -->
 <div class="wp-block-group wrap ucd-split ucd-split--reverse"><!-- wp:image {"aspectRatio":"4/3","scale":"cover"} -->
-<figure class="wp-block-image"><img src="<?php ucd_asset( 'Website/Build%20%20plans/DJI_0424.JPG' ); ?>" alt="Aerial view of a prepared lot with pier footings and a poured walkway" style="aspect-ratio:4/3;object-fit:cover"/><figcaption class="wp-element-caption">A lot ready for delivery: piers set, walkway poured, clear access.</figcaption></figure>
+<figure class="wp-block-image"><img alt="Aerial view of a prepared lot with pier footings and a poured walkway" style="aspect-ratio:4/3;object-fit:cover"/><figcaption class="wp-element-caption">A lot ready for delivery: piers set, walkway poured, clear access.</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"ucd-text"} -->
