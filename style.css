@@ -530,6 +530,10 @@ a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible,su
 .ucd-filter{flex:none;min-height:44px;padding:0 18px;border:1.5px solid #B9C4C8;border-radius:999px;background:#FFFFFF;color:#14324A;font:inherit;font-size:15px;font-weight:600;cursor:pointer}
 .ucd-filter:hover{border-color:#14324A}
 .ucd-filter[aria-pressed="true"]{background:#14324A;border-color:#14324A;color:#FFFFFF}
+.ucd-filters--inline{background:none;border-bottom:0}
+.ucd-filters--inline .ucd-filters__row{padding-top:0;padding-bottom:0}
+.ucd-gallery-body--inline{display:flex;flex-direction:column;gap:40px;padding-bottom:0}
+.ucd-gallery-body--inline .ucd-gallery-section{padding-top:0}
 
 /* Photo grid: overrides the Gallery block's column layout and overlay captions.
    Give an image the is-wide class to span two columns. */
@@ -671,8 +675,8 @@ a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible,su
 .ucd-article__photo{display:flex;flex-direction:column;gap:10px}
 .ucd-article__photo img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:2px;background:#1E425E}
 .ucd-article__photo figcaption,.ucd-prose .wp-element-caption{font-size:14px;line-height:20px;color:#5A666C;text-align:left}
-.ucd-short{display:flex;flex-direction:column;gap:8px;padding:22px 26px;background:#FFFFFF;border:1px solid #D5DCDE;border-left:4px solid #14324A;border-radius:2px}
-.ucd-short p{font-size:19px;line-height:30px}
+.ucd-short-answer{display:flex;flex-direction:column;gap:8px;padding:22px 26px;background:#FFFFFF;border:1px solid #D5DCDE;border-left:4px solid #14324A;border-radius:2px}
+.ucd-short-answer p{font-size:19px;line-height:30px}
 .ucd-prose{display:flex;flex-direction:column;gap:20px;font-size:18px;line-height:30px}
 .ucd-prose>*{margin:0}
 .ucd-prose h2{margin-top:28px;font-size:30px;line-height:36px;font-weight:800;color:#14324A}

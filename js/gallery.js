@@ -1,8 +1,10 @@
 /**
- * Gallery page
+ * Gallery page, and the photos section of a model page
  * - Filter bar: one button per gallery section (Groups with the
  *   ucd-gallery-section class), labeled with the section's heading, so a
- *   section added in the editor gets a button automatically.
+ *   section added in the editor gets a button automatically. Full width on
+ *   the Gallery page; inside the section when the sections sit in a
+ *   ucd-gallery-body--inline group.
  * - Filtering shows one section, hides the intros, and adds a "coming soon"
  *   note to a section with nothing in it yet.
  * - Lightbox: photos in a Gallery block open full size and step through the
@@ -21,17 +23,20 @@
   }
 
   sections.forEach(function (section) {
-    var heading = section.querySelector('h2');
+    var heading = section.querySelector('h2, h3');
     section.dataset.label = heading ? heading.textContent.trim() : '';
     if (!section.id) section.id = slug(section.dataset.label);
   });
 
-  // Filter bar, inserted full width above the gallery sections
+  var body = sections[0].closest('.ucd-gallery-body') || sections[0];
+  var inline = body.classList.contains('ucd-gallery-body--inline');
+
+  // Filter bar, inserted above the gallery sections
   var bar = document.createElement('nav');
-  bar.className = 'ucd-filters alignfull';
-  bar.setAttribute('aria-label', 'Filter the gallery');
+  bar.className = inline ? 'ucd-filters ucd-filters--inline' : 'ucd-filters alignfull';
+  bar.setAttribute('aria-label', inline ? 'Filter the photos' : 'Filter the gallery');
   var row = document.createElement('div');
-  row.className = 'wrap ucd-filters__row';
+  row.className = inline ? 'ucd-filters__row' : 'wrap ucd-filters__row';
   bar.appendChild(row);
 
   var filters = [{ id: 'all', label: 'All' }].concat(sections.map(function (section) {
@@ -47,7 +52,6 @@
     return button;
   });
 
-  var body = sections[0].closest('.ucd-gallery-body') || sections[0];
   body.parentNode.insertBefore(bar, body);
 
   function emptyNote(label) {

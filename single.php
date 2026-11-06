@@ -46,7 +46,7 @@ while ( have_posts() ) :
 			<?php endif; ?>
 
 			<?php if ( has_excerpt() ) : ?>
-			<section class="ucd-short" aria-labelledby="short-h">
+			<section class="ucd-short-answer" aria-labelledby="short-h">
 				<span class="eyebrow" id="short-h">The short answer</span>
 				<p><?php echo esc_html( get_the_excerpt() ); ?></p>
 			</section>

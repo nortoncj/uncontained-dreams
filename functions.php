@@ -284,7 +284,8 @@ add_action( 'template_redirect', 'ucd_redirect_models_parent' );
  * what's written in the editor:
  * - step cards (Groups with the ucd-step class) become a HowTo
  * - Details blocks become an FAQPage
- * - gallery sections (ucd-gallery-section) mark the page as an ImageGallery
+ * - the Gallery page's full-width gallery body (ucd-gallery-body) marks the
+ *   page as an ImageGallery; a model page's inline photo filter doesn't
  * - video items (ucd-video-item) become VideoObjects once their video is in
  *   the Media Library, which supplies the upload date and length
  */
@@ -372,7 +373,7 @@ function ucd_collect_schema_items( $blocks, &$items ) {
 			continue;
 		}
 
-		if ( $group && in_array( 'ucd-gallery-section', $classes, true ) ) {
+		if ( $group && in_array( 'ucd-gallery-body', $classes, true ) && ! in_array( 'ucd-gallery-body--inline', $classes, true ) ) {
 			$items['gallery'] = true;
 		}
 
